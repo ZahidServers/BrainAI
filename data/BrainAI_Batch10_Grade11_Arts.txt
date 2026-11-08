@@ -1,0 +1,201 @@
+BrainAI EDUCATIONAL CORPUS
+BATCH 10 — GRADE 11 ARTS / HUMANITIES (NCERT branch + Maharashtra HSC Arts branch)
+Original teaching corpus; no textbook reproduced. Verified 2026: NCERT Class 11 continues existing books unchanged for 2026–27. Humanities subjects: History (Themes in World History), Political Science (Political Theory + Indian Constitution at Work), Geography (Fundamentals of Physical Geography + India: Physical Environment), Sociology (Introducing Sociology + Understanding Society), Psychology (Introduction to Psychology), Economics (see Batch 8), and Philosophy/Logic where offered. Maharashtra HSC Arts (Std 11): History, Political Science, Geography, Sociology, Psychology, Economics, Logic/Philosophy (optional), languages. Boards kept separate.
+Per the Social-Science brief, this batch teaches theories and concepts (not just lists them) and consistently distinguishes FACT / INTERPRETATION / OPINION. Depth policy: fuller conceptual anchors in Political Science (core political concepts), Sociology (foundational concepts), and Psychology (nature, methods, a core topic); compact-but-teaching records for History, Geography and Philosophy/Logic. Any topic expands on request.
+
+
+=================================================================
+BRANCH A — NCERT / CBSE (Class 11 Humanities)
+=================================================================
+
+===== POLITICAL SCIENCE =====
+Books: Political Theory (concepts) and Indian Constitution at Work (institutions).
+
+★ CHAPTER G11PS-CORE — Political Theory: Freedom, Equality, Rights, Justice — FULLER ANCHOR
+1. METADATA
+• Grade 11 · NCERT · Humanities · Political Science · Unit: Political Theory · Prereq: basic civics (Grade 9–10) · Difficulty: Medium · Objectives: define politics and political theory; understand freedom (negative/positive), equality (kinds), rights (why & which), and justice (distributive) as reasoned concepts, not slogans; connect them to the Indian Constitution.
+2. TEACHING MATERIAL
+(a) What is politics & political theory? Politics is the activity through which people make, preserve and amend the general rules under which they live — involving negotiation, power, and the public good. Political theory examines the ideas and principles (freedom, equality, justice, rights, democracy) that underlie political life, clarifying their meaning and defending or criticising them with arguments.
+(b) Freedom (liberty). Freedom is the absence of constraints and the presence of conditions for self-development.
+ • Negative liberty — freedom from external interference (a protected private sphere).
+ • Positive liberty — freedom to develop one's potential, needing enabling conditions (education, health).
+ • Harm principle (J.S. Mill): a person's liberty may be restricted only to prevent harm to others; "self-regarding" acts should be free.
+(c) Equality. The claim that all humans are of equal worth and deserve equal consideration.
+ • Natural vs social inequalities: some differences (talent) vs those created by society (caste, class) — the latter are the concern of justice.
+ • Kinds: political (equal vote/rights), economic (opportunity, reducing wealth gaps), social (dignity, non-discrimination).
+ • Equality ≠ sameness: it means equal treatment of equals and, sometimes, differential treatment (affirmative action) to achieve real equality of opportunity.
+(d) Rights. Justified claims of individuals, recognised by society/state, essential for a life of dignity.
+ • Why rights? They protect vital human interests (life, liberty, expression) and set limits on state power.
+ • Kinds: political, economic, cultural; legal rights vs human/moral rights. Rights carry duties (my right to free speech implies others' duty not to silence me).
+(e) Justice. Giving each their due. Distributive justice concerns the fair distribution of benefits and burdens. Rawls' "veil of ignorance": just principles are those we would choose if we didn't know our own place in society — leading to protecting the least advantaged.
+(f) Link to the Indian Constitution. These concepts are embedded as Fundamental Rights (equality, freedom, against exploitation, religion, cultural, remedies), Directive Principles (social/economic justice goals), and the Preamble (justice, liberty, equality, fraternity).
+
+FACT vs INTERPRETATION vs OPINION.
+ • FACT: The Indian Constitution guarantees the right to equality (Articles 14–18).
+ • INTERPRETATION: Scholars argue reservations are a means to substantive equality.
+ • OPINION: "Complete economic equality is the ideal society" — a value judgement.
+
+A. DEFINITIONS (10)
+politics, political theory, negative liberty, positive liberty, harm principle, equality, distributive justice, rights, duty, veil of ignorance.
+
+B. QUESTIONS & ANSWERS
+Easy: What is negative liberty? (Freedom from interference.) Which principle limits liberty to prevent harm? (Harm principle.) Medium: Distinguish natural and social inequalities. Why do rights imply duties? (Others must respect them.) Difficult: Explain Rawls' veil of ignorance. Application: Is affirmative action consistent with equality? (Yes — it aims at real equality of opportunity.) Reasoning: Why is "equality" not the same as "sameness"? (Equals treated equally; unequal starting points may need differential support.)
+
+C. MCQs (10, abridged)
+Freedom from interference = negative liberty; freedom to develop = positive liberty; harm principle is from J.S. Mill; giving each their due = justice; Rawls used the veil of ignorance; rights protect vital interests; every right implies a duty; reducing wealth gaps concerns economic equality; equal vote = political equality; the Preamble lists justice, liberty, equality and fraternity.
+
+D. TRUE/FALSE (6)
+Negative liberty means freedom to self-develop. F (that's positive). Rights come with duties. T. Equality means treating everyone identically in all cases. F. Justice means giving each their due. T. The harm principle allows restricting self-regarding acts. F. Political theory only lists rulers. F.
+
+E. FILL BLANKS (6)
+Freedom from interference =  liberty (negative). The  principle restricts liberty to prevent harm to others (harm). Rawls' thought experiment is the  of ignorance (veil). Every right implies a  (duty).  justice concerns fair distribution (Distributive). The Preamble seeks justice, liberty, equality and  (fraternity).
+
+F/G. SHORT/LONG
+Short: Differentiate negative and positive liberty with an example. Long (model): "Discuss whether affirmative action is compatible with equality." Model — Formal equality (identical treatment) can perpetuate disadvantage when starting points differ. Substantive equality aims at genuine equality of opportunity; affirmative action (e.g., reservations) temporarily gives differential support to historically disadvantaged groups to level the field. Critics interpret it as reverse discrimination; defenders see it as required by real equality. (Present as reasoned positions; the conclusion is contested — an interpretive debate, not a settled fact.)
+
+H. HOTS
+Can a society be free but unequal, or equal but unfree? (Yes — liberty and equality can tension; theories balance them differently.) Why might unlimited freedom threaten equality? (The powerful could dominate the weak absent limits.)
+
+I. MISCONCEPTIONS
+"Freedom means doing anything" → it's constrained by others' rights/harm. "Equality means everyone is identical" → equal worth/consideration, not sameness. "Rights are unlimited" → they carry duties and reasonable restrictions.
+
+J. REVISION
+Politics & political theory; negative/positive liberty & harm principle; kinds of equality (political/economic/social); rights & duties; distributive justice & Rawls; constitutional embedding; FACT/INTERPRETATION/OPINION.
+
+ADAPTIVE — "positive vs negative liberty"
+L1: "Negative liberty is being left alone; positive liberty is being able to actually do things." L2: "Negative liberty removes barriers (no one stops you from studying); positive liberty provides means (a school you can afford) so the freedom is real." L3: "Negative liberty is the absence of external constraint on the agent; positive liberty is the presence of enabling conditions for self-realisation — a distinction from Berlin's 'Two Concepts of Liberty.'" L4: "Negative liberty is an open door; positive liberty is also having legs to walk through it." L5: "Free speech laws (negative) matter little without literacy and internet access (positive) to actually be heard."
+``json
+{"messages":[{"role":"user","content":"Explain negative and positive liberty for a Class 11 student."},{"role":"assistant","content":"NEGATIVE liberty is freedom FROM interference — no one (state or others) coercing you within your private sphere; think 'leave me alone to make my choices.' POSITIVE liberty is freedom TO develop yourself — having the actual conditions (education, health, opportunity) to act meaningfully; think 'able to become what I can be.' A person legally free to start a business (negative) may still lack the capital or skills to do so (positive). Good societies protect both."}]}
+{"messages":[{"role":"user","content":"Is affirmative action fair? Give both sides."},{"role":"assistant","content":"This is a genuinely contested question, so here are the reasoned positions. SUPPORTERS argue that identical treatment of people with unequal starting points isn't truly equal; affirmative action (like reservations) gives temporary differential support to historically disadvantaged groups to create real equality of opportunity. CRITICS interpret it as reverse discrimination that judges by group rather than merit, and worry it can entrench group identities. Note: the constitutional fact is that India permits such measures; whether they're 'fair' is an interpretive/ethical debate reasonable people disagree on."}]}
+`
+
+POLITICAL SCIENCE — Remaining (compact)
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Political Science  |  CONCEPT: Indian Constitution at Work
+EXPLANATION: Constitution's making (Constituent Assembly); Preamble; Fundamental Rights & Duties; Directive Principles; federalism; legislature/executive/judiciary; elections; local government. FACT/INTERPRETATION/OPINION flagged.  |  QUESTION: Who interprets the Constitution? ANSWER: The judiciary.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Political Science  |  CONCEPT: Political theory — citizenship, nationalism, secularism, democracy, development, peace
+EXPLANATION: Citizenship & rights; nation & nationalism; secularism (state–religion relations); democracy (procedural & substantive); development debates; peace & non-violence.  |  QUESTION: Secularism in India means? ANSWER: Equal respect for all religions by the state.  |  DIFFICULTY: Medium
+
+===== SOCIOLOGY =====
+
+★ CHAPTER G11SO-FOUND — Foundational Sociological Concepts — FULLER ANCHOR
+METADATA. Grade 11 · NCERT · Sociology · Prereq: none · Difficulty: Medium · Objectives: define sociology & its perspective; understand society, social structure, socialisation, social institutions, status/role, culture; distinguish sociology from common sense.
+TEACHING.
+• What is sociology? The systematic study of human society and social behaviour — how groups, institutions and structures shape individuals and vice versa. The sociological perspective ("imagination", C. Wright Mills) links personal troubles to public issues (e.g., one person's unemployment vs a society-wide recession). It differs from common sense by using evidence, theory and method.
+• Society & social structure. Society is an organised web of social relationships; social structure is the relatively stable patterning of these relationships (institutions, groups, roles) that persists beyond individuals.
+• Socialisation. The lifelong process by which individuals learn the norms, values and roles of their society — via agents: family (primary), school, peer group, media, workplace. It makes culture continue across generations.
+• Status & role. A status is a social position (student, mother); a role is the expected behaviour attached to it. Ascribed status (given by birth, e.g., caste, sex) vs achieved status (earned, e.g., doctor).
+• Social institutions. Enduring patterns organising key needs — family & kinship, economy, polity, religion, education. They provide stability but can also reproduce inequality.
+• Culture, norms, values. Culture = shared ways of living (material & non-material). Norms = rules of behaviour; values = shared ideas of the desirable; mores (strong moral norms) vs folkways (everyday customs).
+• Founders & perspectives (intro): Comte (coined 'sociology'), Durkheim (social facts, solidarity), Marx (class conflict), Weber (interpretive understanding, verstehen).
+FACT/INTERPRETATION/OPINION. FACT: Durkheim studied suicide rates sociologically. INTERPRETATION: He argued suicide reflects social integration. OPINION: "Modern society is worse than traditional society" — a value claim.
+DEFINITIONS (10). sociology, sociological imagination, society, social structure, socialisation, status, role, ascribed status, social institution, norm.
+Q&A. Easy: Who coined 'sociology'? (Comte.) Primary agent of socialisation? (Family.) Medium: Difference between ascribed and achieved status? Application: Is unemployment a personal trouble or public issue? (Both — sociological imagination links them.) Reasoning: Why is socialisation essential for society? (Transmits culture; without it, norms wouldn't persist.)
+MCQs (10, abridged). Coined 'sociology': Comte; caste is an  status: ascribed; expected behaviour of a position: role; lifelong learning of norms: socialisation; family is the  agent: primary; strong moral norms: mores; 'social facts' associated with: Durkheim; class conflict with: Marx; verstehen with: Weber; stable patterning of relations: social structure.
+T/F (5). Sociology is just common sense. F. Status is a social position. T. Achieved status is fixed at birth. F. Family is a primary agent of socialisation. T. Norms are shared ideas of the desirable. F (that's values).
+FILL BLANKS (5).  coined the term sociology (Comte). Behaviour expected of a status is a  (role).  links personal troubles to public issues (sociological imagination). Learning society's norms is  (socialisation). Caste is an  status (ascribed).
+HOTS. Why can the same individual hold several statuses that conflict (role conflict)? (Multiple roles make competing demands.) How might an institution both stabilise and perpetuate inequality? (e.g., education transmits skills but can reproduce class advantage.)
+MISCONCEPTIONS. "Sociology = social work" → it studies society scientifically. "Individuals act purely freely" → structures shape choices. "Status means prestige only" → it's any social position.
+REVISION. Sociology & its imagination; society/structure; socialisation & agents; status/role, ascribed/achieved; institutions; culture/norms/values; founders.
+ADAPTIVE — "sociological imagination". L1: "It's seeing how society shapes your personal life." L2: "It links private troubles (I'm jobless) to public issues (the economy shed jobs) — your biography meets history and society." L3: "Mills' concept: the capacity to situate individual experience within broader social-structural and historical contexts." L4: "It's like zooming out from your single dot to see the whole pattern of dots you're part of." L5: "Understanding that your friend's stress before board exams is partly a society-wide pressure, not just personal, is the sociological imagination at work."
+`json
+{"messages":[{"role":"user","content":"What is sociology and how is it different from common sense?"},{"role":"assistant","content":"Sociology is the systematic, evidence-based study of human society — how groups, institutions and social structures shape people, and how people shape them. Unlike COMMON SENSE (which relies on personal experience and taken-for-granted assumptions), sociology uses theories, careful methods and data, and questions what we assume is 'natural'. For example, common sense might say 'poverty is due to laziness,' but sociology examines structural causes — unemployment, education access, discrimination — using evidence. The key tool is the 'sociological imagination': connecting personal troubles to public issues."}]}
+`
+
+SOCIOLOGY — Remaining (compact)
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Sociology  |  CONCEPT: Understanding Society — social institutions & change
+EXPLANATION: Family/kinship/marriage; work & economy; political & religious institutions; social stratification (caste, class, gender); social change & control; environment & society; methods of sociological research.  |  QUESTION: Movement of individuals between social positions is called? ANSWER: Social mobility.  |  DIFFICULTY: Medium
+
+===== PSYCHOLOGY =====
+
+★ CHAPTER G11PSY-INTRO — Nature, Methods & Core Concepts of Psychology — FULLER ANCHOR
+METADATA. Grade 11 · NCERT · Psychology · Prereq: none · Difficulty: Medium · Objectives: define psychology; its goals & subfields; scientific methods; understand a core process (learning) and key concepts (behaviour, cognition, the biological basis).
+TEACHING.
+• What is psychology? The scientific study of behaviour and mental processes (thinking, feeling, perceiving). Goals: describe, explain, predict and (help) control/change behaviour. It is a science because it uses systematic, empirical methods.
+• Fields: cognitive, developmental, social, clinical, educational, organisational, health, and more.
+• Methods: observation, experiment (manipulating an independent variable to see its effect on a dependent variable, with control), correlation (relationship, not causation), case study, survey, psychological testing. Ethics: informed consent, confidentiality, no harm.
+• Perspectives (schools): psychodynamic (Freud — unconscious), behaviourist (Watson/Skinner — observable behaviour/learning), humanistic (Maslow/Rogers — growth), cognitive (mental processing), biological (brain/nervous system).
+• Biological basis: the neuron, nervous system (central & peripheral), the brain's major parts; behaviour has a physical substrate.
+• A core process — learning: a relatively permanent change in behaviour due to experience.
+ • Classical conditioning (Pavlov): a neutral stimulus paired with a natural one comes to trigger a response (bell → salivation).
+ • Operant conditioning (Skinner): behaviour is shaped by consequences — reinforcement (increases behaviour) and punishment (decreases it).
+ • Observational learning (Bandura): learning by watching models.
+FACT/INTERPRETATION/OPINION. FACT: Pavlov's dogs salivated to a bell after pairing. INTERPRETATION: This shows associative learning. OPINION: "Rewards are always better than punishment" — a value/empirical claim needing evidence.
+DEFINITIONS (10). psychology, behaviour, cognition, independent variable, dependent variable, correlation, classical conditioning, operant conditioning, reinforcement, observational learning.
+Q&A. Easy: Psychology studies behaviour and ? (Mental processes.) Who studied classical conditioning? (Pavlov.) Medium: Difference between reinforcement and punishment? Difficult: Why does correlation not imply causation? (A third variable or reverse direction may explain it.) Application: Giving a child a star for homework uses? (Positive reinforcement.) Reasoning: Why is control important in an experiment? (To isolate the effect of the independent variable.)
+MCQs (10, abridged). Psychology is the science of behaviour and mental processes; Pavlov → classical conditioning; Skinner → operant conditioning; a reward that increases behaviour = reinforcement; watching a model = observational learning; variable manipulated = independent; relationship without causation = correlation; Freud → psychodynamic; Maslow → humanistic; the basic unit of the nervous system = neuron.
+T/F (5). Psychology is not a science. F. Reinforcement decreases behaviour. F (increases). Correlation proves causation. F. Classical conditioning was studied by Pavlov. T. The neuron is a nervous-system cell. T.
+FILL BLANKS (5). Psychology studies behaviour and  processes (mental).  conditioning pairs stimuli (Classical).  increases a behaviour (Reinforcement). The variable manipulated is the  variable (independent). Bandura studied  learning (observational).
+HOTS. A study finds ice-cream sales and drowning both rise together — does ice-cream cause drowning? (No — a third variable, summer heat.) Why might punishment have side effects that reinforcement doesn't? (Fear/aggression; it doesn't teach the desired behaviour.)
+MISCONCEPTIONS. "Psychology is just common sense/reading minds" → it's an empirical science. "Correlation = causation" → not necessarily. "Reinforcement = bribery always" → it's a systematic learning principle.
+REVISION. Definition & goals; fields; methods & ethics; perspectives; biological basis; learning (classical/operant/observational).
+ADAPTIVE — "reinforcement". L1: "A reinforcement is anything that makes a behaviour more likely to happen again." L2: "If a behaviour is followed by a reward (positive reinforcement) or by removing something unpleasant (negative reinforcement), it happens more often — like a star sticker making a child study more." L3: "Reinforcement is a consequence that increases the probability of the preceding operant response; positive adds a stimulus, negative removes an aversive one." L4: "Reinforcement is like watering a plant behaviour — the more you 'water' (reward) it, the more it grows." L5: "Apps use reinforcement — points, streaks, badges — to keep you coming back; it's operant conditioning in your pocket."
+`json
+{"messages":[{"role":"user","content":"Explain the difference between classical and operant conditioning."},{"role":"assistant","content":"CLASSICAL conditioning (Pavlov) is learning by ASSOCIATION: a neutral stimulus (a bell) is repeatedly paired with a natural one (food) until the bell alone triggers the response (salivation). The learner is passive — the association just forms. OPERANT conditioning (Skinner) is learning by CONSEQUENCES: a behaviour is strengthened by reinforcement (reward) or weakened by punishment. Here the learner is active — it does something and learns from what follows. Quick test: a dog salivating at a bell = classical; a dog sitting to earn a treat = operant."}]}
+``
+
+PSYCHOLOGY — Remaining (compact)
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Psychology  |  CONCEPT: Human development, sensation-attention-perception, memory, motivation-emotion, self & personality
+EXPLANATION: Lifespan development; how we sense, attend to and perceive stimuli; memory stages & forgetting; motivation (needs, Maslow) & emotion; concepts of self and personality theories.  |  QUESTION: The three memory stores are? ANSWER: Sensory, short-term, long-term.  |  DIFFICULTY: Medium
+
+===== HISTORY, GEOGRAPHY, PHILOSOPHY/LOGIC (compact) =====
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  History (Themes in World History)  |  CONCEPT: Reading history + major themes
+EXPLANATION: How historians use sources & interpret evidence (FACT vs INTERPRETATION); early humans; early cities & empires; changing traditions (Renaissance, printing); modern revolutions (Industrial); displacement. Emphasis on argument & evidence, not just dates.  |  QUESTION: Why can two historians describe one event differently? ANSWER: Different sources/perspectives — interpretation.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Geography (Fundamentals of Physical Geography)  |  CONCEPT: Earth systems & processes
+EXPLANATION: Earth's interior & plate tectonics; landforms & geomorphic processes; atmosphere (composition, temperature, pressure, winds), climate; hydrosphere (water cycle, oceans); biosphere. India's physical environment (relief, drainage, climate, soils, vegetation).  |  QUESTION: What drives plate movement? ANSWER: Convection currents in the mantle.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT/State  |  Philosophy & Logic (where offered)  |  CONCEPT: Reasoning, arguments, validity
+EXPLANATION: Branches of philosophy (metaphysics, epistemology, ethics); arguments (premises→conclusion); deductive vs inductive; validity vs truth; categorical syllogism & basic fallacies.  |  QUESTION: A valid argument with true premises is called? ANSWER: Sound.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Economics (Arts also takes it)  |  CONCEPT: Cross-reference
+EXPLANATION: Statistics for Economics & Indian Economic Development are taught to Arts students too — see Batch 8 (Grade 11 Commerce/Economics) for full treatment of demand/supply/elasticity, statistical tools, and the Indian economy.  |  QUESTION: 1991 reforms stand for? ANSWER: Liberalisation, Privatisation, Globalisation.  |  DIFFICULTY: Medium
+
+
+=================================================================
+BRANCH B — MAHARASHTRA HSC ARTS (Std 11)
+=================================================================
+Std 11 Arts: History, Political Science, Geography, Sociology, Psychology, Economics, Logic/Philosophy (optional), languages. Parallels NCERT concepts with Balbharati framing and Maharashtra/India context. Kept separate.
+
+RECORDTYPE: LESSON  |  GRADE 11  |  Maharashtra  |  History  |  CONCEPT: Ancient–medieval India & historiography
+EXPLANATION: Sources & historiography; ancient civilisations; Maharashtra history threads; how to weigh evidence (FACT/INTERPRETATION/OPINION).  |  QUESTION: Primary vs secondary source? ANSWER: Primary = original/contemporary; secondary = later account.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 11  |  Maharashtra  |  Political Science  |  CONCEPT: Political concepts & Indian government
+EXPLANATION: Liberty, equality, rights, justice, democracy; Indian Constitution & institutions; political ideologies.  |  QUESTION: Rule by the people is? ANSWER: Democracy.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 11  |  Maharashtra  |  Sociology  |  CONCEPT: Foundations of sociology
+EXPLANATION: Nature of sociology; society, culture, socialisation, institutions, stratification; Indian society.  |  QUESTION: Primary agent of socialisation? ANSWER: Family.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 11  |  Maharashtra  |  Psychology  |  CONCEPT: Introduction to psychology
+EXPLANATION: Nature & methods; biological bases; sensation-perception; learning; development.  |  QUESTION: Pavlov is linked to? ANSWER: Classical conditioning.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 11  |  Maharashtra  |  Logic (optional)  |  CONCEPT: Deductive & inductive logic
+EXPLANATION: Terms, propositions, syllogism, validity, truth-tables intro, induction & causation.  |  QUESTION: Argument form vs content decides? ANSWER: Validity (form).  |  DIFFICULTY: Medium
+Difference to preserve: Maharashtra Arts commonly offers Logic as a distinct subject and centres Maharashtra/India context; sequence and language differ from NCERT. Do not merge.
+
+
+=================================================================
+BATCH 10 — CONSOLIDATED CROSS-BRANCH LESSON RECORDS
+=================================================================
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Political Science  |  UNIT: Political Theory  |  CHAPTER: Core Concepts  |  CONCEPT: Freedom, equality, rights, justice
+EXPLANATION: Negative/positive liberty & harm principle; kinds of equality; rights imply duties; distributive justice & Rawls; embedded in the Constitution. FACT/INTERPRETATION/OPINION distinguished.  |  EXAMPLE: Affirmative action as substantive equality (interpretive debate)  |  APPLICATION: Evaluating rights & policies  |  COMMONMISCONCEPTION: Equality = sameness  |  QUESTION: Freedom from interference is?  |  ANSWER: Negative liberty  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Sociology  |  CHAPTER: Foundational Concepts  |  CONCEPT: Society, socialisation, status/role
+EXPLANATION: Sociological imagination links personal troubles to public issues; social structure; socialisation & agents; status/role, ascribed/achieved; institutions; culture/norms/values; founders.  |  EXAMPLE: Unemployment as personal trouble + public issue  |  APPLICATION: Analysing social patterns  |  COMMONMISCONCEPTION: Sociology = common sense  |  QUESTION: Who coined 'sociology'?  |  ANSWER: Comte  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Psychology  |  CHAPTER: Nature & Methods + Learning  |  CONCEPT: Scientific study of behaviour; conditioning
+EXPLANATION: Psychology = science of behaviour & mental processes; methods (experiment/correlation/observation) & ethics; perspectives; learning (classical/operant/observational).  |  EXAMPLE: Star sticker = positive reinforcement  |  APPLICATION: Habit formation, education  |  COMMONMISCONCEPTION: Correlation = causation  |  QUESTION: Skinner is linked to?  |  ANSWER: Operant conditioning  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  History  |  CHAPTER: Reading History  |  CONCEPT: Evidence & interpretation
+EXPLANATION: Historians build accounts from sources; the same event yields different interpretations; distinguish fact, interpretation and opinion.  |  EXAMPLE: Two historians, one event, different emphases  |  APPLICATION: Critical reading of the past  |  COMMON_MISCONCEPTION: History is just fixed dates  |  QUESTION: Original contemporary evidence is a?  |  ANSWER: Primary source  |  DIFFICULTY: Medium
+
+
+BATCH 10 COVERAGE SUMMARY
+• NCERT Political Science: Core political concepts — fuller anchor (freedom, equality, rights, justice, Rawls) with FACT/INTERPRETATION/OPINION + balanced treatment of contested issues; compact for the Constitution and further political theory.
+• NCERT Sociology: Foundational concepts — fuller anchor (sociological imagination, structure, socialisation, status/role, institutions, culture, founders); compact for institutions & social change.
+• NCERT Psychology: Nature/methods + learning — fuller anchor (scientific study, methods & ethics, perspectives, classical/operant/observational learning); compact for development, cognition, memory, motivation, personality.
+• NCERT History/Geography/Philosophy-Logic: compact teaching records emphasising argument & evidence; Economics cross-referenced to Batch 8.
+• Maharashtra HSC Arts (Std 11): parallel History/Political Science/Sociology/Psychology/Logic — with Logic as a distinct subject and Maharashtra/India context preserved.
+• Boards kept separate; FACT/INTERPRETATION/OPINION and balanced presentation of contested topics maintained throughout.
+
+END OF BATCH 10. Next: BATCH 11 — Grade 12 Arts/Humanities (Political Science: contemporary world politics & Indian politics since independence; Sociology: Indian society & social change/development; Psychology: intelligence, personality, disorders, therapy, attitudes; History: themes in Indian history; Geography: human geography; Philosophy/Logic — with theories taught, not listed).

@@ -1,0 +1,190 @@
+BrainAI EDUCATIONAL CORPUS
+BATCH 11 — GRADE 12 ARTS / HUMANITIES (NCERT branch + Maharashtra HSC Arts branch)
+Original teaching corpus; no textbook reproduced. Verified 2026: NCERT Class 12 continues existing books unchanged for 2026–27. Humanities: Political Science (Contemporary World Politics + Politics in India since Independence), Sociology (Indian Society + Social Change and Development in India), Psychology (attributes/intelligence, self & personality, stress, disorders, therapies, attitudes, group processes), History (Themes in Indian History I–III), Geography (Fundamentals of Human Geography + India: People and Economy), Economics (see Batch 9). Maharashtra HSC Arts (Std 12): History, Political Science, Geography, Sociology, Psychology, Economics, Logic (optional). Boards kept separate.
+Per the Social-Science brief, this batch teaches theories and concepts and distinguishes FACT / INTERPRETATION / OPINION, presenting contested political questions evenhandedly. Fuller anchors: Psychology — Intelligence, Political Science — the Cold War & world order, Sociology — Indian society & social change; compact records for History, Geography, and the remaining psychology/politics chapters.
+
+
+=================================================================
+BRANCH A — NCERT / CBSE (Class 12 Humanities)
+=================================================================
+
+===== PSYCHOLOGY =====
+Chapter arc: Variations in Psychological Attributes (Intelligence) · Self & Personality · Meeting Life Challenges (Stress) · Psychological Disorders · Therapeutic Approaches · Attitude & Social Cognition · Social Influence & Group Processes.
+
+★ CHAPTER G12PSY-INT — Intelligence & Psychological Attributes — FULLER ANCHOR
+1. METADATA
+• Grade 12 · NCERT · Humanities · Psychology · Unit: Variations in psychological attributes · Prereq: Grade 11 methods & concepts · Difficulty: Medium · Objectives: define intelligence & individual differences; compare major theories; understand IQ and its assessment; discuss culture, and concepts like aptitude, creativity, and emotional intelligence.
+2. TEACHING MATERIAL
+(a) Individual differences & intelligence. People differ in psychological attributes; intelligence is the ability to understand, learn from experience, reason, and adapt to the environment. Definitions vary by theory.
+(b) Theories of intelligence.
+ • Psychometric / Spearman's two-factor: a general factor ‘g’ underlies all intelligent behaviour, plus specific factors ‘s’.
+ • Thurstone's Primary Mental Abilities: intelligence = several independent abilities (verbal, numerical, spatial, reasoning, etc.).
+ • Gardner's Multiple Intelligences: eight relatively independent intelligences — linguistic, logical-mathematical, spatial, musical, bodily-kinaesthetic, interpersonal, intrapersonal, naturalistic.
+ • Sternberg's Triarchic theory: componential (analytical), experiential (creative), contextual (practical) intelligence.
+ • PASS model (Das): intelligence as Planning, Attention-arousal, and Simultaneous-Successive processing.
+(c) IQ & assessment. IQ = (Mental Age / Chronological Age) × 100 (original ratio IQ). IQ scores form a roughly normal distribution (mean ≈ 100). Assessment uses verbal, non-verbal and performance tests, individual or group, and must be reliable, valid and culturally fair. Categories range from intellectual disability to giftedness.
+(d) Culture & intelligence. Western views stress cognitive/analytical skills; Indian (e.g., buddhi) and other traditions include social, emotional and practical competence — intelligence is partly culturally defined.
+(e) Related concepts. Aptitude (potential to acquire a skill), creativity (novel & useful ideas; not identical to IQ), emotional intelligence (perceiving, understanding and regulating emotions — EQ).
+
+FACT/INTERPRETATION/OPINION. FACT: IQ tests yield scores distributed around 100. INTERPRETATION: Gardner argues intelligence is plural, not a single g. OPINION: "IQ tests are useless" — a value/empirical claim requiring evidence and nuance.
+
+A. DEFINITIONS (10)
+intelligence, ‘g’ factor, multiple intelligences, triarchic theory, IQ, mental age, aptitude, creativity, emotional intelligence, reliability.
+
+B. QUESTIONS & ANSWERS
+Easy: What does IQ stand for? (Intelligence Quotient.) Who proposed ‘g’? (Spearman.) Medium: Name Sternberg's three intelligences. (Analytical, creative, practical.) Difficult: How is ratio IQ computed? ((MA/CA)×100.) Application: A child, MA 10, CA 8 — IQ? ((10/8)×100 = 125.) Reasoning: Why must a good test be culturally fair? (To avoid bias against groups unfamiliar with the content.)
+
+C. MCQs (12, abridged)
+IQ = (MA/CA)×100; ‘g’ factor → Spearman; eight intelligences → Gardner; analytical/creative/practical → Sternberg; average IQ ≈ 100; potential to learn a skill = aptitude; novel & useful thinking = creativity; EQ concerns emotions; a consistent test is reliable; a test that measures what it claims is valid; intelligence distribution is roughly normal; PASS model by Das.
+
+D. TRUE/FALSE (6)
+Spearman proposed multiple intelligences. F (Gardner). IQ = (MA/CA)×100. T. Creativity always equals high IQ. F. EQ involves managing emotions. T. A valid test is one that gives consistent scores. F (that's reliability). Intelligence is defined identically across cultures. F.
+
+E. FILL BLANKS (6)
+IQ = (Mental Age/ Age)×100 (Chronological). Spearman's general factor is  (g). Gardner proposed  intelligences (multiple/eight). Sternberg's practical intelligence handles  life (everyday).  intelligence involves understanding emotions (Emotional). A dependable, consistent test is  (reliable).
+
+F/G. SHORT/LONG
+Short: Compute IQ for MA 12, CA 10. (120.) Long (model): "Compare the single-factor and multiple-intelligence views of intelligence." Model — Spearman's psychometric view holds a general factor ‘g’ underlies all intelligent performance, so one summary score is meaningful. Gardner challenges this, arguing for several relatively independent intelligences (linguistic, spatial, musical, interpersonal, etc.), so a single IQ misses a person's diverse strengths. This is an ongoing theoretical debate (interpretation), not a settled fact; each view has evidence and critics.
+
+H. HOTS
+Why might a highly creative person score only average on a standard IQ test? (IQ tests emphasise convergent, not divergent, thinking.) Can two people with the same IQ differ greatly in real-life success? (Yes — practical & emotional intelligence, motivation, opportunity matter.)
+
+I. MISCONCEPTIONS
+"IQ fully determines success" → many factors matter. "Intelligence is fixed and single" → theories dispute this; it's multidimensional and develops. "Creativity = intelligence" → related but distinct.
+
+J. REVISION
+Definitions & individual differences; theories (Spearman g, Thurstone PMA, Gardner MI, Sternberg triarchic, PASS); IQ & normal distribution; test qualities (reliable/valid/fair); culture; aptitude, creativity, EQ.
+
+ADAPTIVE — "multiple intelligences"
+L1: "There are many kinds of being smart, not just one." L2: "Gardner says people can be intelligent in different ways — with words, numbers, music, movement, understanding others, and more — so a single IQ number is too narrow." L3: "Gardner's theory posits several relatively autonomous intelligences with distinct neural and developmental profiles, challenging a unitary g." L4: "Intelligence is like a dashboard with many gauges — verbal, spatial, musical, social — not a single fuel meter." L5: "A gifted dancer, a math whiz, and an empathetic counsellor are each 'intelligent' in a different domain — that's multiple intelligences in real life."
+``json
+{"messages":[{"role":"user","content":"Explain the main theories of intelligence for a Class 12 student."},{"role":"assistant","content":"Several theories explain intelligence differently: (1) Spearman's TWO-FACTOR view — a general factor 'g' powers all intelligent behaviour, plus specific 's' factors. (2) Thurstone's PRIMARY MENTAL ABILITIES — several independent abilities like verbal and numerical. (3) Gardner's MULTIPLE INTELLIGENCES — eight kinds (linguistic, logical-mathematical, spatial, musical, bodily, interpersonal, intrapersonal, naturalistic). (4) Sternberg's TRIARCHIC theory — analytical, creative and practical intelligence. (5) PASS model — Planning, Attention, and Simultaneous-Successive processing. The debate over whether intelligence is one thing or many is an interpretive one, still discussed by psychologists."}]}
+{"messages":[{"role":"user","content":"Calculate IQ if mental age is 10 and chronological age is 8."},{"role":"assistant","content":"Using ratio IQ = (Mental Age ÷ Chronological Age) × 100 = (10 ÷ 8) × 100 = 1.25 × 100 = 125. An IQ of 125 is above average (the mean is about 100). Note that modern tests use 'deviation IQ' comparing to age peers, but this ratio formula is the classic method taught here."}]}
+`
+
+PSYCHOLOGY — Remaining chapters (compact)
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Psychology  |  CHAPTER: Self & Personality  |  CONCEPT: Personality theories
+EXPLANATION: Self-concept/esteem; type & trait approaches (Big Five); psychodynamic (Freud), humanistic (Rogers/Maslow), behavioural, cultural; assessment (interview, projective — Rorschach/TAT, self-report).  |  QUESTION: The Big Five includes openness, conscientiousness, extraversion, agreeableness and? ANSWER: Neuroticism.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Psychology  |  CHAPTER: Stress / Psychological Disorders / Therapies  |  CONCEPT: Mental health & treatment
+EXPLANATION: Stress (types, GAS, coping); classification of disorders (anxiety, mood, schizophrenia, etc.); therapeutic approaches (psychodynamic, behaviour, cognitive/CBT, humanistic, biomedical). Educational/informational framing.  |  QUESTION: CBT targets which two things? ANSWER: Thoughts and behaviours.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Psychology  |  CHAPTER: Attitude & Social Cognition / Social Influence & Group Processes  |  CONCEPT: Social psychology
+EXPLANATION: Attitude formation & change; attribution, prejudice & stereotypes; conformity, obedience, cooperation; group dynamics, leadership.  |  QUESTION: Yielding to group pressure is? ANSWER: Conformity.  |  DIFFICULTY: Medium
+
+===== POLITICAL SCIENCE =====
+
+★ CHAPTER G12PS-COLDWAR — The Cold War & the Changing World Order — FULLER ANCHOR
+METADATA. Grade 12 · NCERT · Political Science · Unit: Contemporary World Politics · Prereq: WWII basics · Difficulty: Medium · Objectives: explain the Cold War & bipolarity; non-alignment; the end of bipolarity; US hegemony and emerging multipolarity — with FACT/INTERPRETATION/OPINION.
+TEACHING.
+• The Cold War (1945–1991). After WWII, two superpowers — the USA (capitalist bloc, NATO) and the USSR (communist bloc, Warsaw Pact) — competed globally without direct war (hence "cold"), through arms races, ideology, alliances and proxy conflicts (Korea, Vietnam, Cuba). Deterrence and the fear of mutual destruction (nuclear weapons) restrained direct war.
+• Bipolarity. The world was largely organised around these two poles; smaller states often aligned with one.
+• Non-Aligned Movement (NAM). Many newly independent nations (India, Egypt, Yugoslavia, Indonesia, Ghana — Nehru, Nasser, Tito) chose not to join either bloc, keeping independent foreign policy and promoting decolonisation and development. NAM was not neutrality/passivity but active engagement on their own terms.
+• End of the Cold War. The USSR's economic weaknesses, reforms (glasnost, perestroika), and popular movements led to the collapse of the Soviet Union (1991) and the end of bipolarity.
+• After bipolarity. The US emerged as the sole superpower (hegemony); globalisation deepened; new centres (EU, China, India, Russia) point toward multipolarity. Debates continue on US dominance, its limits, and a shifting order.
+FACT/INTERPRETATION/OPINION. FACT: The USSR dissolved in 1991. INTERPRETATION: Historians debate the relative weight of economic vs ideological causes. OPINION: "A unipolar world is best for peace" — a contested value judgement.
+DEFINITIONS (8). Cold War, bipolarity, superpower, deterrence, Non-Aligned Movement, hegemony, multipolarity, proxy war.
+Q&A. Easy: Which two superpowers led the Cold War? (USA & USSR.) When did the USSR collapse? (1991.) Medium: What was NAM's stance? (Non-alignment with either bloc, independent policy.) Application: Why were conflicts like Vietnam called "proxy wars"? (Superpowers backed opposing sides without fighting each other directly.) Reasoning: Why did nuclear weapons restrain direct war? (Mutual assured destruction — deterrence.)
+MCQs (8, abridged). Cold War poles: USA & USSR; military bloc of the West: NATO; India's stance: non-aligned; USSR collapse year: 1991; single dominant power: hegemony/unipolarity; fear-based restraint: deterrence; NAM leaders included Nehru, Nasser and Tito; conflicts fought via allies: proxy wars.
+HOTS. Was non-alignment a sign of weakness or strategy? (A reasoned strategy for autonomy — present both views.) Is today's world unipolar or multipolar? (Contested — evidence for both; an interpretive debate.)
+MISCONCEPTIONS. "Cold War had no fighting" → there were proxy wars, just not direct superpower war. "Non-alignment meant staying neutral/inactive" → it was active independent engagement.
+REVISION. Cold War & bipolarity; NATO/Warsaw Pact; deterrence; NAM; 1991 collapse; US hegemony → emerging multipolarity; FACT/INTERPRETATION/OPINION.
+ADAPTIVE — "non-alignment". L1: "Non-alignment meant not joining either superpower's side." L2: "Newly free nations like India refused to permanently join the US or Soviet bloc, keeping the freedom to decide each issue on its merits." L3: "Non-alignment was a foreign-policy doctrine asserting strategic autonomy and active agency for post-colonial states within a bipolar order." L4: "It's like refusing to permanently join either of two rival gangs at school — staying friendly-but-independent so you keep your own voice." L5: "India's ability to trade and talk with both blocs during the Cold War, without being anyone's satellite, is non-alignment in practice."
+`json
+{"messages":[{"role":"user","content":"Explain the Cold War and non-alignment for a Class 12 exam."},{"role":"assistant","content":"The COLD WAR (1945–1991) was an intense global rivalry between two superpowers — the capitalist USA (with NATO) and the communist USSR (with the Warsaw Pact). They never fought each other directly (nuclear deterrence made that catastrophic), but competed through arms races, ideology, alliances and PROXY WARS (Korea, Vietnam). The world was BIPOLAR — organised around two poles. NON-ALIGNMENT was the response of many newly independent nations (India, Egypt, Yugoslavia) who refused to permanently join either bloc, preserving independent foreign policy. It wasn't passive neutrality but active engagement on their own terms. The USSR's collapse in 1991 ended bipolarity, leaving the US as the dominant power."}]}
+`
+
+POLITICAL SCIENCE — Remaining (compact)
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Political Science  |  CONCEPT: Contemporary World Politics
+EXPLANATION: US hegemony & its limits; power centres (EU, ASEAN, China); South Asia & India's neighbours; UN & international organisations; globalisation; environment & resource politics. FACT/INTERPRETATION/OPINION flagged.  |  QUESTION: Which body is the UN's primary security organ? ANSWER: The Security Council.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Political Science  |  CONCEPT: Politics in India since Independence
+EXPLANATION: Nation-building & integration; Congress dominance & its decline; planned development; regional aspirations; the Emergency (1975–77); coalition era & recent trends. FACT/INTERPRETATION/OPINION flagged.  |  QUESTION: In which years was the Emergency declared? ANSWER: 1975–1977.  |  DIFFICULTY: Medium
+
+===== SOCIOLOGY =====
+
+★ CHAPTER G12SO-INDIA — Indian Society & Social Change — FULLER ANCHOR
+METADATA. Grade 12 · NCERT · Sociology · Unit: Indian Society / Social Change & Development · Prereq: Grade 11 foundations · Difficulty: Medium · Objectives: understand India's demographic structure; caste, tribe, class, family; social change processes; the impact of colonialism, industrialisation, urbanisation, globalisation; movements.
+TEACHING.
+• Demographic structure. Population size, growth, sex ratio, age structure; the demographic dividend (a large working-age population) and its challenges. Concepts: birth/death rate, fertility, migration.
+• Social institutions in India. Caste (a system of hereditary, ranked groups; changing but persistent), tribe (distinct communities, often outside caste), family & kinship (joint vs nuclear; regional diversity), class (economic strata), gender (patriarchy and change).
+• Structural change & colonialism. British rule reshaped the economy (deindustrialisation, land systems), introduced modern institutions, and created new classes.
+• Processes of change. Sanskritisation (lower groups adopting higher-caste practices to raise status), Westernisation (adopting Western lifestyles/values), modernisation, secularisation, urbanisation and industrialisation — each with mixed effects.
+• Development & its costs. Planned development, the Green Revolution (higher output, but regional/ecological concerns), industrialisation, displacement, and environmental impact.
+• Social movements. Peasant, workers', women's, environmental, and caste/tribal movements as agents of change.
+FACT/INTERPRETATION/OPINION. FACT: India's 2011 Census recorded specific population figures. INTERPRETATION: Sociologists debate whether caste is weakening or merely changing form. OPINION: "Urbanisation is destroying Indian culture" — a value judgement.
+DEFINITIONS (10). demography, sex ratio, demographic dividend, caste, tribe, class, Sanskritisation, Westernisation, urbanisation, social movement.
+Q&A. Easy: What is the sex ratio? (Females per 1000 males.) Define a social movement. (Organised collective effort for/against change.) Medium: What is Sanskritisation? Difficult: Distinguish Westernisation and modernisation. Application: How can a "demographic dividend" become a burden? (If jobs/education don't match the youth bulge.) Reasoning: Why say caste is "changing, not vanishing"? (Its ritual form weakens, but it persists in politics, marriage, inequality.)
+MCQs (10, abridged). Females per 1000 males: sex ratio; large working-age population: demographic dividend; hereditary ranked groups: caste; adopting higher-caste practices: Sanskritisation; adopting Western ways: Westernisation; shift to city living: urbanisation; study of population: demography; Green Revolution raised agricultural output; organised push for change: social movement; joint vs nuclear concerns the family.
+T/F (5). Sanskritisation is adopting Western dress. F. Sex ratio = females per 1000 males. T. A demographic dividend is automatically beneficial. F (needs jobs/education). Caste has completely disappeared. F. Social movements can drive change. T.
+FILL BLANKS (5). Females per 1000 males is the  (sex ratio). Lower groups emulating higher castes =  (Sanskritisation). A youthful working-age bulge is the demographic  (dividend). Movement to cities is  (urbanisation). Organised collective action for change is a  (social movement).
+HOTS. How can development simultaneously reduce poverty and cause displacement? (Dams/industry raise output but uproot communities — a trade-off.) Why might the same reform (Green Revolution) be judged success and failure? (Higher yields vs inequality/ecological costs — interpretive.)
+MISCONCEPTIONS. "Caste = only religion" → it's a social-structural system affecting economy/politics. "Modernisation = Westernisation" → related but distinct. "Demographic dividend guarantees growth" → only if productively employed.
+REVISION. Demography & dividend; caste/tribe/class/family/gender; colonial structural change; Sanskritisation/Westernisation/modernisation/urbanisation; development costs; social movements.
+ADAPTIVE — "Sanskritisation". L1: "Lower-status groups copying higher-caste customs to raise their standing." L2: "Coined by M.N. Srinivas: a caste or group adopts the rituals, diet and lifestyle of a higher caste to claim higher social status over time." L3: "Sanskritisation is a process of positional mobility within the caste hierarchy via cultural emulation, without altering the structure itself." L4: "It's like adopting the manners of a more prestigious group to be accepted among them — climbing the ladder by imitation." L5: "A community shifting to vegetarianism or new rituals to be seen as higher-status illustrates Sanskritisation in Indian society."
+`json
+{"messages":[{"role":"user","content":"Explain Sanskritisation and Westernisation with the difference."},{"role":"assistant","content":"Both are processes of social change M.N. Srinivas described. SANSKRITISATION is when a lower or middle caste/group adopts the customs, rituals, diet and lifestyle of a higher caste to raise its social status WITHIN the caste system — positional mobility without changing the structure. WESTERNISATION is the adoption of Western lifestyles, values, technology and institutions (dress, education, ideas) due to contact with the West, especially under colonial rule. Key difference: Sanskritisation looks 'upward' inside Indian caste hierarchy; Westernisation looks 'outward' toward Western culture."}]}
+``
+
+SOCIOLOGY — Remaining (compact)
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Sociology  |  CONCEPT: Social change & development in India
+EXPLANATION: Structural change; cultural change; social order & change; industrial society & work; globalisation's social impact; mass media & communication; social movements (environmental, women's, worker, peasant).  |  QUESTION: Give one social movement in India. ANSWER: Chipko (environmental) movement.  |  DIFFICULTY: Medium
+
+===== HISTORY, GEOGRAPHY (compact) =====
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  History (Themes in Indian History)  |  CONCEPT: Sources & major themes across eras
+EXPLANATION: Harappan archaeology; kingship/kinship & early societies (Mahabharata); Buddhism & sacred sites; Vijayanagara; Mughal agrarian & court chronicles; colonialism & rebellions; Partition oral history; the making of the Constitution. Emphasis on how historians read sources (FACT vs INTERPRETATION).  |  QUESTION: Why use oral histories for Partition? ANSWER: To capture experiences absent from official records.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Geography (Human Geography)  |  CONCEPT: People, activities, development
+EXPLANATION: Nature of human geography; population (growth, composition, migration); human development (HDI); primary/secondary/tertiary/quaternary activities; transport, trade & communication; India — people, resources & economy.  |  QUESTION: HDI combines income, education and? ANSWER: Health (life expectancy).  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Economics (Arts also takes it)  |  CONCEPT: Cross-reference
+EXPLANATION: Introductory Micro & Macro (national income, money & banking, budget, markets) are taught to Arts students too — see Batch 9 (Grade 12 Commerce/Economics) for full treatment.  |  QUESTION: GNP = GDP + ? ANSWER: Net factor income from abroad.  |  DIFFICULTY: Medium
+
+
+=================================================================
+BRANCH B — MAHARASHTRA HSC ARTS (Std 12)
+=================================================================
+Std 12 Arts: History, Political Science, Geography, Sociology, Psychology, Economics, Logic (optional). Parallels NCERT with Balbharati framing and Maharashtra/India context. Kept separate.
+
+RECORDTYPE: LESSON  |  GRADE 12  |  Maharashtra  |  History  |  CONCEPT: Modern India & the world
+EXPLANATION: Freedom struggle & post-independence India; Maharashtra's role; applied history/heritage; source interpretation (FACT/INTERPRETATION/OPINION).  |  QUESTION: India became a republic on? ANSWER: 26 January 1950.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 12  |  Maharashtra  |  Political Science  |  CONCEPT: Post-WWII world & Indian politics
+EXPLANATION: Cold War & after; international relations; India's foreign policy; contemporary Indian political processes; global issues.  |  QUESTION: India's Cold War policy? ANSWER: Non-alignment.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 12  |  Maharashtra  |  Sociology  |  CONCEPT: Indian society & change
+EXPLANATION: Social structure & institutions; social change; movements; problems (inequality, communalism); Sanskritisation/Westernisation; Indian society specifics.  |  QUESTION: Study of population? ANSWER: Demography.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 12  |  Maharashtra  |  Psychology  |  CONCEPT: Applied psychology
+EXPLANATION: Intelligence & personality; stress & health; disorders & therapies (informational); social psychology; psychology of adjustment.  |  QUESTION: IQ formula? ANSWER: (MA/CA)×100.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 12  |  Maharashtra  |  Logic (optional)  |  CONCEPT: Deductive & symbolic logic
+EXPLANATION: Categorical syllogism & rules; propositional/symbolic logic, truth-tables; decision procedures; grounds of induction.  |  QUESTION: A valid argument with all true premises is? ANSWER: Sound.  |  DIFFICULTY: Medium
+Difference to preserve: Maharashtra Arts offers Logic as a distinct subject with symbolic-logic/truth-table content and centres Maharashtra/India context; sequence and language differ from NCERT. Do not merge.
+
+
+=================================================================
+BATCH 11 — CONSOLIDATED CROSS-BRANCH LESSON RECORDS
+=================================================================
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Psychology  |  UNIT: Psychological attributes  |  CHAPTER: Intelligence  |  CONCEPT: Theories & IQ
+EXPLANATION: Intelligence definitions & individual differences; Spearman g, Thurstone PMA, Gardner MI, Sternberg triarchic, PASS; IQ=(MA/CA)×100, normal distribution; reliability/validity/fairness; aptitude, creativity, EQ; culture. FACT/INTERPRETATION/OPINION.  |  EXAMPLE: MA 10, CA 8 → IQ 125  |  APPLICATION: Educational assessment, talent identification  |  COMMONMISCONCEPTION: IQ fully determines success  |  QUESTION: Who gave the 'g' factor?  |  ANSWER: Spearman  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Political Science  |  CHAPTER: Cold War & World Order  |  CONCEPT: Bipolarity, NAM, hegemony
+EXPLANATION: Cold War (USA/USSR), NATO/Warsaw Pact, deterrence, proxy wars; Non-Aligned Movement as active autonomy; 1991 collapse; US hegemony → multipolarity. FACT/INTERPRETATION/OPINION.  |  EXAMPLE: Vietnam as a proxy war  |  APPLICATION: Understanding today's world order  |  COMMONMISCONCEPTION: Non-alignment = passive neutrality  |  QUESTION: USSR collapse year?  |  ANSWER: 1991  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Sociology  |  CHAPTER: Indian Society & Change  |  CONCEPT: Demography, caste/class, change processes
+EXPLANATION: Demographic dividend; caste/tribe/class/family/gender; colonial structural change; Sanskritisation/Westernisation/modernisation/urbanisation; development costs; social movements. FACT/INTERPRETATION/OPINION.  |  EXAMPLE: Green Revolution — output vs inequality  |  APPLICATION: Analysing Indian social change  |  COMMONMISCONCEPTION: Modernisation = Westernisation  |  QUESTION: Emulating higher-caste practices is?  |  ANSWER: Sanskritisation  |  DIFFICULTY: Medium
+
+RECORD_TYPE: LESSON  |  GRADE 12  |  Maharashtra  |  Arts  |  CONCEPT: Distinct Logic subject & local context
+EXPLANATION: Maharashtra HSC Arts offers Logic (symbolic logic, truth-tables) as a standalone subject and foregrounds Maharashtra/India context across History/Political Science/Sociology — distinct from NCERT framing.  |  QUESTION: Truth-tables belong to which subject here?  |  ANSWER: Logic  |  DIFFICULTY: Medium
+
+
+BATCH 11 COVERAGE SUMMARY
+• NCERT Psychology: Intelligence — fuller anchor (theories: Spearman/Thurstone/Gardner/Sternberg/PASS; IQ & distribution; test qualities; aptitude/creativity/EQ; culture) with FACT/INTERPRETATION/OPINION; compact for personality, stress/disorders/therapies (informational), attitude & group processes.
+• NCERT Political Science: Cold War & world order — fuller anchor (bipolarity, NAM, deterrence, 1991, hegemony→multipolarity), evenhanded on contested points; compact for contemporary world politics and Indian politics since independence.
+• NCERT Sociology: Indian society & change — fuller anchor (demography, caste/class/family/gender, Sanskritisation/Westernisation, development costs, movements); compact for social change & development.
+• NCERT History/Geography: compact records stressing source interpretation & human-geography concepts; Economics cross-referenced to Batch 9.
+• Maharashtra HSC Arts (Std 12): parallel subjects with Logic (symbolic logic/truth-tables) preserved as distinct and Maharashtra/India context foregrounded.
+• Boards kept separate; FACT/INTERPRETATION/OPINION and balanced treatment maintained.
+
+END OF BATCH 11. The Arts/Humanities stream (Grades 11–12) is now complete across both boards. Final: BATCH 12 — Maharashtra Bifocal / Vocational (Information Technology, Computer Science, Electronics, Electrical/Mechanical/Automobile Technology, Engineering Drawing, Office/Secretarial, Entrepreneurship — with theory, components, tools, procedures, practicals, troubleshooting, safety, viva & practical-exam questions).

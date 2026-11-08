@@ -1,0 +1,1614 @@
+INTERNATIONAL MORSE CODE
+========================================
+
+Alphabet and digits:
+  A = .-
+  B = -...
+  C = -.-.
+  D = -..
+  E = .
+  F = ..-.
+  G = --.
+  H = ....
+  I = ..
+  J = .---
+  K = -.-
+  L = .-..
+  M = --
+  N = -.
+  O = ---
+  P = .--.
+  Q = --.-
+  R = .-.
+  S = ...
+  T = -
+  U = ..-
+  V = ...-
+  W = .--
+  X = -..-
+  Y = -.--
+  Z = --..
+  0 = -----
+  1 = .----
+  2 = ..---
+  3 = ...--
+  4 = ....-
+  5 = .....
+  6 = -....
+  7 = --...
+  8 = ---..
+  9 = ----.
+  . = .-.-.-
+  , = --..--
+  ? = ..--..
+  / = -..-.
+  = = -...-
+
+Encoding examples (letters separated by space, words by /):
+  TEXT: SOS
+  MORSE: ... --- ...
+  DECODE ... --- ... -> SOS
+
+  TEXT: HELLO WORLD
+  MORSE: .... . .-.. .-.. --- / .-- --- .-. .-.. -..
+  DECODE .... . .-.. .-.. --- / .-- --- .-. .-.. -.. -> HELLO WORLD
+
+  TEXT: BRAINAI
+  MORSE: -... .-. .- .. -. .- ..
+  DECODE -... .-. .- .. -. .- .. -> BRAINAI
+
+  TEXT: MOHAMMED ZAHID
+  MORSE: -- --- .... .- -- -- . -.. / --.. .- .... .. -..
+  DECODE -- --- .... .- -- -- . -.. / --.. .- .... .. -.. -> MOHAMMED ZAHID
+
+  TEXT: MAYDAY
+  MORSE: -- .- -.-- -.. .- -.--
+  DECODE -- .- -.-- -.. .- -.-- -> MAYDAY
+
+  TEXT: CQ CQ
+  MORSE: -.-. --.- / -.-. --.-
+  DECODE -.-. --.- / -.-. --.- -> CQ CQ
+
+  TEXT: THE QUICK BROWN FOX
+  MORSE: - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..-
+  DECODE - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..- -> THE QUICK BROWN FOX
+
+  TEXT: MORSE CODE
+  MORSE: -- --- .-. ... . / -.-. --- -.. .
+  DECODE -- --- .-. ... . / -.-. --- -.. . -> MORSE CODE
+
+  TEXT: 73 DE OP
+  MORSE: --... ...-- / -.. . / --- .--.
+  DECODE --... ...-- / -.. . / --- .--. -> 73 DE OP
+
+  TEXT: ATTENTION
+  MORSE: .- - - . -. - .. --- -.
+  DECODE .- - - . -. - .. --- -. -> ATTENTION
+
+  TEXT: SPIKING NEURAL NETWORK
+  MORSE: ... .--. .. -.- .. -. --. / -. . ..- .-. .- .-.. / -. . - .-- --- .-. -.-
+  DECODE ... .--. .. -.- .. -. --. / -. . ..- .-. .- .-.. / -. . - .-- --- .-. -.- -> SPIKING NEURAL NETWORK
+
+  TEXT: ADAPTIVE MEMORY SPIKE ACTIVATION
+  MORSE: .- -.. .- .--. - .. ...- . / -- . -- --- .-. -.-- / ... .--. .. -.- . / .- -.-. - .. ...- .- - .. --- -.
+  DECODE .- -.. .- .--. - .. ...- . / -- . -- --- .-. -.-- / ... .--. .. -.- . / .- -.-. - .. ...- .- - .. --- -. -> ADAPTIVE MEMORY SPIKE ACTIVATION
+
+Morse timing (in dot units):
+  dot = 1 unit; dash = 3 units
+  gap between symbols in a letter = 1 unit
+  gap between letters = 3 units; gap between words = 7 units
+
+
+INTERNATIONAL MORSE CODE
+========================================
+
+Alphabet and digits:
+  A = .-
+  B = -...
+  C = -.-.
+  D = -..
+  E = .
+  F = ..-.
+  G = --.
+  H = ....
+  I = ..
+  J = .---
+  K = -.-
+  L = .-..
+  M = --
+  N = -.
+  O = ---
+  P = .--.
+  Q = --.-
+  R = .-.
+  S = ...
+  T = -
+  U = ..-
+  V = ...-
+  W = .--
+  X = -..-
+  Y = -.--
+  Z = --..
+  0 = -----
+  1 = .----
+  2 = ..---
+  3 = ...--
+  4 = ....-
+  5 = .....
+  6 = -....
+  7 = --...
+  8 = ---..
+  9 = ----.
+  . = .-.-.-
+  , = --..--
+  ? = ..--..
+  / = -..-.
+  = = -...-
+
+Encoding examples (letters separated by space, words by /):
+  TEXT: SOS
+  MORSE: ... --- ...
+  DECODE ... --- ... -> SOS
+
+  TEXT: HELLO WORLD
+  MORSE: .... . .-.. .-.. --- / .-- --- .-. .-.. -..
+  DECODE .... . .-.. .-.. --- / .-- --- .-. .-.. -.. -> HELLO WORLD
+
+  TEXT: BRAINAI
+  MORSE: -... .-. .- .. -. .- ..
+  DECODE -... .-. .- .. -. .- .. -> BRAINAI
+
+  TEXT: MOHAMMED ZAHID
+  MORSE: -- --- .... .- -- -- . -.. / --.. .- .... .. -..
+  DECODE -- --- .... .- -- -- . -.. / --.. .- .... .. -.. -> MOHAMMED ZAHID
+
+  TEXT: MAYDAY
+  MORSE: -- .- -.-- -.. .- -.--
+  DECODE -- .- -.-- -.. .- -.-- -> MAYDAY
+
+  TEXT: CQ CQ
+  MORSE: -.-. --.- / -.-. --.-
+  DECODE -.-. --.- / -.-. --.- -> CQ CQ
+
+  TEXT: THE QUICK BROWN FOX
+  MORSE: - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..-
+  DECODE - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..- -> THE QUICK BROWN FOX
+
+  TEXT: MORSE CODE
+  MORSE: -- --- .-. ... . / -.-. --- -.. .
+  DECODE -- --- .-. ... . / -.-. --- -.. . -> MORSE CODE
+
+  TEXT: 73 DE OP
+  MORSE: --... ...-- / -.. . / --- .--.
+  DECODE --... ...-- / -.. . / --- .--. -> 73 DE OP
+
+  TEXT: ATTENTION
+  MORSE: .- - - . -. - .. --- -.
+  DECODE .- - - . -. - .. --- -. -> ATTENTION
+
+  TEXT: SPIKING NEURAL NETWORK
+  MORSE: ... .--. .. -.- .. -. --. / -. . ..- .-. .- .-.. / -. . - .-- --- .-. -.-
+  DECODE ... .--. .. -.- .. -. --. / -. . ..- .-. .- .-.. / -. . - .-- --- .-. -.- -> SPIKING NEURAL NETWORK
+
+  TEXT: ADAPTIVE MEMORY SPIKE ACTIVATION
+  MORSE: .- -.. .- .--. - .. ...- . / -- . -- --- .-. -.-- / ... .--. .. -.- . / .- -.-. - .. ...- .- - .. --- -.
+  DECODE .- -.. .- .--. - .. ...- . / -- . -- --- .-. -.-- / ... .--. .. -.- . / .- -.-. - .. ...- .- - .. --- -. -> ADAPTIVE MEMORY SPIKE ACTIVATION
+
+Morse timing (in dot units):
+  dot = 1 unit; dash = 3 units
+  gap between symbols in a letter = 1 unit
+  gap between letters = 3 units; gap between words = 7 units
+
+
+INTERNATIONAL MORSE CODE
+========================================
+
+Alphabet and digits:
+  A = .-
+  B = -...
+  C = -.-.
+  D = -..
+  E = .
+  F = ..-.
+  G = --.
+  H = ....
+  I = ..
+  J = .---
+  K = -.-
+  L = .-..
+  M = --
+  N = -.
+  O = ---
+  P = .--.
+  Q = --.-
+  R = .-.
+  S = ...
+  T = -
+  U = ..-
+  V = ...-
+  W = .--
+  X = -..-
+  Y = -.--
+  Z = --..
+  0 = -----
+  1 = .----
+  2 = ..---
+  3 = ...--
+  4 = ....-
+  5 = .....
+  6 = -....
+  7 = --...
+  8 = ---..
+  9 = ----.
+  . = .-.-.-
+  , = --..--
+  ? = ..--..
+  / = -..-.
+  = = -...-
+
+Encoding examples (letters separated by space, words by /):
+  TEXT: SOS
+  MORSE: ... --- ...
+  DECODE ... --- ... -> SOS
+
+  TEXT: HELLO WORLD
+  MORSE: .... . .-.. .-.. --- / .-- --- .-. .-.. -..
+  DECODE .... . .-.. .-.. --- / .-- --- .-. .-.. -.. -> HELLO WORLD
+
+  TEXT: BRAINAI
+  MORSE: -... .-. .- .. -. .- ..
+  DECODE -... .-. .- .. -. .- .. -> BRAINAI
+
+  TEXT: MOHAMMED ZAHID
+  MORSE: -- --- .... .- -- -- . -.. / --.. .- .... .. -..
+  DECODE -- --- .... .- -- -- . -.. / --.. .- .... .. -.. -> MOHAMMED ZAHID
+
+  TEXT: MAYDAY
+  MORSE: -- .- -.-- -.. .- -.--
+  DECODE -- .- -.-- -.. .- -.-- -> MAYDAY
+
+  TEXT: CQ CQ
+  MORSE: -.-. --.- / -.-. --.-
+  DECODE -.-. --.- / -.-. --.- -> CQ CQ
+
+  TEXT: THE QUICK BROWN FOX
+  MORSE: - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..-
+  DECODE - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..- -> THE QUICK BROWN FOX
+
+  TEXT: MORSE CODE
+  MORSE: -- --- .-. ... . / -.-. --- -.. .
+  DECODE -- --- .-. ... . / -.-. --- -.. . -> MORSE CODE
+
+  TEXT: 73 DE OP
+  MORSE: --... ...-- / -.. . / --- .--.
+  DECODE --... ...-- / -.. . / --- .--. -> 73 DE OP
+
+  TEXT: ATTENTION
+  MORSE: .- - - . -. - .. --- -.
+  DECODE .- - - . -. - .. --- -. -> ATTENTION
+
+  TEXT: SPIKING NEURAL NETWORK
+  MORSE: ... .--. .. -.- .. -. --. / -. . ..- .-. .- .-.. / -. . - .-- --- .-. -.-
+  DECODE ... .--. .. -.- .. -. --. / -. . ..- .-. .- .-.. / -. . - .-- --- .-. -.- -> SPIKING NEURAL NETWORK
+
+  TEXT: ADAPTIVE MEMORY SPIKE ACTIVATION
+  MORSE: .- -.. .- .--. - .. ...- . / -- . -- --- .-. -.-- / ... .--. .. -.- . / .- -.-. - .. ...- .- - .. --- -.
+  DECODE .- -.. .- .--. - .. ...- . / -- . -- --- .-. -.-- / ... .--. .. -.- . / .- -.-. - .. ...- .- - .. --- -. -> ADAPTIVE MEMORY SPIKE ACTIVATION
+
+Morse timing (in dot units):
+  dot = 1 unit; dash = 3 units
+  gap between symbols in a letter = 1 unit
+  gap between letters = 3 units; gap between words = 7 units
+
+
+INTERNATIONAL MORSE CODE
+========================================
+
+Alphabet and digits:
+  A = .-
+  B = -...
+  C = -.-.
+  D = -..
+  E = .
+  F = ..-.
+  G = --.
+  H = ....
+  I = ..
+  J = .---
+  K = -.-
+  L = .-..
+  M = --
+  N = -.
+  O = ---
+  P = .--.
+  Q = --.-
+  R = .-.
+  S = ...
+  T = -
+  U = ..-
+  V = ...-
+  W = .--
+  X = -..-
+  Y = -.--
+  Z = --..
+  0 = -----
+  1 = .----
+  2 = ..---
+  3 = ...--
+  4 = ....-
+  5 = .....
+  6 = -....
+  7 = --...
+  8 = ---..
+  9 = ----.
+  . = .-.-.-
+  , = --..--
+  ? = ..--..
+  / = -..-.
+  = = -...-
+
+Encoding examples (letters separated by space, words by /):
+  TEXT: SOS
+  MORSE: ... --- ...
+  DECODE ... --- ... -> SOS
+
+  TEXT: HELLO WORLD
+  MORSE: .... . .-.. .-.. --- / .-- --- .-. .-.. -..
+  DECODE .... . .-.. .-.. --- / .-- --- .-. .-.. -.. -> HELLO WORLD
+
+  TEXT: BRAINAI
+  MORSE: -... .-. .- .. -. .- ..
+  DECODE -... .-. .- .. -. .- .. -> BRAINAI
+
+  TEXT: MOHAMMED ZAHID
+  MORSE: -- --- .... .- -- -- . -.. / --.. .- .... .. -..
+  DECODE -- --- .... .- -- -- . -.. / --.. .- .... .. -.. -> MOHAMMED ZAHID
+
+  TEXT: MAYDAY
+  MORSE: -- .- -.-- -.. .- -.--
+  DECODE -- .- -.-- -.. .- -.-- -> MAYDAY
+
+  TEXT: CQ CQ
+  MORSE: -.-. --.- / -.-. --.-
+  DECODE -.-. --.- / -.-. --.- -> CQ CQ
+
+  TEXT: THE QUICK BROWN FOX
+  MORSE: - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..-
+  DECODE - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..- -> THE QUICK BROWN FOX
+
+  TEXT: MORSE CODE
+  MORSE: -- --- .-. ... . / -.-. --- -.. .
+  DECODE -- --- .-. ... . / -.-. --- -.. . -> MORSE CODE
+
+  TEXT: 73 DE OP
+  MORSE: --... ...-- / -.. . / --- .--.
+  DECODE --... ...-- / -.. . / --- .--. -> 73 DE OP
+
+  TEXT: ATTENTION
+  MORSE: .- - - . -. - .. --- -.
+  DECODE .- - - . -. - .. --- -. -> ATTENTION
+
+  TEXT: SPIKING NEURAL NETWORK
+  MORSE: ... .--. .. -.- .. -. --. / -. . ..- .-. .- .-.. / -. . - .-- --- .-. -.-
+  DECODE ... .--. .. -.- .. -. --. / -. . ..- .-. .- .-.. / -. . - .-- --- .-. -.- -> SPIKING NEURAL NETWORK
+
+  TEXT: ADAPTIVE MEMORY SPIKE ACTIVATION
+  MORSE: .- -.. .- .--. - .. ...- . / -- . -- --- .-. -.-- / ... .--. .. -.- . / .- -.-. - .. ...- .- - .. --- -.
+  DECODE .- -.. .- .--. - .. ...- . / -- . -- --- .-. -.-- / ... .--. .. -.- . / .- -.-. - .. ...- .- - .. --- -. -> ADAPTIVE MEMORY SPIKE ACTIVATION
+
+Morse timing (in dot units):
+  dot = 1 unit; dash = 3 units
+  gap between symbols in a letter = 1 unit
+  gap between letters = 3 units; gap between words = 7 units
+
+
+INTERNATIONAL MORSE CODE
+========================================
+
+Alphabet and digits:
+  A = .-
+  B = -...
+  C = -.-.
+  D = -..
+  E = .
+  F = ..-.
+  G = --.
+  H = ....
+  I = ..
+  J = .---
+  K = -.-
+  L = .-..
+  M = --
+  N = -.
+  O = ---
+  P = .--.
+  Q = --.-
+  R = .-.
+  S = ...
+  T = -
+  U = ..-
+  V = ...-
+  W = .--
+  X = -..-
+  Y = -.--
+  Z = --..
+  0 = -----
+  1 = .----
+  2 = ..---
+  3 = ...--
+  4 = ....-
+  5 = .....
+  6 = -....
+  7 = --...
+  8 = ---..
+  9 = ----.
+  . = .-.-.-
+  , = --..--
+  ? = ..--..
+  / = -..-.
+  = = -...-
+
+Encoding examples (letters separated by space, words by /):
+  TEXT: SOS
+  MORSE: ... --- ...
+  DECODE ... --- ... -> SOS
+
+  TEXT: HELLO WORLD
+  MORSE: .... . .-.. .-.. --- / .-- --- .-. .-.. -..
+  DECODE .... . .-.. .-.. --- / .-- --- .-. .-.. -.. -> HELLO WORLD
+
+  TEXT: BRAINAI
+  MORSE: -... .-. .- .. -. .- ..
+  DECODE -... .-. .- .. -. .- .. -> BRAINAI
+
+  TEXT: MOHAMMED ZAHID
+  MORSE: -- --- .... .- -- -- . -.. / --.. .- .... .. -..
+  DECODE -- --- .... .- -- -- . -.. / --.. .- .... .. -.. -> MOHAMMED ZAHID
+
+  TEXT: MAYDAY
+  MORSE: -- .- -.-- -.. .- -.--
+  DECODE -- .- -.-- -.. .- -.-- -> MAYDAY
+
+  TEXT: CQ CQ
+  MORSE: -.-. --.- / -.-. --.-
+  DECODE -.-. --.- / -.-. --.- -> CQ CQ
+
+  TEXT: THE QUICK BROWN FOX
+  MORSE: - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..-
+  DECODE - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..- -> THE QUICK BROWN FOX
+
+  TEXT: MORSE CODE
+  MORSE: -- --- .-. ... . / -.-. --- -.. .
+  DECODE -- --- .-. ... . / -.-. --- -.. . -> MORSE CODE
+
+  TEXT: 73 DE OP
+  MORSE: --... ...-- / -.. . / --- .--.
+  DECODE --... ...-- / -.. . / --- .--. -> 73 DE OP
+
+  TEXT: ATTENTION
+  MORSE: .- - - . -. - .. --- -.
+  DECODE .- - - . -. - .. --- -. -> ATTENTION
+
+  TEXT: SPIKING NEURAL NETWORK
+  MORSE: ... .--. .. -.- .. -. --. / -. . ..- .-. .- .-.. / -. . - .-- --- .-. -.-
+  DECODE ... .--. .. -.- .. -. --. / -. . ..- .-. .- .-.. / -. . - .-- --- .-. -.- -> SPIKING NEURAL NETWORK
+
+  TEXT: ADAPTIVE MEMORY SPIKE ACTIVATION
+  MORSE: .- -.. .- .--. - .. ...- . / -- . -- --- .-. -.-- / ... .--. .. -.- . / .- -.-. - .. ...- .- - .. --- -.
+  DECODE .- -.. .- .--. - .. ...- . / -- . -- --- .-. -.-- / ... .--. .. -.- . / .- -.-. - .. ...- .- - .. --- -. -> ADAPTIVE MEMORY SPIKE ACTIVATION
+
+Morse timing (in dot units):
+  dot = 1 unit; dash = 3 units
+  gap between symbols in a letter = 1 unit
+  gap between letters = 3 units; gap between words = 7 units
+
+
+INTERNATIONAL MORSE CODE
+========================================
+
+Alphabet and digits:
+  A = .-
+  B = -...
+  C = -.-.
+  D = -..
+  E = .
+  F = ..-.
+  G = --.
+  H = ....
+  I = ..
+  J = .---
+  K = -.-
+  L = .-..
+  M = --
+  N = -.
+  O = ---
+  P = .--.
+  Q = --.-
+  R = .-.
+  S = ...
+  T = -
+  U = ..-
+  V = ...-
+  W = .--
+  X = -..-
+  Y = -.--
+  Z = --..
+  0 = -----
+  1 = .----
+  2 = ..---
+  3 = ...--
+  4 = ....-
+  5 = .....
+  6 = -....
+  7 = --...
+  8 = ---..
+  9 = ----.
+  . = .-.-.-
+  , = --..--
+  ? = ..--..
+  / = -..-.
+  = = -...-
+
+Encoding examples (letters separated by space, words by /):
+  TEXT: SOS
+  MORSE: ... --- ...
+  DECODE ... --- ... -> SOS
+
+  TEXT: HELLO WORLD
+  MORSE: .... . .-.. .-.. --- / .-- --- .-. .-.. -..
+  DECODE .... . .-.. .-.. --- / .-- --- .-. .-.. -.. -> HELLO WORLD
+
+  TEXT: BRAINAI
+  MORSE: -... .-. .- .. -. .- ..
+  DECODE -... .-. .- .. -. .- .. -> BRAINAI
+
+  TEXT: MOHAMMED ZAHID
+  MORSE: -- --- .... .- -- -- . -.. / --.. .- .... .. -..
+  DECODE -- --- .... .- -- -- . -.. / --.. .- .... .. -.. -> MOHAMMED ZAHID
+
+  TEXT: MAYDAY
+  MORSE: -- .- -.-- -.. .- -.--
+  DECODE -- .- -.-- -.. .- -.-- -> MAYDAY
+
+  TEXT: CQ CQ
+  MORSE: -.-. --.- / -.-. --.-
+  DECODE -.-. --.- / -.-. --.- -> CQ CQ
+
+  TEXT: THE QUICK BROWN FOX
+  MORSE: - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..-
+  DECODE - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..- -> THE QUICK BROWN FOX
+
+  TEXT: MORSE CODE
+  MORSE: -- --- .-. ... . / -.-. --- -.. .
+  DECODE -- --- .-. ... . / -.-. --- -.. . -> MORSE CODE
+
+  TEXT: 73 DE OP
+  MORSE: --... ...-- / -.. . / --- .--.
+  DECODE --... ...-- / -.. . / --- .--. -> 73 DE OP
+
+  TEXT: ATTENTION
+  MORSE: .- - - . -. - .. --- -.
+  DECODE .- - - . -. - .. --- -. -> ATTENTION
+
+  TEXT: SPIKING NEURAL NETWORK
+  MORSE: ... .--. .. -.- .. -. --. / -. . ..- .-. .- .-.. / -. . - .-- --- .-. -.-
+  DECODE ... .--. .. -.- .. -. --. / -. . ..- .-. .- .-.. / -. . - .-- --- .-. -.- -> SPIKING NEURAL NETWORK
+
+  TEXT: ADAPTIVE MEMORY SPIKE ACTIVATION
+  MORSE: .- -.. .- .--. - .. ...- . / -- . -- --- .-. -.-- / ... .--. .. -.- . / .- -.-. - .. ...- .- - .. --- -.
+  DECODE .- -.. .- .--. - .. ...- . / -- . -- --- .-. -.-- / ... .--. .. -.- . / .- -.-. - .. ...- .- - .. --- -. -> ADAPTIVE MEMORY SPIKE ACTIVATION
+
+Morse timing (in dot units):
+  dot = 1 unit; dash = 3 units
+  gap between symbols in a letter = 1 unit
+  gap between letters = 3 units; gap between words = 7 units
+
+
+INTERNATIONAL MORSE CODE
+========================================
+
+Alphabet and digits:
+  A = .-
+  B = -...
+  C = -.-.
+  D = -..
+  E = .
+  F = ..-.
+  G = --.
+  H = ....
+  I = ..
+  J = .---
+  K = -.-
+  L = .-..
+  M = --
+  N = -.
+  O = ---
+  P = .--.
+  Q = --.-
+  R = .-.
+  S = ...
+  T = -
+  U = ..-
+  V = ...-
+  W = .--
+  X = -..-
+  Y = -.--
+  Z = --..
+  0 = -----
+  1 = .----
+  2 = ..---
+  3 = ...--
+  4 = ....-
+  5 = .....
+  6 = -....
+  7 = --...
+  8 = ---..
+  9 = ----.
+  . = .-.-.-
+  , = --..--
+  ? = ..--..
+  / = -..-.
+  = = -...-
+
+Encoding examples (letters separated by space, words by /):
+  TEXT: SOS
+  MORSE: ... --- ...
+  DECODE ... --- ... -> SOS
+
+  TEXT: HELLO WORLD
+  MORSE: .... . .-.. .-.. --- / .-- --- .-. .-.. -..
+  DECODE .... . .-.. .-.. --- / .-- --- .-. .-.. -.. -> HELLO WORLD
+
+  TEXT: BRAINAI
+  MORSE: -... .-. .- .. -. .- ..
+  DECODE -... .-. .- .. -. .- .. -> BRAINAI
+
+  TEXT: MOHAMMED ZAHID
+  MORSE: -- --- .... .- -- -- . -.. / --.. .- .... .. -..
+  DECODE -- --- .... .- -- -- . -.. / --.. .- .... .. -.. -> MOHAMMED ZAHID
+
+  TEXT: MAYDAY
+  MORSE: -- .- -.-- -.. .- -.--
+  DECODE -- .- -.-- -.. .- -.-- -> MAYDAY
+
+  TEXT: CQ CQ
+  MORSE: -.-. --.- / -.-. --.-
+  DECODE -.-. --.- / -.-. --.- -> CQ CQ
+
+  TEXT: THE QUICK BROWN FOX
+  MORSE: - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..-
+  DECODE - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..- -> THE QUICK BROWN FOX
+
+  TEXT: MORSE CODE
+  MORSE: -- --- .-. ... . / -.-. --- -.. .
+  DECODE -- --- .-. ... . / -.-. --- -.. . -> MORSE CODE
+
+  TEXT: 73 DE OP
+  MORSE: --... ...-- / -.. . / --- .--.
+  DECODE --... ...-- / -.. . / --- .--. -> 73 DE OP
+
+  TEXT: ATTENTION
+  MORSE: .- - - . -. - .. --- -.
+  DECODE .- - - . -. - .. --- -. -> ATTENTION
+
+  TEXT: SPIKING NEURAL NETWORK
+  MORSE: ... .--. .. -.- .. -. --. / -. . ..- .-. .- .-.. / -. . - .-- --- .-. -.-
+  DECODE ... .--. .. -.- .. -. --. / -. . ..- .-. .- .-.. / -. . - .-- --- .-. -.- -> SPIKING NEURAL NETWORK
+
+  TEXT: ADAPTIVE MEMORY SPIKE ACTIVATION
+  MORSE: .- -.. .- .--. - .. ...- . / -- . -- --- .-. -.-- / ... .--. .. -.- . / .- -.-. - .. ...- .- - .. --- -.
+  DECODE .- -.. .- .--. - .. ...- . / -- . -- --- .-. -.-- / ... .--. .. -.- . / .- -.-. - .. ...- .- - .. --- -. -> ADAPTIVE MEMORY SPIKE ACTIVATION
+
+Morse timing (in dot units):
+  dot = 1 unit; dash = 3 units
+  gap between symbols in a letter = 1 unit
+  gap between letters = 3 units; gap between words = 7 units
+
+
+INTERNATIONAL MORSE CODE
+========================================
+
+Alphabet and digits:
+  A = .-
+  B = -...
+  C = -.-.
+  D = -..
+  E = .
+  F = ..-.
+  G = --.
+  H = ....
+  I = ..
+  J = .---
+  K = -.-
+  L = .-..
+  M = --
+  N = -.
+  O = ---
+  P = .--.
+  Q = --.-
+  R = .-.
+  S = ...
+  T = -
+  U = ..-
+  V = ...-
+  W = .--
+  X = -..-
+  Y = -.--
+  Z = --..
+  0 = -----
+  1 = .----
+  2 = ..---
+  3 = ...--
+  4 = ....-
+  5 = .....
+  6 = -....
+  7 = --...
+  8 = ---..
+  9 = ----.
+  . = .-.-.-
+  , = --..--
+  ? = ..--..
+  / = -..-.
+  = = -...-
+
+Encoding examples (letters separated by space, words by /):
+  TEXT: SOS
+  MORSE: ... --- ...
+  DECODE ... --- ... -> SOS
+
+  TEXT: HELLO WORLD
+  MORSE: .... . .-.. .-.. --- / .-- --- .-. .-.. -..
+  DECODE .... . .-.. .-.. --- / .-- --- .-. .-.. -.. -> HELLO WORLD
+
+  TEXT: BRAINAI
+  MORSE: -... .-. .- .. -. .- ..
+  DECODE -... .-. .- .. -. .- .. -> BRAINAI
+
+  TEXT: MOHAMMED ZAHID
+  MORSE: -- --- .... .- -- -- . -.. / --.. .- .... .. -..
+  DECODE -- --- .... .- -- -- . -.. / --.. .- .... .. -.. -> MOHAMMED ZAHID
+
+  TEXT: MAYDAY
+  MORSE: -- .- -.-- -.. .- -.--
+  DECODE -- .- -.-- -.. .- -.-- -> MAYDAY
+
+  TEXT: CQ CQ
+  MORSE: -.-. --.- / -.-. --.-
+  DECODE -.-. --.- / -.-. --.- -> CQ CQ
+
+  TEXT: THE QUICK BROWN FOX
+  MORSE: - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..-
+  DECODE - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..- -> THE QUICK BROWN FOX
+
+  TEXT: MORSE CODE
+  MORSE: -- --- .-. ... . / -.-. --- -.. .
+  DECODE -- --- .-. ... . / -.-. --- -.. . -> MORSE CODE
+
+  TEXT: 73 DE OP
+  MORSE: --... ...-- / -.. . / --- .--.
+  DECODE --... ...-- / -.. . / --- .--. -> 73 DE OP
+
+  TEXT: ATTENTION
+  MORSE: .- - - . -. - .. --- -.
+  DECODE .- - - . -. - .. --- -. -> ATTENTION
+
+  TEXT: SPIKING NEURAL NETWORK
+  MORSE: ... .--. .. -.- .. -. --. / -. . ..- .-. .- .-.. / -. . - .-- --- .-. -.-
+  DECODE ... .--. .. -.- .. -. --. / -. . ..- .-. .- .-.. / -. . - .-- --- .-. -.- -> SPIKING NEURAL NETWORK
+
+  TEXT: ADAPTIVE MEMORY SPIKE ACTIVATION
+  MORSE: .- -.. .- .--. - .. ...- . / -- . -- --- .-. -.-- / ... .--. .. -.- . / .- -.-. - .. ...- .- - .. --- -.
+  DECODE .- -.. .- .--. - .. ...- . / -- . -- --- .-. -.-- / ... .--. .. -.- . / .- -.-. - .. ...- .- - .. --- -. -> ADAPTIVE MEMORY SPIKE ACTIVATION
+
+Morse timing (in dot units):
+  dot = 1 unit; dash = 3 units
+  gap between symbols in a letter = 1 unit
+  gap between letters = 3 units; gap between words = 7 units
+
+
+INTERNATIONAL MORSE CODE
+========================================
+
+Alphabet and digits:
+  A = .-
+  B = -...
+  C = -.-.
+  D = -..
+  E = .
+  F = ..-.
+  G = --.
+  H = ....
+  I = ..
+  J = .---
+  K = -.-
+  L = .-..
+  M = --
+  N = -.
+  O = ---
+  P = .--.
+  Q = --.-
+  R = .-.
+  S = ...
+  T = -
+  U = ..-
+  V = ...-
+  W = .--
+  X = -..-
+  Y = -.--
+  Z = --..
+  0 = -----
+  1 = .----
+  2 = ..---
+  3 = ...--
+  4 = ....-
+  5 = .....
+  6 = -....
+  7 = --...
+  8 = ---..
+  9 = ----.
+  . = .-.-.-
+  , = --..--
+  ? = ..--..
+  / = -..-.
+  = = -...-
+
+Encoding examples (letters separated by space, words by /):
+  TEXT: SOS
+  MORSE: ... --- ...
+  DECODE ... --- ... -> SOS
+
+  TEXT: HELLO WORLD
+  MORSE: .... . .-.. .-.. --- / .-- --- .-. .-.. -..
+  DECODE .... . .-.. .-.. --- / .-- --- .-. .-.. -.. -> HELLO WORLD
+
+  TEXT: BRAINAI
+  MORSE: -... .-. .- .. -. .- ..
+  DECODE -... .-. .- .. -. .- .. -> BRAINAI
+
+  TEXT: MOHAMMED ZAHID
+  MORSE: -- --- .... .- -- -- . -.. / --.. .- .... .. -..
+  DECODE -- --- .... .- -- -- . -.. / --.. .- .... .. -.. -> MOHAMMED ZAHID
+
+  TEXT: MAYDAY
+  MORSE: -- .- -.-- -.. .- -.--
+  DECODE -- .- -.-- -.. .- -.-- -> MAYDAY
+
+  TEXT: CQ CQ
+  MORSE: -.-. --.- / -.-. --.-
+  DECODE -.-. --.- / -.-. --.- -> CQ CQ
+
+  TEXT: THE QUICK BROWN FOX
+  MORSE: - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..-
+  DECODE - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..- -> THE QUICK BROWN FOX
+
+  TEXT: MORSE CODE
+  MORSE: -- --- .-. ... . / -.-. --- -.. .
+  DECODE -- --- .-. ... . / -.-. --- -.. . -> MORSE CODE
+
+  TEXT: 73 DE OP
+  MORSE: --... ...-- / -.. . / --- .--.
+  DECODE --... ...-- / -.. . / --- .--. -> 73 DE OP
+
+  TEXT: ATTENTION
+  MORSE: .- - - . -. - .. --- -.
+  DECODE .- - - . -. - .. --- -. -> ATTENTION
+
+  TEXT: SPIKING NEURAL NETWORK
+  MORSE: ... .--. .. -.- .. -. --. / -. . ..- .-. .- .-.. / -. . - .-- --- .-. -.-
+  DECODE ... .--. .. -.- .. -. --. / -. . ..- .-. .- .-.. / -. . - .-- --- .-. -.- -> SPIKING NEURAL NETWORK
+
+  TEXT: ADAPTIVE MEMORY SPIKE ACTIVATION
+  MORSE: .- -.. .- .--. - .. ...- . / -- . -- --- .-. -.-- / ... .--. .. -.- . / .- -.-. - .. ...- .- - .. --- -.
+  DECODE .- -.. .- .--. - .. ...- . / -- . -- --- .-. -.-- / ... .--. .. -.- . / .- -.-. - .. ...- .- - .. --- -. -> ADAPTIVE MEMORY SPIKE ACTIVATION
+
+Morse timing (in dot units):
+  dot = 1 unit; dash = 3 units
+  gap between symbols in a letter = 1 unit
+  gap between letters = 3 units; gap between words = 7 units
+
+
+INTERNATIONAL MORSE CODE
+========================================
+
+Alphabet and digits:
+  A = .-
+  B = -...
+  C = -.-.
+  D = -..
+  E = .
+  F = ..-.
+  G = --.
+  H = ....
+  I = ..
+  J = .---
+  K = -.-
+  L = .-..
+  M = --
+  N = -.
+  O = ---
+  P = .--.
+  Q = --.-
+  R = .-.
+  S = ...
+  T = -
+  U = ..-
+  V = ...-
+  W = .--
+  X = -..-
+  Y = -.--
+  Z = --..
+  0 = -----
+  1 = .----
+  2 = ..---
+  3 = ...--
+  4 = ....-
+  5 = .....
+  6 = -....
+  7 = --...
+  8 = ---..
+  9 = ----.
+  . = .-.-.-
+  , = --..--
+  ? = ..--..
+  / = -..-.
+  = = -...-
+
+Encoding examples (letters separated by space, words by /):
+  TEXT: SOS
+  MORSE: ... --- ...
+  DECODE ... --- ... -> SOS
+
+  TEXT: HELLO WORLD
+  MORSE: .... . .-.. .-.. --- / .-- --- .-. .-.. -..
+  DECODE .... . .-.. .-.. --- / .-- --- .-. .-.. -.. -> HELLO WORLD
+
+  TEXT: BRAINAI
+  MORSE: -... .-. .- .. -. .- ..
+  DECODE -... .-. .- .. -. .- .. -> BRAINAI
+
+  TEXT: MOHAMMED ZAHID
+  MORSE: -- --- .... .- -- -- . -.. / --.. .- .... .. -..
+  DECODE -- --- .... .- -- -- . -.. / --.. .- .... .. -.. -> MOHAMMED ZAHID
+
+  TEXT: MAYDAY
+  MORSE: -- .- -.-- -.. .- -.--
+  DECODE -- .- -.-- -.. .- -.-- -> MAYDAY
+
+  TEXT: CQ CQ
+  MORSE: -.-. --.- / -.-. --.-
+  DECODE -.-. --.- / -.-. --.- -> CQ CQ
+
+  TEXT: THE QUICK BROWN FOX
+  MORSE: - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..-
+  DECODE - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..- -> THE QUICK BROWN FOX
+
+  TEXT: MORSE CODE
+  MORSE: -- --- .-. ... . / -.-. --- -.. .
+  DECODE -- --- .-. ... . / -.-. --- -.. . -> MORSE CODE
+
+  TEXT: 73 DE OP
+  MORSE: --... ...-- / -.. . / --- .--.
+  DECODE --... ...-- / -.. . / --- .--. -> 73 DE OP
+
+  TEXT: ATTENTION
+  MORSE: .- - - . -. - .. --- -.
+  DECODE .- - - . -. - .. --- -. -> ATTENTION
+
+  TEXT: SPIKING NEURAL NETWORK
+  MORSE: ... .--. .. -.- .. -. --. / -. . ..- .-. .- .-.. / -. . - .-- --- .-. -.-
+  DECODE ... .--. .. -.- .. -. --. / -. . ..- .-. .- .-.. / -. . - .-- --- .-. -.- -> SPIKING NEURAL NETWORK
+
+  TEXT: ADAPTIVE MEMORY SPIKE ACTIVATION
+  MORSE: .- -.. .- .--. - .. ...- . / -- . -- --- .-. -.-- / ... .--. .. -.- . / .- -.-. - .. ...- .- - .. --- -.
+  DECODE .- -.. .- .--. - .. ...- . / -- . -- --- .-. -.-- / ... .--. .. -.- . / .- -.-. - .. ...- .- - .. --- -. -> ADAPTIVE MEMORY SPIKE ACTIVATION
+
+Morse timing (in dot units):
+  dot = 1 unit; dash = 3 units
+  gap between symbols in a letter = 1 unit
+  gap between letters = 3 units; gap between words = 7 units
+
+
+INTERNATIONAL MORSE CODE
+========================================
+
+Alphabet and digits:
+  A = .-
+  B = -...
+  C = -.-.
+  D = -..
+  E = .
+  F = ..-.
+  G = --.
+  H = ....
+  I = ..
+  J = .---
+  K = -.-
+  L = .-..
+  M = --
+  N = -.
+  O = ---
+  P = .--.
+  Q = --.-
+  R = .-.
+  S = ...
+  T = -
+  U = ..-
+  V = ...-
+  W = .--
+  X = -..-
+  Y = -.--
+  Z = --..
+  0 = -----
+  1 = .----
+  2 = ..---
+  3 = ...--
+  4 = ....-
+  5 = .....
+  6 = -....
+  7 = --...
+  8 = ---..
+  9 = ----.
+  . = .-.-.-
+  , = --..--
+  ? = ..--..
+  / = -..-.
+  = = -...-
+
+Encoding examples (letters separated by space, words by /):
+  TEXT: SOS
+  MORSE: ... --- ...
+  DECODE ... --- ... -> SOS
+
+  TEXT: HELLO WORLD
+  MORSE: .... . .-.. .-.. --- / .-- --- .-. .-.. -..
+  DECODE .... . .-.. .-.. --- / .-- --- .-. .-.. -.. -> HELLO WORLD
+
+  TEXT: BRAINAI
+  MORSE: -... .-. .- .. -. .- ..
+  DECODE -... .-. .- .. -. .- .. -> BRAINAI
+
+  TEXT: MOHAMMED ZAHID
+  MORSE: -- --- .... .- -- -- . -.. / --.. .- .... .. -..
+  DECODE -- --- .... .- -- -- . -.. / --.. .- .... .. -.. -> MOHAMMED ZAHID
+
+  TEXT: MAYDAY
+  MORSE: -- .- -.-- -.. .- -.--
+  DECODE -- .- -.-- -.. .- -.-- -> MAYDAY
+
+  TEXT: CQ CQ
+  MORSE: -.-. --.- / -.-. --.-
+  DECODE -.-. --.- / -.-. --.- -> CQ CQ
+
+  TEXT: THE QUICK BROWN FOX
+  MORSE: - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..-
+  DECODE - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..- -> THE QUICK BROWN FOX
+
+  TEXT: MORSE CODE
+  MORSE: -- --- .-. ... . / -.-. --- -.. .
+  DECODE -- --- .-. ... . / -.-. --- -.. . -> MORSE CODE
+
+  TEXT: 73 DE OP
+  MORSE: --... ...-- / -.. . / --- .--.
+  DECODE --... ...-- / -.. . / --- .--. -> 73 DE OP
+
+  TEXT: ATTENTION
+  MORSE: .- - - . -. - .. --- -.
+  DECODE .- - - . -. - .. --- -. -> ATTENTION
+
+  TEXT: SPIKING NEURAL NETWORK
+  MORSE: ... .--. .. -.- .. -. --. / -. . ..- .-. .- .-.. / -. . - .-- --- .-. -.-
+  DECODE ... .--. .. -.- .. -. --. / -. . ..- .-. .- .-.. / -. . - .-- --- .-. -.- -> SPIKING NEURAL NETWORK
+
+  TEXT: ADAPTIVE MEMORY SPIKE ACTIVATION
+  MORSE: .- -.. .- .--. - .. ...- . / -- . -- --- .-. -.-- / ... .--. .. -.- . / .- -.-. - .. ...- .- - .. --- -.
+  DECODE .- -.. .- .--. - .. ...- . / -- . -- --- .-. -.-- / ... .--. .. -.- . / .- -.-. - .. ...- .- - .. --- -. -> ADAPTIVE MEMORY SPIKE ACTIVATION
+
+Morse timing (in dot units):
+  dot = 1 unit; dash = 3 units
+  gap between symbols in a letter = 1 unit
+  gap between letters = 3 units; gap between words = 7 units
+
+
+INTERNATIONAL MORSE CODE
+========================================
+
+Alphabet and digits:
+  A = .-
+  B = -...
+  C = -.-.
+  D = -..
+  E = .
+  F = ..-.
+  G = --.
+  H = ....
+  I = ..
+  J = .---
+  K = -.-
+  L = .-..
+  M = --
+  N = -.
+  O = ---
+  P = .--.
+  Q = --.-
+  R = .-.
+  S = ...
+  T = -
+  U = ..-
+  V = ...-
+  W = .--
+  X = -..-
+  Y = -.--
+  Z = --..
+  0 = -----
+  1 = .----
+  2 = ..---
+  3 = ...--
+  4 = ....-
+  5 = .....
+  6 = -....
+  7 = --...
+  8 = ---..
+  9 = ----.
+  . = .-.-.-
+  , = --..--
+  ? = ..--..
+  / = -..-.
+  = = -...-
+
+Encoding examples (letters separated by space, words by /):
+  TEXT: SOS
+  MORSE: ... --- ...
+  DECODE ... --- ... -> SOS
+
+  TEXT: HELLO WORLD
+  MORSE: .... . .-.. .-.. --- / .-- --- .-. .-.. -..
+  DECODE .... . .-.. .-.. --- / .-- --- .-. .-.. -.. -> HELLO WORLD
+
+  TEXT: BRAINAI
+  MORSE: -... .-. .- .. -. .- ..
+  DECODE -... .-. .- .. -. .- .. -> BRAINAI
+
+  TEXT: MOHAMMED ZAHID
+  MORSE: -- --- .... .- -- -- . -.. / --.. .- .... .. -..
+  DECODE -- --- .... .- -- -- . -.. / --.. .- .... .. -.. -> MOHAMMED ZAHID
+
+  TEXT: MAYDAY
+  MORSE: -- .- -.-- -.. .- -.--
+  DECODE -- .- -.-- -.. .- -.-- -> MAYDAY
+
+  TEXT: CQ CQ
+  MORSE: -.-. --.- / -.-. --.-
+  DECODE -.-. --.- / -.-. --.- -> CQ CQ
+
+  TEXT: THE QUICK BROWN FOX
+  MORSE: - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..-
+  DECODE - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..- -> THE QUICK BROWN FOX
+
+  TEXT: MORSE CODE
+  MORSE: -- --- .-. ... . / -.-. --- -.. .
+  DECODE -- --- .-. ... . / -.-. --- -.. . -> MORSE CODE
+
+  TEXT: 73 DE OP
+  MORSE: --... ...-- / -.. . / --- .--.
+  DECODE --... ...-- / -.. . / --- .--. -> 73 DE OP
+
+  TEXT: ATTENTION
+  MORSE: .- - - . -. - .. --- -.
+  DECODE .- - - . -. - .. --- -. -> ATTENTION
+
+  TEXT: SPIKING NEURAL NETWORK
+  MORSE: ... .--. .. -.- .. -. --. / -. . ..- .-. .- .-.. / -. . - .-- --- .-. -.-
+  DECODE ... .--. .. -.- .. -. --. / -. . ..- .-. .- .-.. / -. . - .-- --- .-. -.- -> SPIKING NEURAL NETWORK
+
+  TEXT: ADAPTIVE MEMORY SPIKE ACTIVATION
+  MORSE: .- -.. .- .--. - .. ...- . / -- . -- --- .-. -.-- / ... .--. .. -.- . / .- -.-. - .. ...- .- - .. --- -.
+  DECODE .- -.. .- .--. - .. ...- . / -- . -- --- .-. -.-- / ... .--. .. -.- . / .- -.-. - .. ...- .- - .. --- -. -> ADAPTIVE MEMORY SPIKE ACTIVATION
+
+Morse timing (in dot units):
+  dot = 1 unit; dash = 3 units
+  gap between symbols in a letter = 1 unit
+  gap between letters = 3 units; gap between words = 7 units
+
+
+INTERNATIONAL MORSE CODE
+========================================
+
+Alphabet and digits:
+  A = .-
+  B = -...
+  C = -.-.
+  D = -..
+  E = .
+  F = ..-.
+  G = --.
+  H = ....
+  I = ..
+  J = .---
+  K = -.-
+  L = .-..
+  M = --
+  N = -.
+  O = ---
+  P = .--.
+  Q = --.-
+  R = .-.
+  S = ...
+  T = -
+  U = ..-
+  V = ...-
+  W = .--
+  X = -..-
+  Y = -.--
+  Z = --..
+  0 = -----
+  1 = .----
+  2 = ..---
+  3 = ...--
+  4 = ....-
+  5 = .....
+  6 = -....
+  7 = --...
+  8 = ---..
+  9 = ----.
+  . = .-.-.-
+  , = --..--
+  ? = ..--..
+  / = -..-.
+  = = -...-
+
+Encoding examples (letters separated by space, words by /):
+  TEXT: SOS
+  MORSE: ... --- ...
+  DECODE ... --- ... -> SOS
+
+  TEXT: HELLO WORLD
+  MORSE: .... . .-.. .-.. --- / .-- --- .-. .-.. -..
+  DECODE .... . .-.. .-.. --- / .-- --- .-. .-.. -.. -> HELLO WORLD
+
+  TEXT: BRAINAI
+  MORSE: -... .-. .- .. -. .- ..
+  DECODE -... .-. .- .. -. .- .. -> BRAINAI
+
+  TEXT: MOHAMMED ZAHID
+  MORSE: -- --- .... .- -- -- . -.. / --.. .- .... .. -..
+  DECODE -- --- .... .- -- -- . -.. / --.. .- .... .. -.. -> MOHAMMED ZAHID
+
+  TEXT: MAYDAY
+  MORSE: -- .- -.-- -.. .- -.--
+  DECODE -- .- -.-- -.. .- -.-- -> MAYDAY
+
+  TEXT: CQ CQ
+  MORSE: -.-. --.- / -.-. --.-
+  DECODE -.-. --.- / -.-. --.- -> CQ CQ
+
+  TEXT: THE QUICK BROWN FOX
+  MORSE: - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..-
+  DECODE - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..- -> THE QUICK BROWN FOX
+
+  TEXT: MORSE CODE
+  MORSE: -- --- .-. ... . / -.-. --- -.. .
+  DECODE -- --- .-. ... . / -.-. --- -.. . -> MORSE CODE
+
+  TEXT: 73 DE OP
+  MORSE: --... ...-- / -.. . / --- .--.
+  DECODE --... ...-- / -.. . / --- .--. -> 73 DE OP
+
+  TEXT: ATTENTION
+  MORSE: .- - - . -. - .. --- -.
+  DECODE .- - - . -. - .. --- -. -> ATTENTION
+
+  TEXT: SPIKING NEURAL NETWORK
+  MORSE: ... .--. .. -.- .. -. --. / -. . ..- .-. .- .-.. / -. . - .-- --- .-. -.-
+  DECODE ... .--. .. -.- .. -. --. / -. . ..- .-. .- .-.. / -. . - .-- --- .-. -.- -> SPIKING NEURAL NETWORK
+
+  TEXT: ADAPTIVE MEMORY SPIKE ACTIVATION
+  MORSE: .- -.. .- .--. - .. ...- . / -- . -- --- .-. -.-- / ... .--. .. -.- . / .- -.-. - .. ...- .- - .. --- -.
+  DECODE .- -.. .- .--. - .. ...- . / -- . -- --- .-. -.-- / ... .--. .. -.- . / .- -.-. - .. ...- .- - .. --- -. -> ADAPTIVE MEMORY SPIKE ACTIVATION
+
+Morse timing (in dot units):
+  dot = 1 unit; dash = 3 units
+  gap between symbols in a letter = 1 unit
+  gap between letters = 3 units; gap between words = 7 units
+
+
+INTERNATIONAL MORSE CODE
+========================================
+
+Alphabet and digits:
+  A = .-
+  B = -...
+  C = -.-.
+  D = -..
+  E = .
+  F = ..-.
+  G = --.
+  H = ....
+  I = ..
+  J = .---
+  K = -.-
+  L = .-..
+  M = --
+  N = -.
+  O = ---
+  P = .--.
+  Q = --.-
+  R = .-.
+  S = ...
+  T = -
+  U = ..-
+  V = ...-
+  W = .--
+  X = -..-
+  Y = -.--
+  Z = --..
+  0 = -----
+  1 = .----
+  2 = ..---
+  3 = ...--
+  4 = ....-
+  5 = .....
+  6 = -....
+  7 = --...
+  8 = ---..
+  9 = ----.
+  . = .-.-.-
+  , = --..--
+  ? = ..--..
+  / = -..-.
+  = = -...-
+
+Encoding examples (letters separated by space, words by /):
+  TEXT: SOS
+  MORSE: ... --- ...
+  DECODE ... --- ... -> SOS
+
+  TEXT: HELLO WORLD
+  MORSE: .... . .-.. .-.. --- / .-- --- .-. .-.. -..
+  DECODE .... . .-.. .-.. --- / .-- --- .-. .-.. -.. -> HELLO WORLD
+
+  TEXT: BRAINAI
+  MORSE: -... .-. .- .. -. .- ..
+  DECODE -... .-. .- .. -. .- .. -> BRAINAI
+
+  TEXT: MOHAMMED ZAHID
+  MORSE: -- --- .... .- -- -- . -.. / --.. .- .... .. -..
+  DECODE -- --- .... .- -- -- . -.. / --.. .- .... .. -.. -> MOHAMMED ZAHID
+
+  TEXT: MAYDAY
+  MORSE: -- .- -.-- -.. .- -.--
+  DECODE -- .- -.-- -.. .- -.-- -> MAYDAY
+
+  TEXT: CQ CQ
+  MORSE: -.-. --.- / -.-. --.-
+  DECODE -.-. --.- / -.-. --.- -> CQ CQ
+
+  TEXT: THE QUICK BROWN FOX
+  MORSE: - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..-
+  DECODE - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..- -> THE QUICK BROWN FOX
+
+  TEXT: MORSE CODE
+  MORSE: -- --- .-. ... . / -.-. --- -.. .
+  DECODE -- --- .-. ... . / -.-. --- -.. . -> MORSE CODE
+
+  TEXT: 73 DE OP
+  MORSE: --... ...-- / -.. . / --- .--.
+  DECODE --... ...-- / -.. . / --- .--. -> 73 DE OP
+
+  TEXT: ATTENTION
+  MORSE: .- - - . -. - .. --- -.
+  DECODE .- - - . -. - .. --- -. -> ATTENTION
+
+  TEXT: SPIKING NEURAL NETWORK
+  MORSE: ... .--. .. -.- .. -. --. / -. . ..- .-. .- .-.. / -. . - .-- --- .-. -.-
+  DECODE ... .--. .. -.- .. -. --. / -. . ..- .-. .- .-.. / -. . - .-- --- .-. -.- -> SPIKING NEURAL NETWORK
+
+  TEXT: ADAPTIVE MEMORY SPIKE ACTIVATION
+  MORSE: .- -.. .- .--. - .. ...- . / -- . -- --- .-. -.-- / ... .--. .. -.- . / .- -.-. - .. ...- .- - .. --- -.
+  DECODE .- -.. .- .--. - .. ...- . / -- . -- --- .-. -.-- / ... .--. .. -.- . / .- -.-. - .. ...- .- - .. --- -. -> ADAPTIVE MEMORY SPIKE ACTIVATION
+
+Morse timing (in dot units):
+  dot = 1 unit; dash = 3 units
+  gap between symbols in a letter = 1 unit
+  gap between letters = 3 units; gap between words = 7 units
+
+
+INTERNATIONAL MORSE CODE
+========================================
+
+Alphabet and digits:
+  A = .-
+  B = -...
+  C = -.-.
+  D = -..
+  E = .
+  F = ..-.
+  G = --.
+  H = ....
+  I = ..
+  J = .---
+  K = -.-
+  L = .-..
+  M = --
+  N = -.
+  O = ---
+  P = .--.
+  Q = --.-
+  R = .-.
+  S = ...
+  T = -
+  U = ..-
+  V = ...-
+  W = .--
+  X = -..-
+  Y = -.--
+  Z = --..
+  0 = -----
+  1 = .----
+  2 = ..---
+  3 = ...--
+  4 = ....-
+  5 = .....
+  6 = -....
+  7 = --...
+  8 = ---..
+  9 = ----.
+  . = .-.-.-
+  , = --..--
+  ? = ..--..
+  / = -..-.
+  = = -...-
+
+Encoding examples (letters separated by space, words by /):
+  TEXT: SOS
+  MORSE: ... --- ...
+  DECODE ... --- ... -> SOS
+
+  TEXT: HELLO WORLD
+  MORSE: .... . .-.. .-.. --- / .-- --- .-. .-.. -..
+  DECODE .... . .-.. .-.. --- / .-- --- .-. .-.. -.. -> HELLO WORLD
+
+  TEXT: BRAINAI
+  MORSE: -... .-. .- .. -. .- ..
+  DECODE -... .-. .- .. -. .- .. -> BRAINAI
+
+  TEXT: MOHAMMED ZAHID
+  MORSE: -- --- .... .- -- -- . -.. / --.. .- .... .. -..
+  DECODE -- --- .... .- -- -- . -.. / --.. .- .... .. -.. -> MOHAMMED ZAHID
+
+  TEXT: MAYDAY
+  MORSE: -- .- -.-- -.. .- -.--
+  DECODE -- .- -.-- -.. .- -.-- -> MAYDAY
+
+  TEXT: CQ CQ
+  MORSE: -.-. --.- / -.-. --.-
+  DECODE -.-. --.- / -.-. --.- -> CQ CQ
+
+  TEXT: THE QUICK BROWN FOX
+  MORSE: - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..-
+  DECODE - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..- -> THE QUICK BROWN FOX
+
+  TEXT: MORSE CODE
+  MORSE: -- --- .-. ... . / -.-. --- -.. .
+  DECODE -- --- .-. ... . / -.-. --- -.. . -> MORSE CODE
+
+  TEXT: 73 DE OP
+  MORSE: --... ...-- / -.. . / --- .--.
+  DECODE --... ...-- / -.. . / --- .--. -> 73 DE OP
+
+  TEXT: ATTENTION
+  MORSE: .- - - . -. - .. --- -.
+  DECODE .- - - . -. - .. --- -. -> ATTENTION
+
+  TEXT: SPIKING NEURAL NETWORK
+  MORSE: ... .--. .. -.- .. -. --. / -. . ..- .-. .- .-.. / -. . - .-- --- .-. -.-
+  DECODE ... .--. .. -.- .. -. --. / -. . ..- .-. .- .-.. / -. . - .-- --- .-. -.- -> SPIKING NEURAL NETWORK
+
+  TEXT: ADAPTIVE MEMORY SPIKE ACTIVATION
+  MORSE: .- -.. .- .--. - .. ...- . / -- . -- --- .-. -.-- / ... .--. .. -.- . / .- -.-. - .. ...- .- - .. --- -.
+  DECODE .- -.. .- .--. - .. ...- . / -- . -- --- .-. -.-- / ... .--. .. -.- . / .- -.-. - .. ...- .- - .. --- -. -> ADAPTIVE MEMORY SPIKE ACTIVATION
+
+Morse timing (in dot units):
+  dot = 1 unit; dash = 3 units
+  gap between symbols in a letter = 1 unit
+  gap between letters = 3 units; gap between words = 7 units
+
+
+INTERNATIONAL MORSE CODE
+========================================
+
+Alphabet and digits:
+  A = .-
+  B = -...
+  C = -.-.
+  D = -..
+  E = .
+  F = ..-.
+  G = --.
+  H = ....
+  I = ..
+  J = .---
+  K = -.-
+  L = .-..
+  M = --
+  N = -.
+  O = ---
+  P = .--.
+  Q = --.-
+  R = .-.
+  S = ...
+  T = -
+  U = ..-
+  V = ...-
+  W = .--
+  X = -..-
+  Y = -.--
+  Z = --..
+  0 = -----
+  1 = .----
+  2 = ..---
+  3 = ...--
+  4 = ....-
+  5 = .....
+  6 = -....
+  7 = --...
+  8 = ---..
+  9 = ----.
+  . = .-.-.-
+  , = --..--
+  ? = ..--..
+  / = -..-.
+  = = -...-
+
+Encoding examples (letters separated by space, words by /):
+  TEXT: SOS
+  MORSE: ... --- ...
+  DECODE ... --- ... -> SOS
+
+  TEXT: HELLO WORLD
+  MORSE: .... . .-.. .-.. --- / .-- --- .-. .-.. -..
+  DECODE .... . .-.. .-.. --- / .-- --- .-. .-.. -.. -> HELLO WORLD
+
+  TEXT: BRAINAI
+  MORSE: -... .-. .- .. -. .- ..
+  DECODE -... .-. .- .. -. .- .. -> BRAINAI
+
+  TEXT: MOHAMMED ZAHID
+  MORSE: -- --- .... .- -- -- . -.. / --.. .- .... .. -..
+  DECODE -- --- .... .- -- -- . -.. / --.. .- .... .. -.. -> MOHAMMED ZAHID
+
+  TEXT: MAYDAY
+  MORSE: -- .- -.-- -.. .- -.--
+  DECODE -- .- -.-- -.. .- -.-- -> MAYDAY
+
+  TEXT: CQ CQ
+  MORSE: -.-. --.- / -.-. --.-
+  DECODE -.-. --.- / -.-. --.- -> CQ CQ
+
+  TEXT: THE QUICK BROWN FOX
+  MORSE: - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..-
+  DECODE - .... . / --.- ..- .. -.-. -.- / -... .-. --- .-- -. / ..-. --- -..- -> THE QUICK BROWN FOX
+
+  TEXT: MORSE CODE
+  MORSE: -- --- .-. ... . / -.-. --- -.. .
+  DECODE -- --- .-. ... . / -.-. --- -.. . -> MORSE CODE
+
+  TEXT: 73 DE OP
+  MORSE: --... ...-- / -.. . / --- .--.
+  DECODE --... ...-- / -.. . / --- .--. -> 73 DE OP
+
+  TEXT: ATTENTION
+  MORSE: .- - - . -. - .. --- -.
+  DECODE .- - - . -. - .. --- -. -> ATTENTION
+
+  TEXT: SPIKING NEURAL NETWORK
+  MORSE: ... .--. .. -.- .. -. --. / -. . ..- .-. .- .-.. / -. . - .-- --- .-. -.-
+  DECODE ... .--. .. -.- .. -. --. / -. . ..- .-. .- .-.. / -. . - .-- --- .-. -.- -> SPIKING NEURAL NETWORK
+
+  TEXT: ADAPTIVE MEMORY SPIKE ACTIVATION
+  MORSE: .- -.. .- .--. - .. ...- . / -- . -- --- .-. -.-- / ... .--. .. -.- . / .- -.-. - .. ...- .- - .. --- -.
+  DECODE .- -.. .- .--. - .. ...- . / -- . -- --- .-. -.-- / ... .--. .. -.- . / .- -.-. - .. ...- .- - .. --- -. -> ADAPTIVE MEMORY SPIKE ACTIVATION
+
+Morse timing (in dot units):
+  dot = 1 unit; dash = 3 units
+  gap between symbols in a letter = 1 unit
+  gap between letters = 3 units; gap between words = 7 units

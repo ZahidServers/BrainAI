@@ -1,0 +1,1649 @@
+BRAINAI LANGUAGE CORPUS — KONKANI
+KINDERGARTEN TO GRADE 12
+COMPREHENSIVE GRAMMAR, LANGUAGE SKILLS, LITERATURE AND WRITING
+
+Purpose:
+This corpus is designed as structured educational knowledge for BrainAI tutoring,
+question generation, explanation, revision, assessment and language-learning systems.
+
+Scope:
+KG through Grade 12, with progressive difficulty. It covers the developmental
+framework supplied by the user plus a universal language-learning framework.
+Exact textbook chapters differ by board, state, school and academic year; therefore
+this is a master pedagogical corpus rather than a reproduction of any one textbook.
+
+SCRIPT:
+Devanagari and Roman script; regional usage may vary
+
+LANGUAGE-SPECIFIC ARCHITECTURE:
+Konkani varies substantially by region and script. This corpus treats the supplied Devanagari-oriented school framework as the common pedagogical baseline and should not be interpreted as eliminating dialectal variation.
+
+
+UNIVERSAL LANGUAGE SKILLS
+1. Listening: sound discrimination, comprehension, note-taking, inference, response.
+2. Speaking: pronunciation, fluency, vocabulary, dialogue, presentation, debate.
+3. Reading: decoding, fluency, literal comprehension, inference, critical reading.
+4. Writing: handwriting/script, spelling, sentence construction, paragraphs, essays, formal writing.
+5. Vocabulary: synonyms, antonyms, homonyms/homophones where applicable, collocations, idioms, proverbs, word families.
+6. Grammar: morphology, syntax, agreement, tense/aspect/mood, case/postpositions, sentence types.
+7. Literature: prose, poetry, drama, narrative, character, theme, imagery, symbolism, tone, authorial intent.
+8. Composition: descriptive, narrative, expository, argumentative, reflective and functional writing.
+9. Editing: spelling, punctuation, agreement, word choice, sentence order, redundancy, ambiguity and style.
+10. Assessment: recall, application, transformation, error correction, unseen comprehension, writing and oral performance.
+
+
+================================================================================
+KG — DEVELOPMENTAL CURRICULUM
+================================================================================
+CORE FOCUS
+Foundational oral language, listening, speaking, phonemic awareness, script recognition, strokes/letter formation, basic vocabulary, rhymes, colors, family, body parts, animals, numbers, greetings.
+
+LEARNING OBJECTIVES
+- Recognize and correctly use age-appropriate vocabulary.
+- Build grammatically valid sentences.
+- Improve listening, speaking, reading and writing.
+- Connect grammar rules to meaningful communication.
+- Read age-appropriate prose and poetry.
+- Produce increasingly independent written work.
+
+LESSON PATTERN
+1. Introduce the concept.
+2. Show examples.
+3. Identify the grammatical structure.
+4. Practice with controlled exercises.
+5. Apply it in sentences.
+6. Apply it in a paragraph/passage.
+7. Read and analyze authentic language.
+8. Correct errors and explain the rule.
+
+ASSESSMENT
+- Oral identification
+- Reading aloud
+- Dictation/spelling
+- Fill in the blanks
+- Matching
+- Sentence construction
+- Transformation
+- Error correction
+- Unseen comprehension
+- Guided composition
+- Independent composition
+
+================================================================================
+GRADE 1 — DEVELOPMENTAL CURRICULUM
+================================================================================
+CORE FOCUS
+Letter/sound correspondence, syllables, basic reading, copying, handwriting, naming words, action words, simple sentences, oral comprehension, picture description.
+
+LEARNING OBJECTIVES
+- Recognize and correctly use age-appropriate vocabulary.
+- Build grammatically valid sentences.
+- Improve listening, speaking, reading and writing.
+- Connect grammar rules to meaningful communication.
+- Read age-appropriate prose and poetry.
+- Produce increasingly independent written work.
+
+LESSON PATTERN
+1. Introduce the concept.
+2. Show examples.
+3. Identify the grammatical structure.
+4. Practice with controlled exercises.
+5. Apply it in sentences.
+6. Apply it in a paragraph/passage.
+7. Read and analyze authentic language.
+8. Correct errors and explain the rule.
+
+ASSESSMENT
+- Oral identification
+- Reading aloud
+- Dictation/spelling
+- Fill in the blanks
+- Matching
+- Sentence construction
+- Transformation
+- Error correction
+- Unseen comprehension
+- Guided composition
+- Independent composition
+
+================================================================================
+GRADE 2 — DEVELOPMENTAL CURRICULUM
+================================================================================
+CORE FOCUS
+Reading short sentences, spelling patterns, noun/pronoun basics, singular/plural, gender where applicable, basic verbs, simple tense concepts, punctuation, guided composition.
+
+LEARNING OBJECTIVES
+- Recognize and correctly use age-appropriate vocabulary.
+- Build grammatically valid sentences.
+- Improve listening, speaking, reading and writing.
+- Connect grammar rules to meaningful communication.
+- Read age-appropriate prose and poetry.
+- Produce increasingly independent written work.
+
+LESSON PATTERN
+1. Introduce the concept.
+2. Show examples.
+3. Identify the grammatical structure.
+4. Practice with controlled exercises.
+5. Apply it in sentences.
+6. Apply it in a paragraph/passage.
+7. Read and analyze authentic language.
+8. Correct errors and explain the rule.
+
+ASSESSMENT
+- Oral identification
+- Reading aloud
+- Dictation/spelling
+- Fill in the blanks
+- Matching
+- Sentence construction
+- Transformation
+- Error correction
+- Unseen comprehension
+- Guided composition
+- Independent composition
+
+================================================================================
+GRADE 3 — DEVELOPMENTAL CURRICULUM
+================================================================================
+CORE FOCUS
+Parts of speech introduction, sentence types, adjectives, adverbs, conjunctions, expanded vocabulary, paragraph writing, unseen comprehension, story sequencing.
+
+LEARNING OBJECTIVES
+- Recognize and correctly use age-appropriate vocabulary.
+- Build grammatically valid sentences.
+- Improve listening, speaking, reading and writing.
+- Connect grammar rules to meaningful communication.
+- Read age-appropriate prose and poetry.
+- Produce increasingly independent written work.
+
+LESSON PATTERN
+1. Introduce the concept.
+2. Show examples.
+3. Identify the grammatical structure.
+4. Practice with controlled exercises.
+5. Apply it in sentences.
+6. Apply it in a paragraph/passage.
+7. Read and analyze authentic language.
+8. Correct errors and explain the rule.
+
+ASSESSMENT
+- Oral identification
+- Reading aloud
+- Dictation/spelling
+- Fill in the blanks
+- Matching
+- Sentence construction
+- Transformation
+- Error correction
+- Unseen comprehension
+- Guided composition
+- Independent composition
+
+================================================================================
+GRADE 4 — DEVELOPMENTAL CURRICULUM
+================================================================================
+CORE FOCUS
+Tense development, agreement, prepositions/postpositions, pronouns, compound words, punctuation, formal/informal writing, descriptive and narrative composition.
+
+LEARNING OBJECTIVES
+- Recognize and correctly use age-appropriate vocabulary.
+- Build grammatically valid sentences.
+- Improve listening, speaking, reading and writing.
+- Connect grammar rules to meaningful communication.
+- Read age-appropriate prose and poetry.
+- Produce increasingly independent written work.
+
+LESSON PATTERN
+1. Introduce the concept.
+2. Show examples.
+3. Identify the grammatical structure.
+4. Practice with controlled exercises.
+5. Apply it in sentences.
+6. Apply it in a paragraph/passage.
+7. Read and analyze authentic language.
+8. Correct errors and explain the rule.
+
+ASSESSMENT
+- Oral identification
+- Reading aloud
+- Dictation/spelling
+- Fill in the blanks
+- Matching
+- Sentence construction
+- Transformation
+- Error correction
+- Unseen comprehension
+- Guided composition
+- Independent composition
+
+================================================================================
+GRADE 5 — DEVELOPMENTAL CURRICULUM
+================================================================================
+CORE FOCUS
+Integrated grammar, sentence transformation, vocabulary expansion, idioms/proverbs, comprehension inference, letters, diary entries, story writing, poetry appreciation.
+
+LEARNING OBJECTIVES
+- Recognize and correctly use age-appropriate vocabulary.
+- Build grammatically valid sentences.
+- Improve listening, speaking, reading and writing.
+- Connect grammar rules to meaningful communication.
+- Read age-appropriate prose and poetry.
+- Produce increasingly independent written work.
+
+LESSON PATTERN
+1. Introduce the concept.
+2. Show examples.
+3. Identify the grammatical structure.
+4. Practice with controlled exercises.
+5. Apply it in sentences.
+6. Apply it in a paragraph/passage.
+7. Read and analyze authentic language.
+8. Correct errors and explain the rule.
+
+ASSESSMENT
+- Oral identification
+- Reading aloud
+- Dictation/spelling
+- Fill in the blanks
+- Matching
+- Sentence construction
+- Transformation
+- Error correction
+- Unseen comprehension
+- Guided composition
+- Independent composition
+
+================================================================================
+GRADE 6 — DEVELOPMENTAL CURRICULUM
+================================================================================
+CORE FOCUS
+Advanced parts of speech, clauses and phrases, tense systems, voice, reported speech, word formation, formal correspondence, prose/poetry analysis.
+
+LEARNING OBJECTIVES
+- Recognize and correctly use age-appropriate vocabulary.
+- Build grammatically valid sentences.
+- Improve listening, speaking, reading and writing.
+- Connect grammar rules to meaningful communication.
+- Read age-appropriate prose and poetry.
+- Produce increasingly independent written work.
+
+LESSON PATTERN
+1. Introduce the concept.
+2. Show examples.
+3. Identify the grammatical structure.
+4. Practice with controlled exercises.
+5. Apply it in sentences.
+6. Apply it in a paragraph/passage.
+7. Read and analyze authentic language.
+8. Correct errors and explain the rule.
+
+ASSESSMENT
+- Oral identification
+- Reading aloud
+- Dictation/spelling
+- Fill in the blanks
+- Matching
+- Sentence construction
+- Transformation
+- Error correction
+- Unseen comprehension
+- Guided composition
+- Independent composition
+
+================================================================================
+GRADE 7 — DEVELOPMENTAL CURRICULUM
+================================================================================
+CORE FOCUS
+Complex sentence structures, subordinate clauses, agreement exceptions, compound formation, semantic relations, editing, notices/emails, argumentative and descriptive writing.
+
+LEARNING OBJECTIVES
+- Recognize and correctly use age-appropriate vocabulary.
+- Build grammatically valid sentences.
+- Improve listening, speaking, reading and writing.
+- Connect grammar rules to meaningful communication.
+- Read age-appropriate prose and poetry.
+- Produce increasingly independent written work.
+
+LESSON PATTERN
+1. Introduce the concept.
+2. Show examples.
+3. Identify the grammatical structure.
+4. Practice with controlled exercises.
+5. Apply it in sentences.
+6. Apply it in a paragraph/passage.
+7. Read and analyze authentic language.
+8. Correct errors and explain the rule.
+
+ASSESSMENT
+- Oral identification
+- Reading aloud
+- Dictation/spelling
+- Fill in the blanks
+- Matching
+- Sentence construction
+- Transformation
+- Error correction
+- Unseen comprehension
+- Guided composition
+- Independent composition
+
+================================================================================
+GRADE 8 — DEVELOPMENTAL CURRICULUM
+================================================================================
+CORE FOCUS
+Advanced grammar integration, transformations, non-finite forms where applicable, rhetorical devices, literary interpretation, formal applications, reports, debates.
+
+LEARNING OBJECTIVES
+- Recognize and correctly use age-appropriate vocabulary.
+- Build grammatically valid sentences.
+- Improve listening, speaking, reading and writing.
+- Connect grammar rules to meaningful communication.
+- Read age-appropriate prose and poetry.
+- Produce increasingly independent written work.
+
+LESSON PATTERN
+1. Introduce the concept.
+2. Show examples.
+3. Identify the grammatical structure.
+4. Practice with controlled exercises.
+5. Apply it in sentences.
+6. Apply it in a paragraph/passage.
+7. Read and analyze authentic language.
+8. Correct errors and explain the rule.
+
+ASSESSMENT
+- Oral identification
+- Reading aloud
+- Dictation/spelling
+- Fill in the blanks
+- Matching
+- Sentence construction
+- Transformation
+- Error correction
+- Unseen comprehension
+- Guided composition
+- Independent composition
+
+================================================================================
+GRADE 9 — DEVELOPMENTAL CURRICULUM
+================================================================================
+CORE FOCUS
+Board-level grammar, error correction, synthesis, clauses, voice, reported speech, advanced vocabulary, poetry/prose analysis, analytical writing.
+
+LEARNING OBJECTIVES
+- Recognize and correctly use age-appropriate vocabulary.
+- Build grammatically valid sentences.
+- Improve listening, speaking, reading and writing.
+- Connect grammar rules to meaningful communication.
+- Read age-appropriate prose and poetry.
+- Produce increasingly independent written work.
+
+LESSON PATTERN
+1. Introduce the concept.
+2. Show examples.
+3. Identify the grammatical structure.
+4. Practice with controlled exercises.
+5. Apply it in sentences.
+6. Apply it in a paragraph/passage.
+7. Read and analyze authentic language.
+8. Correct errors and explain the rule.
+
+ASSESSMENT
+- Oral identification
+- Reading aloud
+- Dictation/spelling
+- Fill in the blanks
+- Matching
+- Sentence construction
+- Transformation
+- Error correction
+- Unseen comprehension
+- Guided composition
+- Independent composition
+
+================================================================================
+GRADE 10 — DEVELOPMENTAL CURRICULUM
+================================================================================
+CORE FOCUS
+Integrated grammar, editing and omission, advanced composition, literature appreciation, rhetorical analysis, formal letters, articles, reports, examination writing.
+
+LEARNING OBJECTIVES
+- Recognize and correctly use age-appropriate vocabulary.
+- Build grammatically valid sentences.
+- Improve listening, speaking, reading and writing.
+- Connect grammar rules to meaningful communication.
+- Read age-appropriate prose and poetry.
+- Produce increasingly independent written work.
+
+LESSON PATTERN
+1. Introduce the concept.
+2. Show examples.
+3. Identify the grammatical structure.
+4. Practice with controlled exercises.
+5. Apply it in sentences.
+6. Apply it in a paragraph/passage.
+7. Read and analyze authentic language.
+8. Correct errors and explain the rule.
+
+ASSESSMENT
+- Oral identification
+- Reading aloud
+- Dictation/spelling
+- Fill in the blanks
+- Matching
+- Sentence construction
+- Transformation
+- Error correction
+- Unseen comprehension
+- Guided composition
+- Independent composition
+
+================================================================================
+GRADE 11 — DEVELOPMENTAL CURRICULUM
+================================================================================
+CORE FOCUS
+Higher-secondary syntax, advanced morphology, stylistics, rhetoric, critical reading, précis, professional communication, research-oriented writing.
+
+LEARNING OBJECTIVES
+- Recognize and correctly use age-appropriate vocabulary.
+- Build grammatically valid sentences.
+- Improve listening, speaking, reading and writing.
+- Connect grammar rules to meaningful communication.
+- Read age-appropriate prose and poetry.
+- Produce increasingly independent written work.
+
+LESSON PATTERN
+1. Introduce the concept.
+2. Show examples.
+3. Identify the grammatical structure.
+4. Practice with controlled exercises.
+5. Apply it in sentences.
+6. Apply it in a paragraph/passage.
+7. Read and analyze authentic language.
+8. Correct errors and explain the rule.
+
+ASSESSMENT
+- Oral identification
+- Reading aloud
+- Dictation/spelling
+- Fill in the blanks
+- Matching
+- Sentence construction
+- Transformation
+- Error correction
+- Unseen comprehension
+- Guided composition
+- Independent composition
+
+================================================================================
+GRADE 12 — DEVELOPMENTAL CURRICULUM
+================================================================================
+CORE FOCUS
+Advanced grammar and usage, linguistic analysis, literary criticism, professional/academic writing, argumentation, interpretation, rhetoric, revision and examination mastery.
+
+LEARNING OBJECTIVES
+- Recognize and correctly use age-appropriate vocabulary.
+- Build grammatically valid sentences.
+- Improve listening, speaking, reading and writing.
+- Connect grammar rules to meaningful communication.
+- Read age-appropriate prose and poetry.
+- Produce increasingly independent written work.
+
+LESSON PATTERN
+1. Introduce the concept.
+2. Show examples.
+3. Identify the grammatical structure.
+4. Practice with controlled exercises.
+5. Apply it in sentences.
+6. Apply it in a paragraph/passage.
+7. Read and analyze authentic language.
+8. Correct errors and explain the rule.
+
+ASSESSMENT
+- Oral identification
+- Reading aloud
+- Dictation/spelling
+- Fill in the blanks
+- Matching
+- Sentence construction
+- Transformation
+- Error correction
+- Unseen comprehension
+- Guided composition
+- Independent composition
+
+================================================================================
+LANGUAGE-SPECIFIC GRAMMAR PROGRESSION
+================================================================================
+
+PRIMARY — KG TO GRADE 5
+स्वर, व्यंजनां, मात्रा, उच्चार, नाव, सर्वनाम, विशेशण, क्रियापद, लिंग, वचन, सोपी वाक्यरचना, विरामचिन्हां.
+
+MIDDLE — GRADES 6 TO 8
+उतरांच्यो आठ जाती, सव्यय/अव्यय, विभक्ती, सामान्यरूप, काळ, क्रियापद, शब्दयोगी, उभयान्वयी, क्रियाविशेशण, वाक्यरचना, समानार्थी/विरुद्धार्थी शब्द.
+
+SECONDARY / HIGHER SECONDARY — GRADES 9 TO 12
+कर्तरी, कर्मणी, भावे प्रयोग, साधे/संयुक्त/मिश्र वाक्य, समास, वाक्यसंलेषण, वाक्यरूपांतर, अलंकार, वाक्प्रचार, म्हणी, शुद्धलेखन, साहित्यिक भाषा, निबंध, पत्र, भाषिक विश्लेषण.
+
+================================================================================
+PHONOLOGY AND ORTHOGRAPHY
+================================================================================
+SCOPE
+phonemes, graphemes, vowels, consonants, syllables, stress/length where applicable, pronunciation, spelling, script conventions, punctuation, capitalization where applicable, diacritics, orthographic exceptions.
+
+MASTER RULE
+Treat phonology and orthography as a system: identify its units, define their function,
+show their forms, state exceptions, give examples, contrast related forms, and
+test the learner with production and correction tasks.
+
+Example 1: Create a short sentence or passage demonstrating PHONOLOGY AND ORTHOGRAPHY; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 2: Create a short sentence or passage demonstrating PHONOLOGY AND ORTHOGRAPHY; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 3: Create a short sentence or passage demonstrating PHONOLOGY AND ORTHOGRAPHY; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 4: Create a short sentence or passage demonstrating PHONOLOGY AND ORTHOGRAPHY; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+
+================================================================================
+MORPHOLOGY
+================================================================================
+SCOPE
+roots, stems, affixes, prefixes, suffixes, inflection, derivation, compounds, reduplication where applicable, gender, number, person, case, tense, aspect, mood, participles and agreement.
+
+MASTER RULE
+Treat morphology as a system: identify its units, define their function,
+show their forms, state exceptions, give examples, contrast related forms, and
+test the learner with production and correction tasks.
+
+Example 1: Create a short sentence or passage demonstrating MORPHOLOGY; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 2: Create a short sentence or passage demonstrating MORPHOLOGY; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 3: Create a short sentence or passage demonstrating MORPHOLOGY; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 4: Create a short sentence or passage demonstrating MORPHOLOGY; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+
+================================================================================
+NOUN SYSTEM
+================================================================================
+SCOPE
+proper/common nouns, concrete/abstract nouns, collective nouns, countability, gender, number, case, definiteness, possession and noun phrase structure.
+
+MASTER RULE
+Treat noun system as a system: identify its units, define their function,
+show their forms, state exceptions, give examples, contrast related forms, and
+test the learner with production and correction tasks.
+
+Example 1: Create a short sentence or passage demonstrating NOUN SYSTEM; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 2: Create a short sentence or passage demonstrating NOUN SYSTEM; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 3: Create a short sentence or passage demonstrating NOUN SYSTEM; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 4: Create a short sentence or passage demonstrating NOUN SYSTEM; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+
+================================================================================
+PRONOUN SYSTEM
+================================================================================
+SCOPE
+personal, demonstrative, interrogative, relative, reflexive, reciprocal, indefinite, possessive and emphatic forms where applicable.
+
+MASTER RULE
+Treat pronoun system as a system: identify its units, define their function,
+show their forms, state exceptions, give examples, contrast related forms, and
+test the learner with production and correction tasks.
+
+Example 1: Create a short sentence or passage demonstrating PRONOUN SYSTEM; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 2: Create a short sentence or passage demonstrating PRONOUN SYSTEM; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 3: Create a short sentence or passage demonstrating PRONOUN SYSTEM; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 4: Create a short sentence or passage demonstrating PRONOUN SYSTEM; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+
+================================================================================
+ADJECTIVES
+================================================================================
+SCOPE
+attributive/predicative use, agreement, comparison, intensification, adjective order and adjective clauses/phrases where applicable.
+
+MASTER RULE
+Treat adjectives as a system: identify its units, define their function,
+show their forms, state exceptions, give examples, contrast related forms, and
+test the learner with production and correction tasks.
+
+Example 1: Create a short sentence or passage demonstrating ADJECTIVES; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 2: Create a short sentence or passage demonstrating ADJECTIVES; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 3: Create a short sentence or passage demonstrating ADJECTIVES; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 4: Create a short sentence or passage demonstrating ADJECTIVES; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+
+================================================================================
+VERB SYSTEM
+================================================================================
+SCOPE
+transitivity, auxiliaries, tense, aspect, mood, person, number, gender agreement, active/passive, causative constructions, infinitives and participles where applicable.
+
+MASTER RULE
+Treat verb system as a system: identify its units, define their function,
+show their forms, state exceptions, give examples, contrast related forms, and
+test the learner with production and correction tasks.
+
+Example 1: Create a short sentence or passage demonstrating VERB SYSTEM; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 2: Create a short sentence or passage demonstrating VERB SYSTEM; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 3: Create a short sentence or passage demonstrating VERB SYSTEM; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 4: Create a short sentence or passage demonstrating VERB SYSTEM; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+
+================================================================================
+ADVERBS AND MODIFIERS
+================================================================================
+SCOPE
+manner, time, place, frequency, degree, sentence adverbs, adverbial phrases and clauses, modifier placement and ambiguity.
+
+MASTER RULE
+Treat adverbs and modifiers as a system: identify its units, define their function,
+show their forms, state exceptions, give examples, contrast related forms, and
+test the learner with production and correction tasks.
+
+Example 1: Create a short sentence or passage demonstrating ADVERBS AND MODIFIERS; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 2: Create a short sentence or passage demonstrating ADVERBS AND MODIFIERS; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 3: Create a short sentence or passage demonstrating ADVERBS AND MODIFIERS; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 4: Create a short sentence or passage demonstrating ADVERBS AND MODIFIERS; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+
+================================================================================
+DETERMINERS / ARTICLES / QUANTIFICATION
+================================================================================
+SCOPE
+definiteness, demonstratives, possessives, numerals, quantifiers, distributives and agreement; apply only where structurally relevant to the language.
+
+MASTER RULE
+Treat determiners / articles / quantification as a system: identify its units, define their function,
+show their forms, state exceptions, give examples, contrast related forms, and
+test the learner with production and correction tasks.
+
+Example 1: Create a short sentence or passage demonstrating DETERMINERS / ARTICLES / QUANTIFICATION; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 2: Create a short sentence or passage demonstrating DETERMINERS / ARTICLES / QUANTIFICATION; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 3: Create a short sentence or passage demonstrating DETERMINERS / ARTICLES / QUANTIFICATION; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 4: Create a short sentence or passage demonstrating DETERMINERS / ARTICLES / QUANTIFICATION; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+
+================================================================================
+CASE / POSTPOSITIONS / PREPOSITIONS
+================================================================================
+SCOPE
+grammatical roles, subject, object, instrument, recipient, source, possession, location, address and case marking; preposition/postposition behavior.
+
+MASTER RULE
+Treat case / postpositions / prepositions as a system: identify its units, define their function,
+show their forms, state exceptions, give examples, contrast related forms, and
+test the learner with production and correction tasks.
+
+Example 1: Create a short sentence or passage demonstrating CASE / POSTPOSITIONS / PREPOSITIONS; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 2: Create a short sentence or passage demonstrating CASE / POSTPOSITIONS / PREPOSITIONS; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 3: Create a short sentence or passage demonstrating CASE / POSTPOSITIONS / PREPOSITIONS; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 4: Create a short sentence or passage demonstrating CASE / POSTPOSITIONS / PREPOSITIONS; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+
+================================================================================
+CONJUNCTIONS AND PARTICLES
+================================================================================
+SCOPE
+coordination, subordination, contrast, cause, condition, purpose, result, sequence, emphasis and discourse connection.
+
+MASTER RULE
+Treat conjunctions and particles as a system: identify its units, define their function,
+show their forms, state exceptions, give examples, contrast related forms, and
+test the learner with production and correction tasks.
+
+Example 1: Create a short sentence or passage demonstrating CONJUNCTIONS AND PARTICLES; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 2: Create a short sentence or passage demonstrating CONJUNCTIONS AND PARTICLES; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 3: Create a short sentence or passage demonstrating CONJUNCTIONS AND PARTICLES; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 4: Create a short sentence or passage demonstrating CONJUNCTIONS AND PARTICLES; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+
+================================================================================
+SENTENCE STRUCTURE
+================================================================================
+SCOPE
+subject, predicate, object, complement, adjunct, word order, simple/compound/complex sentences, clauses, phrases, coordination and subordination.
+
+MASTER RULE
+Treat sentence structure as a system: identify its units, define their function,
+show their forms, state exceptions, give examples, contrast related forms, and
+test the learner with production and correction tasks.
+
+Example 1: Create a short sentence or passage demonstrating SENTENCE STRUCTURE; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 2: Create a short sentence or passage demonstrating SENTENCE STRUCTURE; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 3: Create a short sentence or passage demonstrating SENTENCE STRUCTURE; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 4: Create a short sentence or passage demonstrating SENTENCE STRUCTURE; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+
+================================================================================
+AGREEMENT
+================================================================================
+SCOPE
+subject-verb agreement, noun-adjective agreement, gender/number/person agreement, proximity effects and irregular agreement.
+
+MASTER RULE
+Treat agreement as a system: identify its units, define their function,
+show their forms, state exceptions, give examples, contrast related forms, and
+test the learner with production and correction tasks.
+
+Example 1: Create a short sentence or passage demonstrating AGREEMENT; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 2: Create a short sentence or passage demonstrating AGREEMENT; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 3: Create a short sentence or passage demonstrating AGREEMENT; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 4: Create a short sentence or passage demonstrating AGREEMENT; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+
+================================================================================
+TENSE / ASPECT / MOOD
+================================================================================
+SCOPE
+present/past/future, simple/continuous/perfect/perfect-continuous concepts where applicable, habituality, completion, possibility, obligation, command, condition and evidential/epistemic meanings where applicable.
+
+MASTER RULE
+Treat tense / aspect / mood as a system: identify its units, define their function,
+show their forms, state exceptions, give examples, contrast related forms, and
+test the learner with production and correction tasks.
+
+Example 1: Create a short sentence or passage demonstrating TENSE / ASPECT / MOOD; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 2: Create a short sentence or passage demonstrating TENSE / ASPECT / MOOD; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 3: Create a short sentence or passage demonstrating TENSE / ASPECT / MOOD; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 4: Create a short sentence or passage demonstrating TENSE / ASPECT / MOOD; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+
+================================================================================
+VOICE AND TRANSFORMATION
+================================================================================
+SCOPE
+active/passive, causative, reflexive, sentence negation, interrogation, emphasis, affirmative/negative transformations and simple/compound/complex conversion.
+
+MASTER RULE
+Treat voice and transformation as a system: identify its units, define their function,
+show their forms, state exceptions, give examples, contrast related forms, and
+test the learner with production and correction tasks.
+
+Example 1: Create a short sentence or passage demonstrating VOICE AND TRANSFORMATION; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 2: Create a short sentence or passage demonstrating VOICE AND TRANSFORMATION; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 3: Create a short sentence or passage demonstrating VOICE AND TRANSFORMATION; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 4: Create a short sentence or passage demonstrating VOICE AND TRANSFORMATION; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+
+================================================================================
+REPORTED SPEECH
+================================================================================
+SCOPE
+direct speech, indirect speech, reporting verbs, sequence of tense, pronoun changes, time/place changes and question/command reporting where structurally applicable.
+
+MASTER RULE
+Treat reported speech as a system: identify its units, define their function,
+show their forms, state exceptions, give examples, contrast related forms, and
+test the learner with production and correction tasks.
+
+Example 1: Create a short sentence or passage demonstrating REPORTED SPEECH; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 2: Create a short sentence or passage demonstrating REPORTED SPEECH; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 3: Create a short sentence or passage demonstrating REPORTED SPEECH; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 4: Create a short sentence or passage demonstrating REPORTED SPEECH; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+
+================================================================================
+CLAUSES AND NON-FINITE CONSTRUCTIONS
+================================================================================
+SCOPE
+noun clauses, relative/adjective clauses, adverbial clauses, infinitives, gerunds, participles, subordinate structures and clause reduction where applicable.
+
+MASTER RULE
+Treat clauses and non-finite constructions as a system: identify its units, define their function,
+show their forms, state exceptions, give examples, contrast related forms, and
+test the learner with production and correction tasks.
+
+Example 1: Create a short sentence or passage demonstrating CLAUSES AND NON-FINITE CONSTRUCTIONS; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 2: Create a short sentence or passage demonstrating CLAUSES AND NON-FINITE CONSTRUCTIONS; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 3: Create a short sentence or passage demonstrating CLAUSES AND NON-FINITE CONSTRUCTIONS; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 4: Create a short sentence or passage demonstrating CLAUSES AND NON-FINITE CONSTRUCTIONS; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+
+================================================================================
+WORD FORMATION AND VOCABULARY
+================================================================================
+SCOPE
+synonymy, antonymy, polysemy, homonymy, collocation, idioms, proverbs, derivation, compounding, borrowing, semantic fields and register.
+
+MASTER RULE
+Treat word formation and vocabulary as a system: identify its units, define their function,
+show their forms, state exceptions, give examples, contrast related forms, and
+test the learner with production and correction tasks.
+
+Example 1: Create a short sentence or passage demonstrating WORD FORMATION AND VOCABULARY; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 2: Create a short sentence or passage demonstrating WORD FORMATION AND VOCABULARY; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 3: Create a short sentence or passage demonstrating WORD FORMATION AND VOCABULARY; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 4: Create a short sentence or passage demonstrating WORD FORMATION AND VOCABULARY; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+
+================================================================================
+PUNCTUATION AND EDITING
+================================================================================
+SCOPE
+sentence boundaries, commas, quotation marks, apostrophes, colons, semicolons, dashes, brackets and language-specific punctuation/orthography.
+
+MASTER RULE
+Treat punctuation and editing as a system: identify its units, define their function,
+show their forms, state exceptions, give examples, contrast related forms, and
+test the learner with production and correction tasks.
+
+Example 1: Create a short sentence or passage demonstrating PUNCTUATION AND EDITING; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 2: Create a short sentence or passage demonstrating PUNCTUATION AND EDITING; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 3: Create a short sentence or passage demonstrating PUNCTUATION AND EDITING; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 4: Create a short sentence or passage demonstrating PUNCTUATION AND EDITING; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+
+================================================================================
+RHETORIC AND LITERARY DEVICES
+================================================================================
+SCOPE
+simile, metaphor, personification, hyperbole, irony, alliteration, repetition, contrast, imagery, symbolism, allusion, metonymy, rhetorical question and language-specific classical devices.
+
+MASTER RULE
+Treat rhetoric and literary devices as a system: identify its units, define their function,
+show their forms, state exceptions, give examples, contrast related forms, and
+test the learner with production and correction tasks.
+
+Example 1: Create a short sentence or passage demonstrating RHETORIC AND LITERARY DEVICES; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 2: Create a short sentence or passage demonstrating RHETORIC AND LITERARY DEVICES; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 3: Create a short sentence or passage demonstrating RHETORIC AND LITERARY DEVICES; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 4: Create a short sentence or passage demonstrating RHETORIC AND LITERARY DEVICES; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+
+================================================================================
+PROSODY / POETICS
+================================================================================
+SCOPE
+rhyme, rhythm, meter, stanza, poetic form, imagery, sound devices and language-specific prosodic systems.
+
+MASTER RULE
+Treat prosody / poetics as a system: identify its units, define their function,
+show their forms, state exceptions, give examples, contrast related forms, and
+test the learner with production and correction tasks.
+
+Example 1: Create a short sentence or passage demonstrating PROSODY / POETICS; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 2: Create a short sentence or passage demonstrating PROSODY / POETICS; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 3: Create a short sentence or passage demonstrating PROSODY / POETICS; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 4: Create a short sentence or passage demonstrating PROSODY / POETICS; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+
+================================================================================
+COMPOSITION
+================================================================================
+SCOPE
+paragraph, essay, story, dialogue, letter, application, notice, email, report, speech, debate, article, diary, précis, advertisement and professional writing.
+
+MASTER RULE
+Treat composition as a system: identify its units, define their function,
+show their forms, state exceptions, give examples, contrast related forms, and
+test the learner with production and correction tasks.
+
+Example 1: Create a short sentence or passage demonstrating COMPOSITION; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 2: Create a short sentence or passage demonstrating COMPOSITION; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 3: Create a short sentence or passage demonstrating COMPOSITION; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 4: Create a short sentence or passage demonstrating COMPOSITION; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+
+================================================================================
+LITERATURE
+================================================================================
+SCOPE
+prose, poetry, drama, plot, setting, character, theme, conflict, point of view, tone, symbolism, imagery, structure, authorial intent and critical response.
+
+MASTER RULE
+Treat literature as a system: identify its units, define their function,
+show their forms, state exceptions, give examples, contrast related forms, and
+test the learner with production and correction tasks.
+
+Example 1: Create a short sentence or passage demonstrating LITERATURE; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 2: Create a short sentence or passage demonstrating LITERATURE; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 3: Create a short sentence or passage demonstrating LITERATURE; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+Example 4: Create a short sentence or passage demonstrating LITERATURE; identify the relevant grammatical elements; explain why the construction is correct; then create a contrasting incorrect example and correct it.
+
+================================================================================
+ADVANCED LANGUAGE-SPECIFIC MASTER RULES
+================================================================================
+
+TOPIC: स्वर, व्यंजनां, मात्रा, उच्चार आनी लिपी वापर
+Definition: Explain what the structure means and what grammatical function it performs.
+Formation: State the normal formation pattern and all major variants.
+Agreement/Selection: State what controls the form.
+Meaning: Explain the semantic/pragmatic difference from related forms.
+Exceptions: Record irregular, idiomatic and exceptional forms.
+Examples: Provide affirmative, negative, interrogative and contextual examples where applicable.
+Practice: Generate identification, transformation, correction and production questions.
+
+TOPIC: नाव, सर्वनाम, विशेशण, क्रियापद, क्रियाविशेशण, शब्दयोगी, उभयान्वयी, केवलप्रयोगी
+Definition: Explain what the structure means and what grammatical function it performs.
+Formation: State the normal formation pattern and all major variants.
+Agreement/Selection: State what controls the form.
+Meaning: Explain the semantic/pragmatic difference from related forms.
+Exceptions: Record irregular, idiomatic and exceptional forms.
+Examples: Provide affirmative, negative, interrogative and contextual examples where applicable.
+Practice: Generate identification, transformation, correction and production questions.
+
+TOPIC: पुल्लिंग, स्त्रीलिंग, नपुंसकलिंग; एकवचन आनी अनेकवचन
+Definition: Explain what the structure means and what grammatical function it performs.
+Formation: State the normal formation pattern and all major variants.
+Agreement/Selection: State what controls the form.
+Meaning: Explain the semantic/pragmatic difference from related forms.
+Exceptions: Record irregular, idiomatic and exceptional forms.
+Examples: Provide affirmative, negative, interrogative and contextual examples where applicable.
+Practice: Generate identification, transformation, correction and production questions.
+
+TOPIC: विभक्ती आनी सामान्यरूप
+Definition: Explain what the structure means and what grammatical function it performs.
+Formation: State the normal formation pattern and all major variants.
+Agreement/Selection: State what controls the form.
+Meaning: Explain the semantic/pragmatic difference from related forms.
+Exceptions: Record irregular, idiomatic and exceptional forms.
+Examples: Provide affirmative, negative, interrogative and contextual examples where applicable.
+Practice: Generate identification, transformation, correction and production questions.
+
+TOPIC: वर्तमानकाळ, भूतकाळ, भविश्यकाळ
+Definition: Explain what the structure means and what grammatical function it performs.
+Formation: State the normal formation pattern and all major variants.
+Agreement/Selection: State what controls the form.
+Meaning: Explain the semantic/pragmatic difference from related forms.
+Exceptions: Record irregular, idiomatic and exceptional forms.
+Examples: Provide affirmative, negative, interrogative and contextual examples where applicable.
+Practice: Generate identification, transformation, correction and production questions.
+
+TOPIC: कर्तरी, कर्मणी आनी भावे प्रयोग
+Definition: Explain what the structure means and what grammatical function it performs.
+Formation: State the normal formation pattern and all major variants.
+Agreement/Selection: State what controls the form.
+Meaning: Explain the semantic/pragmatic difference from related forms.
+Exceptions: Record irregular, idiomatic and exceptional forms.
+Examples: Provide affirmative, negative, interrogative and contextual examples where applicable.
+Practice: Generate identification, transformation, correction and production questions.
+
+TOPIC: सादें, संयुक्त आनी मिश्र वाक्य
+Definition: Explain what the structure means and what grammatical function it performs.
+Formation: State the normal formation pattern and all major variants.
+Agreement/Selection: State what controls the form.
+Meaning: Explain the semantic/pragmatic difference from related forms.
+Exceptions: Record irregular, idiomatic and exceptional forms.
+Examples: Provide affirmative, negative, interrogative and contextual examples where applicable.
+Practice: Generate identification, transformation, correction and production questions.
+
+TOPIC: समास: अव्ययीभाव, तत्पुरुष, द्वंद्व, बहुव्रीही
+Definition: Explain what the structure means and what grammatical function it performs.
+Formation: State the normal formation pattern and all major variants.
+Agreement/Selection: State what controls the form.
+Meaning: Explain the semantic/pragmatic difference from related forms.
+Exceptions: Record irregular, idiomatic and exceptional forms.
+Examples: Provide affirmative, negative, interrogative and contextual examples where applicable.
+Practice: Generate identification, transformation, correction and production questions.
+
+TOPIC: वाक्यसंलेषण, वाक्यरूपांतर, शुद्धलेखन
+Definition: Explain what the structure means and what grammatical function it performs.
+Formation: State the normal formation pattern and all major variants.
+Agreement/Selection: State what controls the form.
+Meaning: Explain the semantic/pragmatic difference from related forms.
+Exceptions: Record irregular, idiomatic and exceptional forms.
+Examples: Provide affirmative, negative, interrogative and contextual examples where applicable.
+Practice: Generate identification, transformation, correction and production questions.
+
+TOPIC: अलंकार, म्हणी, वाक्प्रचार आनी साहित्यिक भाशेचे नेम
+Definition: Explain what the structure means and what grammatical function it performs.
+Formation: State the normal formation pattern and all major variants.
+Agreement/Selection: State what controls the form.
+Meaning: Explain the semantic/pragmatic difference from related forms.
+Exceptions: Record irregular, idiomatic and exceptional forms.
+Examples: Provide affirmative, negative, interrogative and contextual examples where applicable.
+Practice: Generate identification, transformation, correction and production questions.
+
+TOPIC: Devanagari आणि Roman Konkani मधील script-specific लेखन फरक; प्रदेशानुसार variation
+Definition: Explain what the structure means and what grammatical function it performs.
+Formation: State the normal formation pattern and all major variants.
+Agreement/Selection: State what controls the form.
+Meaning: Explain the semantic/pragmatic difference from related forms.
+Exceptions: Record irregular, idiomatic and exceptional forms.
+Examples: Provide affirmative, negative, interrogative and contextual examples where applicable.
+Practice: Generate identification, transformation, correction and production questions.
+
+================================================================================
+BRAINAI RESPONSE AND TEACHING PROTOCOL
+================================================================================
+When teaching a concept:
+1. Give the learner's level-appropriate definition.
+2. Give the form/rule.
+3. Explain the function.
+4. Show 3–10 examples.
+5. Show a common incorrect form.
+6. Explain why it is incorrect.
+7. Give controlled exercises.
+8. Give production exercises.
+9. Test comprehension with an unseen example.
+10. Increase difficulty only after mastery.
+
+For bilingual learners:
+- Give the target-language explanation first.
+- Use the learner's known language only as support.
+- Do not assume literal translation preserves grammar.
+- Explicitly identify differences in word order, gender, case, tense/aspect,
+  agreement, script and idiomatic usage.
+
+For text correction:
+- Preserve intended meaning.
+- Correct spelling, grammar, punctuation and word choice.
+- Explain the rule responsible for each correction.
+- Distinguish grammatical error from stylistic preference.
+
+For literature:
+- Separate literal meaning, vocabulary, grammar, theme, structure, imagery,
+  rhetoric, cultural context and critical interpretation.
+- Never invent a quotation and attribute it to a real author.
+
+For assessment:
+Generate MCQs, fill-in-the-blanks, matching, short answers, transformations,
+error correction, translation, unseen passages, dictation, speaking prompts,
+composition prompts, viva questions and model answers.
+
+For language generation:
+- Maintain correct script direction.
+- Preserve diacritics when the task requires them.
+- Avoid mixing scripts unless requested.
+- Respect regional/dialectal variation, especially for Konkani.
+
+
+================================================================================
+DEEP EXAMPLE BANK — KONKANI — 120 EXAMPLES
+================================================================================
+
+EXAMPLE 001 — नाव
+TEXT: राम शाळेंत गेलो.
+EXPLANATION: राम आनी शाळा ही नांवां.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 002 — सर्वनाम
+TEXT: सीमा आयली. ती बसली.
+EXPLANATION: ती सर्वनाम.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 003 — विशेशण
+TEXT: सुंदर फूल उमललां.
+EXPLANATION: सुंदर विशेशण.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 004 — क्रियापद
+TEXT: भुरगीं मैदानांत खेळतात.
+EXPLANATION: खेळतात क्रियापद.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 005 — लिंग
+TEXT: मुलगो आयलो. मुलगी आयली.
+EXPLANATION: लिंगानुसार क्रियापद बदलता.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 006 — वचन
+TEXT: मुलगो आयलो. मुलगे आयले.
+EXPLANATION: एकवचन आनी अनेकवचन.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 007 — कर्ता
+TEXT: मोहनान पत्र बरयलां.
+EXPLANATION: मोहन कर्ता.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 008 — कर्म
+TEXT: मोहनान पत्र बरयलां.
+EXPLANATION: पत्र कर्म.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 009 — करण
+TEXT: ताणें पेनान बरयलां.
+EXPLANATION: पेनान करण.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 010 — संप्रदान
+TEXT: हांव भुरग्याक पुस्तक दिलां.
+EXPLANATION: भुरग्याक संप्रदान.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 011 — संबंध
+TEXT: हें रामाचें पुस्तक आसा.
+EXPLANATION: रामाचें संबंध.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 012 — अधिकरण
+TEXT: पुस्तक टेबलाचेर आसा.
+EXPLANATION: टेबलाचेर अधिकरण.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 013 — संबोधन
+TEXT: अरे मित्रा! इकडे ये.
+EXPLANATION: मित्रा संबोधन.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 014 — वर्तमानकाळ
+TEXT: हांव रोज अभ्यास करतां.
+EXPLANATION: वर्तमानकाळ.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 015 — भूतकाळ
+TEXT: हांव काल बाजारांत गेलों.
+EXPLANATION: भूतकाळ.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 016 — भविष्यकाळ
+TEXT: हांव फाल्यां वचतलों.
+EXPLANATION: भविष्यकाळ.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 017 — सादें वाक्य
+TEXT: राम घरा गेलो.
+EXPLANATION: एक मुख्य क्रिया.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 018 — संयुक्त वाक्य
+TEXT: राम आयलो आनी श्याम गेलो.
+EXPLANATION: दोन वाक्यां जोडली.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 019 — मिश्र वाक्य
+TEXT: पावस पडला जाका लागून आमी घरा गेलां.
+EXPLANATION: कारण दर्शयता.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 020 — कर्तरी प्रयोग
+TEXT: सीमान पत्र बरयलां.
+EXPLANATION: कर्ता प्रधान.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 021 — कर्मणी प्रयोग
+TEXT: पत्र सीमे कडल्यान बरयलां गेलां.
+EXPLANATION: कर्म प्रधान.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 022 — भावे प्रयोग
+TEXT: म्हज्यान चलना.
+EXPLANATION: भाव प्रधान.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 023 — समानार्थी
+TEXT: सूर्य — रवि, आदित्य.
+EXPLANATION: समान अर्थ.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 024 — विरुद्धार्थी
+TEXT: दीस — रात.
+EXPLANATION: विरुद्ध अर्थ.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 025 — वाक्प्रचार
+TEXT: ताणें नाकीं नऊ हाडले.
+EXPLANATION: लाक्षणिक अर्थ.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 026 — म्हण
+TEXT: अति जाल्यार माती.
+EXPLANATION: अनुभवाधारित म्हण.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 027 — उपमा
+TEXT: ताचो चेहरो चंद्रा सारको आसा.
+EXPLANATION: समानता.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 028 — रूपक
+TEXT: ताचो चेहरो चंद्र आसा.
+EXPLANATION: रूपक.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 029 — अनुप्रास
+TEXT: चंचल चांदणें चमकलें.
+EXPLANATION: ध्वनी पुनरावृत्ती.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 030 — प्रश्नार्थक
+TEXT: तूं खंय वता?
+EXPLANATION: प्रश्न.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 031 — नकारार्थी
+TEXT: हांव आयज वचना.
+EXPLANATION: नकार.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 032 — उद्गार
+TEXT: वा! कितलो सुंदर दिस!
+EXPLANATION: उद्गार.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 033 — आज्ञार्थक
+TEXT: दिसो नीट वाच.
+EXPLANATION: आज्ञा.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 034 — औपचारिक पत्र
+TEXT: महोदय, म्हाका दोन दिसांची रजा दियात.
+EXPLANATION: औपचारिक लेखन.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 035 — निबंध
+TEXT: स्वच्छताय आरोग्याक लागीं आसता.
+EXPLANATION: विषयक लेखन.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 036 — अहवाल
+TEXT: शाळेंत विज्ञान प्रदर्शन जालें.
+EXPLANATION: तथ्यात्मक अहवाल.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 037 — संवाद
+TEXT: राम: तूं खंय वता? श्याम: पुस्तकालयांत.
+EXPLANATION: संवाद.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 038 — सामान्यरूप
+TEXT: रामाक, रामान, रामाचें अशी रूपांतरां येतात.
+EXPLANATION: संदर्भानुसार नामरूप बदलता.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 039 — लिपी
+TEXT: कोंकणी देवनागरी आनी रोमन लिपींत बरयतात.
+EXPLANATION: लिपीविषयक माहिती.
+TRAINING TASK: Core example: memorize the construction, identify its components, and explain why it is correct.
+
+EXAMPLE 040 — नाव
+TEXT: राम शाळेंत गेलो.
+EXPLANATION: राम आनी शाळा ही नांवां.
+TRAINING TASK: Identify the rule and each relevant word.
+
+EXAMPLE 041 — सर्वनाम
+TEXT: सीमा आयली. ती बसली.
+EXPLANATION: ती सर्वनाम.
+TRAINING TASK: Change the example to a negative form where possible.
+
+EXAMPLE 042 — विशेशण
+TEXT: सुंदर फूल उमललां.
+EXPLANATION: सुंदर विशेशण.
+TRAINING TASK: Change it into a question where structurally possible.
+
+EXAMPLE 043 — क्रियापद
+TEXT: भुरगीं मैदानांत खेळतात.
+EXPLANATION: खेळतात क्रियापद.
+TRAINING TASK: Change number or person and adjust agreement.
+
+EXAMPLE 044 — लिंग
+TEXT: मुलगो आयलो. मुलगी आयली.
+EXPLANATION: लिंगानुसार क्रियापद बदलता.
+TRAINING TASK: Change the tense/aspect and adjust dependent forms.
+
+EXAMPLE 045 — वचन
+TEXT: मुलगो आयलो. मुलगे आयले.
+EXPLANATION: एकवचन आनी अनेकवचन.
+TRAINING TASK: Replace the main noun with a pronoun.
+
+EXAMPLE 046 — कर्ता
+TEXT: मोहनान पत्र बरयलां.
+EXPLANATION: मोहन कर्ता.
+TRAINING TASK: Create one incorrect version and correct it.
+
+EXAMPLE 047 — कर्म
+TEXT: मोहनान पत्र बरयलां.
+EXPLANATION: पत्र कर्म.
+TRAINING TASK: Explain the word order.
+
+EXAMPLE 048 — करण
+TEXT: ताणें पेनान बरयलां.
+EXPLANATION: पेनान करण.
+TRAINING TASK: Create another sentence using the same rule.
+
+EXAMPLE 049 — संप्रदान
+TEXT: हांव भुरग्याक पुस्तक दिलां.
+EXPLANATION: भुरग्याक संप्रदान.
+TRAINING TASK: Turn it into a fill-in-the-blank question.
+
+EXAMPLE 050 — संबंध
+TEXT: हें रामाचें पुस्तक आसा.
+EXPLANATION: रामाचें संबंध.
+TRAINING TASK: Turn it into an error-correction question.
+
+EXAMPLE 051 — अधिकरण
+TEXT: पुस्तक टेबलाचेर आसा.
+EXPLANATION: टेबलाचेर अधिकरण.
+TRAINING TASK: Turn it into a short-answer exam question.
+
+EXAMPLE 052 — संबोधन
+TEXT: अरे मित्रा! इकडे ये.
+EXPLANATION: मित्रा संबोधन.
+TRAINING TASK: Create a translation exercise testing the same rule.
+
+EXAMPLE 053 — वर्तमानकाळ
+TEXT: हांव रोज अभ्यास करतां.
+EXPLANATION: वर्तमानकाळ.
+TRAINING TASK: Explain a common learner mistake.
+
+EXAMPLE 054 — भूतकाळ
+TEXT: हांव काल बाजारांत गेलों.
+EXPLANATION: भूतकाळ.
+TRAINING TASK: Explain how the meaning changes if the key form changes.
+
+EXAMPLE 055 — भविष्यकाळ
+TEXT: हांव फाल्यां वचतलों.
+EXPLANATION: भविष्यकाळ.
+TRAINING TASK: Identify the rule and each relevant word.
+
+EXAMPLE 056 — सादें वाक्य
+TEXT: राम घरा गेलो.
+EXPLANATION: एक मुख्य क्रिया.
+TRAINING TASK: Change the example to a negative form where possible.
+
+EXAMPLE 057 — संयुक्त वाक्य
+TEXT: राम आयलो आनी श्याम गेलो.
+EXPLANATION: दोन वाक्यां जोडली.
+TRAINING TASK: Change it into a question where structurally possible.
+
+EXAMPLE 058 — मिश्र वाक्य
+TEXT: पावस पडला जाका लागून आमी घरा गेलां.
+EXPLANATION: कारण दर्शयता.
+TRAINING TASK: Change number or person and adjust agreement.
+
+EXAMPLE 059 — कर्तरी प्रयोग
+TEXT: सीमान पत्र बरयलां.
+EXPLANATION: कर्ता प्रधान.
+TRAINING TASK: Change the tense/aspect and adjust dependent forms.
+
+EXAMPLE 060 — कर्मणी प्रयोग
+TEXT: पत्र सीमे कडल्यान बरयलां गेलां.
+EXPLANATION: कर्म प्रधान.
+TRAINING TASK: Replace the main noun with a pronoun.
+
+EXAMPLE 061 — भावे प्रयोग
+TEXT: म्हज्यान चलना.
+EXPLANATION: भाव प्रधान.
+TRAINING TASK: Create one incorrect version and correct it.
+
+EXAMPLE 062 — समानार्थी
+TEXT: सूर्य — रवि, आदित्य.
+EXPLANATION: समान अर्थ.
+TRAINING TASK: Explain the word order.
+
+EXAMPLE 063 — विरुद्धार्थी
+TEXT: दीस — रात.
+EXPLANATION: विरुद्ध अर्थ.
+TRAINING TASK: Create another sentence using the same rule.
+
+EXAMPLE 064 — वाक्प्रचार
+TEXT: ताणें नाकीं नऊ हाडले.
+EXPLANATION: लाक्षणिक अर्थ.
+TRAINING TASK: Turn it into a fill-in-the-blank question.
+
+EXAMPLE 065 — म्हण
+TEXT: अति जाल्यार माती.
+EXPLANATION: अनुभवाधारित म्हण.
+TRAINING TASK: Turn it into an error-correction question.
+
+EXAMPLE 066 — उपमा
+TEXT: ताचो चेहरो चंद्रा सारको आसा.
+EXPLANATION: समानता.
+TRAINING TASK: Turn it into a short-answer exam question.
+
+EXAMPLE 067 — रूपक
+TEXT: ताचो चेहरो चंद्र आसा.
+EXPLANATION: रूपक.
+TRAINING TASK: Create a translation exercise testing the same rule.
+
+EXAMPLE 068 — अनुप्रास
+TEXT: चंचल चांदणें चमकलें.
+EXPLANATION: ध्वनी पुनरावृत्ती.
+TRAINING TASK: Explain a common learner mistake.
+
+EXAMPLE 069 — प्रश्नार्थक
+TEXT: तूं खंय वता?
+EXPLANATION: प्रश्न.
+TRAINING TASK: Explain how the meaning changes if the key form changes.
+
+EXAMPLE 070 — नकारार्थी
+TEXT: हांव आयज वचना.
+EXPLANATION: नकार.
+TRAINING TASK: Identify the rule and each relevant word.
+
+EXAMPLE 071 — उद्गार
+TEXT: वा! कितलो सुंदर दिस!
+EXPLANATION: उद्गार.
+TRAINING TASK: Change the example to a negative form where possible.
+
+EXAMPLE 072 — आज्ञार्थक
+TEXT: दिसो नीट वाच.
+EXPLANATION: आज्ञा.
+TRAINING TASK: Change it into a question where structurally possible.
+
+EXAMPLE 073 — औपचारिक पत्र
+TEXT: महोदय, म्हाका दोन दिसांची रजा दियात.
+EXPLANATION: औपचारिक लेखन.
+TRAINING TASK: Change number or person and adjust agreement.
+
+EXAMPLE 074 — निबंध
+TEXT: स्वच्छताय आरोग्याक लागीं आसता.
+EXPLANATION: विषयक लेखन.
+TRAINING TASK: Change the tense/aspect and adjust dependent forms.
+
+EXAMPLE 075 — अहवाल
+TEXT: शाळेंत विज्ञान प्रदर्शन जालें.
+EXPLANATION: तथ्यात्मक अहवाल.
+TRAINING TASK: Replace the main noun with a pronoun.
+
+EXAMPLE 076 — संवाद
+TEXT: राम: तूं खंय वता? श्याम: पुस्तकालयांत.
+EXPLANATION: संवाद.
+TRAINING TASK: Create one incorrect version and correct it.
+
+EXAMPLE 077 — सामान्यरूप
+TEXT: रामाक, रामान, रामाचें अशी रूपांतरां येतात.
+EXPLANATION: संदर्भानुसार नामरूप बदलता.
+TRAINING TASK: Explain the word order.
+
+EXAMPLE 078 — लिपी
+TEXT: कोंकणी देवनागरी आनी रोमन लिपींत बरयतात.
+EXPLANATION: लिपीविषयक माहिती.
+TRAINING TASK: Create another sentence using the same rule.
+
+EXAMPLE 079 — नाव
+TEXT: राम शाळेंत गेलो.
+EXPLANATION: राम आनी शाळा ही नांवां.
+TRAINING TASK: Turn it into a fill-in-the-blank question.
+
+EXAMPLE 080 — सर्वनाम
+TEXT: सीमा आयली. ती बसली.
+EXPLANATION: ती सर्वनाम.
+TRAINING TASK: Turn it into an error-correction question.
+
+EXAMPLE 081 — विशेशण
+TEXT: सुंदर फूल उमललां.
+EXPLANATION: सुंदर विशेशण.
+TRAINING TASK: Turn it into a short-answer exam question.
+
+EXAMPLE 082 — क्रियापद
+TEXT: भुरगीं मैदानांत खेळतात.
+EXPLANATION: खेळतात क्रियापद.
+TRAINING TASK: Create a translation exercise testing the same rule.
+
+EXAMPLE 083 — लिंग
+TEXT: मुलगो आयलो. मुलगी आयली.
+EXPLANATION: लिंगानुसार क्रियापद बदलता.
+TRAINING TASK: Explain a common learner mistake.
+
+EXAMPLE 084 — वचन
+TEXT: मुलगो आयलो. मुलगे आयले.
+EXPLANATION: एकवचन आनी अनेकवचन.
+TRAINING TASK: Explain how the meaning changes if the key form changes.
+
+EXAMPLE 085 — कर्ता
+TEXT: मोहनान पत्र बरयलां.
+EXPLANATION: मोहन कर्ता.
+TRAINING TASK: Identify the rule and each relevant word.
+
+EXAMPLE 086 — कर्म
+TEXT: मोहनान पत्र बरयलां.
+EXPLANATION: पत्र कर्म.
+TRAINING TASK: Change the example to a negative form where possible.
+
+EXAMPLE 087 — करण
+TEXT: ताणें पेनान बरयलां.
+EXPLANATION: पेनान करण.
+TRAINING TASK: Change it into a question where structurally possible.
+
+EXAMPLE 088 — संप्रदान
+TEXT: हांव भुरग्याक पुस्तक दिलां.
+EXPLANATION: भुरग्याक संप्रदान.
+TRAINING TASK: Change number or person and adjust agreement.
+
+EXAMPLE 089 — संबंध
+TEXT: हें रामाचें पुस्तक आसा.
+EXPLANATION: रामाचें संबंध.
+TRAINING TASK: Change the tense/aspect and adjust dependent forms.
+
+EXAMPLE 090 — अधिकरण
+TEXT: पुस्तक टेबलाचेर आसा.
+EXPLANATION: टेबलाचेर अधिकरण.
+TRAINING TASK: Replace the main noun with a pronoun.
+
+EXAMPLE 091 — संबोधन
+TEXT: अरे मित्रा! इकडे ये.
+EXPLANATION: मित्रा संबोधन.
+TRAINING TASK: Create one incorrect version and correct it.
+
+EXAMPLE 092 — वर्तमानकाळ
+TEXT: हांव रोज अभ्यास करतां.
+EXPLANATION: वर्तमानकाळ.
+TRAINING TASK: Explain the word order.
+
+EXAMPLE 093 — भूतकाळ
+TEXT: हांव काल बाजारांत गेलों.
+EXPLANATION: भूतकाळ.
+TRAINING TASK: Create another sentence using the same rule.
+
+EXAMPLE 094 — भविष्यकाळ
+TEXT: हांव फाल्यां वचतलों.
+EXPLANATION: भविष्यकाळ.
+TRAINING TASK: Turn it into a fill-in-the-blank question.
+
+EXAMPLE 095 — सादें वाक्य
+TEXT: राम घरा गेलो.
+EXPLANATION: एक मुख्य क्रिया.
+TRAINING TASK: Turn it into an error-correction question.
+
+EXAMPLE 096 — संयुक्त वाक्य
+TEXT: राम आयलो आनी श्याम गेलो.
+EXPLANATION: दोन वाक्यां जोडली.
+TRAINING TASK: Turn it into a short-answer exam question.
+
+EXAMPLE 097 — मिश्र वाक्य
+TEXT: पावस पडला जाका लागून आमी घरा गेलां.
+EXPLANATION: कारण दर्शयता.
+TRAINING TASK: Create a translation exercise testing the same rule.
+
+EXAMPLE 098 — कर्तरी प्रयोग
+TEXT: सीमान पत्र बरयलां.
+EXPLANATION: कर्ता प्रधान.
+TRAINING TASK: Explain a common learner mistake.
+
+EXAMPLE 099 — कर्मणी प्रयोग
+TEXT: पत्र सीमे कडल्यान बरयलां गेलां.
+EXPLANATION: कर्म प्रधान.
+TRAINING TASK: Explain how the meaning changes if the key form changes.
+
+EXAMPLE 100 — भावे प्रयोग
+TEXT: म्हज्यान चलना.
+EXPLANATION: भाव प्रधान.
+TRAINING TASK: Identify the rule and each relevant word.
+
+EXAMPLE 101 — समानार्थी
+TEXT: सूर्य — रवि, आदित्य.
+EXPLANATION: समान अर्थ.
+TRAINING TASK: Change the example to a negative form where possible.
+
+EXAMPLE 102 — विरुद्धार्थी
+TEXT: दीस — रात.
+EXPLANATION: विरुद्ध अर्थ.
+TRAINING TASK: Change it into a question where structurally possible.
+
+EXAMPLE 103 — वाक्प्रचार
+TEXT: ताणें नाकीं नऊ हाडले.
+EXPLANATION: लाक्षणिक अर्थ.
+TRAINING TASK: Change number or person and adjust agreement.
+
+EXAMPLE 104 — म्हण
+TEXT: अति जाल्यार माती.
+EXPLANATION: अनुभवाधारित म्हण.
+TRAINING TASK: Change the tense/aspect and adjust dependent forms.
+
+EXAMPLE 105 — उपमा
+TEXT: ताचो चेहरो चंद्रा सारको आसा.
+EXPLANATION: समानता.
+TRAINING TASK: Replace the main noun with a pronoun.
+
+EXAMPLE 106 — रूपक
+TEXT: ताचो चेहरो चंद्र आसा.
+EXPLANATION: रूपक.
+TRAINING TASK: Create one incorrect version and correct it.
+
+EXAMPLE 107 — अनुप्रास
+TEXT: चंचल चांदणें चमकलें.
+EXPLANATION: ध्वनी पुनरावृत्ती.
+TRAINING TASK: Explain the word order.
+
+EXAMPLE 108 — प्रश्नार्थक
+TEXT: तूं खंय वता?
+EXPLANATION: प्रश्न.
+TRAINING TASK: Create another sentence using the same rule.
+
+EXAMPLE 109 — नकारार्थी
+TEXT: हांव आयज वचना.
+EXPLANATION: नकार.
+TRAINING TASK: Turn it into a fill-in-the-blank question.
+
+EXAMPLE 110 — उद्गार
+TEXT: वा! कितलो सुंदर दिस!
+EXPLANATION: उद्गार.
+TRAINING TASK: Turn it into an error-correction question.
+
+EXAMPLE 111 — आज्ञार्थक
+TEXT: दिसो नीट वाच.
+EXPLANATION: आज्ञा.
+TRAINING TASK: Turn it into a short-answer exam question.
+
+EXAMPLE 112 — औपचारिक पत्र
+TEXT: महोदय, म्हाका दोन दिसांची रजा दियात.
+EXPLANATION: औपचारिक लेखन.
+TRAINING TASK: Create a translation exercise testing the same rule.
+
+EXAMPLE 113 — निबंध
+TEXT: स्वच्छताय आरोग्याक लागीं आसता.
+EXPLANATION: विषयक लेखन.
+TRAINING TASK: Explain a common learner mistake.
+
+EXAMPLE 114 — अहवाल
+TEXT: शाळेंत विज्ञान प्रदर्शन जालें.
+EXPLANATION: तथ्यात्मक अहवाल.
+TRAINING TASK: Explain how the meaning changes if the key form changes.
+
+EXAMPLE 115 — संवाद
+TEXT: राम: तूं खंय वता? श्याम: पुस्तकालयांत.
+EXPLANATION: संवाद.
+TRAINING TASK: Identify the rule and each relevant word.
+
+EXAMPLE 116 — सामान्यरूप
+TEXT: रामाक, रामान, रामाचें अशी रूपांतरां येतात.
+EXPLANATION: संदर्भानुसार नामरूप बदलता.
+TRAINING TASK: Change the example to a negative form where possible.
+
+EXAMPLE 117 — लिपी
+TEXT: कोंकणी देवनागरी आनी रोमन लिपींत बरयतात.
+EXPLANATION: लिपीविषयक माहिती.
+TRAINING TASK: Change it into a question where structurally possible.
+
+EXAMPLE 118 — नाव
+TEXT: राम शाळेंत गेलो.
+EXPLANATION: राम आनी शाळा ही नांवां.
+TRAINING TASK: Change number or person and adjust agreement.
+
+EXAMPLE 119 — सर्वनाम
+TEXT: सीमा आयली. ती बसली.
+EXPLANATION: ती सर्वनाम.
+TRAINING TASK: Change the tense/aspect and adjust dependent forms.
+
+EXAMPLE 120 — विशेशण
+TEXT: सुंदर फूल उमललां.
+EXPLANATION: सुंदर विशेशण.
+TRAINING TASK: Replace the main noun with a pronoun.
+
+================================================================================
+CORPUS GENERATION RULE
+================================================================================
+For every numbered example, BrainAI can generate additional training pairs:
+1. definition → example
+2. example → rule identification
+3. rule → new example
+4. correct → incorrect contrast
+5. error → correction → explanation
+6. sentence → transformation
+7. passage → grammatical analysis
+8. question → answer → rationale
+9. translation → grammatical comparison
+10. easy → intermediate → advanced difficulty progression
+
+The 120 examples are therefore anchor examples. They are intended to seed
+large-scale synthetic expansion while preserving grammatical explanations.

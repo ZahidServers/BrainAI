@@ -1,0 +1,398 @@
+BrainAI EDUCATIONAL CORPUS
+BATCH 7 — GRADE 12 SCIENCE (NCERT branch + Maharashtra HSC Science branch)
+Original teaching corpus; no textbook reproduced. Verified 2026: NCERT Class 12 continues its existing books unchanged for 2026–27 (new books 2027–28). Physics 14 ch (Electric Charges & Fields → Semiconductor Electronics); Chemistry 10 ch (Solutions, Electrochemistry, Kinetics, d/f-block, Coordination, Haloalkanes/arenes, Alcohols-Phenols-Ethers, Aldehydes-Ketones-Acids, Amines, Biomolecules); Mathematics 13 ch (Relations & Functions → Probability; Calculus block ~35 marks); Biology 13 ch (Reproduction → Ecology). Maharashtra HSC Science (Std 12) parallels these with Balbharati framing and Mathematics & Statistics Part I + II; bifocal/vocational in Batch 12. Boards kept separate.
+Depth policy: full flagship apparatus on Physics: Electric Charges & Fields (Electrostatics), Chemistry: Electrochemistry, and Biology: Principles of Inheritance & Variation (Genetics); medium anchor on Maths: Integrals; compact-but-teaching LESSON records for remaining chapters. Any chapter expands on request.
+
+
+=================================================================
+BRANCH A — NCERT / CBSE (Class 12 Science)
+=================================================================
+
+===== PHYSICS =====
+
+★ FLAGSHIP G12P-ES — Electric Charges and Fields (Electrostatics) — FULL APPARATUS
+1. METADATA
+• Grade 12 · NCERT · Science · Physics · Unit: Electrostatics · Chapter: Electric Charges and Fields
+• Prerequisites: vectors, Coulomb-scale forces, area/flux idea, integration basics.
+• Difficulty: Medium–Hard (opens the electrostatics unit; heavy in boards + JEE/NEET).
+• Objectives: properties of charge; Coulomb's law (vector form); superposition; electric field & field lines; electric dipole & torque; continuous charge distributions; electric flux & Gauss's law with applications.
+2. TEACHING MATERIAL
+(a) Charge & its properties. Charge is a fundamental property of matter (unit coulomb, C). Two kinds: positive, negative; like repel, unlike attract. Key properties: quantisation (q = ne, e = 1.6×10⁻¹⁹ C), conservation (total charge is constant), and additivity (charges add algebraically).
+(b) Coulomb's law. The force between two point charges: F = k·q₁q₂/r², k = 1/4πε₀ ≈ 9×10⁹ N·m²/C². Directed along the line joining them (repulsive for like, attractive for unlike). Vector form: F₁₂ = (1/4πε₀)(q₁q₂/r²) r̂. Weaker in a medium: divide by relative permittivity εᵣ.
+(c) Superposition principle. The net force on a charge is the vector sum of forces due to all other charges, each computed independently.
+(d) Electric field E. Field is force per unit positive test charge: E = F/q₀ (N/C or V/m), a vector. For a point charge: E = (1/4πε₀)(q/r²), pointing away from + and toward −. Fields obey superposition.
+(e) Field lines. Imaginary lines showing field direction (tangent = E direction); denser lines = stronger field; start on +, end on −; never cross.
+(f) Electric dipole. Two equal and opposite charges ±q separated by 2a. Dipole moment p = q·(2a), directed −→+. Field on axial line ≈ 2kp/r³; on equatorial line ≈ kp/r³ (opposite direction). In a uniform field, a dipole feels torque τ = pE sinθ (τ = p×E), zero net force; potential energy U = −pE cosθ.
+(g) Continuous charge distributions. Linear (λ), surface (σ), volume (ρ) charge densities; field found by integrating dE over the distribution.
+(h) Electric flux & Gauss's law. Flux Φ = E·A (Φ = ∮E·dA). Gauss's law: the net flux through a closed surface = enclosed charge / ε₀, Φ = qenc/ε₀. Powerful for symmetric charges:
+ • Infinite line charge: E = λ/(2πε₀r).
+ • Infinite charged sheet: E = σ/(2ε₀) (independent of distance).
+ • Uniformly charged spherical shell: E = kq/r² outside (as if all charge at centre); E = 0 inside.
+3. WORKED EXAMPLES
+1. Two charges +2 μC and +3 μC are 0.3 m apart. F = 9×10⁹·(2×10⁻⁶·3×10⁻⁶)/(0.3²) = 9×10⁹·6×10⁻¹²/0.09 = 0.6 N (repulsive).
+2. Field at 0.1 m from +5 μC: E = 9×10⁹·5×10⁻⁶/0.01 = 4.5×10⁶ N/C (away from charge).
+3. Dipole p = 2×10⁻⁹ C·m in field 10⁵ N/C at 30°: τ = pE sinθ = 2×10⁻⁹·10⁵·0.5 = 1×10⁻⁴ N·m.
+4. Flux through a closed surface enclosing +8.85 nC: Φ = q/ε₀ = 8.85×10⁻⁹/8.85×10⁻¹² = 1000 N·m²/C.
+4. UNITS & DIMENSIONS
+ Quantity  |  Unit  |  Dimensional formula 
+------------------------------
+ Charge q  |  C (A·s)  |  [A T] 
+ Field E  |  N/C = V/m  |  [M L T⁻³ A⁻¹] 
+ Flux Φ  |  N·m²/C  |  [M L³ T⁻³ A⁻¹] 
+ Dipole moment p  |  C·m  |  [A T L] 
+5. VISUAL / DIAGRAM DESCRIPTIONS
+• Field lines: radial arrows outward from a + charge, inward to a − charge; a dipole showing curved lines from + to −.
+• Gaussian sphere around a point charge: uniform radial E crossing the surface, Φ = q/ε₀.
+
+A. DEFINITIONS (12)
+1. Electric charge. 2. Quantisation of charge. 3. Coulomb's law. 4. Permittivity (ε₀). 5. Electric field. 6. Field line. 7. Superposition principle. 8. Electric dipole. 9. Dipole moment. 10. Electric flux. 11. Gauss's law. 12. Surface charge density.
+
+B. QUESTIONS & ANSWERS
+Easy: SI unit of charge? (Coulomb.) Value of e? (1.6×10⁻¹⁹ C.) Medium: State Coulomb's law. Field due to a point charge formula? (kq/r².) Difficult: Field inside a uniformly charged spherical shell? (Zero.) Derive field of an infinite sheet using Gauss's law. (σ/2ε₀.) Application: Why do field lines never intersect? (E would have two directions at one point — impossible.) Reasoning: Why is the field inside a conductor zero in electrostatics? (Charges rearrange until internal field cancels.)
+
+C. MCQs (20, abridged)
+1. Charge is quantised as q = ne. 2. Coulomb constant k = 9×10⁹. 3. Field unit = N/C. 4. Field of a point charge ∝ 1/r². 5. Like charges — repel. 6. Flux Φ = q/ε₀ (closed surface). 7. Field inside a charged shell = 0. 8. Dipole torque = pE sinθ. 9. Field lines start on +. 10. e = 1.6×10⁻¹⁹ C. 11. Field of infinite sheet = σ/2ε₀. 12. Charge is conserved & quantised. 13. Superposition adds forces as vectors. 14. Dipole moment direction: −→+. 15. Field of infinite line = λ/2πε₀r. 16. Two field lines can — never cross. 17. Force in a medium is smaller (÷εᵣ). 18. Flux depends only on enclosed charge. 19. U of dipole = −pE cosθ. 20. Unit of ε₀ = C²N⁻¹m⁻².
+
+D. TRUE / FALSE (10)
+1. Charge is quantised. T. 2. Field lines can cross. F. 3. Field inside a conducting shell is zero. T. 4. Coulomb force ∝ 1/r. F (1/r²). 5. Flux through a closed surface depends on external charges. F. 6. A dipole in a uniform field feels net force. F (only torque). 7. Like charges attract. F. 8. E = F/q₀. T. 9. Field of an infinite sheet decreases with distance. F (constant). 10. e = 1.6×10⁻¹⁹ C. T.
+
+E. FILL IN THE BLANKS (10)
+1. Coulomb's law: F = k q₁q₂/ (r²). 2. e =  C (1.6×10⁻¹⁹). 3. E =  /q₀ (F). 4. Gauss: Φ =  (q/ε₀). 5. Field inside a charged shell =  (0). 6. Dipole torque =  (pE sinθ). 7. k =  (9×10⁹). 8. Field of infinite sheet =  (σ/2ε₀). 9. Field lines never  (cross). 10. Dipole moment p = q×  (2a).
+
+F. SHORT-ANSWER
+• State and write the vector form of Coulomb's law.
+• Using Gauss's law, find the field near an infinite charged plane.
+• Define electric flux and state its SI unit.
+
+G. LONG-ANSWER (model)
+Q: Using Gauss's law, derive the electric field due to a uniformly charged infinite plane sheet, and comment on its distance dependence.
+Model: Choose a Gaussian "pillbox" cylinder piercing the sheet, faces of area A parallel to the sheet. By symmetry E is perpendicular to the sheet and equal on both faces; the curved side contributes no flux. Total flux = 2EA. Enclosed charge = σA. By Gauss: 2EA = σA/ε₀ → E = σ/2ε₀. It is independent of distance from the sheet (uniform field), directed away from a positively charged sheet.
+
+H. HOTS
+• Three equal charges at a triangle's vertices — is the net force on any one zero? (No, unless a special configuration; compute vector sum.)
+• Why does a charged comb attract tiny paper bits (neutral)? (Induced polarisation creates a net attraction toward stronger field.)
+• If flux through a closed surface is zero, must the enclosed charge be zero? (Yes, by Gauss's law — though field on the surface need not be zero.)
+
+I. MISCONCEPTIONS
+• "Field lines are real, physical lines" → they are a representation.
+• "Flux depends on the surface shape/size" → only on enclosed charge (Gauss).
+• "Inside a charged shell the field is strong" → it is zero.
+• "Coulomb force falls as 1/r" → it falls as 1/r².
+
+J. REVISION
+Key points: charge properties (quantised, conserved, additive); Coulomb's law (vector, 1/r²); superposition; field E and lines; dipole torque τ=pE sinθ; flux; Gauss's law and its three classic applications.
+Formula sheet: F=kq₁q₂/r²; E=kq/r²; Esheet=σ/2ε₀; Eline=λ/2πε₀r; τ=pE sinθ; U=−pE cosθ; Φ=qenc/ε₀; k=1/4πε₀=9×10⁹.
+Vocabulary: charge, field, flux, dipole, permittivity, Gauss's law.
+
+ADAPTIVE — Concept: "electric field"
+• L1 Beginner: "An electric field is the region around a charge where it can push or pull other charges."
+• L2 Grade level: "The electric field E at a point is the force a small positive test charge would feel there per unit charge: E = F/q, pointing away from + charges and toward − charges."
+• L3 Technical: "The electric field is a vector field E(r) = (1/4πε₀)Σqᵢr̂ᵢ/rᵢ² satisfying Gauss's law ∮E·dA = qenc/ε₀; it mediates the Coulomb interaction."
+• L4 Analogy: "A field is like the invisible 'influence zone' around a magnet, but for charges — stronger nearby (dense lines), weaker far away, and it always tells a test charge which way to move."
+• L5 Real-world: "Electric fields inside capacitors store energy in your phone; the field near a charged cloud can grow until it sparks as lightning."
+
+INSTRUCTION RECORDS
+``json
+{"messages":[{"role":"user","content":"Explain Coulomb's law and the electric field for a Class 12 student."},{"role":"assistant","content":"Coulomb's law gives the force between two point charges: F = k·q₁q₂/r², where k = 9×10⁹ N·m²/C² and r is their separation. Like charges repel, unlike attract, and the force weakens with the SQUARE of distance. The electric field E is that force per unit positive test charge, E = F/q, so a point charge creates E = kq/r² pointing away from + or toward −. The field lets us describe a charge's influence at every point in space without needing a second charge present."}]}
+{"messages":[{"role":"user","content":"Derive the field of an infinite charged sheet using Gauss's law."},{"role":"assistant","content":"Take a cylindrical Gaussian pillbox through the sheet, its flat faces (area A) parallel to the sheet. By symmetry, E is perpendicular to the sheet and equal on both faces; the curved side has no flux. Total flux = 2EA. Charge enclosed = σA (σ = surface charge density). Gauss's law: 2EA = σA/ε₀ → E = σ/(2ε₀). Notice it doesn't depend on distance — the field of an infinite sheet is uniform!"}]}
+{"messages":[{"role":"user","content":"Why is the field zero inside a charged spherical shell?"},{"role":"assistant","content":"Apply Gauss's law to a spherical Gaussian surface inside the shell. Since all the charge sits on the outer shell, the charge ENCLOSED by an inner surface is zero. So flux = qenc/ε₀ = 0, and by symmetry E must be zero everywhere inside. That's why a hollow charged conductor shields its interior — the basis of a Faraday cage."}]}
+`
+
+PHYSICS — Remaining chapters (compact)
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Physics  |  CHAPTER: Electrostatic Potential & Capacitance  |  CONCEPT: Potential, capacitors
+EXPLANATION: Potential V=kq/r; work-potential relation; equipotentials; capacitance C=Q/V; parallel-plate C=ε₀A/d; series/parallel combos; energy ½CV²; dielectrics.  |  QUESTION: Energy stored in a capacitor? ANSWER: ½CV².  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Physics  |  CHAPTER: Current Electricity  |  CONCEPT: Ohm's law, circuits
+EXPLANATION: Current, drift velocity, resistivity; Ohm's law V=IR; series/parallel resistance; Kirchhoff's rules; Wheatstone bridge; cells, emf & internal resistance, potentiometer.  |  QUESTION: Kirchhoff's junction rule conserves? ANSWER: Charge.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Physics  |  CHAPTER: Magnetism (Moving Charges/Magnetism & Matter/EM Induction/AC)  |  CONCEPT: Electromagnetism
+EXPLANATION: Force on charge F=qv×B; Biot-Savart & Ampère's law; solenoid field; magnetic materials; Faraday's law EMF=−dΦ/dt, Lenz; AC, reactance, LCR resonance, transformers.  |  QUESTION: Faraday's law formula? ANSWER: EMF = −dΦ/dt.  |  DIFFICULTY: Hard
+
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Physics  |  CHAPTER: EM Waves / Ray Optics / Wave Optics  |  CONCEPT: Light & waves
+EXPLANATION: EM spectrum, c=1/√(μ₀ε₀); reflection/refraction, lenses & mirrors, total internal reflection, optical instruments; Huygens' principle, interference (Young's), diffraction, polarisation.  |  QUESTION: Lens maker's use of refractive index? ANSWER: 1/f=(n−1)(1/R₁−1/R₂).  |  DIFFICULTY: Hard
+
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Physics  |  CHAPTER: Dual Nature / Atoms / Nuclei / Semiconductors  |  CONCEPT: Modern physics
+EXPLANATION: Photoelectric effect E=hν, work function; Bohr model & spectra; nuclear binding energy, radioactivity, fission/fusion; semiconductors, p-n junction, diodes, transistors, logic gates.  |  QUESTION: Photoelectric equation? ANSWER: hν = φ + ½mv²max.  |  DIFFICULTY: Hard
+
+===== CHEMISTRY =====
+
+★ FLAGSHIP G12C-ELE — Electrochemistry — FULL APPARATUS
+1. METADATA
+• Grade 12 · NCERT · Science · Chemistry · Unit: Physical Chemistry · Chapter: Electrochemistry
+• Prerequisites: redox reactions, oxidation numbers, mole concept, thermodynamics (ΔG).
+• Difficulty: Medium–Hard (numericals-rich; JEE/NEET favourite).
+• Objectives: distinguish galvanic vs electrolytic cells; standard electrode potentials & the electrochemical series; cell EMF and its relation to ΔG; the Nernst equation; conductance and molar conductivity (Kohlrausch); electrolysis and Faraday's laws; batteries, fuel cells, corrosion.
+2. TEACHING MATERIAL
+(a) Redox recap. Oxidation = loss of electrons; reduction = gain. Electrochemistry studies the interconversion of chemical and electrical energy via redox reactions occurring at electrodes.
+(b) Galvanic (voltaic) cell. Spontaneous redox produces electricity. Two half-cells joined by a salt bridge; anode (oxidation, − terminal), cathode (reduction, + terminal). Example: Daniell cell, Zn  |  Zn²⁺  |    |  Cu²⁺  |  Cu. Electrons flow anode→cathode through the wire; current the opposite way.
+(c) Electrode potential & the series. Each electrode has a tendency to be reduced, measured as standard electrode potential E° (vs the standard hydrogen electrode, SHE = 0 V). The electrochemical series ranks E°; higher E° = stronger oxidising agent (more easily reduced). Cell EMF: E°cell = E°cathode − E°anode. Positive E°cell ⇒ spontaneous.
+(d) EMF–thermodynamics link. ΔG = −nFEcell (n = electrons transferred, F = 96500 C/mol). At standard state ΔG° = −nFE°cell; also ΔG° = −RT ln K, giving E°cell = (RT/nF) ln K.
+(e) Nernst equation. Concentration dependence of potential:
+ Ecell = E°cell − (RT/nF) ln Q = E°cell − (0.0591/n) log Q at 298 K.
+ (Q = reaction quotient.) Explains how EMF changes as reactants deplete; at equilibrium Ecell = 0, Q = K.
+(f) Conductance. Conductivity κ (S/cm) and molar conductivity Λm = κ×1000/c (S cm²/mol). Λm rises on dilution (more ions freed). Kohlrausch's law: at infinite dilution, Λ°m = sum of ionic contributions (λ°₊ + λ°₋).
+(g) Electrolysis & Faraday's laws. Passing current through an electrolyte drives non-spontaneous redox (electrolytic cell). Faraday's 1st law: mass deposited ∝ charge (m ∝ Q = It). 2nd law: for the same charge, masses ∝ equivalent masses. One mole of electrons = 1 F = 96500 C.
+(h) Applications. Primary cells (dry cell), secondary (lead-acid, Li-ion), fuel cells (H₂–O₂); corrosion as electrochemical (rusting) and its prevention (galvanising, cathodic protection).
+3. WORKED EXAMPLES
+1. Daniell cell: E°(Cu²⁺/Cu)=+0.34, E°(Zn²⁺/Zn)=−0.76. E°cell = 0.34−(−0.76) = +1.10 V (spontaneous).
+2. ΔG° for the above (n=2): ΔG° = −nFE° = −2×96500×1.10 = −212,300 J = −212.3 kJ.
+3. Nernst: for the cell with [Zn²⁺]=0.1, [Cu²⁺]=1.0 at 298 K: E = 1.10 − (0.0591/2) log(0.1/1.0) = 1.10 − 0.0296×(−1) = 1.13 V.
+4. Electrolysis: current 2 A for 965 s deposits how many mol e⁻? Q=It=1930 C → 1930/96500 = 0.02 mol e⁻.
+5. Molar conductivity: κ=0.025 S/cm, c=0.5 mol/L → Λm = 0.025×1000/0.5 = 50 S cm²/mol.
+4. VISUAL / DIAGRAM DESCRIPTION
+Daniell cell: left beaker Zn rod in ZnSO₄ (anode, −), right Cu rod in CuSO₄ (cathode, +), a salt bridge (KCl) connecting them, electrons flowing through the external wire from Zn to Cu; a voltmeter reads 1.10 V.
+
+A. DEFINITIONS (12)
+1. Galvanic cell. 2. Electrolytic cell. 3. Anode. 4. Cathode. 5. Standard electrode potential. 6. SHE. 7. EMF. 8. Nernst equation. 9. Molar conductivity. 10. Kohlrausch's law. 11. Faraday constant. 12. Electrochemical series.
+
+B. QUESTIONS & ANSWERS
+Easy: Which electrode is oxidation? (Anode.) Faraday constant? (96500 C/mol.) Medium: E°cell = ? (E°cathode − E°anode.) Relation ΔG and E? (ΔG=−nFE.) Difficult: Write the Nernst equation at 298 K. State Kohlrausch's law. Application: Why does a Daniell cell run down over time? (Concentrations change; E falls toward 0 as Q→K.) Reasoning: Why is a positive E°cell spontaneous? (ΔG=−nFE°<0.)
+
+C. MCQs (20, abridged)
+1. Oxidation occurs at the anode. 2. F = 96500 C/mol. 3. E°cell = E°cathode − E°anode. 4. ΔG = −nFE. 5. SHE potential = 0 V. 6. Nernst term at 298 K = 0.0591/n log Q. 7. Λm = κ×1000/c. 8. Molar conductivity increases on dilution. 9. Positive E°cell → spontaneous. 10. Salt bridge maintains electrical neutrality. 11. In a galvanic cell, e⁻ flow anode→cathode. 12. 1 mol e⁻ = 1 F. 13. Kohlrausch: Λ°m = λ°₊ + λ°₋. 14. At equilibrium Ecell = 0. 15. Higher E° = stronger oxidising agent. 16. Electrolysis needs external current. 17. Rusting is electrochemical corrosion. 18. Lead-acid battery is a secondary cell. 19. Cathode sign in galvanic cell = +. 20. Units of Λm = S cm²/mol.
+
+D. TRUE / FALSE (10)
+1. Anode is the reduction electrode. F (oxidation). 2. E°cell positive means spontaneous. T. 3. ΔG = −nFE. T. 4. SHE potential is 1 V. F (0 V). 5. Molar conductivity decreases on dilution. F (increases). 6. Faraday constant ≈ 96500 C/mol. T. 7. In a galvanic cell, cathode is negative. F (positive). 8. At equilibrium, cell EMF is zero. T. 9. Electrolysis is spontaneous. F. 10. Salt bridge completes the circuit and balances charge. T.
+
+E. FILL IN THE BLANKS (10)
+1. Oxidation at the  (anode). 2. E°cell = E°cathode −  (E°anode). 3. ΔG =  (−nFE). 4. F =  C/mol (96500). 5. Nernst: E = E° − (0.0591/n) log  (Q). 6. Λm = κ×1000/ (c). 7. SHE potential =  V (0). 8. 1 mol electrons =  F (1). 9. Rusting is  corrosion (electrochemical). 10. At equilibrium, Q =  (K).
+
+F. SHORT-ANSWER
+• Write the cell notation and EMF of the Daniell cell.
+• State Faraday's two laws of electrolysis.
+• How does molar conductivity vary with concentration for a strong vs weak electrolyte?
+
+G. LONG-ANSWER (model)
+Q: Derive ΔG° = −nFE°cell and use it to compute ΔG° and K for a cell with E°cell = 0.59 V, n = 2, at 298 K.
+Model: Electrical work done by the cell = charge × potential = (nF)(E°cell); this equals the maximum useful work = −ΔG°, so ΔG° = −nFE°cell. Compute: ΔG° = −2×96500×0.59 = −113,870 J ≈ −113.9 kJ. For K: ΔG° = −RT ln K → ln K = −ΔG°/RT = 113870/(8.314×298) ≈ 45.9 → K ≈ e⁴⁵·⁹ ≈ 9×10¹⁹ (very product-favoured).
+
+H. HOTS
+• Two cells have E° = +1.1 V and +0.5 V; which reaction is more spontaneous and why? (The +1.1 V — more negative ΔG.)
+• Using the Nernst equation, predict how a hydrogen electrode's potential changes if pH increases. (E becomes more negative as [H⁺] falls.)
+• Why can't we measure a single electrode potential absolutely? (Only potential differences are measurable; SHE is the reference set to 0.)
+
+I. MISCONCEPTIONS
+• "Anode is always positive" → in a galvanic cell it's negative; in electrolysis it's positive.
+• "Electrons flow through the salt bridge" → ions do; electrons flow through the wire.
+• "E°cell depends on how the equation is multiplied" → E° is intensive; it doesn't scale with n.
+• "Molar conductivity decreases on dilution" → it increases (more ions dissociate/move freely).
+
+J. REVISION
+Key points: galvanic (spontaneous) vs electrolytic; anode = oxidation, cathode = reduction; E°cell = cathode − anode; ΔG=−nFE; Nernst for concentration; conductance & Kohlrausch; Faraday's laws; batteries, fuel cells, corrosion.
+Formula sheet: E°cell=E°cat−E°an; ΔG=−nFE; E=E°−(0.0591/n)logQ (298 K); Λm=κ×1000/c; m∝It; 1 F=96500 C.
+Vocabulary: galvanic/electrolytic cell, electrode potential, EMF, Nernst, molar conductivity, Faraday's laws.
+
+ADAPTIVE — Concept: "electrode potential / EMF"
+• L1 Beginner: "EMF is the electrical push a cell gives to move electrons."
+• L2 Grade level: "Each metal has a tendency to gain or lose electrons (its electrode potential). The cell's EMF is the difference between the two electrodes' potentials; a positive value means the cell works spontaneously."
+• L3 Technical: "Electrode potential is the reduction tendency relative to SHE; E°cell = E°cathode − E°anode, and ΔG = −nFEcell links it to spontaneity, with the Nernst equation giving concentration dependence."
+• L4 Analogy: "Electrode potential is like the height of two water tanks — electrons (water) flow from the higher-energy electrode to the lower, and the 'height difference' is the EMF driving the flow."
+• L5 Real-world: "Your phone battery is an electrochemical cell; its voltage is the EMF from carefully chosen electrode materials, and it drops as the cell discharges (Nernst in action)."
+
+INSTRUCTION RECORDS
+`json
+{"messages":[{"role":"user","content":"Explain how a galvanic cell produces electricity."},{"role":"assistant","content":"A galvanic cell turns a spontaneous redox reaction into electric current. It has two half-cells: at the ANODE (−), a metal is oxidised, releasing electrons; at the CATHODE (+), ions are reduced, accepting electrons. The electrons travel through the external wire from anode to cathode (that's the current), while a salt bridge lets ions move to keep both sides electrically neutral. Example: in the Daniell cell, Zn is oxidised, Cu²⁺ is reduced, giving E°cell = 0.34 − (−0.76) = 1.10 V."}]}
+{"messages":[{"role":"user","content":"Solve: find E°cell for Zn/Cu given E°(Cu2+/Cu)=+0.34 V and E°(Zn2+/Zn)=-0.76 V, and state if it's spontaneous."},{"role":"assistant","content":"E°cell = E°cathode − E°anode. Copper (higher E°) is reduced (cathode); zinc is oxidised (anode).\nE°cell = 0.34 − (−0.76) = +1.10 V.\nSince E°cell is positive, ΔG = −nFE° < 0, so the reaction is SPONTANEOUS — this is exactly the Daniell cell."}]}
+`
+
+CHEMISTRY — Remaining chapters (compact)
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Chemistry  |  CHAPTER: Solutions  |  CONCEPT: Concentration & colligative properties
+EXPLANATION: Molarity/molality/mole fraction; Raoult's law; colligative properties (ΔTb, ΔTf, osmotic pressure), van't Hoff factor; ideal/non-ideal solutions.  |  QUESTION: Which property depends on particle number, not identity? ANSWER: Colligative.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Chemistry  |  CHAPTER: Chemical Kinetics  |  CONCEPT: Rate, order, Arrhenius
+EXPLANATION: Rate laws; order vs molecularity; integrated first-order (ln[A]=−kt+ln[A]₀), half-life; Arrhenius k=Ae^(−Ea/RT); collision theory.  |  QUESTION: Half-life of first-order reaction? ANSWER: t½=0.693/k.  |  DIFFICULTY: Hard
+
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Chemistry  |  CHAPTER: d & f Block / Coordination Compounds  |  CONCEPT: Transition metals & complexes
+EXPLANATION: Variable oxidation states, colour, magnetism, catalysis; lanthanoid contraction; coordination number, ligands, Werner theory, IUPAC naming, isomerism, VBT/CFT, colour of complexes.  |  QUESTION: What splits d-orbitals in a complex? ANSWER: The crystal (ligand) field.  |  DIFFICULTY: Hard
+
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Chemistry  |  CHAPTER: Organic (Haloalkanes/arenes, Alcohols-Phenols-Ethers, Aldehydes-Ketones-Acids, Amines)  |  CONCEPT: Functional groups & reactions
+EXPLANATION: Nomenclature; SN1/SN2, elimination; preparation & reactions of each family; nucleophilic addition to carbonyls; acidity of carboxylic acids; basicity of amines; important named reactions.  |  QUESTION: Which mechanism is favoured by tertiary halides? ANSWER: SN1.  |  DIFFICULTY: Hard
+
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Chemistry  |  CHAPTER: Biomolecules  |  CONCEPT: Carbohydrates, proteins, nucleic acids, vitamins
+EXPLANATION: Mono/di/polysaccharides; amino acids, peptide bonds, protein structure; enzymes; DNA/RNA & nucleotides; vitamins & hormones (overview).  |  QUESTION: Monomer of proteins? ANSWER: Amino acids.  |  DIFFICULTY: Medium
+
+===== BIOLOGY =====
+
+★ FLAGSHIP G12B-GEN — Principles of Inheritance and Variation (Genetics) — FULL APPARATUS
+1. METADATA
+• Grade 12 · NCERT · Science · Biology · Unit: Genetics & Evolution · Chapter: Principles of Inheritance and Variation
+• Prerequisites: cell division (meiosis), chromosomes, gene concept.
+• Difficulty: Medium–Hard (top-scoring NEET unit).
+• Objectives: Mendel's experiments & laws; monohybrid & dihybrid crosses; dominance/recessiveness; test cross; incomplete dominance & codominance; multiple alleles (blood groups); linkage & recombination; chromosomal theory; sex determination; pedigree analysis; genetic disorders.
+2. TEACHING MATERIAL
+(a) Mendel & his method. Gregor Mendel used garden pea (Pisum sativum) with clear contrasting traits and controlled crosses, tracking traits across generations (P, F₁, F₂) quantitatively.
+(b) Terms. Gene (unit of heredity), allele (variant of a gene), genotype (genetic makeup) vs phenotype (appearance), homozygous/heterozygous, dominant/recessive.
+(c) Law of Dominance. In a heterozygote, one allele (dominant) masks the other (recessive); the F₁ shows the dominant trait.
+(d) Law of Segregation (purity of gametes). The two alleles of a gene separate during gamete formation, each gamete getting one; they rejoin at fertilisation. A monohybrid F₂ ratio is 3:1 phenotypic (1:2:1 genotypic).
+(e) Law of Independent Assortment. Alleles of different genes assort independently (for genes on different chromosomes). A dihybrid F₂ ratio is 9:3:3:1. Punnett squares predict these.
+(f) Test cross. Crossing an organism of unknown genotype with a homozygous recessive reveals whether it is homozygous (all dominant offspring) or heterozygous (1:1).
+(g) Deviations from Mendel.
+ • Incomplete dominance: heterozygote is intermediate (e.g., pink snapdragon; F₂ 1:2:1 phenotype = genotype).
+ • Codominance: both alleles fully expressed (e.g., AB blood group).
+ • Multiple alleles: more than two alleles in a population (ABO: Iᴬ, Iᴮ, i).
+ • Pleiotropy: one gene affects many traits.
+(h) Chromosomal theory & linkage. Genes are on chromosomes (Sutton & Boveri). Genes on the same chromosome tend to be inherited together (linkage); crossing over produces recombination, more frequent for genes far apart (Morgan's Drosophila work).
+(i) Sex determination. Humans: XX (female), XY (male); the sperm decides sex. Other systems: XX–XO, ZZ–ZW (birds).
+(j) Genetic disorders.
+ • Mendelian: haemophilia & colour blindness (X-linked recessive), sickle-cell anaemia (autosomal recessive, codominant at molecular level), thalassaemia, phenylketonuria.
+ • Chromosomal: Down syndrome (trisomy 21), Klinefelter (XXY), Turner (XO).
+(k) Pedigree analysis. Family trees trace trait inheritance to deduce dominant/recessive and autosomal/sex-linked patterns.
+3. WORKED EXAMPLES
+1. Monohybrid: Tall(TT) × short(tt) → F₁ all Tt (tall); F₁ self → F₂ 3 tall : 1 short (TT:Tt:tt = 1:2:1).
+2. Test cross of a tall pea: if offspring are all tall → TT; if 1 tall : 1 short → Tt.
+3. Dihybrid: RrYy × RrYy → 9 round-yellow : 3 round-green : 3 wrinkled-yellow : 1 wrinkled-green.
+4. Blood group: Iᴬi × Iᴮi → children Iᴬᴮ (AB), Iᴬi (A), Iᴮi (B), ii (O) — all four groups possible.
+5. Colour blindness: carrier mother (XᶜX) × normal father (XY) → sons ½ colour-blind (XᶜY), daughters ½ carriers.
+4. VISUAL / DIAGRAM DESCRIPTION
+A 4×4 Punnett square for RrYy × RrYy producing the 9:3:3:1 grid; a pedigree chart with squares (males), circles (females), shaded = affected, showing X-linked recessive transmission through carrier mothers to sons.
+
+A. DEFINITIONS (12)
+1. Gene. 2. Allele. 3. Genotype. 4. Phenotype. 5. Homozygous/Heterozygous. 6. Dominant/Recessive. 7. Segregation. 8. Independent assortment. 9. Test cross. 10. Incomplete dominance. 11. Codominance. 12. Linkage.
+
+B. QUESTIONS & ANSWERS
+Easy: Mendel's plant? (Pea.) Monohybrid F₂ ratio? (3:1.) Medium: Dihybrid F₂ ratio? (9:3:3:1.) What does a test cross reveal? (Unknown genotype.) Difficult: Explain codominance with blood groups. Why is haemophilia commoner in males? (X-linked recessive; males have one X.) Application: Parents A and B blood group can have an O child — how? (Both heterozygous Iᴬi × Iᴮi.) Reasoning: Why do linked genes not follow independent assortment? (They're on the same chromosome.)
+
+C. MCQs (20, abridged)
+1. Mendel worked on pea. 2. Monohybrid F₂ = 3:1. 3. Dihybrid F₂ = 9:3:3:1. 4. Alleles separate in gametes = law of segregation. 5. Test cross uses a homozygous recessive. 6. Pink flower from red×white = incomplete dominance. 7. AB blood group shows codominance. 8. ABO has multiple alleles. 9. Human male is XY. 10. Colour blindness is X-linked recessive. 11. Down syndrome = trisomy 21. 12. Genotype TT is homozygous. 13. F₁ of Tt shows tall (dominant). 14. Genes on same chromosome show linkage. 15. Crossing over gives recombination. 16. Sperm determines sex in humans. 17. Turner syndrome = XO. 18. 1:2:1 is the genotypic monohybrid ratio. 19. Sickle-cell is autosomal recessive. 20. Punnett square predicts offspring ratios.
+
+D. TRUE / FALSE (10)
+1. Mendel used pea plants. T. 2. Monohybrid F₂ phenotype is 1:2:1. F (3:1; 1:2:1 is genotype). 3. AB blood group is codominance. T. 4. Linked genes assort independently. F. 5. Human females are XY. F (XX). 6. Colour blindness is more common in males. T. 7. A test cross uses a dominant homozygote. F (recessive). 8. Down syndrome is trisomy 21. T. 9. Incomplete dominance gives an intermediate phenotype. T. 10. Genotype is the physical appearance. F (that's phenotype).
+
+E. FILL IN THE BLANKS (10)
+1. Mendel's law that alleles separate is  (segregation). 2. Dihybrid F₂ ratio is  (9:3:3:1). 3. AB blood group demonstrates  (codominance). 4. Human males are  (XY). 5. A cross with a homozygous recessive is a  cross (test). 6. Down syndrome is trisomy  (21). 7. Genes on the same chromosome are  (linked). 8. Red×white → pink shows  dominance (incomplete). 9. Genotype Tt is  (heterozygous). 10. Colour blindness is -linked recessive (X).
+
+F. SHORT-ANSWER
+• State Mendel's three laws.
+• Explain why a monohybrid cross gives 3:1 in F₂.
+• Differentiate incomplete dominance and codominance.
+
+G. LONG-ANSWER (model)
+Q: A woman with blood group A and a man with blood group B have four children with groups A, B, AB and O. Explain the genetics.
+Model: Blood-group O child means each parent carries a recessive i allele. So the mother is Iᴬi (group A) and the father Iᴮi (group B). Cross Iᴬi × Iᴮi → Iᴬi:Iᴬᴮ... using a Punnett square: offspring genotypes Iᴬi (A), Iᴬᴮ (AB), Iᴮi (B), ii (O) in 1:1:1:1 ratio — exactly the four observed groups. This illustrates multiple alleles (Iᴬ, Iᴮ, i) and codominance of Iᴬ and Iᴮ.
+
+H. HOTS
+• Two normal-vision parents have a colour-blind son. Give the parents' genotypes. (Mother XᶜX carrier, father XY normal.)
+• Why did Mendel's independent assortment hold — what would break it? (Genes on different chromosomes; linkage would break it.)
+• If a plant with unknown genotype for a dominant trait gives a 1:1 ratio in a test cross, what is its genotype? (Heterozygous.)
+
+I. MISCONCEPTIONS
+• "Dominant means more common or stronger" → it only means it masks the recessive in heterozygotes.
+• "Blood group O parents can have an AB child" → impossible (O = ii).
+• "Traits blend" → generally particulate inheritance (except incomplete dominance appears blended but alleles stay discrete).
+• "The mother determines the baby's sex" → the sperm (X or Y) does.
+
+J. REVISION
+Key points: Mendel's three laws; 3:1 & 9:3:3:1 ratios; test cross; incomplete dominance/codominance/multiple alleles; linkage & recombination; XX/XY sex determination; Mendelian & chromosomal disorders; pedigrees.
+Fact sheet: monohybrid F₂ 3:1 (1:2:1 genotype); dihybrid F₂ 9:3:3:1; ABO alleles Iᴬ,Iᴮ,i; haemophilia/colour-blindness X-linked recessive; Down = trisomy 21.
+Vocabulary: allele, genotype, phenotype, dominance, segregation, linkage, codominance.
+
+ADAPTIVE — Concept: "dominant vs recessive"
+• L1 Beginner: "A dominant trait shows up even if you have just one copy of its gene; a recessive one needs two copies to show."
+• L2 Grade level: "In a Tt pea, T (tall) is dominant and masks t (short), so the plant is tall. Only tt (two recessive) is short — that's why F₂ is 3 tall : 1 short."
+• L3 Technical: "Dominance describes allelic interaction where the heterozygote's phenotype matches the homozygous dominant; recessive alleles are phenotypically expressed only in the homozygous state."
+• L4 Analogy: "Think of alleles as two votes for a trait: a dominant allele is a 'loud' vote that wins even 1-against-1, while a recessive allele only gets its way when both votes agree."
+• L5 Real-world: "Attached vs free earlobes, or the ability to roll your tongue, follow dominant/recessive patterns you can spot in your own family tree."
+
+INSTRUCTION RECORDS
+`json
+{"messages":[{"role":"user","content":"Explain Mendel's law of segregation for a Class 12 student."},{"role":"assistant","content":"The Law of Segregation says every organism carries TWO alleles for each gene, and these separate (segregate) during gamete formation so each sperm or egg gets only ONE allele. At fertilisation, offspring get one allele from each parent. That's why crossing two tall heterozygotes (Tt × Tt) gives a 3:1 tall:short ratio in F₂ — the recessive t alleles pair up in one-quarter of offspring (tt) and show the short trait. The alleles stay 'pure' — they don't blend."}]}
+{"messages":[{"role":"user","content":"How can two group-A and group-B parents have a group-O child?"},{"role":"assistant","content":"It works if both parents are carriers of the recessive i allele! An A parent can be IᴬI (i.e., Iᴬi) and a B parent Iᴮi. Cross Iᴬi × Iᴮi and the Punnett square gives four possible children: Iᴬi (A), Iᴮi (B), Iᴬᴮ (AB) and ii (O). The ii child is blood group O — each parent quietly passed on their hidden i allele. This shows multiple alleles and codominance in the ABO system."}]}
+`
+
+BIOLOGY — Remaining chapters (compact)
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Biology  |  CHAPTER: Reproduction (Flowering plants, Human, Reproductive Health)  |  CONCEPT: Continuity of life
+EXPLANATION: Flower structure, pollination, double fertilisation, seed/fruit; human male/female systems, gametogenesis, menstrual cycle, fertilisation, pregnancy; contraception & reproductive health.  |  QUESTION: Double fertilisation produces? ANSWER: Zygote + endosperm.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Biology  |  CHAPTER: Molecular Basis of Inheritance  |  CONCEPT: DNA & gene expression
+EXPLANATION: DNA structure (Watson-Crick), replication, transcription, genetic code, translation, lac operon, DNA fingerprinting, Human Genome Project.  |  QUESTION: Which sugar is in DNA? ANSWER: Deoxyribose.  |  DIFFICULTY: Hard
+
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Biology  |  CHAPTER: Evolution  |  CONCEPT: Origin & mechanisms
+EXPLANATION: Origin of life; evidence (fossils, homology); Darwin's natural selection; Hardy-Weinberg; adaptive radiation; human evolution.  |  QUESTION: Who proposed natural selection? ANSWER: Darwin (and Wallace).  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Biology  |  CHAPTER: Human Health & Disease / Microbes in Human Welfare  |  CONCEPT: Health & applied microbiology
+EXPLANATION: Pathogens & diseases; immunity (innate/acquired, antibodies, vaccines); AIDS, cancer, drug abuse; microbes in food, industry, sewage, biocontrol, biofertilisers.  |  QUESTION: Which cells does HIV attack? ANSWER: Helper T-cells.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Biology  |  CHAPTER: Biotechnology (Principles & Applications)  |  CONCEPT: rDNA & its uses
+EXPLANATION: Tools (restriction enzymes, vectors, PCR); cloning steps; applications in agriculture (Bt crops), medicine (insulin, gene therapy), transgenics; bioethics.  |  QUESTION: Enzyme that cuts DNA at specific sites? ANSWER: Restriction endonuclease.  |  DIFFICULTY: Hard
+
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Biology  |  CHAPTER: Ecology (Organisms & Populations, Ecosystem, Biodiversity)  |  CONCEPT: Ecology & conservation
+EXPLANATION: Population attributes & growth; ecosystem structure, energy flow, pyramids, nutrient cycles; biodiversity patterns, threats & conservation (in situ/ex situ).  |  QUESTION: 10% law refers to? ANSWER: Energy transfer between trophic levels.  |  DIFFICULTY: Medium
+
+===== MATHEMATICS =====
+
+★ CHAPTER G12M-INT — Integrals — MEDIUM ANCHOR
+METADATA. Grade 12 · NCERT · Maths · Unit: Calculus · Prereq: differentiation, functions · Difficulty: Hard · Objectives: understand integration as anti-derivative; standard integrals; methods (substitution, parts, partial fractions); definite integrals & the Fundamental Theorem of Calculus; area interpretation.
+TEACHING. Integration is the inverse of differentiation: if d/dx F(x) = f(x), then ∫f(x)dx = F(x) + C (indefinite integral; C is the constant of integration). Standard integrals: ∫xⁿdx = xⁿ⁺¹/(n+1)+C (n≠−1); ∫(1/x)dx = ln  |  x  |  +C; ∫eˣdx = eˣ+C; ∫sinx dx = −cosx+C; ∫cosx dx = sinx+C. Methods: substitution (change of variable), integration by parts (∫u v′ = uv − ∫u′v), and partial fractions (for rational functions). Definite integral ∫ₐᵇ f(x)dx = F(b) − F(a) (Fundamental Theorem), giving the signed area under the curve between a and b. Properties: ∫ₐᵇ = −∫ᵦᵃ; ∫ₐᵇ = ∫ₐᶜ + ∫꜀ᵇ.
+Worked: ∫(3x²)dx = x³+C. ∫₀¹ x²dx = [x³/3]₀¹ = 1/3. ∫x·eˣ dx (by parts, u=x) = x·eˣ − ∫eˣ = eˣ(x−1)+C.
+DEFINITIONS (8). integral, anti-derivative, indefinite integral, definite integral, constant of integration, substitution, integration by parts, Fundamental Theorem of Calculus.
+Q&A. Easy: ∫1 dx? (x+C.) ∫cosx dx? (sinx+C.) Medium: ∫x³dx? (x⁴/4+C.) ∫₀¹ 2x dx? (1.) Difficult: ∫x sinx dx by parts? (−x cosx + sinx + C.) Application: Area under y=x from 0 to 2? (∫₀² x dx = 2.) Reasoning: Why the +C? (Differentiation loses constants; the anti-derivative family differs by a constant.)
+MCQs (8, abridged). ∫xⁿdx = xⁿ⁺¹/(n+1)+C; ∫(1/x)dx = ln  |  x  |  +C; ∫eˣdx = eˣ+C; ∫₀¹x²dx = 1/3; ∫sinx dx = −cosx+C; by-parts formula uv−∫u′v; definite integral gives signed area; FTC: ∫ₐᵇf = F(b)−F(a).
+HOTS. Evaluate ∫₀^{π} sinx dx. (2.) Find ∫ (2x)/(x²+1) dx. (ln(x²+1)+C.) Why can a definite integral be negative? (Area below the x-axis counts as negative.)
+MISCONCEPTIONS. "Forget +C" → indefinite integrals need it. "Definite integral is always positive" → it's signed area. "Integration and differentiation are unrelated" → they're inverses (FTC).
+REVISION. Anti-derivative + C; standard integrals; substitution/parts/partial fractions; definite integral = F(b)−F(a) = signed area; key properties.
+ADAPTIVE — "integration". L1: "Integration adds up tiny pieces to find a total, like area under a curve." L2: "It's the reverse of differentiation: if the slope function is f, integration recovers the original F (plus a constant)." L3: "The definite integral ∫ₐᵇf(x)dx is the limit of Riemann sums, equal to F(b)−F(a) by the Fundamental Theorem." L4: "Differentiation slices a quantity into rates; integration glues the slices back into the whole — inverse operations." L5: "Integration finds distance from a speed graph, area of irregular land, or total charge from a current — summing continuous change."
+`json
+{"messages":[{"role":"user","content":"Explain integration as the reverse of differentiation with an example."},{"role":"assistant","content":"Differentiation finds the rate of change; integration undoes it to recover the original function. If d/dx(x³) = 3x², then ∫3x² dx = x³ + C. The '+C' appears because differentiating any constant gives 0, so the original could have had any constant. For a DEFINITE integral, we evaluate between limits: ∫₀¹ 3x² dx = [x³]₀¹ = 1 − 0 = 1, which is the area under y = 3x² from 0 to 1."}]}
+``
+
+MATHEMATICS — Remaining chapters (compact)
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Maths  |  CHAPTER: Relations & Functions / Inverse Trig  |  CONCEPT: Function types & inverse trig
+EXPLANATION: One-one/onto, composition, invertible functions; binary operations; inverse trig functions, domains/ranges, principal values, identities.  |  QUESTION: sin⁻¹(1)? ANSWER: π/2.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Maths  |  CHAPTER: Matrices & Determinants  |  CONCEPT: Linear algebra
+EXPLANATION: Matrix operations, transpose, symmetric/skew; determinants & properties; adjoint & inverse; solving linear systems (Cramer/matrix method); area of triangle by determinant.  |  QUESTION: Condition for invertibility? ANSWER: det ≠ 0.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Maths  |  CHAPTER: Continuity & Differentiability / Application of Derivatives  |  CONCEPT: Differential calculus
+EXPLANATION: Continuity, differentiability, chain rule, implicit/parametric/log differentiation; Rolle/Mean-value; rate of change, tangents/normals, maxima-minima, increasing/decreasing.  |  QUESTION: d/dx(ln x)? ANSWER: 1/x.  |  DIFFICULTY: Hard
+
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Maths  |  CHAPTER: Application of Integrals / Differential Equations  |  CONCEPT: Area & DEs
+EXPLANATION: Area under curves & between curves; order/degree of DEs; solving variable-separable, linear (integrating factor) DEs; forming DEs from situations.  |  QUESTION: Integrating factor of dy/dx+Py=Q? ANSWER: e^∫P dx.  |  DIFFICULTY: Hard
+
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Maths  |  CHAPTER: Vectors & 3-D Geometry / Linear Programming / Probability  |  CONCEPT: Vectors, geometry, optimisation, chance
+EXPLANATION: Vector algebra (dot/cross product), lines/planes in 3-D; LPP graphical method; conditional probability, Bayes' theorem, random variables, binomial distribution.  |  QUESTION: a·b for perpendicular vectors? ANSWER: 0.  |  DIFFICULTY: Hard
+
+
+=================================================================
+BRANCH B — MAHARASHTRA HSC SCIENCE (Std 12)
+=================================================================
+Std 12 Science parallels NCERT (Physics, Chemistry, Biology, Mathematics & Statistics Part I + II) with Balbharati framing, Marathi metalanguage, and a strong prescribed practical component; bifocal/vocational in Batch 12. Kept separate from NCERT.
+
+RECORDTYPE: LESSON  |  GRADE 12  |  Maharashtra  |  Physics  |  CONCEPT: Electrostatics, current, magnetism, optics, modern physics (parallel)
+EXPLANATION: स्थिरविद्युत, विद्युतधारा, चुंबकत्व, विद्युतचुंबकीय प्रवर्तन, प्रत्यावर्ती धारा, प्रकाशशास्त्र, अणु-केंद्रक, अर्धवाहक. Same physics as NCERT with Maharashtra sequence & derivations.  |  QUESTION: Coulomb's law force ∝? ANSWER: 1/r².  |  DIFFICULTY: Hard
+
+RECORDTYPE: LESSON  |  GRADE 12  |  Maharashtra  |  Chemistry  |  CONCEPT: Solutions, electrochemistry, kinetics, coordination, organic (parallel)
+EXPLANATION: द्रावण, विद्युतरसायनशास्त्र, रासायनिक गतिकी, समन्वय संयुगे, कार्बनी रसायनशास्त्र (हॅलोजन/अल्कोहॉल/कार्बोनिल/अमाइन), जैवरेणू.  |  QUESTION: Faraday constant? ANSWER: 96500 C/mol.  |  DIFFICULTY: Hard
+
+RECORDTYPE: LESSON  |  GRADE 12  |  Maharashtra  |  Biology  |  CONCEPT: Reproduction, genetics, evolution, biotech, ecology (parallel)
+EXPLANATION: प्रजनन, अनुवंशशास्त्र (मेंडेलचे नियम), उत्क्रांती, जैवतंत्रज्ञान, परिस्थितिकी.  |  QUESTION: Monohybrid F₂ ratio? ANSWER: 3:1.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 12  |  Maharashtra  |  Mathematics & Statistics (Part I & II)  |  CONCEPT: Calculus, algebra, statistics, probability
+EXPLANATION: Part I — mathematical logic, matrices, trigonometric functions, vectors, line/plane, LPP; Part II — differentiation, integration, applications, differential equations, statistics, probability distributions. Two textbooks/papers.  |  QUESTION: ∫eˣdx? ANSWER: eˣ+C.  |  DIFFICULTY: Hard
+Difference to preserve: Maharashtra's Mathematics & Statistics two-part structure, its inclusion of Mathematical Logic & Probability Distributions, and a heavier applied-statistics emphasis distinguish it from NCERT's single Maths book; Science subjects carry prescribed lab work. Do not merge.
+
+
+=================================================================
+BATCH 7 — CONSOLIDATED CROSS-BRANCH LESSON RECORDS
+=================================================================
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Physics  |  UNIT: Electrostatics  |  CHAPTER: Electric Charges & Fields  |  CONCEPT: Coulomb's law, field, Gauss
+EXPLANATION: Charge (quantised/conserved); F=kq₁q₂/r²; E=kq/r²; field lines; dipole torque pE sinθ; Gauss Φ=q/ε₀ with sheet/line/shell results.  |  EXAMPLE: Esheet=σ/2ε₀; shell interior E=0  |  APPLICATION: Capacitors, Faraday cage, lightning  |  COMMONMISCONCEPTION: Force ∝ 1/r  |  QUESTION: Field inside a charged shell?  |  ANSWER: Zero  |  DIFFICULTY: Hard
+
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Chemistry  |  CHAPTER: Electrochemistry  |  CONCEPT: Cells, EMF, Nernst, Faraday
+EXPLANATION: Galvanic vs electrolytic; anode oxidation/cathode reduction; E°cell=cat−an; ΔG=−nFE; Nernst E=E°−(0.0591/n)logQ; Λm=κ×1000/c; Faraday's laws.  |  EXAMPLE: Daniell E°=1.10 V, ΔG°=−212 kJ  |  APPLICATION: Batteries, fuel cells, corrosion  |  COMMONMISCONCEPTION: Electrons flow through salt bridge  |  QUESTION: E°cell for Zn/Cu?  |  ANSWER: +1.10 V  |  DIFFICULTY: Hard
+
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Biology  |  CHAPTER: Principles of Inheritance  |  CONCEPT: Mendelian genetics
+EXPLANATION: Mendel's laws; 3:1 & 9:3:3:1; test cross; incomplete dominance/codominance/multiple alleles; linkage/recombination; XX/XY; genetic disorders; pedigrees.  |  EXAMPLE: Iᴬi × Iᴮi → A,B,AB,O  |  APPLICATION: Blood-group prediction, disease inheritance  |  COMMONMISCONCEPTION: Dominant = more common  |  QUESTION: Dihybrid F₂ ratio?  |  ANSWER: 9:3:3:1  |  DIFFICULTY: Hard
+
+RECORDTYPE: LESSON  |  GRADE 12  |  NCERT  |  Maths  |  CHAPTER: Integrals  |  CONCEPT: Anti-derivatives & definite integrals
+EXPLANATION: ∫f=F+C (inverse of d/dx); standard integrals; substitution/parts/partial fractions; ∫ₐᵇf=F(b)−F(a)=signed area (FTC).  |  EXAMPLE: ∫₀¹x²dx=1/3  |  APPLICATION: Area, distance from speed, accumulated change  |  COMMON_MISCONCEPTION: Forget +C / definite integral always positive  |  QUESTION: ∫x³dx?  |  ANSWER: x⁴/4+C  |  DIFFICULTY: Hard
+
+
+BATCH 7 COVERAGE SUMMARY
+• NCERT Physics: ★ Electric Charges & Fields — full flagship (charge properties, Coulomb's law, field & lines, dipole torque, flux, Gauss's law with sheet/line/shell derivations, 20 MCQs, numericals, adaptive, instruction records); compact for potential/capacitance, current electricity, magnetism/induction/AC, optics, modern physics/semiconductors.
+• NCERT Chemistry: ★ Electrochemistry — full flagship (galvanic/electrolytic cells, electrode potentials, EMF, ΔG=−nFE, Nernst, conductance/Kohlrausch, Faraday's laws, batteries/corrosion, 20 MCQs, numericals); compact for solutions, kinetics, d/f-block & coordination, organic families, biomolecules.
+• NCERT Biology: ★ Principles of Inheritance (Genetics) — full flagship (Mendel's laws, mono/dihybrid, test cross, incomplete/codominance, multiple alleles, linkage, sex determination, disorders, pedigrees, 20 MCQs, worked crosses); compact for reproduction, molecular genetics, evolution, health/microbes, biotechnology, ecology.
+• NCERT Mathematics: Integrals — anchor; compact for relations/functions & inverse trig, matrices/determinants, differential calculus, applications & differential equations, vectors/3-D/LPP/probability.
+• Maharashtra HSC Science (Std 12): parallel Physics/Chemistry/Biology + Mathematics & Statistics Part I/II with the two-part split, Mathematical Logic & Probability Distributions, and lab emphasis preserved; bifocal noted for Batch 12.
+• Boards kept separate; Class 12 correctly treated as existing-syllabus (2026–27).
+
+END OF BATCH 7. The Science stream (KG → Grade 12 Science) is now complete across both boards. Next: BATCH 8 — Grade 11 Commerce (Accountancy, Business Studies, Economics, with step-by-step numerical solutions as specified), then Batch 9 (Grade 12 Commerce), Batches 10–11 (Grade 11–12 Arts/Humanities), and Batch 12 (Maharashtra Bifocal/Vocational).

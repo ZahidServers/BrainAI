@@ -1,0 +1,39 @@
+EDUCATIONAL AI MASTER CORPUS — ORIGINAL TEACHING TEXT
+============================================================
+
+SCOPE
+Kindergarten Junior + Senior, Grades 1–12, NCERT + Maharashtra
+Balbharati aligned, including Science, Commerce, Arts/Humanities and
+Maharashtra bifocal/vocational domains.
+
+This corpus is ORIGINAL educational writing. It is curriculum-aligned
+rather than a reproduction of NCERT or Balbharati textbooks. It is intended
+as a foundation for an educational AI and can be expanded with more chapters,
+worked examples, question banks, laboratory activities, projects and
+multilingual variants.
+
+DATA DESIGN
+Each chapter contains:
+- learning objectives
+- teaching text
+- key terms
+- examples/applications
+- practice questions
+- answer guidance
+- misconception check
+- revision guidance
+
+TRAINING RECOMMENDATION
+For supervised fine-tuning, convert each chapter into multiple records:
+1) concept explanation
+2) question-answer
+3) worked problem
+4) misconception correction
+5) summarisation
+6) age-level simplification
+7) exam-style response
+8) application scenario
+9) comparison
+10) retrieval fact
+
+============================================================

@@ -1,0 +1,370 @@
+BrainAI EDUCATIONAL CORPUS
+BATCH 6 — GRADE 11 SCIENCE (NCERT branch + Maharashtra HSC Science branch)
+Original teaching corpus; no textbook reproduced. Verified 2026: NCERT Class 11 continues its existing books unchanged for 2026–27 (new books arrive 2027–28). Physics (Units & Measurements → Waves), Chemistry (14 chapters, physical/inorganic/organic), Mathematics (16 chapters: Sets → Probability), Biology (22 chapters — the largest book). Maharashtra HSC Science (Std 11) — Physics, Chemistry, Biology, Mathematics & Statistics (Part I + Part II), with bifocal/vocational options (Electronics, Computer Science, etc.) treated in Batch 12. Boards kept separate.
+Depth policy: full apparatus on two flagship college-prep chapters — Physics: Motion in a Straight Line (Kinematics) and Chemistry: Some Basic Concepts (Mole Concept) — plus medium anchors on Biology: Cell and Maths: Sets; compact-but-teaching LESSON records for the remaining chapters. Physics units/dimensions requirement is covered explicitly in a dedicated record. Any chapter expands on request.
+
+
+=================================================================
+BRANCH A — NCERT / CBSE (Class 11 Science)
+=================================================================
+
+===== PHYSICS =====
+Chapter arc: Units and Measurements · Motion in a Straight Line · Motion in a Plane · Laws of Motion · Work, Energy and Power · System of Particles & Rotational Motion · Gravitation · Mechanical Properties of Solids · Mechanical Properties of Fluids · Thermal Properties of Matter · Thermodynamics · Kinetic Theory · Oscillations · Waves.
+
+★ FLAGSHIP CHAPTER G11P-KIN — Motion in a Straight Line (Kinematics) — FULL APPARATUS
+1. METADATA
+• Grade 11 · Board NCERT/CBSE · Stream Science · Subject Physics · Unit: Kinematics · Chapter: Motion in a Straight Line
+• Prerequisites: distance/displacement idea, basic algebra & graphs, units (m, s), SI system, elementary calculus notion (rate of change).
+• Difficulty: Medium (foundational for all mechanics; heavy in JEE/NEET).
+• Learning objectives: distinguish distance/displacement, speed/velocity, average/instantaneous quantities; define acceleration; read and construct x–t and v–t graphs; derive and apply the three equations of uniformly accelerated motion; solve numericals including free fall; build physical intuition for signs of velocity/acceleration.
+2. TEACHING MATERIAL
+
+(a) Frame of reference & position. Motion is described relative to a reference point (origin). In one dimension, position x is a signed coordinate on a line. A body is in motion if its position changes with time.
+
+(b) Distance vs displacement. Distance is the total path length (scalar, always ≥ 0). Displacement Δx = x₂ − x₁ is the straight-line change in position (vector, can be +, −, 0). Example: walk 3 m east then 3 m west → distance 6 m, displacement 0.
+
+(c) Speed vs velocity.
+ • Average speed = total distance / total time (scalar).
+ • Average velocity = displacement / time = Δx/Δt (vector; sign shows direction).
+ • Instantaneous velocity v = dx/dt (the limit as Δt→0) — slope of the x–t graph at a point.
+ • Instantaneous speed =  |  v  |  .
+
+(d) Acceleration. Rate of change of velocity: average a = Δv/Δt; instantaneous a = dv/dt = d²x/dt². Units m s⁻². Positive a means velocity increasing (in the + direction); negative a (retardation/deceleration) means velocity decreasing. Uniform acceleration = constant a (e.g., free fall, a = g ≈ 9.8 m s⁻² downward).
+
+(e) Graphs and their meaning.
+ • x–t graph: slope = velocity. Straight line → uniform velocity; curve → acceleration.
+ • v–t graph: slope = acceleration; area under the curve = displacement.
+ • A horizontal v–t line = constant velocity (zero acceleration); a straight sloped v–t line = uniform acceleration.
+
+(f) Equations of uniformly accelerated motion (derivations). For constant a, initial velocity u, after time t velocity v, displacement s:
+1. v = u + at — from a = (v−u)/t.
+2. s = ut + ½at² — from s = (average velocity)×t = ((u+v)/2)t, substitute v = u+at.
+3. v² = u² + 2as — eliminate t between (1) and (2).
+ (Graphical derivation: on a v–t graph, area = rectangle (ut) + triangle (½·t·at) = ut + ½at² = s.)
+ Also sₙₜₕ = u + (a/2)(2n−1) = displacement in the nth second.
+
+(g) Free fall. Motion under gravity alone: a = g (downward). Taking up as +: a = −g. A dropped body: u = 0, v = gt, h = ½gt². Thrown up with speed u: rises to hmax = u²/2g, time up = u/g, total flight time (returns to start) = 2u/g.
+
+(h) Relative velocity (1-D). Velocity of A relative to B: vAB = vA − vB. Two trains, same direction: relative speed = difference; opposite directions: sum.
+
+(i) Physical intuition. Sign conventions matter: velocity and acceleration can have opposite signs (a ball moving up while decelerating: v > 0, a < 0). Speed can be constant while velocity changes only in 2-D; in 1-D, constant speed with sign change means the object reversed.
+3. UNITS & DIMENSIONS (as required for Physics)
+ Quantity  |  Symbol  |  SI unit  |  Dimensional formula 
+------------------------------
+ Displacement  |  s  |  metre (m)  |  [L] 
+ Velocity  |  v  |  m s⁻¹  |  [L T⁻¹] 
+ Acceleration  |  a  |  m s⁻²  |  [L T⁻²] 
+ Time  |  t  |  second (s)  |  [T] 
+Dimensional check of s = ut + ½at²: [L] = [LT⁻¹][T] + [LT⁻²][T²] = [L] + [L] ✓ (dimensionally consistent).
+4. WORKED EXAMPLES (step-by-step)
+1. A car goes from 0 to 20 m/s in 5 s. a = (20−0)/5 = 4 m/s².
+2. u = 5 m/s, a = 2 m/s², t = 3 s → v = 5+2·3 = 11 m/s; s = 5·3 + ½·2·9 = 15+9 = 24 m.
+3. A stone dropped from 45 m: h = ½gt² → 45 = ½·10·t² → t² = 9 → t = 3 s; v = gt = 30 m/s.
+4. Car brakes from 30 m/s to rest over 75 m: v²=u²+2as → 0 = 900 + 2a·75 → a = −6 m/s².
+5. Ball thrown up at 20 m/s (g=10): hmax = u²/2g = 400/20 = 20 m; time to top = u/g = 2 s; total flight = 4 s.
+5. VISUAL / DIAGRAM DESCRIPTIONS
+• x–t graph: a straight sloping line (uniform velocity) vs an upward-bending curve (positive acceleration); slope at a point = instantaneous velocity.
+• v–t graph: a straight line from (0,u) with slope a; the shaded trapezium under it equals displacement s = ut + ½at².
+
+A. DEFINITIONS (12)
+1. Reference frame. 2. Position. 3. Distance (scalar path length). 4. Displacement (vector change in position). 5. Average speed. 6. Average velocity. 7. Instantaneous velocity (dx/dt). 8. Acceleration (dv/dt). 9. Uniform acceleration. 10. Free fall. 11. Relative velocity. 12. Retardation (negative acceleration).
+
+B. QUESTIONS & ANSWERS
+Easy: Is displacement a scalar or vector? (Vector.) SI unit of acceleration? (m/s².) Slope of x–t graph gives? (Velocity.) Medium: Distance vs displacement if you run 400 m around a track back to start? (400 m; 0.) A body at rest dropped for 2 s — velocity? (v=gt≈20 m/s.) Difficult: Derive v²=u²+2as. Area under v–t graph represents? (Displacement.) Application: A bus decelerates 15→0 m/s in 3 s — stopping distance? (avg v=7.5, s=22.5 m.) Reasoning: Can a body have zero velocity but non-zero acceleration? (Yes — at the top of a vertical throw.)
+
+C. MCQs (20, abridged)
+1. Displacement is a — vector. 2. SI unit of velocity — m/s. 3. Slope of v–t graph — acceleration. 4. Area under v–t graph — displacement. 5. v=u+at is valid for — uniform acceleration. 6. A freely falling body has a = g. 7. Distance is always — ≥0. 8. If a=0, motion is — uniform velocity. 9. Instantaneous velocity = dx/dt. 10. Dimensional formula of acceleration — [LT⁻²]. 11. Ball thrown up, at top v = 0. 12. Retardation means a is — negative (opposite to v). 13. Dropped from rest, distance in t: ½gt². 14. Average velocity = Δx/Δt. 15. v²=u²+2as eliminates — t. 16. Speed is the magnitude of — velocity. 17. Time of flight (up-down) = 2u/g. 18. Uniform velocity → x–t graph is a — straight line. 19. Max height = u²/2g. 20. Relative velocity (same direction) = difference of velocities.
+
+D. TRUE / FALSE (10)
+1. Displacement can be zero for non-zero distance. T. 2. Speed is a vector. F. 3. Slope of x–t graph is acceleration. F (velocity). 4. Area under v–t graph is displacement. T. 5. In free fall a depends on mass. F (g is the same). 6. v=u+at needs constant a. T. 7. A body can have zero velocity and non-zero acceleration. T. 8. Retardation is negative acceleration. T. 9. Distance can be negative. F. 10. Instantaneous speed =  |  instantaneous velocity  |  . T.
+
+E. FILL IN THE BLANKS (10)
+1. v = u +  (at). 2. s = ut +  (½at²). 3. v² = u² +  (2as). 4. SI unit of acceleration is  (m/s²). 5. Slope of x–t graph =  (velocity). 6. Area under v–t graph =  (displacement). 7. For free fall, a =  (g). 8. At the top of a vertical throw, v =  (0). 9. Max height =  (u²/2g). 10. Dimensional formula of velocity =  ([LT⁻¹]).
+
+F. SHORT-ANSWER
+• Distinguish distance and displacement with an example.
+• A car accelerates 0→30 m/s in 6 s; find a and distance. (a=5 m/s², s=90 m.)
+• State the physical meaning of the area under a v–t graph.
+
+G. LONG-ANSWER (model)
+Q: Derive the three equations of uniformly accelerated motion and use them to analyse a body dropped from 80 m (g=10). 
+Model: (1) a=(v−u)/t → v=u+at. (2) s=average velocity×t=((u+v)/2)t; sub v=u+at → s=ut+½at². (3) from (1) t=(v−u)/a, sub in (2) → v²=u²+2as. For the drop: u=0, s=80 → 80=½·10·t² → t²=16 → t=4 s; v=gt=40 m/s (check v²=2·10·80=1600 → v=40 ✓).
+
+H. HOTS
+• A ball is thrown up; sketch its v–t graph and explain the sign of a throughout. (v decreases linearly through 0 to negative; a=−g constant.)
+• Two bodies dropped 1 s apart from the same height — does the gap between them increase, decrease, or stay constant? (Increases, since the earlier one is always faster.)
+• From a v–t graph that is a straight line from (0,10) to (5,0), find displacement and acceleration. (Area=25 m; a=−2 m/s².)
+
+I. MISCONCEPTIONS
+• "Negative velocity means slowing down" → it means moving in the negative direction; slowing depends on a·v sign.
+• "Heavier objects fall faster" → in free fall (no air), all fall with the same g.
+• "Distance and displacement are the same" → only when motion is straight without reversal.
+• "Zero velocity means zero acceleration" → not at a turning point.
+
+J. REVISION
+Key points: scalar vs vector (distance/speed vs displacement/velocity); a=dv/dt; graph slopes/areas; three equations for constant a; free fall (a=g); relative velocity in 1-D.
+Formula sheet: v=u+at; s=ut+½at²; v²=u²+2as; sₙₜₕ=u+(a/2)(2n−1); hmax=u²/2g; T=2u/g.
+Vocabulary: displacement, velocity, acceleration, uniform, free fall, retardation.
+
+ADAPTIVE — Concept: "acceleration"
+• L1 Beginner: "Acceleration is how quickly speed changes."
+• L2 Grade level: "Acceleration = change in velocity ÷ time taken; if a car goes 0→20 m/s in 5 s, a = 4 m/s²."
+• L3 Technical: "Acceleration is the time derivative of velocity, a = dv/dt = d²x/dt², a vector with dimension [LT⁻²]."
+• L4 Analogy: "If velocity is your car's speedometer reading, acceleration is how hard you press the pedal (or brake) — the rate the needle moves."
+• L5 Real-world: "A phone's accelerometer senses this to rotate the screen or count steps; free fall is a constant downward acceleration g ≈ 9.8 m/s²."
+
+INSTRUCTION RECORDS
+``json
+{"messages":[{"role":"user","content":"Explain the difference between distance and displacement."},{"role":"assistant","content":"Distance is the TOTAL path length you travel — a scalar, always positive. Displacement is the straight-line change from start to finish, WITH direction — a vector that can be positive, negative, or zero. Example: walk 3 m east, then 3 m back west. Distance = 6 m, but displacement = 0 because you ended where you started. Distance tells 'how much ground'; displacement tells 'how far and which way from start'."}]}
+{"messages":[{"role":"user","content":"Solve step by step: a stone is dropped from 45 m, g=10. Find time to fall and final speed."},{"role":"assistant","content":"Given: u=0 (dropped), s=45 m, a=g=10 m/s².\nTime: s=ut+½at² → 45 = 0 + ½·10·t² → 45 = 5t² → t²=9 → t=3 s.\nFinal speed: v=u+at = 0 + 10·3 = 30 m/s.\nCheck: v²=u²+2as = 0 + 2·10·45 = 900 → v=30 m/s ✓."}]}
+{"messages":[{"role":"user","content":"Why can velocity be zero but acceleration not zero?"},{"role":"assistant","content":"At the very top of a ball thrown straight up, its velocity is momentarily 0 — but gravity is still pulling it down, so acceleration is g (≈9.8 m/s²) the whole time. Velocity being zero just means it's not moving at that instant; acceleration tells you it's about to speed up downward. They're independent!"}]}
+`
+
+PHYSICS — Remaining chapters (compact)
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Physics  |  CHAPTER: Units and Measurements  |  CONCEPT: SI units, dimensions, errors, significant figures
+EXPLANATION: 7 base SI units; dimensional formulae & analysis (check equations, derive relations, convert units); measurement errors (absolute/relative/percentage), propagation; significant figures & rounding.  |  EXAMPLE: Check [v²=u²+2as] dimensionally → all [L²T⁻²].  |  QUESTION: Dimensional formula of force? ANSWER: [MLT⁻²].  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Physics  |  CHAPTER: Motion in a Plane  |  CONCEPT: Vectors & projectile motion
+EXPLANATION: Vector addition (triangle/parallelogram), components; projectile motion (independent x/y), range R=u²sin2θ/g, max height, time of flight; uniform circular motion, centripetal acceleration v²/r.  |  QUESTION: Angle for max range? ANSWER: 45°.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Physics  |  CHAPTER: Laws of Motion  |  CONCEPT: Newton's laws, momentum, friction
+EXPLANATION: Inertia; F=ma; action-reaction; conservation of momentum; impulse=FΔt=Δp; friction (static/kinetic), f=μN; circular motion dynamics, banking.  |  QUESTION: Newton's 2nd law? ANSWER: F=dp/dt=ma.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Physics  |  CHAPTER: Work, Energy & Power  |  CONCEPT: Energy & its conservation
+EXPLANATION: W=F·d cosθ; KE=½mv²; work-energy theorem; PE=mgh, spring PE=½kx²; conservation of mechanical energy; power P=W/t=F·v; collisions (elastic/inelastic).  |  QUESTION: Work-energy theorem? ANSWER: Net work = ΔKE.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Physics  |  CHAPTER: Rotational Motion / Gravitation  |  CONCEPT: Rigid bodies & gravity
+EXPLANATION: Centre of mass, torque τ=r×F, moment of inertia, angular momentum L=Iω, rotational KE; Newton's law of gravitation F=Gm₁m₂/r², g variation, orbital & escape velocity, Kepler's laws.  |  QUESTION: Escape velocity from Earth ≈? ANSWER: 11.2 km/s.  |  DIFFICULTY: Hard
+
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Physics  |  CHAPTER: Properties of Matter / Thermal / Thermodynamics / Kinetic Theory  |  CONCEPT: Solids, fluids, heat
+EXPLANATION: Stress-strain, Young's modulus; pressure, Pascal's & Archimedes' principles, Bernoulli, viscosity, surface tension; thermal expansion, calorimetry, conduction/convection/radiation; laws of thermodynamics (ΔU=Q−W), kinetic theory & gas laws (PV=nRT).  |  QUESTION: First law of thermodynamics? ANSWER: ΔU = Q − W.  |  DIFFICULTY: Hard
+
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Physics  |  CHAPTER: Oscillations & Waves  |  CONCEPT: SHM & wave motion
+EXPLANATION: SHM x=A sin(ωt+φ), T=2π√(m/k) & 2π√(L/g); energy in SHM; wave types, v=fλ, superposition, standing waves, beats, resonance; Doppler effect.  |  QUESTION: Time period of a simple pendulum? ANSWER: T=2π√(L/g).  |  DIFFICULTY: Medium
+
+===== CHEMISTRY =====
+Chapter arc: Some Basic Concepts · Structure of Atom · Classification & Periodicity · Chemical Bonding & Molecular Structure · Thermodynamics · Equilibrium · Redox Reactions · Organic Chemistry: Basic Principles & Techniques · Hydrocarbons (+ physical/inorganic/organic threads).
+
+★ FLAGSHIP CHAPTER G11C-MOLE — Some Basic Concepts of Chemistry (Mole Concept) — FULL APPARATUS
+1. METADATA
+• Grade 11 · NCERT · Science · Chemistry · Unit: Physical/foundational · Chapter: Some Basic Concepts
+• Prerequisites: atoms/molecules, symbols & formulae, atomic mass, balancing equations (G9–10).
+• Difficulty: Medium (bedrock of all stoichiometry; heavy in JEE/NEET).
+• Objectives: use SI units & significant figures; understand laws of chemical combination; define atomic/molecular mass, the mole and Avogadro's number; interconvert mass–moles–particles; compute molar mass, %composition, empirical/molecular formula; do stoichiometric and concentration calculations (molarity, molality); identify limiting reagent.
+2. TEACHING MATERIAL
+(a) Matter & measurement. Chemistry is quantitative — SI units, significant figures and dimensional analysis (factor-label method) underlie every calculation.
+(b) Laws of chemical combination. Conservation of mass; constant proportions (a compound always has the same element ratio by mass); multiple proportions; Gay-Lussac's law of gaseous volumes; Avogadro's law (equal volumes of gases at same T,P have equal molecules).
+(c) Atomic & molecular mass. Relative atomic mass is measured against ¹²C = 12 u. Molecular mass = sum of atomic masses (e.g., H₂O = 2×1 + 16 = 18 u). Formula mass for ionic compounds.
+(d) The mole — the chemist's counting unit. One mole = the amount containing Avogadro's number, Nₐ = 6.022×10²³ particles (atoms/molecules/ions). The molar mass (g/mol) is numerically equal to the atomic/molecular mass in u. So 1 mol H₂O = 18 g = 6.022×10²³ molecules.
+ Core conversions: moles = mass/molar mass = number of particles/Nₐ = volume of gas at STP / 22.4 L (STP = 273 K, 1 bar; 22.7 L with the newer STP, but 22.4 L is commonly used at 1 atm).
+(e) Percentage composition & formulae. %element = (mass of element in 1 mol / molar mass)×100. Empirical formula = simplest whole-number ratio of atoms (from % composition → moles → ratio). Molecular formula = (empirical formula)×n, where n = molar mass / empirical formula mass.
+(f) Stoichiometry. A balanced equation gives mole ratios between reactants/products. Use them to find masses/volumes. The limiting reagent is the reactant that runs out first and caps the product; the other is in excess.
+(g) Concentration terms. Molarity M = moles solute / litre solution; molality m = moles solute / kg solvent; mole fraction; mass % and ppm. Molarity is temperature-dependent (volume changes); molality is not.
+3. WORKED EXAMPLES
+1. Moles in 36 g water: n = 36/18 = 2 mol = 1.2044×10²⁴ molecules.
+2. Mass of 0.5 mol CO₂ (M=44): 0.5×44 = 22 g.
+3. Molecules in 8 g O₂ (M=32): n=8/32=0.25 mol → 0.25×6.022×10²³ = 1.5055×10²³.
+4. Empirical formula of a compound 40% C, 6.7% H, 53.3% O: moles 40/12=3.33, 6.7/1=6.7, 53.3/16=3.33 → ratio 1:2:1 → CH₂O; if molar mass 180 → n=180/30=6 → molecular formula C₆H₁₂O₆.
+5. Stoichiometry: N₂ + 3H₂ → 2NH₃. From 2 mol N₂ (with excess H₂) → 4 mol NH₃.
+6. Limiting reagent: 2 mol H₂ + 1 mol O₂ → H₂O; 2H₂+O₂→2H₂O needs 2:1, so exactly matched → 2 mol H₂O; if 3 mol H₂ + 1 mol O₂, O₂ is limiting (needs only 2 mol H₂), product 2 mol H₂O, 1 mol H₂ left over.
+7. Molarity: 4 g NaOH (M=40) in 500 mL → 0.1 mol / 0.5 L = 0.2 M.
+4. VISUAL / DIAGRAM DESCRIPTION
+A conversion "hub" diagram: MASS ↔ (÷/× molar mass) ↔ MOLES ↔ (×/÷ Nₐ) ↔ PARTICLES, and MOLES ↔ (×/÷ 22.4 L) ↔ GAS VOLUME at STP — arrows both ways labelled with the operation.
+
+A. DEFINITIONS (12)
+1. Mole. 2. Avogadro's number (6.022×10²³). 3. Molar mass. 4. Atomic mass unit (u). 5. Molecular mass. 6. Empirical formula. 7. Molecular formula. 8. Limiting reagent. 9. Molarity. 10. Molality. 11. Stoichiometry. 12. Percentage composition.
+
+B. QUESTIONS & ANSWERS
+Easy: What is Nₐ? (6.022×10²³.) Molar mass of H₂O? (18 g/mol.) Medium: Moles in 44 g CO₂? (1.) Molecules in 1 mol? (6.022×10²³.) Difficult: Empirical formula from 3.33:6.7:3.33? (CH₂O.) Molarity of 0.1 mol in 250 mL? (0.4 M.) Application: Mass of NaCl to make 1 L of 1 M solution (M=58.5)? (58.5 g.) Reasoning: Why is molarity temperature-dependent but molality not? (Volume changes with T; mass doesn't.)
+
+C. MCQs (20, abridged)
+1. 1 mole = 6.022×10²³ particles. 2. Molar mass of O₂ = 32 g/mol. 3. Moles in 9 g H₂O = 0.5. 4. Empirical formula shows the simplest ratio. 5. Molarity unit = mol/L. 6. Std ¹²C is assigned mass = 12 u. 7. Limiting reagent is the one fully consumed. 8. Molecules in 0.5 mol = 3.011×10²³. 9. Molar volume of ideal gas at STP ≈ 22.4 L. 10. %C in CO₂ (M=44) = 27.3%. 11. Molality unit = mol/kg. 12. Molecular formula = empirical × n. 13. Mass of 2 mol H₂ = 4 g. 14. Avogadro's law: equal volumes → equal molecules. 15. 1 u ≈ 1.66×10⁻²⁴ g. 16. Moles of atoms in 12 g C = 1. 17. Conservation of mass is a law of chemical combination. 18. Molar mass numerically equals molecular mass in u. 19. Concentration independent of T = molality. 20. n = mass/molar mass.
+
+D. TRUE / FALSE (10)
+1. 1 mole always weighs the same for all substances. F (mass = molar mass, differs). 2. Nₐ ≈ 6.022×10²³. T. 3. Molar mass of water is 18 g/mol. T. 4. Molarity depends on temperature. T. 5. Empirical and molecular formula are always the same. F. 6. Limiting reagent decides maximum product. T. 7. STP molar volume ≈ 22.4 L. T. 8. Molality uses kg of solution. F (kg of solvent). 9. Formula mass applies to ionic compounds. T. 10. Moles = particles × Nₐ. F (particles ÷ Nₐ).
+
+E. FILL IN THE BLANKS (10)
+1. Nₐ =  (6.022×10²³). 2. n = mass/ (molar mass). 3. Molarity = moles/ (litre of solution). 4. Empirical formula of C₆H₁₂O₆ is  (CH₂O). 5. Molar mass of CO₂ =  (44 g/mol). 6. The reactant used up first is the  reagent (limiting). 7. 1 mol of gas at STP occupies  (22.4 L). 8. Molality = moles/ (kg solvent). 9. Molecular mass of NH₃ =  (17 u). 10. Percentage composition uses  (molar mass). 
+
+F. SHORT-ANSWER
+• Calculate the number of molecules in 4.4 g CO₂. (0.1 mol → 6.022×10²².)
+• Define molarity and molality; state which is T-independent.
+• Find the molar mass of Ca(OH)₂. (74 g/mol.)
+
+G. LONG-ANSWER (model)
+Q: A 3.0 g sample of a hydrocarbon on combustion gives 9.9 g CO₂ and 8.1 g H₂O. Find its empirical formula. (Atomic masses C=12, H=1, O=16.)
+Model: C in CO₂: (12/44)×9.9 = 2.7 g → 2.7/12 = 0.225 mol C. H in H₂O: (2/18)×8.1 = 0.9 g → 0.9/1 = 0.9 mol H. Ratio C:H = 0.225:0.9 = 1:4 → empirical formula CH₄. (Check masses: C 2.7 + H 0.9 ≈ 3.6 — sample impurity/rounding; the intended teaching ratio is 1:4.)
+
+H. HOTS
+• Which contains more atoms: 1 g of hydrogen or 1 g of oxygen? (H: 1/1=1 mol atoms; O: 1/16 mol — hydrogen has far more atoms.)
+• 5.6 L of a gas at STP has mass 11 g — find its molar mass. (n=5.6/22.4=0.25 mol → M=11/0.25=44 g/mol, e.g., CO₂/propane.)
+• If a reaction is run with equal masses of two reactants, is the limiting reagent obvious? (No — convert to moles first via molar masses.)
+
+I. MISCONCEPTIONS
+• "A mole is a mass unit" → it's an amount (a count of particles).
+• "Equal masses = equal moles" → depends on molar mass.
+• "The bigger amount of reactant is in excess" → convert to moles and compare to the equation ratio.
+• "Molarity and molality are interchangeable" → they use different denominators (volume vs solvent mass).
+
+J. REVISION
+Key points: mole = Nₐ particles; molar mass links mass↔moles; particles = moles×Nₐ; gas volume at STP = moles×22.4 L; empirical→molecular formula via molar mass; stoichiometry via mole ratios; limiting reagent caps product; molarity vs molality.
+Formula sheet: n = m/M = N/Nₐ = V(STP)/22.4; M(molarity) = n/V(L); molality = n/kg solvent; %element = (mass in 1 mol/M)×100.
+Vocabulary: mole, molar mass, Avogadro's number, empirical/molecular formula, stoichiometry, limiting reagent, molarity, molality.
+
+ADAPTIVE — Concept: "the mole"
+• L1 Beginner: "A mole is just a chemist's word for a fixed, huge number of tiny particles."
+• L2 Grade level: "One mole is 6.022×10²³ particles — like 'a dozen' means 12, 'a mole' means 6.022×10²³. One mole of water is 18 grams."
+• L3 Technical: "The mole is the SI amount-of-substance unit; it contains exactly Nₐ = 6.022×10²³ elementary entities, linking the microscopic (particles) and macroscopic (grams) scales via molar mass."
+• L4 Analogy: "A mole is a 'chemist's dozen' — a counting package. Just as a grocer counts eggs in dozens, chemists count atoms in moles because atoms are far too small to count one by one."
+• L5 Real-world: "When a recipe (equation) says 2 parts H₂ to 1 part O₂ make water, factories scale it up in moles to know exactly how many tonnes of each to buy — no waste."
+
+INSTRUCTION RECORDS
+`json
+{"messages":[{"role":"user","content":"Explain the mole concept to a Class 11 student."},{"role":"assistant","content":"Atoms are far too tiny to count one at a time, so chemists count them in 'moles'. One mole = 6.022×10²³ particles (Avogadro's number) — just like a 'dozen' means 12. The magic link: one mole of any substance weighs its molar mass in grams. So 1 mole of water (H₂O) = 18 g = 6.022×10²³ molecules. To convert: moles = mass ÷ molar mass, and particles = moles × 6.022×10²³. This lets us bridge grams (which we can weigh) and atoms (which we can't count)."}]}
+{"messages":[{"role":"user","content":"Solve step by step: how many moles and molecules are in 8 g of oxygen gas?"},{"role":"assistant","content":"Oxygen gas is O₂, molar mass = 32 g/mol.\nMoles: n = mass/molar mass = 8/32 = 0.25 mol.\nMolecules: N = n × Nₐ = 0.25 × 6.022×10²³ = 1.5055×10²³ molecules.\nSo 8 g of O₂ is 0.25 mol containing about 1.51×10²³ molecules."}]}
+{"messages":[{"role":"user","content":"What is a limiting reagent? Give a real example."},{"role":"assistant","content":"The limiting reagent is the reactant that runs out first, stopping the reaction and deciding how much product forms; the others are 'in excess'. Analogy: to make sandwiches needing 2 bread slices + 1 filling each, if you have 10 bread and 3 fillings, you can make only 3 sandwiches — filling is limiting; 4 bread are left over. In chemistry: for 2H₂ + O₂ → 2H₂O, with 3 mol H₂ and 1 mol O₂, O₂ is limiting (it needs just 2 mol H₂), so 2 mol water forms and 1 mol H₂ remains."}]}
+`
+
+CHEMISTRY — Remaining chapters (compact)
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Chemistry  |  CHAPTER: Structure of Atom  |  CONCEPT: Atomic models & quantum numbers
+EXPLANATION: Thomson→Rutherford→Bohr models; dual nature; quantum numbers (n,l,m,s); orbitals & shapes; Aufbau, Pauli, Hund; electronic configuration.  |  QUESTION: Max electrons in n=2? ANSWER: 8.  |  DIFFICULTY: Hard
+
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Chemistry  |  CHAPTER: Periodicity  |  CONCEPT: Periodic trends
+EXPLANATION: Modern periodic law (atomic number); periods/groups/blocks; trends in atomic radius, ionisation enthalpy, electron gain enthalpy, electronegativity, valency.  |  QUESTION: Ionisation energy trend across a period? ANSWER: Increases.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Chemistry  |  CHAPTER: Chemical Bonding  |  CONCEPT: Bonds, VSEPR, hybridisation
+EXPLANATION: Ionic/covalent bonds, Lewis structures, octet & exceptions; VSEPR geometry; valence bond theory & hybridisation (sp, sp², sp³); MO theory basics; hydrogen bonding.  |  QUESTION: Shape of CH₄? ANSWER: Tetrahedral (sp³).  |  DIFFICULTY: Hard
+
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Chemistry  |  CHAPTER: Thermodynamics / Equilibrium / Redox  |  CONCEPT: Energy, equilibria, electron transfer
+EXPLANATION: System/surroundings, ΔU, ΔH, Hess's law, entropy, Gibbs energy ΔG=ΔH−TΔS; chemical & ionic equilibrium, Kc/Kp, Le Chatelier, pH, buffers; oxidation numbers & balancing redox.  |  QUESTION: Sign of ΔG for spontaneity? ANSWER: Negative.  |  DIFFICULTY: Hard
+
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Chemistry  |  CHAPTER: Organic Basics & Hydrocarbons  |  CONCEPT: Organic principles
+EXPLANATION: IUPAC nomenclature, isomerism, electronic effects (inductive, resonance, hyperconjugation), reaction intermediates; alkanes/alkenes/alkynes/aromatics — preparation, properties, mechanisms (addition, substitution).  |  QUESTION: General formula of alkanes? ANSWER: CₙH₂ₙ₊₂.  |  DIFFICULTY: Hard
+
+===== BIOLOGY =====
+
+★ CHAPTER G11B-CELL — Cell: The Unit of Life — MEDIUM–FULL ANCHOR
+METADATA. Grade 11 · NCERT · Biology · Unit: Cell Structure & Function · Prereq: Class 9 cell/tissue basics · Difficulty: Medium · Objectives: state the cell theory; distinguish prokaryotic vs eukaryotic and plant vs animal cells; describe organelles and their functions; relate structure to function.
+TEACHING. Cell theory (Schleiden, Schwann, Virchow): all living things are made of cells; the cell is the basic unit of life; new cells arise from pre-existing cells. Prokaryotes (bacteria) lack a true nucleus and membrane-bound organelles; DNA lies free in the nucleoid; have cell wall, plasma membrane, ribosomes (70S), sometimes capsule/flagella. Eukaryotes (plants, animals, fungi, protists) have a membrane-bound nucleus and organelles.
+Key organelles: Nucleus (control centre; DNA + nucleolus), plasma membrane (fluid-mosaic; selective transport), cell wall (plants; cellulose; support), mitochondria (ATP/"powerhouse"), chloroplast (photosynthesis; plants), endoplasmic reticulum (rough=protein, smooth=lipid), ribosomes (protein synthesis), Golgi apparatus (packaging/secretion), lysosomes ("suicide bags"/digestion), vacuole (large & central in plants; storage/turgor), cytoskeleton, centrosome (animal cell division).
+Table — plant vs animal cell.
+ Feature  |  Plant  |  Animal 
+------------------------------
+ Cell wall  |  Present (cellulose)  |  Absent 
+ Chloroplast  |  Present  |  Absent 
+ Vacuole  |  Large, central  |  Small/absent 
+ Centriole  |  Usually absent  |  Present 
+ Shape  |  Fixed, rectangular  |  Variable, round 
+DEFINITIONS (10). cell theory, prokaryote, eukaryote, organelle, nucleus, mitochondrion, chloroplast, plasma membrane, ribosome, lysosome.
+Q&A. Easy: Powerhouse of the cell? (Mitochondrion.) Which cell has a wall — plant or animal? (Plant.) Medium: State the three parts of cell theory. Difference between 70S and 80S ribosomes? (Prokaryotic vs eukaryotic.) Application: A cell with a large central vacuole and chloroplasts is likely? (Plant.) Reasoning: Why are mitochondria called semi-autonomous? (They have their own DNA and ribosomes.)
+MCQs (10, abridged). Control centre: nucleus; photosynthesis site: chloroplast; ATP made in: mitochondria; lacks true nucleus: prokaryote; protein synthesis: ribosome; digestion/"suicide bags": lysosomes; plant support layer: cell wall (cellulose); packaging: Golgi; selective barrier: plasma membrane; large plant storage sac: vacuole.
+T/F (5). All cells have a nucleus. F (prokaryotes don't). Mitochondria make ATP. T. Animal cells have chloroplasts. F. Cell theory says cells come from pre-existing cells. T. Ribosomes make lipids. F (proteins).
+FILL BLANKS (5). The  is the control centre (nucleus). Photosynthesis occurs in the  (chloroplast). Plant cells have a  made of cellulose (cell wall). ATP is produced in  (mitochondria).  package and secrete proteins (Golgi apparatus).
+HOTS. Why does a plant cell not burst in pure water while an animal cell may? (Rigid cell wall resists turgor pressure.) Predict the effect of removing a cell's ribosomes. (No protein synthesis → cell dies.)
+MISCONCEPTIONS. "All cells have organelles" → prokaryotes lack membrane-bound ones. "Cell wall = cell membrane" → wall (plants, rigid) vs membrane (all cells, selective).
+REVISION. Cell theory; pro vs eukaryote; organelle functions; plant vs animal differences.
+ADAPTIVE — "cell". L1: "A cell is the smallest living unit of the body." L2: "Every living thing is built from cells; each has parts (organelles) doing jobs — the nucleus controls, mitochondria power it." L3: "The cell is the fundamental structural, functional and biological unit; eukaryotic cells compartmentalise functions in membrane-bound organelles." L4: "A cell is like a tiny factory — the nucleus is the manager, mitochondria the power plant, ribosomes the assembly line, Golgi the packaging department, membrane the security gate." L5: "Muscle cells packed with mitochondria power your movement; that's cell biology behind every step you take."
+`json
+{"messages":[{"role":"user","content":"Explain the cell and its main organelles like a factory."},{"role":"assistant","content":"A cell is a tiny living factory! The NUCLEUS is the manager holding the instructions (DNA). MITOCHONDRIA are the power plant making energy (ATP). RIBOSOMES are the assembly line building proteins. The GOLGI APPARATUS packages and ships products. The PLASMA MEMBRANE is the security gate controlling what enters/leaves. Plant cells add a CELL WALL (outer fence) and CHLOROPLASTS (solar kitchens for photosynthesis). Each part has a job, and together they keep the cell alive."}]}
+`
+
+BIOLOGY — Remaining chapters (compact)
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Biology  |  CHAPTER: Diversity of Living World  |  CONCEPT: Classification & taxonomy
+EXPLANATION: Nomenclature (binomial), taxonomic hierarchy; five kingdoms (Monera, Protista, Fungi, Plantae, Animalia); plant & animal kingdom features; viruses/lichens.  |  QUESTION: Who proposed five-kingdom classification? ANSWER: Whittaker.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Biology  |  CHAPTER: Structural Organisation (Plants & Animals)  |  CONCEPT: Morphology & anatomy
+EXPLANATION: Root/stem/leaf/flower morphology, families; plant tissues (meristem, permanent); animal tissues (epithelial, connective, muscular, nervous); frog/cockroach organisation.  |  QUESTION: Tissue lining body surfaces? ANSWER: Epithelial.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Biology  |  CHAPTER: Biomolecules / Cell Cycle  |  CONCEPT: Biochemistry & division
+EXPLANATION: Carbohydrates, proteins, lipids, nucleic acids, enzymes (structure/function); cell cycle phases; mitosis vs meiosis & significance.  |  QUESTION: Which division halves chromosome number? ANSWER: Meiosis.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Biology  |  CHAPTER: Plant Physiology  |  CONCEPT: Photosynthesis, respiration, transport, growth
+EXPLANATION: Photosynthesis (light & dark reactions, C3/C4); respiration (glycolysis, Krebs, ETC); transport (transpiration, ascent of sap); plant growth regulators.  |  QUESTION: Site of Krebs cycle? ANSWER: Mitochondrial matrix.  |  DIFFICULTY: Hard
+
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Biology  |  CHAPTER: Human Physiology  |  CONCEPT: Body systems
+EXPLANATION: Digestion & absorption; breathing & gas exchange; body fluids & circulation (heart, blood); excretion (nephron); locomotion; neural & chemical (hormonal) control.  |  QUESTION: Functional unit of the kidney? ANSWER: Nephron.  |  DIFFICULTY: Hard
+
+===== MATHEMATICS =====
+
+★ CHAPTER G11M-SETS — Sets — MEDIUM ANCHOR
+METADATA. Grade 11 · NCERT · Maths · Unit: Sets & Functions · Prereq: number systems · Difficulty: Medium · Objectives: define sets & notation; types of sets; subsets & power set; Venn diagrams; operations (union, intersection, difference, complement); use of set identities.
+TEACHING. A set is a well-defined collection of distinct objects (elements). Notation: roster {1,2,3} or set-builder {x : x is even}. Types: empty (∅), finite/infinite, equal, singleton, universal (U). Subset A⊆B if every element of A is in B; the power set P(A) has 2ⁿ subsets for n elements. Operations: union A∪B (in A or B), intersection A∩B (in both), difference A−B (in A not B), complement A′=U−A. Venn diagrams picture these. Identities: commutative, associative, distributive, De Morgan's: (A∪B)′=A′∩B′, (A∩B)′=A′∪B′. Cardinality: n(A∪B)=n(A)+n(B)−n(A∩B).
+DEFINITIONS (10). set, element, empty set, subset, proper subset, power set, universal set, union, intersection, complement.
+Q&A. Easy: Is {1,2,2,3} a valid set listing? (Elements are distinct → {1,2,3}.) Power set size of a 3-element set? (8.) Medium: A={1,2,3}, B={2,3,4}: A∩B? ({2,3}); A∪B? ({1,2,3,4}). Application: In a class, 20 play cricket, 15 football, 5 both — how many play at least one? (20+15−5=30.) Reasoning: Why is ∅ a subset of every set? (Vacuously — it has no element that could be outside.)
+MCQs (8, abridged). ∅ has  elements: 0; A⊆A is: true; P(A) for  |  A  |  =4: 16; A∩A′: ∅; A∪U: U; De Morgan: (A∪B)′=A′∩B′; n(A∪B) formula includes −n(A∩B); {x:x²=4}: {−2,2}.
+HOTS. Prove (A∪B)′=A′∩B′ using a Venn diagram. If n(A)=30, n(B)=20, n(A∪B)=40, find n(A∩B). (10.)
+MISCONCEPTIONS. "∅ and {∅} are the same" → {∅} has one element (the empty set). "Order/repetition matters in a set" → it doesn't.
+REVISION. Set notation & types; subsets & power set (2ⁿ); operations & Venn; De Morgan; inclusion–exclusion.
+ADAPTIVE — "set". L1: "A set is just a collection of things." L2: "A set is a well-defined group of distinct objects, like the set of even numbers {2,4,6,…}." L3: "A set is a well-defined collection; membership is binary, elements are distinct and unordered, enabling algebra of unions/intersections." L4: "A set is like a labelled box — either an item is in the box or not, and duplicates don't count twice." L5: "Search filters use sets: 'shirts AND blue' is an intersection; 'red OR blue' is a union."
+`json
+{"messages":[{"role":"user","content":"Explain union and intersection of sets with an example."},{"role":"assistant","content":"Take A = {1,2,3} and B = {2,3,4}. The UNION A∪B is everything in either set: {1,2,3,4}. The INTERSECTION A∩B is only what's in BOTH: {2,3}. Memory tip: Union = 'either/or' (put together), Intersection = 'both/and' (overlap only). In a Venn diagram, union is both circles shaded; intersection is just the overlap."}]}
+``
+
+MATHEMATICS — Remaining chapters (compact)
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Maths  |  CHAPTER: Relations & Functions / Trigonometric Functions  |  CONCEPT: Functions & trig
+EXPLANATION: Ordered pairs, Cartesian product, relations, function types & graphs; angles in radians, trig ratios of any angle, identities, sum/difference & multiple-angle formulae, general solutions.  |  QUESTION: sin(90°−θ)=? ANSWER: cosθ.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Maths  |  CHAPTER: Complex Numbers / Linear Inequalities  |  CONCEPT: i and inequalities
+EXPLANATION: i²=−1, algebra of complex numbers, modulus/argument, Argand plane; solving & graphing linear inequalities in one/two variables.  |  QUESTION:  |  3+4i  |  ? ANSWER: 5.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Maths  |  CHAPTER: Permutations & Combinations / Binomial Theorem  |  CONCEPT: Counting & expansion
+EXPLANATION: Fundamental counting principle; nPr, nCr; binomial expansion (a+b)ⁿ, general term.  |  QUESTION: 5C2? ANSWER: 10.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Maths  |  CHAPTER: Sequences & Series / Straight Lines / Conic Sections / 3-D  |  CONCEPT: Progressions & coordinate geometry
+EXPLANATION: AP/GP nth term & sums, AM/GM; slope, line forms, distance; circle/parabola/ellipse/hyperbola equations; 3-D distance formula.  |  QUESTION: Sum of infinite GP (  |  r  |  <1)? ANSWER: a/(1−r).  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Maths  |  CHAPTER: Limits & Derivatives  |  CONCEPT: Intro calculus
+EXPLANATION: Limit concept & algebra of limits; derivative as slope/rate, first-principles; standard derivatives & rules (power, product, quotient).  |  QUESTION: d/dx(x³)? ANSWER: 3x².  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Maths  |  CHAPTER: Statistics & Probability  |  CONCEPT: Dispersion & chance
+EXPLANATION: Mean deviation, variance, standard deviation; classical probability, events, addition rule.  |  QUESTION: P(A∪B)=? ANSWER: P(A)+P(B)−P(A∩B).  |  DIFFICULTY: Medium
+
+
+=================================================================
+BRANCH B — MAHARASHTRA HSC SCIENCE (Std 11)
+=================================================================
+Std 11 Science: Physics, Chemistry, Biology, Mathematics & Statistics (Part I + Part II); English & one more language; optional bifocal/vocational (Electronics, Computer Science, etc. — full treatment in Batch 12). Concepts parallel NCERT but follow Balbharati sequence/terminology; Maths is split into two parts. Kept separate from NCERT.
+
+PHYSICS / CHEMISTRY / BIOLOGY / MATHS (Std 11) — Anchors + Compact
+RECORDTYPE: LESSON  |  GRADE 11  |  Maharashtra  |  Physics  |  CONCEPT: Kinematics & mechanics (parallel)
+EXPLANATION: गती (motion), सदिश (vectors), प्रक्षेपण (projectile), न्यूटनचे नियम, कार्य-ऊर्जा-शक्ती, गुरुत्वाकर्षण, दोलन-तरंग. Same physics as NCERT with Marathi/Balbharati framing; strong lab component.  |  QUESTION: v = u + at is valid for? ANSWER: uniform acceleration (एकसमान त्वरण).  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 11  |  Maharashtra  |  Chemistry  |  CONCEPT: Mole concept & physical/inorganic/organic (parallel)
+EXPLANATION: मोल संकल्पना, अणु-रेणू वस्तुमान, स्टॉइकिओमेट्री, अणुरचना, आवर्तसारणी, रासायनिक बंध, रासायनिक समतोल, कार्बनी रसायनशास्त्राची मूलतत्त्वे.  |  QUESTION: Avogadro number? ANSWER: 6.022×10²³.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 11  |  Maharashtra  |  Biology  |  CONCEPT: Cell, biomolecules, plant & animal physiology (parallel)
+EXPLANATION: पेशी (cell) व अंगके; जैवरेणू; वनस्पती व प्राणी शरीरक्रियाविज्ञान; वर्गीकरण; प्रकाशसंश्लेषण, श्वसन.  |  QUESTION: पेशीचे ऊर्जाकेंद्र कोणते? ANSWER: तंतुकणिका (mitochondria).  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 11  |  Maharashtra  |  Mathematics & Statistics (Part I & II)  |  CONCEPT: Algebra/trig (Part I) + calculus/statistics (Part II)
+EXPLANATION: Part I — angle measurement, trigonometry, determinants, straight line, circle, conics, sets/relations/functions; Part II — logic, matrices, differentiation, integration intro, statistics, probability. Two textbooks/papers.  |  QUESTION: sin²θ+cos²θ=? ANSWER: 1.  |  DIFFICULTY: Medium
+Difference to preserve: Maharashtra offers Mathematics & Statistics split into Part I & Part II, includes Mathematical Logic, Determinants/Matrices and Statistics at Std 11 with a distinct sequence; Science subjects have a strong prescribed practical/lab component and Marathi metalanguage. Do not merge with NCERT.
+
+
+=================================================================
+BATCH 6 — CONSOLIDATED CROSS-BRANCH LESSON RECORDS
+=================================================================
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Physics  |  UNIT: Kinematics  |  CHAPTER: Motion in a Straight Line  |  SECTION: Equations of motion  |  CONCEPT: Uniformly accelerated motion
+PREREQUISITES: SI units, graphs, algebra  |  LEARNINGOBJECTIVE: Derive & apply v=u+at, s=ut+½at², v²=u²+2as
+EXPLANATION: Distance/displacement & speed/velocity distinctions; a=dv/dt; graph slopes/areas; three equations for constant a; free fall a=g.  |  EXAMPLE: Drop from 45 m → t=3 s, v=30 m/s  |  APPLICATION: Braking distances, projectile drop, free fall  |  COMMONMISCONCEPTION: Heavier bodies fall faster  |  QUESTION: v after u=5, a=2, t=3?  |  ANSWER: 11 m/s  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Chemistry  |  CHAPTER: Some Basic Concepts  |  SECTION: Mole concept  |  CONCEPT: Mole–mass–particle interconversion & stoichiometry
+PREREQUISITES: Atomic mass, formulae, balancing  |  LEARNINGOBJECTIVE: Use moles, molar mass, Nₐ, limiting reagent, molarity
+EXPLANATION: 1 mol = 6.022×10²³ particles = molar mass in g; n=m/M=N/Nₐ; empirical→molecular formula; stoichiometric mole ratios; limiting reagent; molarity vs molality.  |  EXAMPLE: 8 g O₂ = 0.25 mol = 1.5×10²³ molecules  |  APPLICATION: Reaction yield, solution preparation  |  COMMONMISCONCEPTION: A mole is a mass unit  |  QUESTION: Moles in 36 g water?  |  ANSWER: 2 mol  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 11  |  NCERT  |  Biology  |  CHAPTER: Cell: The Unit of Life  |  SECTION: Organelles  |  CONCEPT: Cell theory & structure–function
+PREREQUISITES: Class 9 cell basics  |  LEARNINGOBJECTIVE: Compare cell types & organelle functions
+EXPLANATION: Cell theory; prokaryote vs eukaryote; plant vs animal; organelle roles (nucleus, mitochondria, chloroplast, ER, Golgi, ribosomes, lysosomes, vacuole).  |  EXAMPLE: Chloroplast + central vacuole → plant cell  |  APPLICATION: Identifying cell types under a microscope  |  COMMONMISCONCEPTION: All cells have a nucleus  |  QUESTION: Powerhouse of the cell?  |  ANSWER: Mitochondrion  |  DIFFICULTY: Medium
+
+RECORD_TYPE: LESSON  |  GRADE 11  |  Maharashtra  |  Mathematics & Statistics  |  CONCEPT: Two-part Maths structure
+EXPLANATION: Maharashtra splits Std 11 Maths into Part I (trig/algebra/coordinate geometry/sets) and Part II (logic/matrices/calculus/statistics/probability) with separate papers; includes Mathematical Logic & Statistics not identically placed in NCERT.  |  QUESTION: i² = ?  |  ANSWER: −1  |  DIFFICULTY: Medium
+
+
+BATCH 6 COVERAGE SUMMARY
+• NCERT Physics: ★ Motion in a Straight Line (Kinematics) — full flagship (distance/displacement, velocity/acceleration, x–t & v–t graphs, derivations of the three equations, free fall, units/dimensions table, 20 MCQs, worked numericals, adaptive, instruction records); compact for Units & Measurements, Motion in a Plane, Laws of Motion, Work-Energy-Power, Rotation/Gravitation, Properties of Matter/Thermal/Thermodynamics/Kinetic Theory, Oscillations & Waves.
+• NCERT Chemistry: ★ Mole Concept — full flagship (mole, Nₐ, molar mass, empirical/molecular formula, stoichiometry, limiting reagent, molarity/molality, 20 MCQs, worked numericals); compact for atomic structure, periodicity, bonding, thermodynamics/equilibrium/redox, organic basics & hydrocarbons.
+• NCERT Biology: Cell: The Unit of Life — anchor; compact for diversity/classification, structural organisation, biomolecules/cell cycle, plant & human physiology.
+• NCERT Mathematics: Sets — anchor; compact for relations/functions/trigonometry, complex numbers/inequalities, P&C/binomial, sequences/coordinate geometry/conics/3-D, limits & derivatives, statistics/probability.
+• Maharashtra HSC Science (Std 11): parallel Physics/Chemistry/Biology anchors + Mathematics & Statistics Part I/II with the two-part split, Mathematical Logic/Statistics placement, and strong lab component preserved; bifocal noted for Batch 12.
+• Boards kept separate; Class 11 correctly treated as existing-syllabus (2026–27).
+
+END OF BATCH 6. Next: BATCH 7 — Grade 12 Science (Physics: electrostatics→modern physics; Chemistry: solutions, electrochemistry, kinetics, coordination, organic functional groups, biomolecules; Biology: reproduction, genetics, evolution, biotech, ecology; Mathematics: relations/functions, calculus (continuity, differentiation, integration, differential equations), vectors & 3-D, probability). Flagship-depth on a pivotal chapter each.

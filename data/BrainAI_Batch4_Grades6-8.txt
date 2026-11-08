@@ -1,0 +1,311 @@
+BrainAI EDUCATIONAL CORPUS
+BATCH 4 — GRADES 6, 7 & 8 (NCERT branch + Maharashtra Balbharati branch)
+Original teaching corpus; no textbook reproduced. Grounded in current NEP-2020 / NCF-2023 books verified 2026: NCERT — Ganita Prakash (Maths), Curiosity (Science), Exploring Society: India and Beyond (Social Science), Poorvi (English), Malhar (Hindi). Class 6 Ganita Prakash has 10 chapters (…10 "The Other Side of Zero" = integers); Curiosity has 12. Classes 7–8 continue the same series. Maharashtra Balbharati — Marathi, Hindi, English, Sanskrit (optional), Mathematics (गणित), General Science (सामान्य विज्ञान) as one subject, History & Civics (इतिहास व नागरिकशास्त्र), and Geography (भूगोल). Boards kept separate.
+Depth policy: full apparatus on the pivotal new concepts that unlock middle school — Integers, Algebra & Simple Equations, Photosynthesis/Nutrition in Plants — plus a Civics anchor; compact-but-teaching LESSON records for the wide remainder (Science physics/chemistry/biology, Maths mensuration/ratio/geometry, History/Geography). Any chapter expands on request.
+
+
+=================================================================
+BRANCH A — NCERT / CBSE
+=================================================================
+
+===== GRADE 6 (NCERT) =====
+
+SUBJECT: MATHEMATICS — Ganita Prakash (Class 6)
+Verified 10-chapter arc: 1 Patterns in Mathematics, 2 Lines and Angles, 3 Number Play, 4 Data Handling and Presentation, 5 Prime Time, 6 Perimeter and Area, 7 Fractions, 8 Playing with Constructions, 9 Symmetry, 10 The Other Side of Zero (Integers).
+
+
+CHAPTER G6M-A — Integers ("The Other Side of Zero") — FULL APPARATUS
+METADATA. Grade 6 · NCERT · Maths · Unit: Number system · Prereq: whole numbers, number line (G5) · Difficulty: Medium · Objectives: understand negative numbers and the extended number line; represent integers; compare/order; add, subtract, multiply and divide integers using sign rules; apply to real contexts (temperature, debt, elevation).
+
+TEACHING MATERIAL.
+Why negatives? Whole numbers can't describe "3 below zero" or "owing ₹50." Integers extend numbers to the left of zero: …−3, −2, −1, 0, 1, 2, 3… Positive integers are to the right of 0, negative to the left; zero is neither positive nor negative.
+The number line. Numbers increase left→right, so −5 < −2 < 0 < 3. Two numbers the same distance from 0 on opposite sides are opposites (+4 and −4). The absolute value is distance from 0 (  |  −4  |  = 4).
+Adding integers.
+ • Same sign → add the values, keep the sign: (−3)+(−5) = −8; (+3)+(+5)=+8.
+ • Different signs → subtract the smaller value from the larger, take the sign of the larger-value number: (−7)+(+3) = −4; (+7)+(−3)=+4.
+Subtracting integers. Subtracting is adding the opposite: a − b = a + (−b). So 5 − (−3) = 5 + 3 = 8; (−4) − (+6) = −4 + (−6) = −10.
+Multiplying/dividing integers (sign rules).
+ • (+)(+) = + ; (−)(−) = + ; (+)(−) = − ; (−)(+) = − . Same signs → positive; different signs → negative.
+ • Examples: (−4)×(−3)=+12; (−4)×(+3)=−12; (−12)÷(+4)=−3; (−12)÷(−4)=+3.
+Properties. Integers are closed under +, −, × (result is always an integer). Addition/multiplication are commutative and associative; 0 is the additive identity, 1 the multiplicative identity; every integer has an opposite (additive inverse).
+
+Worked examples.
+1. Order −3, 5, −7, 0, 2 → −7, −3, 0, 2, 5. 2. (−8)+(+5) = −3. 3. 6 − (−4) = 10. 4. (−5)×(−6) = 30. 5. (−48)÷(6) = −8. 6. Temperature rises from −4°C by 9°C → −4+9 = 5°C.
+
+Visual/diagram description. A horizontal number line from −7 to +7 with 0 centred; arrows show (−3)+(+5): start at −3, move 5 right, land on +2.
+
+DEFINITIONS (10). integer, positive integer, negative integer, number line, opposite (additive inverse), absolute value, closure, additive identity, sign rule, comparison (< >).
+
+Q&A. Easy: Which is greater, −2 or −5? (−2.)  |  −9  |  ? (9.) Medium: (−6)+(−4)? (−10.) 3−(−7)? (10.) Difficult: (−7)×(+8)? (−56.) (−72)÷(−9)? (8.) Application: A diver at −20 m rises 12 m — new depth? (−8 m.) A bank balance of −₹300 gets a ₹500 deposit — balance? (+₹200.) Reasoning: Why is (−)×(−) positive? (Removing a negative amount repeatedly increases the total; consistent with distributivity: (−a)(−b)+(−a)(b)=(−a)(−b+b)=0, so (−a)(−b) must equal +ab.)
+
+MCQs (12, abridged). Greater: −1 or −9 → −1;  |  −12  |  = 12; (−5)+(+8)=+3; 4−(−6)=10; (−3)×(−7)=21; (−20)÷5=−4; opposite of −8 = 8; 0 is neither +/−; (−9)+(+9)=0; smallest: −4,−10,3 → −10; (+6)×(−4)=−24; (−15)÷(−3)=5.
+
+T/F (10). −3 > −1 F. Zero is a positive integer F. (−)(−)=+ T. 5−(−2)=3 F (=7).  |  −7  |  =7 T. Integers are closed under division F (e.g., 3÷2 not an integer). (−8)+(+8)=0 T. The opposite of 6 is −6 T. (−4)×(+5)=20 F (=−20). −10 < −2 T.
+
+FILL BLANKS (10). Opposite of −7 is  (7). (−6)+(−3)= (−9).  |  −15  |  = (15). 8−(−5)= (13). (−4)×(−9)= (36). (−36)÷9= (−4).  is neither positive nor negative (0). Same signs multiply to a  (positive). (−12)+(+7)= (−5). Smaller of −3 and −8 is  (−8).
+
+SHORT/LONG. Short: Evaluate (−7)+(+3)−(−5). ( = −7+3+5 = 1.) Long (model): "State and illustrate the four sign rules for multiplication with an example each." Model — (+)(+)=+ : 4×3=12; (−)(−)=+ : (−4)×(−3)=12; (+)(−)=− : 4×(−3)=−12; (−)(+)=− : (−4)×3=−12. Rule: same signs → positive, different signs → negative.
+
+HOTS. Fill □: (−5) − □ = 2 (□ = −7). If the product of two integers is +36 and their sum is −13, find them. (−4 and −9.) A lift starts at floor −2, goes up 7, down 3 — where does it stop? (Floor 2.)
+
+MISCONCEPTIONS. "−3 is bigger than −1 because 3 > 1" → on the line −1 is greater. "Subtracting always makes smaller" → subtracting a negative increases. "(−)(−) = −" → it is +. "Zero is positive" → it is neither.
+
+REVISION. Integers extend the line both ways; compare left→right; add (same sign add/keep; different subtract/take larger sign); subtract = add opposite; sign rules for ×,÷ (same→+, different→−); closure under +,−,×.
+Fact sheet: a−b = a+(−b); (−a)(−b)=ab; (−a)(b)=−ab;  |  −a  |  =a; a+(−a)=0.
+
+ADAPTIVE — "negative numbers". L1: "Negative numbers are numbers less than zero, like −3." L2: "Just as we count 1,2,3 to the right of zero, we count −1,−2,−3 to the left; −5 is colder/lower/less than −2." L3: "Integers form a commutative ring ℤ closed under +,−,× with additive inverses; ordering places negatives below zero." L4: "Think of a lift: floors above ground are +, basements are −, ground is 0 — going up adds, going down subtracts." L5: "Your bank balance: deposits are positive, spending is negative; if you owe more than you have, the balance goes negative (−₹200)."
+
+INSTRUCTION RECORDS.
+``json
+{"messages":[{"role":"user","content":"Explain integers and negative numbers to a Grade 6 student."},{"role":"assistant","content":"Numbers don't stop at zero — they continue to the LEFT as negatives! Picture a number line: 0 in the middle, positives (1,2,3…) to the right, negatives (−1,−2,−3…) to the left. Real examples: −5°C is 5 degrees below zero; a basement is floor −1; owing ₹100 is −₹100. On the line, whatever is further LEFT is smaller — so −7 < −2. Zero itself is neither positive nor negative."}]}
+{"messages":[{"role":"user","content":"Why does a negative times a negative give a positive?"},{"role":"assistant","content":"Think of it as 'taking away debts'. Removing a negative (a debt) makes you richer — a positive change. Mathematically: we need (−a)(−b) + (−a)(b) = (−a)(−b+b) = (−a)(0) = 0. Since (−a)(b) = −ab, we need (−a)(−b) to cancel −ab, so it must equal +ab. That's why (−4)×(−3) = +12."}]}
+{"messages":[{"role":"user","content":"Solve: a diver is at −18 m and rises 25 m. Where is she now?"},{"role":"assistant","content":"Start at −18 m (18 metres below sea level). Rising 25 m means +25: −18 + 25 = +7. She's now 7 metres ABOVE sea level (+7 m)! Different signs → subtract the values (25−18=7) and take the sign of the bigger value (positive)."}]}
+`
+
+
+CHAPTERS G6M — Remaining (compact)
+RECORDTYPE: LESSON  |  GRADE 6  |  NCERT  |  Maths  |  CHAPTER: Number Play / Knowing Numbers  |  CONCEPT: Large numbers, estimation, Indian/International systems
+EXPLANATION: Place value to crores; commas (Indian: lakh/crore vs International: million); rounding & estimation; Roman numerals.  |  QUESTION: 10 lakh = ? million. ANSWER: 1 million.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 6  |  NCERT  |  Maths  |  CHAPTER: Prime Time  |  CONCEPT: Factors, multiples, primes, HCF/LCM, divisibility
+EXPLANATION: Prime vs composite; prime factorisation; divisibility rules (2,3,5,9,10); HCF (largest common factor) & LCM (smallest common multiple) by factorisation.  |  QUESTION: LCM of 4 and 6? ANSWER: 12.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 6  |  NCERT  |  Maths  |  CHAPTER: Fractions  |  CONCEPT: Operations on fractions
+EXPLANATION: Proper/improper/mixed; equivalent; +,−,× of fractions; unlike fractions need common denominators (LCM); of = ×.  |  QUESTION: ½ + ⅓ ? ANSWER: 5/6.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 6  |  NCERT  |  Maths  |  CHAPTER: Lines and Angles / Symmetry / Constructions  |  CONCEPT: Basic geometry
+EXPLANATION: Point/line/ray/segment; angle types (acute/right/obtuse/straight/reflex); measure with protractor; line & rotational symmetry; ruler-compass constructions (copy segment/angle, perpendicular bisector).  |  QUESTION: A right angle = ? ANSWER: 90°.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 6  |  NCERT  |  Maths  |  CHAPTER: Perimeter and Area / Data Handling  |  CONCEPT: Mensuration & statistics basics
+EXPLANATION: Perimeter (sum of sides), area of rectangle/square (l×b, s²); collect/organise data; bar graphs & pictographs; simple mean.  |  QUESTION: Area of a 7×3 rectangle? ANSWER: 21 sq units.  |  DIFFICULTY: Medium
+
+SUBJECT: SCIENCE — Curiosity (Class 6)
+Verified 12-chapter arc: 1 Wonderful World of Science, 2 Diversity in the Living World, 3 Mindful Eating, 4 Exploring Magnets, 5 Measurement of Length and Motion, 6 Materials Around Us, 7 Temperature and its Measurement, 8 A Journey through States of Water, 9 Methods of Separation, 10 Living Creatures, 11 Nature's Treasures, 12 Beyond Earth.
+
+RECORDTYPE: LESSON  |  GRADE 6  |  NCERT  |  Science  |  CHAPTER: Measurement of Length and Motion  |  CONCEPT: SI units & types of motion
+EXPLANATION: Measurement needs a standard unit; SI length = metre; measure correctly (eye in line, avoid worn ends). Motion types: rectilinear (straight), circular, periodic (repeating), rotational.  |  QUESTION: SI unit of length? ANSWER: metre (m).  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 6  |  NCERT  |  Science  |  CHAPTER: Materials / States of Water / Separation  |  CONCEPT: Materials, states, methods
+EXPLANATION: Classify materials by properties (hardness, solubility, transparency, magnetism); water's three states & changes (melting, evaporation, condensation); separation (handpicking, sieving, filtration, evaporation, magnetic).  |  QUESTION: How to separate iron filings from sand? ANSWER: Use a magnet.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 6  |  NCERT  |  Science  |  CHAPTER: Exploring Magnets / Temperature  |  CONCEPT: Magnetism & heat
+EXPLANATION: Magnets have two poles (N/S); like poles repel, unlike attract; a freely suspended magnet points N–S (compass). Temperature is measured with a thermometer in °C; heat flows hot→cold.  |  QUESTION: Do like poles attract or repel? ANSWER: Repel.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 6  |  NCERT  |  Science  |  CHAPTER: Diversity/Living Creatures/Mindful Eating  |  CONCEPT: Living world & nutrition
+EXPLANATION: Characteristics of living things (growth, respiration, response, reproduction, excretion, nutrition, movement); habitats; balanced diet & nutrient groups; deficiency diseases.  |  QUESTION: Which nutrient prevents scurvy? ANSWER: Vitamin C.  |  DIFFICULTY: Medium
+
+SUBJECT: SOCIAL SCIENCE — Exploring Society: India and Beyond (Class 6) — compact
+RECORDTYPE: LESSON  |  GRADE 6  |  NCERT  |  Social Science  |  CONCEPT: Integrated History/Geography/Civics/Economics themes
+EXPLANATION: Earth in the solar system, globe & maps, latitudes/longitudes; earliest humans & the beginnings of civilisation; diversity, family & community; local government & the idea of rules.  |  QUESTION: What lines run east–west on a globe? ANSWER: Latitudes (parallels).  |  DIFFICULTY: Medium
+
+===== GRADE 7 (NCERT) =====
+Continues Ganita Prakash, Curiosity, Exploring Society, Poorvi, Malhar. Maths deepens to integer/fraction/decimal operations, algebraic expressions, simple equations, ratio-proportion-percentage, lines & angles, triangles, perimeter/area, data & chance. Science branches clearly into physics/chemistry/biology topics.
+
+CHAPTER G7M-A — Algebraic Expressions & Simple Equations — FULL APPARATUS
+METADATA. Grade 7 · NCERT · Maths · Prereq: integers, patterns · Medium · Objectives: use variables/letters for unknowns; form and read algebraic expressions; identify terms, coefficients, like/unlike terms; add/subtract expressions; understand an equation and solve simple linear equations in one variable; translate word problems into equations.
+
+TEACHING MATERIAL.
+From arithmetic to algebra. A variable is a letter (x, y, n) standing for an unknown or changing number. "5 more than a number" = x + 5; "twice a number" = 2x; "a number divided by 3" = x/3.
+Expressions. An algebraic expression combines variables, numbers and operations (e.g., 3x + 7). A term is a part separated by + or − (in 3x + 7, the terms are 3x and 7). In the term 3x, 3 is the coefficient and x is the variable. Constants are pure numbers (7). Like terms have the same variable part (3x and 5x); unlike terms don't (3x and 5y).
+Operations on expressions. Combine like terms: 3x + 5x = 8x; 7y − 2y = 5y; 4x + 3 + 2x = 6x + 3. You cannot combine unlike terms (3x + 2y stays as is).
+Equations. An equation says two expressions are equal (has an = sign), e.g., 2x + 3 = 11. Solving means finding the variable value that makes it true. Use the balance idea: do the same operation to both sides.
+ • 2x + 3 = 11 → subtract 3: 2x = 8 → divide by 2: x = 4. Check: 2(4)+3 = 11 ✓.
+ • x/5 = 3 → multiply by 5: x = 15.
+Word problems. "Three times a number, increased by 4, is 19." → 3x + 4 = 19 → 3x = 15 → x = 5.
+
+Worked examples.
+1. Simplify 6a + 2 − 4a + 5 = 2a + 7. 2. Solve 5x − 7 = 18 → 5x = 25 → x = 5. 3. Solve (x/3) + 2 = 6 → x/3 = 4 → x = 12. 4. Perimeter of a square is 4s; if perimeter = 36, s = 9.
+
+Visual/diagram description. A two-pan balance: left pan "2x + 3", right pan "11"; removing 3 unit-weights from both pans keeps balance (2x = 8); splitting into 2 equal groups gives x = 4.
+
+DEFINITIONS (10). variable, constant, algebraic expression, term, coefficient, like terms, unlike terms, equation, solution/root, linear equation.
+
+Q&A. Easy: Coefficient of x in 7x? (7.) Are 3x and 5x like terms? (Yes.) Medium: Simplify 4y + 3 − y (3y + 3). Solve x + 9 = 15 (x = 6). Difficult: Solve 3x − 5 = 2x + 4 (x = 9). Simplify 5a − 2b + 3a + b (8a − b). Application: A pencil costs ₹x; 4 pencils cost ₹28 — find x. (4x = 28 → x = 7.) Reasoning: Why can't 3x + 2y be simplified to 5xy? (Unlike terms; adding counts of different things, and x·y is multiplication, not addition.)
+
+MCQs (12, abridged). Coefficient of y in −6y: −6; like terms: 2a & 5a; simplify 3x+4x: 7x; solve x−4=10: 14; solve 2x=18: 9; a variable is a: letter for a number; terms in 5x+3: 2; solve x/2=6: 12; 3x+2 at x=4: 14; equation has: = sign; solve 4x+1=13: 3; simplify 7m−7m: 0.
+
+T/F (10). 3x and 3y are like terms F. An equation has an = sign T. 5x + 2x = 7x T. The coefficient of x in x is 0 F (1). Solving keeps both sides equal T. 3x + 4 is an equation F (expression). x = 4 solves 2x+3=11 T. Constants have no variable T. 2y − 2y = 2 F (0). You may add the same number to both sides of an equation T.
+
+FILL BLANKS (10). In 8x, the coefficient is  (8). 3a + 5a =  (8a). Solve x − 6 = 2 → x =  (8). An  has an equals sign (equation). Like terms have the same  part (variable). Solve 3x = 21 → x =  (7). The constant in 4x + 9 is  (9). 2x + 3 = 9 → x =  (3). Simplify 6p − 6p =  (0). "Twice a number" =  (2x).
+
+SHORT/LONG. Short: Solve 7x − 3 = 4x + 12. (3x = 15 → x = 5.) Long (model): "Turn this into an equation and solve: 'Five less than three times a number is 16.'" Model — Let the number be x. Three times it: 3x. Five less: 3x − 5. Equation: 3x − 5 = 16. Add 5: 3x = 21. Divide by 3: x = 7. Check: 3(7)−5 = 16 ✓.
+
+HOTS. The sum of a number and its double is 27 — find it. (x + 2x = 27 → x = 9.) If 4x + 3 = 2x + 15, what is x, and what does each side equal? (x = 6; each side = 27.) Write an expression for the perimeter of a rectangle with length ℓ and breadth ℓ − 2. (2(ℓ + ℓ − 2) = 4ℓ − 4.)
+
+MISCONCEPTIONS. "3x means 3 and x separately" → it means 3 times x. "3x + 2y = 5xy" → cannot combine unlike terms; and + isn't ×. "x always equals a fixed value" → a variable can represent different values; in an equation it's the value that fits. "Do an operation to one side only" → must do it to both sides.
+
+REVISION. Variable = letter for a number; expression (terms, coefficient, constant); combine like terms only; equation has =; solve by balancing (same operation both sides); translate words → equations.
+Fact sheet: like terms combine; a·x notation; solve linear ax + b = c → x = (c − b)/a.
+
+ADAPTIVE — "variable / solving equations". L1: "A letter like x stands for an unknown number; an equation is a puzzle to find x." L2: "In 2x + 3 = 11, x is the mystery number; take 3 off both sides (2x=8), then split into 2 (x=4)." L3: "A linear equation ax + b = c has the unique solution x = (c−b)/a; solving applies inverse operations preserving equality." L4: "An equation is a balance scale — whatever you remove or add to one pan, do to the other so it stays level, until x sits alone." L5: "If 4 identical notebooks cost ₹100, then 4x = 100 and each costs x = ₹25 — algebra finds unknown prices, ages, distances."
+
+INSTRUCTION RECORDS.
+`json
+{"messages":[{"role":"user","content":"Explain algebra to a Grade 7 student who finds letters in maths confusing."},{"role":"assistant","content":"The letter is just a placeholder for a number we don't know yet — like a box. If I say 'a number plus 5 equals 12', I can write x + 5 = 12, where x is the mystery number. To find it, undo the +5 by subtracting 5 from BOTH sides: x = 7. Algebra is just arithmetic with a blank you're solving for!"}]}
+{"messages":[{"role":"user","content":"Solve 3x - 5 = 16 step by step."},{"role":"assistant","content":"3x − 5 = 16\nStep 1: Add 5 to both sides → 3x = 21.\nStep 2: Divide both sides by 3 → x = 7.\nCheck: 3(7) − 5 = 21 − 5 = 16 ✓\nKeep the equation balanced: whatever you do to one side, do to the other."}]}
+{"messages":[{"role":"user","content":"Why can't I add 3x and 2y together?"},{"role":"assistant","content":"Because they count different things! 3x is 'three x's' and 2y is 'two y's' — like 3 apples and 2 oranges. You can't merge them into one number; you just leave it as 3x + 2y. You can only combine LIKE terms (same letter), e.g., 3x + 5x = 8x."}]}
+`
+
+G7 Maths / Science / Social — Remaining (compact)
+RECORDTYPE: LESSON  |  GRADE 7  |  NCERT  |  Maths  |  CONCEPT: Ratio, proportion, percentage
+EXPLANATION: Ratio compares quantities (a:b); proportion equates two ratios (a:b = c:d ⇒ ad=bc); percent = per hundred; percent↔fraction↔decimal; profit/loss & simple interest intro.  |  QUESTION: 25% of 80? ANSWER: 20.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 7  |  NCERT  |  Maths  |  CONCEPT: Triangles, lines & angles, area/perimeter
+EXPLANATION: Angle sum of triangle = 180°; types by side/angle; parallel lines & transversal angles; area of triangle = ½×base×height; circumference/area of circle intro.  |  QUESTION: Two angles of a triangle are 60° and 70°; the third? ANSWER: 50°.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 7  |  NCERT  |  Science  |  CONCEPT: Nutrition in Animals; Respiration; Transport in animals & plants
+EXPLANATION: Digestion stages & organs; respiration releases energy (aerobic/anaerobic); heart, blood & circulation; transport of water in plants (xylem) and food (phloem).  |  QUESTION: Which organ pumps blood? ANSWER: Heart.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 7  |  NCERT  |  Science  |  CONCEPT: Heat; Acids, Bases & Salts; Physical & Chemical Changes
+EXPLANATION: Heat transfer (conduction/convection/radiation); acids (sour, turn blue litmus red), bases (bitter, turn red litmus blue), neutralisation → salt+water; physical (reversible, no new substance) vs chemical (new substance) changes.  |  QUESTION: Litmus colour in acid? ANSWER: Red.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 7  |  NCERT  |  Social Science  |  CONCEPT: Medieval history; climate & environment; democracy, equality & markets
+EXPLANATION: Delhi Sultanate/Mughals & regional kingdoms (fact vs interpretation flagged); weather vs climate; the water/air cycles; equality in democracy; how markets work.  |  QUESTION: Difference between weather and climate? ANSWER: Weather is short-term; climate is the long-term average.  |  DIFFICULTY: Medium
+
+===== GRADE 8 (NCERT) =====
+New-series books continue. Maths: rational numbers, linear equations in one variable, quadrilaterals & practical geometry, mensuration (area/volume), exponents, algebraic identities, factorisation, graphs, direct/inverse proportion, comparing quantities. Science: crop production, microorganisms, materials (metals/non-metals, synthetic fibres), combustion, cell, reproduction & adolescence, force/pressure/friction, sound, light, electricity effects, natural phenomena. Social: modern Indian history, resources & agriculture/industry, the Constitution & the judiciary.
+
+CHAPTER G8S-A — Photosynthesis / Nutrition in Plants — FULL APPARATUS
+METADATA. Grade 8 (also revisits Grade 7 biology) · NCERT · Science · Prereq: plant parts, cell basics · Medium · Objectives: define nutrition and its modes; explain photosynthesis (raw materials, conditions, products, site); describe the role of chlorophyll, stomata and the leaf; distinguish autotrophs/heterotrophs; explain other modes (parasitic, saprotrophic, insectivorous, symbiotic); connect to food chains.
+
+TEACHING MATERIAL.
+Nutrition. All living things need food for energy, growth and repair. Autotrophs (green plants) make their own food; heterotrophs (animals, fungi) depend on others.
+Photosynthesis. The process by which green plants make food (glucose) using carbon dioxide + water, in the presence of sunlight and chlorophyll, releasing oxygen.
+ Word equation: carbon dioxide + water —(sunlight, chlorophyll)→ glucose + oxygen.
+ Balanced (for reference): 6CO₂ + 6H₂O —light→ C₆H₁₂O₆ + 6O₂.
+Where & how. Mostly in leaves (the "food factories"). Chlorophyll (green pigment in chloroplasts) captures light energy. Stomata (tiny leaf pores) let CO₂ in and O₂ out; roots absorb water, carried up by xylem. Glucose made is used for energy or stored as starch (tested with iodine → blue-black).
+Two steps (idea). Light reactions capture energy; that energy is used to combine CO₂ and water into glucose.
+Other nutrition modes. Parasitic (Cuscuta/amarbel takes food from a host), saprotrophic (fungi digest dead matter externally), insectivorous (pitcher plant traps insects for nitrogen), symbiotic (lichen = alga + fungus; Rhizobium in legume roots fixes nitrogen).
+Why it matters. Photosynthesis is the source of almost all food and oxygen on Earth; it begins every food chain and removes CO₂.
+
+Experiment/activity. Starch test: de-starch a plant (dark 2–3 days), expose one leaf to light with part covered by black paper, then test with iodine — only the light-exposed part turns blue-black, showing light and chlorophyll are needed. Safety: handle boiling water/alcohol away from flame (alcohol is flammable — heat in a water bath).
+
+Visual/diagram description. A leaf cross-section: upper/lower epidermis, palisade cells packed with green chloroplasts, air spaces, and a stoma with two guard cells; arrows show CO₂ in, O₂ out, water up from the vein.
+
+DEFINITIONS (10). nutrition, autotroph, heterotroph, photosynthesis, chlorophyll, chloroplast, stomata, xylem, starch, saprotroph.
+
+Q&A. Easy: Which gas do plants take in for photosynthesis? (Carbon dioxide.) What is released? (Oxygen.) Medium: Name the green pigment and where it sits. (Chlorophyll, in chloroplasts.) What are stomata for? (Gas exchange.) Difficult: Write the word equation of photosynthesis. State two conditions necessary. (Sunlight, chlorophyll.) Application: Why do farmers avoid overcrowding crops? (Enough light for photosynthesis.) A variegated leaf (green + white) tested with iodine — which part turns blue-black? (Only the green part — it has chlorophyll.) Reasoning: Why is photosynthesis called the basis of life? (It provides food and oxygen and starts food chains.)
+
+MCQs (12, abridged). Food-making process: photosynthesis; green pigment: chlorophyll; gas taken in: CO₂; gas released: O₂; food produced: glucose; pores for gas exchange: stomata; plants that make own food: autotrophs; Cuscuta nutrition: parasitic; fungi mode: saprotrophic; site of photosynthesis: leaf/chloroplast; stored food tested by: iodine; nitrogen-fixing bacteria: Rhizobium.
+
+T/F (10). Plants release CO₂ during photosynthesis F (release O₂). Chlorophyll traps light T. Photosynthesis happens without light F. Stomata allow gas exchange T. Animals are autotrophs F. Glucose can be stored as starch T. Xylem carries food F (carries water; phloem carries food). Fungi are saprotrophs T. Pitcher plant is insectivorous T. Oxygen is a raw material for photosynthesis F (it's a product).
+
+FILL BLANKS (10). Green plants are called  (autotrophs). The green pigment is  (chlorophyll). Photosynthesis needs CO₂, water, sunlight and  (chlorophyll). Gas released is  (oxygen). Food made is  (glucose). Leaf pores are  (stomata). Stored food is  (starch), tested by  (iodine).  absorbs water from soil (root). Rhizobium fixes  (nitrogen). Fungi feed as  (saprotrophs).
+
+SHORT/LONG. Short: Define photosynthesis and give its raw materials and products. Long (model): "Describe photosynthesis, its site, conditions and importance." Model — Photosynthesis is the process by which green plants synthesise glucose from carbon dioxide and water, using light energy captured by chlorophyll in the chloroplasts of leaf cells, releasing oxygen. CO₂ enters through stomata, water rises via xylem from roots. Conditions: sunlight and chlorophyll. It is vital because it produces food and oxygen and forms the base of nearly all food chains, while consuming atmospheric CO₂.
+
+HOTS. Predict the effect on animals if all green plants vanished. (No food/oxygen source; food chains collapse; life would end.) A plant kept in a sealed jar with a burning candle and a mouse survives longer than a mouse alone — why? (The plant releases O₂ in light, supporting the mouse — Priestley's idea.) Why do desert plants often photosynthesise/open stomata at night? (To reduce water loss in daytime heat.)
+
+MISCONCEPTIONS. "Plants take in oxygen and give out CO₂ (only)" → in light they make food and release O₂ (they respire too, but net O₂ is released). "Plants get food from the soil" → soil gives water/minerals; food is made in leaves. "Roots do photosynthesis" → leaves (chlorophyll) do; roots absorb water. "Photosynthesis and respiration are the same" → opposite processes.
+
+REVISION. Nutrition modes (auto/hetero); photosynthesis: CO₂ + water →(light, chlorophyll)→ glucose + O₂ in leaves; chlorophyll, stomata, xylem roles; starch test; parasitic/saprotrophic/insectivorous/symbiotic; ecological importance.
+Fact sheet: 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂ (light, chlorophyll); starch + iodine → blue-black.
+
+ADAPTIVE — "photosynthesis". L1: "Photosynthesis is how green plants make their own food using sunlight." L2: "Leaves use carbon dioxide from the air and water from the soil, and with sunlight caught by green chlorophyll, they make sugar (glucose) and give off oxygen." L3: "Photosynthesis converts light energy to chemical energy: 6CO₂ + 6H₂O →(light, chlorophyll) C₆H₁₂O₆ + 6O₂, occurring in chloroplasts via light-dependent and carbon-fixation reactions." L4: "A leaf is a solar-powered kitchen: sunlight is the cooker, chlorophyll the chef, CO₂ and water the ingredients, glucose the dish, and oxygen the pleasant smell wafting out." L5: "Every grain, fruit and vegetable you eat — and the oxygen you breathe — came from photosynthesis; it quietly feeds the whole planet."
+
+INSTRUCTION RECORDS.
+`json
+{"messages":[{"role":"user","content":"Explain photosynthesis to a Grade 7 student."},{"role":"assistant","content":"Photosynthesis is how green plants cook their own food! Their leaves take in carbon dioxide from the air and water from the soil. Then, using sunlight captured by the green colour chlorophyll, the leaf combines these into sugar (glucose) for the plant — and breathes out oxygen for us. In short: carbon dioxide + water + sunlight → sugar + oxygen. Leaves are like tiny solar kitchens, and they feed almost every living thing!"}]}
+{"messages":[{"role":"user","content":"Give me an exam question on photosynthesis with the answer."},{"role":"assistant","content":"Q (3 marks): Define photosynthesis and write its word equation. Name the site and the green pigment involved.\nA: Photosynthesis is the process by which green plants make glucose from carbon dioxide and water using sunlight. Word equation: carbon dioxide + water —(sunlight, chlorophyll)→ glucose + oxygen. Site: leaves (in chloroplasts). Pigment: chlorophyll."}]}
+{"messages":[{"role":"user","content":"Why do leaves look green? Explain simply."},{"role":"assistant","content":"Leaves are full of a green pigment called chlorophyll. Chlorophyll absorbs red and blue light (using that energy to make food) but reflects green light back to your eyes — so the leaf looks green! In autumn, when chlorophyll breaks down, other colours (yellow, orange) show through."}]}
+`
+
+G8 Maths / Science / Social — Remaining (compact)
+RECORDTYPE: LESSON  |  GRADE 8  |  NCERT  |  Maths  |  CONCEPT: Rational numbers & linear equations
+EXPLANATION: Rational number = p/q (q≠0); properties (closure, commutativity, distributivity); operations; solve linear equations with variables on both sides & brackets.  |  QUESTION: Solve 2(x−3)=x+4. ANSWER: x=10.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 8  |  NCERT  |  Maths  |  CONCEPT: Exponents, identities, factorisation, mensuration
+EXPLANATION: Laws of exponents (aᵐ·aⁿ=aᵐ⁺ⁿ etc.); (a+b)²=a²+2ab+b²; factorise by common factor/identities; area of trapezium & surface area/volume of cuboid/cylinder.  |  QUESTION: Expand (x+3)². ANSWER: x²+6x+9.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 8  |  NCERT  |  Science  |  CONCEPT: Cell — structure & functions
+EXPLANATION: Cell = basic unit of life; prokaryotic vs eukaryotic; plant vs animal cell (cell wall, chloroplast, large vacuole in plants); organelles (nucleus, cytoplasm, mitochondria, membrane).  |  QUESTION: Which organelle controls the cell? ANSWER: Nucleus.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 8  |  NCERT  |  Science  |  CONCEPT: Force, pressure, friction; sound; light; electricity/chemical effects
+EXPLANATION: Force changes motion/shape; pressure = force/area; friction opposes motion; sound from vibrations (needs a medium); light reflection & the eye; chemical effects of current & electroplating.  |  QUESTION: Pressure formula? ANSWER: Pressure = Force ÷ Area.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 8  |  NCERT  |  Science  |  CONCEPT: Microorganisms; materials; combustion; crop production
+EXPLANATION: Microbes (bacteria, virus, fungi, protozoa, algae) — friendly & harmful; metals vs non-metals; synthetic fibres & plastics; combustion & fire safety; crop practices & irrigation.  |  QUESTION: Which microbe causes curd from milk? ANSWER: Lactobacillus (bacteria).  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 8  |  NCERT  |  Social Science  |  CONCEPT: Modern history, resources, Constitution & judiciary
+EXPLANATION: Colonial rule & the freedom movement (fact vs interpretation flagged); natural/human resources, agriculture & industries; the Indian Constitution, fundamental rights, and the judiciary.  |  QUESTION: What is the supreme law of India? ANSWER: The Constitution.  |  DIFFICULTY: Medium
+
+CHAPTER G8SS-A — Civics: The Constitution & Democracy — MEDIUM ANCHOR
+METADATA. Grade 8 · NCERT · Social Science (Civics) · Prereq: idea of rules/government (G6–7) · Medium · Objectives: explain why a country needs a constitution; key features of the Indian Constitution; fundamental rights & duties; the three organs of government; the meaning of democracy and secularism.
+TEACHING. A constitution is the supreme rule-book that lays out how a country is governed, the powers of government, and citizens' rights — protecting people from misuse of power. India's Constitution (adopted 26 Nov 1949, in force 26 Jan 1950) makes India a sovereign, socialist, secular, democratic republic. Fundamental Rights (equality, freedom, against exploitation, freedom of religion, cultural/educational, constitutional remedies) protect citizens; Fundamental Duties list responsibilities. Government has three organs — Legislature (makes laws), Executive (implements), Judiciary (interprets and protects rights) — with separation of powers. Democracy = rule by the people through elected representatives; secularism = the state treats all religions equally.
+FACT vs INTERPRETATION vs OPINION. FACT: the Constitution came into force on 26 Jan 1950. INTERPRETATION: historians argue the Constitution balanced diverse interests through compromise. OPINION: "It is the world's best constitution" is a value judgement, not a fact.
+DEFINITIONS (10). constitution, sovereign, secular, democracy, republic, fundamental rights, fundamental duties, legislature, executive, judiciary.
+Q&A. Easy: When did the Constitution come into force? (26 Jan 1950.) Medium: Name the three organs of government. (Legislature, executive, judiciary.) Application: Which right lets you approach courts if a right is violated? (Right to constitutional remedies.) Reasoning: Why separate the three organs? (To prevent concentration/misuse of power — checks and balances.)
+MCQs (6, abridged). Supreme law: Constitution; makes laws: legislature; interprets laws: judiciary; equal treatment of religions: secularism; rule by people: democracy; rights that protect citizens: fundamental rights.
+HOTS. How do fundamental rights and the judiciary work together to protect a citizen? (Courts can strike down laws/actions violating rights.) Why might duties matter as much as rights? (Rights of some depend on duties of others.)
+MISCONCEPTIONS. "The government is above the Constitution" → the Constitution is supreme; government works within it. "Secular means anti-religion" → it means equal treatment of all religions.
+REVISION. Constitution = supreme rule-book; India = sovereign socialist secular democratic republic; rights & duties; three organs & separation of powers; democracy & secularism.
+ADAPTIVE — "constitution". L1: "A constitution is a country's main rule-book." L2: "It sets how the government works, what powers it has, and what rights citizens are guaranteed — so no one can misuse power." L3: "A constitution is the foundational legal document establishing the structure, powers, and limits of state institutions and enumerating justiciable rights." L4: "Like the rules of a game everyone — even the referee — must follow, so play stays fair." L5: "When a court cancels an unfair law, it's using the Constitution to protect ordinary citizens' freedoms."
+`json
+{"messages":[{"role":"user","content":"Why does a country need a constitution? Explain for Grade 8."},{"role":"assistant","content":"A constitution is a country's supreme rule-book. It does three big jobs: (1) decides how the government is formed and what powers it has, (2) limits that power so leaders can't misuse it, and (3) guarantees citizens' rights — like equality and freedom. Without it, whoever held power could act unfairly. India's Constitution came into force on 26 January 1950 and makes India a democratic republic where the people rule through elected representatives."}]}
+`
+
+LANGUAGES (Poorvi/Malhar, Grade 6–8) — compact
+RECORDTYPE: LESSON  |  GRADE 6–8  |  NCERT  |  English (Poorvi)  |  CONCEPT: Grammar & composition (middle school)
+EXPLANATION: Tenses (all simple/continuous/perfect intro), active/passive voice intro, direct/indirect speech intro, clauses & conjunctions, modals, punctuation; comprehension (themes/inference, not reproduced); formal/informal letters, notices, paragraphs, story & diary writing, précis intro.  |  QUESTION: Passive of "She writes a letter"? ANSWER: A letter is written by her.  |  DIFFICULTY: Medium
+
+
+=================================================================
+BRANCH B — MAHARASHTRA STATE BOARD (Balbharati)
+=================================================================
+Std 6–8 subjects: Marathi, Hindi, English, Sanskrit (optional), Mathematics (गणित), General Science (सामान्य विज्ञान) as a single integrated science subject, History & Civics (इतिहास व नागरिकशास्त्र), Geography (भूगोल). Concepts parallel NCERT but follow the Balbharati sequence/terminology and often integrate more local (Maharashtra/India) context. Kept separate from NCERT.
+
+MATHEMATICS (गणित, Std 6–8) — Anchor: Integers & Algebra (parallels NCERT)
+TEACHING (key points). पूर्णांक (integers) with संख्यारेषा (number line) and चिन्हांचे नियम (sign rules); बैजिक राशी (algebraic expressions) — चल (variable), पद (term), सहगुणक (coefficient); सोपी समीकरणे (simple equations) solved by तराजू/balance idea; गुणोत्तर-प्रमाण (ratio-proportion), शेकडेवारी (percentage); भूमिती (geometry) and क्षेत्रफळ-घनफळ (area-volume).
+Difference to preserve: Maharashtra General Science is one subject through Std 8 (physics/chemistry/biology integrated), whereas NCERT Curiosity is likewise integrated but with different chapter framing; Maharashtra Maths uses distinct Marathi metalanguage (पूर्णांक, चल, सहगुणक, समीकरण). Keep branches distinct.
+ADAPTIVE — "समीकरण (equation)". L1: "समीकरण म्हणजे दोन बाजू समान असल्याचे विधान (= चिन्ह)." L2: "2x+3=11 मध्ये x हा अज्ञात; दोन्ही बाजूंनी 3 वजा करा (2x=8), मग 2 ने भागा (x=4)." L3: "Linear equation ax+b=c चे एकमेव समाधान x=(c−b)/a; समानता टिकवत व्यस्त क्रिया वापरतात." L4: "समीकरण म्हणजे तराजू — एका पारड्यात केलेली क्रिया दुसऱ्यातही करावी, तोल राखत x एकटा करेपर्यंत." L5: "४ वह्यांची किंमत ₹१०० असेल तर 4x=100, प्रत्येक वही x=₹२५ — बीजगणित अज्ञात किमती शोधते."
+`json
+{"messages":[{"role":"user","content":"मराठीत पूर्णांकांच्या चिन्हांचे नियम सांगा."},{"role":"assistant","content":"गुणाकार/भागाकारात: समान चिन्हे → धन (positive), भिन्न चिन्हे → ऋण (negative). उदा. (−४)×(−३)=+१२, (−४)×(+३)=−१२. बेरजेत: समान चिन्हे असतील तर किमती जोडून तेच चिन्ह; भिन्न असतील तर लहान किंमत मोठ्या किमतीतून वजा करून मोठ्याचे चिन्ह घ्या — उदा. (−७)+(+३)=−४."}]}
+``
+
+GENERAL SCIENCE (सामान्य विज्ञान, Std 6–8) — compact
+RECORDTYPE: LESSON  |  GRADE 6–8  |  Maharashtra  |  General Science  |  CONCEPT: Integrated physics/chemistry/biology
+EXPLANATION: सजीव सृष्टी व वर्गीकरण; पेशी (cell); अन्न व पोषण; प्रकाशसंश्लेषण (photosynthesis); पदार्थ व त्यांचे गुणधर्म; आम्ल-आम्लारी-क्षार; गती-बल-दाब; उष्णता, प्रकाश, ध्वनी; नैसर्गिक साधनसंपत्ती व पर्यावरण. Includes activity-based experiments with observation & safety.  |  QUESTION: प्रकाशसंश्लेषणात कोणता वायू बाहेर पडतो? ANSWER: ऑक्सिजन.  |  DIFFICULTY: Medium
+
+HISTORY & CIVICS / GEOGRAPHY (Std 6–8) — compact
+RECORDTYPE: LESSON  |  GRADE 6–8  |  Maharashtra  |  History & Civics  |  CONCEPT: Ancient→medieval India, Maharashtra emphasis; local self-government
+EXPLANATION: प्राचीन-मध्ययुगीन भारत (with Maharashtra/Shivaji-era context in relevant stds); राज्यघटना ओळख; स्थानिक स्वराज्य संस्था (ग्रामपंचायत/नगरपालिका). FACT vs INTERPRETATION flagged.  |  QUESTION: ग्रामीण स्थानिक स्वराज्य संस्था कोणती? ANSWER: ग्रामपंचायत.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 6–8  |  Maharashtra  |  Geography  |  CONCEPT: Earth, maps, climate, resources
+EXPLANATION: पृथ्वी व नकाशे; अक्षांश-रेखांश; हवामान व ऋतू; भूरूपे; नैसर्गिक साधनसंपत्ती; महाराष्ट्र/भारताचा भूगोल.  |  QUESTION: विषुववृत्ताचे अक्षांश किती? ANSWER: ०°.  |  DIFFICULTY: Medium
+
+LANGUAGES (Marathi/Hindi/English, Std 6–8) — compact
+RECORDTYPE: LESSON  |  GRADE 6–8  |  Maharashtra  |  Marathi  |  CONCEPT: व्याकरण व लेखन (माध्यमिक)
+EXPLANATION: संधी, समास, अलंकार (उपमा/रूपक/अनुप्रास), नाम-सर्वनाम-क्रियापद-विशेषण, काळ, प्रयोग; निबंध/पत्र/वृत्तान्त लेखन; पठन-आकलन (मूळ मजकूर न देता).  |  QUESTION: 'चंद्रमुख' मध्ये कोणता अलंकार? ANSWER: रूपक (metaphor).  |  DIFFICULTY: Medium
+
+
+=================================================================
+BATCH 4 — CONSOLIDATED CROSS-BRANCH LESSON RECORDS
+=================================================================
+RECORDTYPE: LESSON  |  GRADE 6  |  NCERT  |  Maths  |  UNIT: Number system  |  CHAPTER: The Other Side of Zero  |  SECTION: Integers  |  CONCEPT: Signed numbers & operations
+PREREQUISITES: Whole numbers, number line  |  LEARNINGOBJECTIVE: Compare & compute with integers
+EXPLANATION: Negatives extend the line left of 0; add (same sign add/keep, different subtract/take larger sign); subtract = add opposite; ×,÷ signs: same→+, different→−.  |  EXAMPLE: (−7)+(+3)=−4; (−4)×(−3)=12  |  APPLICATION: Temperature, debt, elevation  |  COMMONMISCONCEPTION: −3 > −1  |  QUESTION: 6 − (−4)  |  ANSWER: 10  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 7  |  NCERT  |  Maths  |  CHAPTER: Algebraic Expressions & Simple Equations  |  SECTION: Solving  |  CONCEPT: Variables & linear equations
+PREREQUISITES: Integers  |  LEARNINGOBJECTIVE: Form & solve one-variable equations
+EXPLANATION: Variable = letter for a number; combine like terms only; equation has =; solve by doing the same operation to both sides.  |  EXAMPLE: 3x−5=16 → x=7  |  APPLICATION: Unknown price/age/number problems  |  COMMONMISCONCEPTION: 3x+2y=5xy  |  QUESTION: Solve 2x+3=11  |  ANSWER: x=4  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 8  |  NCERT  |  Science  |  CHAPTER: Nutrition in Plants  |  SECTION: Photosynthesis  |  CONCEPT: Food-making in green plants
+PREREQUISITES: Plant parts, cell basics  |  LEARNINGOBJECTIVE: Explain photosynthesis & modes of nutrition
+EXPLANATION: CO₂ + water →(sunlight, chlorophyll) glucose + O₂ in leaves; chlorophyll traps light; stomata exchange gases; other modes: parasitic/saprotrophic/insectivorous/symbiotic.  |  EXAMPLE: Starch (iodine) test shows light is needed  |  APPLICATION: Crop spacing for light; oxygen supply  |  COMMONMISCONCEPTION: Plants get food from soil  |  QUESTION: Gas released in photosynthesis?  |  ANSWER: Oxygen  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 8  |  NCERT  |  Social Science  |  CHAPTER: The Constitution  |  SECTION: Civics  |  CONCEPT: Supreme law, rights, organs of government
+PREREQUISITES: Idea of rules/government  |  LEARNINGOBJECTIVE: Explain constitution, rights & three organs
+EXPLANATION: Constitution = supreme rule-book; India = sovereign socialist secular democratic republic; fundamental rights/duties; legislature/executive/judiciary with separation of powers.  |  EXAMPLE: Courts protect rights via constitutional remedies  |  APPLICATION: How unfair laws can be struck down  |  COMMONMISCONCEPTION: Secular = anti-religion  |  QUESTION: Supreme law of India?  |  ANSWER: The Constitution  |  DIFFICULTY: Medium
+
+RECORD_TYPE: LESSON  |  GRADE 6–8  |  Maharashtra  |  General Science  |  CONCEPT: Single integrated science subject
+EXPLANATION: Maharashtra teaches physics, chemistry and biology together as सामान्य विज्ञान through Std 8, with activity-based experiments; distinct from NCERT chapter framing though both are integrated.  |  QUESTION: Which pigment enables photosynthesis?  |  ANSWER: Chlorophyll (हरितद्रव्य).  |  DIFFICULTY: Medium
+
+
+BATCH 4 COVERAGE SUMMARY
+• NCERT Grade 6: Maths (Ganita Prakash, 10 verified chapters) — full apparatus on Integers + compact for large numbers, HCF/LCM/primes, fraction operations, geometry/symmetry/constructions, perimeter-area/data; Science (Curiosity, 12 verified chapters) — compact records across measurement/motion, materials/states/separation, magnets/temperature, living world/nutrition; Social Science (Exploring Society) compact.
+• NCERT Grade 7: Maths — full apparatus on Algebraic Expressions & Simple Equations + compact (ratio/proportion/percentage, triangles/angles/area); Science compact (nutrition/respiration/transport, heat, acids-bases-salts, changes); Social compact (medieval history, climate, democracy, markets).
+• NCERT Grade 8: Science — full apparatus on Photosynthesis/Nutrition in Plants + compact (cell, force/pressure/friction/sound/light/electricity, microbes/materials/combustion/crops); Maths compact (rational numbers, linear equations, exponents/identities/factorisation/mensuration); Social Science — Civics: Constitution & Democracy medium anchor + compact history/geography.
+• Maharashtra Grade 6–8: Mathematics anchor (पूर्णांक & समीकरण) with Marathi metalanguage; General Science (single integrated subject), History & Civics, Geography compact; Marathi/Hindi/English progression. Differences from NCERT flagged (integrated science subject, sequence, terminology, local context).
+• Boards kept separate throughout; FACT/INTERPRETATION/OPINION distinguished in Social Science.
+
+END OF BATCH 4. Next: BATCH 5 — Grades 9–10 (board-exam years: Maths — real numbers, polynomials, linear/quadratic equations, coordinate geometry, trigonometry, mensuration, statistics/probability; Science — physics/chemistry/biology as distinct disciplines; full separate Social Science; NCERT vs Maharashtra SSC differences preserved).

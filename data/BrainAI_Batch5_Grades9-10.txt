@@ -1,0 +1,379 @@
+BrainAI EDUCATIONAL CORPUS
+BATCH 5 — GRADES 9 & 10 (NCERT branch + Maharashtra SSC branch)
+Original teaching corpus; no textbook reproduced. Verified 2026: NCERT Class 10 continues the existing established books for 2026–27 (new Class 10 books arrive 2027–28); NCERT Class 9 has moved to new NEP books (Maths = Ganita Manjari, 8 inquiry-based chapters; new Science/English/Sanskrit), with Class 9 Maths & Social Science Part 2 finalising mid-2026. Maharashtra SSC keeps its signature structure: Mathematics Part I (Algebra) + Part II (Geometry) and Science & Technology Part 1 + Part 2, plus History & Political Science and Geography. Boards kept separate.
+Class 10 Maths (existing) 14 chapters: Real Numbers, Polynomials, Pair of Linear Equations in Two Variables, Quadratic Equations, Arithmetic Progressions, Triangles, Coordinate Geometry, Introduction to Trigonometry, Some Applications of Trigonometry, Circles, Areas Related to Circles, Surface Areas & Volumes, Statistics, Probability. Class 10 Science: Chemical Reactions & Equations, Acids-Bases-Salts, Metals & Non-metals, Carbon & its Compounds, Life Processes, Control & Coordination, How do Organisms Reproduce, Heredity, Light–Reflection & Refraction, Human Eye & Colourful World, Electricity, Magnetic Effects of Current, Our Environment.
+Depth policy: full apparatus on the flagship Quadratic Equations (built to the exact specification requested) and on Chemical Reactions & Equations, plus a Trigonometry anchor and a Nationalism/Civics social-science anchor; compact-but-teaching LESSON records for the remaining chapters. Any chapter expands on request.
+
+
+=================================================================
+BRANCH A — NCERT / CBSE
+=================================================================
+
+===== GRADE 10 (NCERT) — MATHEMATICS =====
+
+★ FLAGSHIP CHAPTER G10M-QUAD — Quadratic Equations — FULL APPARATUS
+1. METADATA
+• Grade 10 · Board NCERT/CBSE · Stream — · Subject Mathematics · Unit: Algebra · Chapter: Quadratic Equations
+• Prerequisites: what an equation is; polynomials and degree; linear equations; factorisation; square roots; the number line and integers.
+• Difficulty: Medium–Hard (board weightage high; algebra unit ~20 marks).
+• Learning objectives: recognise a quadratic equation and its standard form; identify coefficients and roots; solve by factorisation, completing the square, and the quadratic formula; use the discriminant to judge the nature of roots; relate roots to coefficients; form and solve word problems; interpret roots graphically.
+2. TEACHING MATERIAL (built up from first principles)
+
+(a) What is an equation? An equation states that two expressions are equal, joined by "=". Solving means finding the value(s) of the unknown that make the statement true.
+
+(b) What does "degree" mean? The degree of a polynomial is the highest power of the variable. A linear equation has degree 1 (ax + b = 0). A quadratic equation has degree 2 — the variable's highest power is 2.
+
+(c) What makes an equation quadratic? It must contain an x² term (with a non-zero coefficient) and no higher power. The standard form is:
+  ax² + bx + c = 0, where a, b, c are real numbers and a ≠ 0.
+ • a = coefficient of x² (leading coefficient); b = coefficient of x; c = constant term. If a = 0 it collapses to a linear equation, so a ≠ 0 is essential.
+ Examples: 2x² − 5x + 3 = 0 (a=2, b=−5, c=3); x² − 9 = 0 (a=1, b=0, c=−9); x² + x = 0 (c=0).
+
+(d) Roots (solutions). A root is a value of x that satisfies the equation (makes LHS = 0). A quadratic has at most two roots. If α is a root, then aα² + bα + c = 0.
+
+(e) Graphical meaning. The graph of y = ax² + bx + c is a parabola (U-shaped if a>0, ∩-shaped if a<0). The roots are the x-values where the parabola crosses the x-axis (y = 0). Three cases: it may cut the axis at two points (two distinct real roots), touch it at one point (two equal roots), or not meet it (no real roots).
+
+(f) Method 1 — Factorisation (splitting the middle term). Write ax² + bx + c as a product of two linear factors, then set each to zero (zero-product rule: if PQ = 0 then P = 0 or Q = 0).
+ Procedure: find two numbers whose product = a·c and sum = b; split bx accordingly; group and factor.
+ Example: 2x² − 5x + 3 = 0. a·c = 6; need factors of 6 summing to −5 → −2 and −3. So 2x² − 2x − 3x + 3 = 0 → 2x(x−1) − 3(x−1) = 0 → (x−1)(2x−3) = 0 → x = 1 or x = 3/2.
+
+(g) Method 2 — Completing the square. Make a perfect-square trinomial.
+ Procedure: divide by a; move the constant; add (half the x-coefficient)² to both sides; write as (x + p)²; take square roots.
+ Example: x² + 6x + 5 = 0 → x² + 6x = −5 → add 9 → x² + 6x + 9 = 4 → (x+3)² = 4 → x + 3 = ±2 → x = −1 or x = −5.
+ This method is also how the general quadratic formula is derived.
+
+(h) Method 3 — Quadratic formula (works for every quadratic).
+  x = [ −b ± √(b² − 4ac) ] / (2a)
+ Derivation (sketch): from ax² + bx + c = 0, divide by a, complete the square to (x + b/2a)² = (b² − 4ac)/4a², take roots, and rearrange.
+ Example: 3x² − 2x − 1 = 0 → b²−4ac = 4+12 = 16 → x = (2 ± 4)/6 → x = 1 or x = −1/3.
+
+(i) Discriminant D = b² − 4ac — nature of roots.
+ D value  |  Nature of roots  |  Graph 
+------------------------------
+ D > 0  |  Two distinct real roots  |  parabola cuts x-axis at 2 points 
+ D = 0  |  Two equal (real, coincident) roots, x = −b/2a  |  parabola touches x-axis 
+ D < 0  |  No real roots (complex)  |  parabola misses x-axis 
+ The discriminant lets you judge the roots without solving.
+
+(j) Relationship between roots and coefficients. If α and β are the roots of ax² + bx + c = 0:
+ • Sum of roots α + β = −b/a
+ • Product of roots α·β = c/a
+ A quadratic with given roots can be written as x² − (sum)x + (product) = 0, i.e., x² − (α+β)x + αβ = 0.
+
+(k) Word problems / real-world applications. Quadratics model area problems (a rectangle's dimensions), speed–time–distance, ages, consecutive-number products, projectile height (h = ut − ½gt²), profit/pricing, and geometry (Pythagoras-based). Method: define a variable, translate the condition into ax² + bx + c = 0, solve, and reject roots that are physically impossible (e.g., negative length).
+3. WORKED EXAMPLES (step-by-step)
+1. Factorise: x² − 7x + 12 = 0 → factors of 12 summing to −7: −3,−4 → (x−3)(x−4)=0 → x = 3, 4.
+2. Formula: 5x² + 6x + 1 = 0 → D = 36−20 = 16 → x = (−6 ± 4)/10 → x = −1/5, −1.
+3. Completing the square: 2x² − 4x − 6 = 0 → x² − 2x − 3 = 0 → (x−1)² = 4 → x = 3, −1.
+4. Nature of roots: 4x² − 4x + 1 = 0 → D = 16−16 = 0 → equal roots, x = ½ (twice).
+5. Roots–coefficients: For 2x² − 8x + 6 = 0, sum = 8/2 = 4, product = 6/2 = 3; roots 1 and 3 check (1+3=4, 1·3=3).
+6. Word problem: The product of two consecutive positive integers is 156. Let them be x and x+1: x(x+1)=156 → x²+x−156=0 → (x+13)(x−12)=0 → x=12 (reject −13). Integers: 12 and 13.
+7. Area problem: A rectangular plot's length is 3 m more than its breadth; area 70 m². Let breadth x: x(x+3)=70 → x²+3x−70=0 → (x+10)(x−7)=0 → x=7 (reject −10). Breadth 7 m, length 10 m.
+4. VISUAL / DIAGRAM DESCRIPTIONS
+• A parabola y = x² − 4 opening upward, crossing the x-axis at (−2,0) and (2,0): these are the roots of x² − 4 = 0.
+• Three small parabolas side by side illustrating D>0 (cuts twice), D=0 (touches vertex on axis), D<0 (floats above axis) for a>0.
+
+A. DEFINITIONS (12)
+1. Quadratic equation — a degree-2 polynomial equation, ax²+bx+c=0, a≠0. 2. Standard form — ax²+bx+c=0. 3. Coefficient — the number multiplying a term (a, b). 4. Constant term — c. 5. Root/solution — an x that satisfies the equation. 6. Factorisation method — solving via linear factors. 7. Completing the square — forming a perfect-square trinomial. 8. Quadratic formula — x=(−b±√(b²−4ac))/2a. 9. Discriminant — D=b²−4ac. 10. Nature of roots — real-distinct/real-equal/no-real per D. 11. Parabola — the graph of a quadratic. 12. Sum & product of roots — −b/a and c/a.
+
+B. QUESTIONS & ANSWERS
+Easy (5): Is 3x²−2=0 quadratic? (Yes.) State a, b, c in x²−5x+6=0. (1,−5,6.) Roots of x²−9=0? (±3.) Degree of a quadratic? (2.) Write the quadratic formula. (x=(−b±√(b²−4ac))/2a.)
+Medium (5): Solve x²−5x+6=0. (2,3.) D of x²+x+1=0? (−3 → no real roots.) Sum of roots of 2x²−6x+4=0? (3.) Product of roots of x²−7x+10=0? (10.) Solve 4x²=9. (±3/2.)
+Difficult (5): Solve 3x²−5x+2=0 by formula. (1, 2/3.) For which k does x²−kx+9=0 have equal roots? (k=±6.) Solve by completing the square: x²+4x−1=0. (−2±√5.) If one root of x²−6x+k=0 is 2, find k and the other root. (k=8; other root 4.) Solve 2x²+x−6=0. (3/2, −2.)
+Application (5): A number plus its square is 90 — find it. (x²+x−90=0 → x=9 or −10.) The sum of a number and its reciprocal is 26/5 — find it. (5 or 1/5.) A train's speed increased by 10 km/h saves 1 h over 300 km — find original speed. (50 km/h.) A rectangle's diagonal is 5 more than shorter side, longer side 5 more than shorter — dimensions. (shorter tricky; use Pythagoras → 15,20,25 family scaled — see full solution note.) A ball thrown up: h=20t−5t²; when is h=15 m? (t=1 or 3 s.)
+Reasoning (5): Why must a≠0? (Else not degree 2 — becomes linear.) If D<0, why no real roots graphically? (Parabola doesn't meet x-axis.) How does the sign of D relate to the parabola's position? (D>0 cuts, D=0 touches, D<0 misses.) Why can a quadratic have at most two roots? (Degree 2 → factors into at most two linear factors.) Why reject a negative root in a length problem? (Physical lengths can't be negative.)
+
+C. MULTIPLE-CHOICE QUESTIONS (20)
+1. Standard form of a quadratic is — (A) ax+b=0 (B) ax²+bx+c=0, a≠0 (C) ax³+…=0 (D) ax²+bx+c=0, a=0.
+2. Degree of a quadratic — (A) 1 (B) 2 (C) 3 (D) 0.
+3. Discriminant is — (A) b²+4ac (B) b²−4ac (C) 4ac−b² (D) 2a.
+4. If D>0, roots are — (A) equal (B) real & distinct (C) complex (D) zero.
+5. If D=0, roots are — (A) distinct (B) real & equal (C) imaginary (D) none.
+6. Sum of roots of ax²+bx+c=0 — (A) c/a (B) −b/a (C) b/a (D) −c/a.
+7. Product of roots — (A) c/a (B) −b/a (C) b/a (D) a/c.
+8. Roots of x²−9=0 — (A) 9 (B) ±3 (C) 3 (D) ±9.
+9. x²−5x+6=0 has roots — (A) 1,6 (B) 2,3 (C) −2,−3 (D) 6,1.
+10. Quadratic formula gives x = — (A) −b/2a only (B) (−b±√(b²−4ac))/2a (C) b±√D (D) −c/b.
+11. For equal roots — (A) D>0 (B) D=0 (C) D<0 (D) a=0.
+12. In 2x²+3x−5=0, c = — (A) 2 (B) 3 (C) −5 (D) 5.
+13. If roots are 2 and 3, the equation is — (A) x²+5x+6 (B) x²−5x+6=0 (C) x²−6x+5 (D) x²+6x+5.
+14. x²+x+1=0 has — (A) two real roots (B) equal roots (C) no real roots (D) one root.
+15. If one root of x²−7x+k=0 is 3, k = — (A) 10 (B) 12 (C) 21 (D) 7.
+16. The graph of a quadratic is a — (A) line (B) circle (C) parabola (D) hyperbola.
+17. 4x²−4x+1=0 → x = — (A) 1 (B) ½ (C) 2 (D) −½.
+18. If a=0, ax²+bx+c=0 becomes — (A) quadratic (B) linear (C) cubic (D) constant.
+19. Nature of roots of 2x²−4x+2=0 — (A) distinct (B) equal (C) no real (D) three.
+20. Roots of x²−(α+β)x+αβ=0 are — (A) 1,0 (B) α,β (C) a,b (D) −α,−β.
+
+D. TRUE / FALSE (10)
+1. A quadratic has degree 2. T. 2. If a=0 it is still quadratic. F (becomes linear). 3. D=b²−4ac. T. 4. D<0 gives two real roots. F (no real roots). 5. Sum of roots = −b/a. T. 6. A quadratic can have three roots. F (at most two). 7. The graph is a parabola. T. 8. Completing the square can solve any quadratic. T. 9. Product of roots = −c/a. F (= c/a). 10. If D=0, both roots equal −b/2a. T.
+
+E. FILL IN THE BLANKS (10)
+1. Standard form: ax²+bx+c=0 with a  0 (≠). 2. Discriminant D =  (b²−4ac). 3. Quadratic formula: x =  ((−b±√(b²−4ac))/2a). 4. Sum of roots =  (−b/a). 5. Product of roots =  (c/a). 6. If D>0, roots are real and  (distinct). 7. If D=0, roots are  (equal). 8. The graph of a quadratic is a  (parabola). 9. A quadratic has at most  roots (two). 10. x²−5x+6=0 factors to (x−2)(x−)=0 (3).
+
+F. SHORT-ANSWER (exam-style)
+• Find the discriminant of 2x²−3x+5 and state the nature of roots. (D=9−40=−31<0 → no real roots.)
+• Solve 6x²−x−2=0 by factorisation. ((3x−2)(2x+1)=0 → x=2/3, −1/2.)
+• Find k if 9x²+kx+1=0 has equal roots. (D=0 → k²=36 → k=±6.)
+
+G. LONG-ANSWER (with model answers)
+Q1. Solve 2x² − 7x + 3 = 0 by (i) factorisation and (ii) the quadratic formula, and verify by the sum/product of roots.
+Model: (i) a·c=6; factors −6,−1 sum −7 → 2x²−6x−x+3=0 → 2x(x−3)−1(x−3)=0 → (x−3)(2x−1)=0 → x=3, ½. (ii) D=49−24=25; x=(7±5)/4 → 3, ½. Verify: sum=3+½=7/2=−b/a=7/2 ✓; product=3·½=3/2=c/a=3/2 ✓.
+Q2. A motorboat goes 30 km upstream and back in 4½ h; stream speed 5 km/h. Find the boat's still-water speed.
+Model: Let speed = x. Up = 30/(x−5), down = 30/(x+5); sum = 9/2. → 30(x+5)+30(x−5) = (9/2)(x²−25) → 60x = (9/2)(x²−25) → 9x²−225=120x → 9x²−120x−225=0 → 3x²−40x−75=0 → D=1600+900=2500 → x=(40±50)/6 → x=15 (reject negative). Still-water speed 15 km/h.
+
+H. HOTS
+• If the roots of x²+px+q=0 are equal, express the relation between p and q. (p²=4q.)
+• Form a quadratic whose roots are the squares of the roots of x²−5x+6=0. (Roots 2,3 → squares 4,9 → x²−13x+36=0.)
+• For what value of k are the roots of (k−2)x²+2(k−2)x+2=0 equal and real? (Set D=0 with a≠0 → 4(k−2)²−8(k−2)=0 → 4(k−2)(k−4)=0 → k=4, since k=2 removes the x² term.)
+
+I. COMMON MISCONCEPTIONS
+• "Any equation with x² is quadratic even if the x² cancels" → after simplifying, a must remain ≠0.
+• "D<0 means one real root" → it means no real roots.
+• "Sum of roots = b/a" → it is −b/a.
+• "A quadratic always has two different roots" → equal roots occur when D=0.
+• "Reject no roots in word problems" → discard physically impossible roots (negative length/time).
+• "Completing the square only works sometimes" → it works for every quadratic (it derives the formula).
+
+J. REVISION
+Key points: standard form ax²+bx+c=0 (a≠0); three solving methods (factorisation, completing the square, formula); D=b²−4ac decides nature (>0 distinct, =0 equal, <0 none); sum=−b/a, product=c/a; graph is a parabola whose x-intercepts are the roots; reject impossible roots in applications.
+Formula sheet: x=(−b±√(b²−4ac))/2a; D=b²−4ac; α+β=−b/a; αβ=c/a; equation from roots: x²−(α+β)x+αβ=0; equal roots when D=0, root=−b/2a.
+Vocabulary: quadratic, coefficient, root, discriminant, parabola, factorise, complete the square.
+
+ADAPTIVE EXPLANATIONS — Concept: "Discriminant / nature of roots"
+• L1 Beginner: "The discriminant is a number that tells you how many real answers a quadratic has before you solve it."
+• L2 Grade level: "Compute D = b²−4ac. If D is positive there are two different roots, if zero there's one repeated root, if negative there are no real roots."
+• L3 Technical: "The discriminant D=b²−4ac is the quantity under the radical in the quadratic formula; its sign determines whether the roots are real-distinct, real-coincident, or a complex-conjugate pair."
+• L4 Analogy: "D is a weather forecast for the parabola: positive = it will 'rain' on the x-axis at two spots, zero = it just grazes the ground once, negative = it stays up in the sky and never lands."
+• L5 Real-world: "Engineers checking if a projectile ever reaches a target height set the height equation to that value; D<0 means the target is never reached, D=0 means it's reached exactly once (peak), D>0 means twice (on the way up and down)."
+
+INSTRUCTION RECORDS
+``json
+{"messages":[{"role":"user","content":"Explain quadratic equations to a Grade 10 student from scratch."},{"role":"assistant","content":"A quadratic equation is a degree-2 equation — its highest power of x is 2. Standard form: ax² + bx + c = 0, where a ≠ 0 (if a were 0, there'd be no x² and it wouldn't be quadratic). The values of x that make it true are the 'roots', and there are at most two. You can find them three ways: (1) factorising into two brackets, (2) completing the square, or (3) the quadratic formula x = (−b ± √(b²−4ac))/2a, which always works. The bit under the root, b²−4ac, is the 'discriminant' — it tells you the roots' nature without solving. Want to try one together?"}]}
+{"messages":[{"role":"user","content":"Solve x² - 5x + 6 = 0 step by step."},{"role":"assistant","content":"By factorisation: find two numbers that multiply to 6 (=a·c) and add to −5 (=b) → −2 and −3. Split: x² − 2x − 3x + 6 = 0 → x(x−2) − 3(x−2) = 0 → (x−2)(x−3) = 0. So x = 2 or x = 3. Check: 2²−5·2+6 = 0 ✓ and 3²−5·3+6 = 0 ✓."}]}
+{"messages":[{"role":"user","content":"How do I know if a quadratic has real roots without solving it?"},{"role":"assistant","content":"Use the discriminant, D = b²−4ac. If D > 0 → two distinct real roots; if D = 0 → two equal real roots; if D < 0 → no real roots (the parabola never touches the x-axis). Example: x²+x+1 → D = 1−4 = −3 < 0, so no real roots — you'd know instantly, no solving needed."}]}
+{"messages":[{"role":"user","content":"Give me a real-world quadratic word problem with solution."},{"role":"assistant","content":"Problem: The length of a rectangular garden is 3 m more than its breadth, and its area is 70 m². Find the dimensions.\nLet breadth = x, so length = x + 3. Area: x(x+3) = 70 → x² + 3x − 70 = 0 → (x+10)(x−7) = 0 → x = 7 (reject −10, a length can't be negative). Breadth = 7 m, length = 10 m."}]}
+{"messages":[{"role":"user","content":"Find my mistake: for 2x²-8x+6=0 I got sum of roots = -4."},{"role":"assistant","content":"Small sign slip! Sum of roots = −b/a, and here b = −8, a = 2. So sum = −(−8)/2 = +4, not −4. (The roots are 1 and 3, which indeed add to 4.) Remember the minus in front of b flips the sign of a negative b to positive."}]}
+`
+
+
+GRADE 10 (NCERT) — MATHEMATICS: Remaining chapters
+
+CHAPTER G10M-TRIG — Introduction to Trigonometry — MEDIUM ANCHOR
+METADATA. Grade 10 · NCERT · Maths · Prereq: right triangles, Pythagoras, ratios · Medium–Hard · Objectives: define the six trig ratios in a right triangle; know values for 0°,30°,45°,60°,90°; use identities; apply to heights & distances (next chapter).
+TEACHING. In a right triangle with an acute angle θ: sin θ = opposite/hypotenuse, cos θ = adjacent/hypotenuse, tan θ = opposite/adjacent; reciprocals cosec, sec, cot. Also tan θ = sin θ/cos θ. Standard values:
+ θ  |  0°  |  30°  |  45°  |  60°  |  90° 
+------------------------------
+ sin  |  0  |  ½  |  1/√2  |  √3/2  |  1 
+ cos  |  1  |  √3/2  |  1/√2  |  ½  |  0 
+ tan  |  0  |  1/√3  |  1  |  √3  |  ∞ 
+Identities: sin²θ + cos²θ = 1; 1 + tan²θ = sec²θ; 1 + cot²θ = cosec²θ.
+DEFINITIONS (8). hypotenuse, opposite side, adjacent side, sine, cosine, tangent, trig identity, angle of elevation.
+Q&A. sin 30°? (½.) tan 45°? (1.) If sin θ=3/5, cos θ? (4/5.) Prove sin²+cos²=1 for θ=30°. (¼+¾=1.)
+MCQs (6). cos 60°=½; tan 60°=√3; sin²30°+cos²30°=1; sec 0°=1; sin 90°=1; cot 45°=1.
+HOTS. If tan θ=1, find θ and sin θ. (45°, 1/√2.) Simplify (1−sin²θ)/cos²θ. (1.)
+MISCONCEPTIONS. "sin θ is an angle" → it's a ratio. "Ratios depend on triangle size" → they depend only on the angle.
+REVISION. SOH-CAH-TOA; standard-angle table; three Pythagorean identities.
+ADAPTIVE — "trig ratio". L1: "A trig ratio compares two sides of a right triangle for a given angle." L2: "sin θ = opposite/hypotenuse — a fixed ratio for each angle, e.g., sin 30°=½." L3: "Trigonometric functions map angles to side ratios, invariant under similarity." L4: "Like a fixed recipe: for a 30° corner, the opposite side is always half the hypotenuse, no matter the triangle's size." L5: "Surveyors find a tower's height from its base distance and the angle of elevation using tan θ."
+`json
+{"messages":[{"role":"user","content":"Explain sin, cos, tan simply."},{"role":"assistant","content":"In a right triangle, pick an acute angle θ. sin θ = opposite/hypotenuse, cos θ = adjacent/hypotenuse, tan θ = opposite/adjacent — remember SOH-CAH-TOA! These ratios depend ONLY on the angle, not the triangle's size. For example, sin 30° is always ½."}]}
+`
+
+G10 Maths — Compact records
+RECORDTYPE: LESSON  |  GRADE 10  |  NCERT  |  Maths  |  CHAPTER: Real Numbers  |  CONCEPT: Euclid's lemma, Fundamental Theorem of Arithmetic, irrationals
+EXPLANATION: Every composite factors uniquely into primes; HCF×LCM=product of two numbers; prove √2 irrational; terminating vs recurring decimals by denominator's prime factors.  |  QUESTION: HCF×LCM of 6,8? ANSWER: 6×8=48.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 10  |  NCERT  |  Maths  |  CHAPTER: Polynomials  |  CONCEPT: Zeros & coefficient relations
+EXPLANATION: For quadratic ax²+bx+c, sum of zeros=−b/a, product=c/a; geometrical meaning of zeros (x-intercepts).  |  QUESTION: Sum of zeros of x²−3x+2? ANSWER: 3.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 10  |  NCERT  |  Maths  |  CHAPTER: Pair of Linear Equations in Two Variables  |  CONCEPT: Solving simultaneous equations
+EXPLANATION: Solve by substitution, elimination, and graph; consistency by comparing a1/a2, b1/b2, c1/c2 (unique/none/infinite solutions).  |  QUESTION: Solve x+y=5, x−y=1. ANSWER: x=3,y=2.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 10  |  NCERT  |  Maths  |  CHAPTER: Arithmetic Progressions  |  CONCEPT: nth term & sum
+EXPLANATION: aₙ=a+(n−1)d; Sₙ=n/2[2a+(n−1)d]=n/2(a+l).  |  QUESTION: 10th term of 2,5,8,…? ANSWER: 29.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 10  |  NCERT  |  Maths  |  CHAPTER: Triangles  |  CONCEPT: Similarity & theorems
+EXPLANATION: Similar triangles (AAA/SAS/SSS); Basic Proportionality (Thales) theorem; areas ratio = square of side ratio; Pythagoras via similarity.  |  QUESTION: If triangles similar with ratio 2:3, area ratio? ANSWER: 4:9.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 10  |  NCERT  |  Maths  |  CHAPTER: Coordinate Geometry  |  CONCEPT: Distance, section, area
+EXPLANATION: Distance=√((x₂−x₁)²+(y₂−y₁)²); section formula; area of triangle from vertices.  |  QUESTION: Distance between (0,0),(3,4)? ANSWER: 5.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 10  |  NCERT  |  Maths  |  CHAPTER: Applications of Trigonometry / Circles / Areas / Surface Areas & Volumes  |  CONCEPT: Heights-distances, tangents, sector area, solids
+EXPLANATION: Angle of elevation/depression problems; tangent ⟂ radius; length of two tangents equal; area of sector=(θ/360)πr²; surface area/volume of combinations (cylinder, cone, sphere, hemisphere, frustum).  |  QUESTION: Volume of a sphere radius r? ANSWER: (4/3)πr³.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 10  |  NCERT  |  Maths  |  CHAPTER: Statistics & Probability  |  CONCEPT: Central tendency & chance
+EXPLANATION: Mean (direct/assumed-mean/step-deviation), median, mode of grouped data; ogive; probability=favourable/total (0≤P≤1).  |  QUESTION: P(head) for a fair coin? ANSWER: ½.  |  DIFFICULTY: Medium
+
+===== GRADE 10 (NCERT) — SCIENCE =====
+
+★ CHAPTER G10S-CRE — Chemical Reactions and Equations — FULL APPARATUS
+METADATA. Grade 10 · NCERT · Science (Chemistry) · Unit: Chemical substances · Prereq: atoms/molecules, symbols/formulae, valency (G9) · Difficulty: Medium · Objectives: recognise chemical changes; write and balance chemical equations; classify reactions (combination, decomposition, displacement, double displacement, redox); understand oxidation/reduction, exothermic/endothermic; explain corrosion & rancidity.
+
+TEACHING MATERIAL.
+Chemical vs physical change. A chemical reaction forms new substances with new properties (e.g., iron rusting, food digesting), often signalled by colour change, gas evolution, precipitate, temperature change, or state change.
+Chemical equation. Reactants → Products, using formulae. A skeletal equation lists them; a balanced equation has equal atoms of each element on both sides (Law of Conservation of Mass — matter is neither created nor destroyed).
+ Balancing steps: write formulae; count atoms; adjust coefficients (never subscripts) to equalise; include states (s, l, g, aq) and conditions (Δ for heat).
+ Example: Zn + H₂SO₄ → ZnSO₄ + H₂ (already balanced). Fe + H₂O → Fe₃O₄ + H₂ balances to 3Fe + 4H₂O → Fe₃O₄ + 4H₂.
+Types of reactions.
+ • Combination: two+ reactants → one product. CaO + H₂O → Ca(OH)₂ (exothermic).
+ • Decomposition: one reactant → two+ products (by heat/light/electricity). 2FeSO₄ —Δ→ Fe₂O₃ + SO₂ + SO₃; 2H₂O —electricity→ 2H₂ + O₂; AgCl —light→ Ag + Cl₂.
+ • Displacement: a more reactive element displaces a less reactive one. Fe + CuSO₄ → FeSO₄ + Cu.
+ • Double displacement: ions exchange partners; often a precipitate. Na₂SO₄ + BaCl₂ → BaSO₄↓ + 2NaCl.
+ • Redox: oxidation (gain of O / loss of H / loss of electrons) and reduction (opposite) occur together. CuO + H₂ → Cu + H₂O (CuO reduced, H₂ oxidised).
+Energy changes. Exothermic releases heat (respiration, combustion, quicklime + water); endothermic absorbs heat (many decompositions, photosynthesis).
+Effects in daily life. Corrosion — metals attacked by air/moisture (iron rusts red-brown; silver blackens; copper greens). Rancidity — oils/fats oxidise, smelling bad; prevented by antioxidants, airtight/N₂ packaging, refrigeration.
+
+Laboratory observations & safety. Mg ribbon burns with a dazzling white flame → white MgO (don't look directly; eye damage). Heating lead nitrate → brown NO₂ fumes (toxic; fume care). Adding water to quicklime → vigorous heat (handle carefully). Always wear goggles; add acid to water, not water to acid.
+
+Visual/diagram description. A balanced-equation "see-saw" showing equal atom counts on both pans; an electrolysis-of-water setup with twice the gas volume at the cathode (H₂) versus anode (O₂).
+
+DEFINITIONS (12). chemical reaction, reactant, product, chemical equation, balanced equation, coefficient, combination reaction, decomposition reaction, displacement reaction, double displacement, oxidation, reduction (+corrosion, rancidity, exothermic/endothermic in glossary).
+
+Q&A. Easy: What is conserved in a reaction? (Mass/atoms.) Rusting is what type of change? (Chemical.) Medium: Balance H₂ + O₂ → H₂O. (2H₂+O₂→2H₂O.) Classify Fe+CuSO₄→FeSO₄+Cu. (Displacement.) Difficult: Balance 3Fe+4H₂O→Fe₃O₄+4H₂ — verify atoms. Identify oxidised/reduced in CuO+H₂→Cu+H₂O. (H₂ oxidised, CuO reduced.) Application: Why is a food packet flushed with nitrogen? (Prevents oxidation/rancidity.) Reasoning: Why balance equations? (Law of conservation of mass — atoms can't vanish or appear.)
+
+MCQs (14, abridged). Balancing changes: coefficients; law obeyed: conservation of mass; Fe+CuSO₄→: displacement; BaCl₂+Na₂SO₄→: double displacement/precipitate; CaO+H₂O→: combination; 2H₂O→2H₂+O₂ by electricity: decomposition; gain of oxygen = oxidation; rusting is corrosion; respiration is exothermic; symbol for heat over arrow: Δ; state of aqueous: aq; Mg burns to: MgO (white); reducing agent in CuO+H₂: H₂; rancidity is due to: oxidation of fats.
+
+T/F (10). Balancing adjusts subscripts F (coefficients). Mass is conserved T. Decomposition needs one reactant T. Displacement swaps ions between two compounds F (that's double displacement). Respiration is exothermic T. Rusting is a physical change F. Oxidation is loss of electrons T. A precipitate is a soluble product F (insoluble solid). CuO + H₂ → Cu + H₂O is redox T. Adding water to concentrated acid is safe practice F (add acid to water).
+
+FILL BLANKS (10). A balanced equation obeys the law of  of mass (conservation). We balance by changing  (coefficients). Fe+CuSO₄→FeSO₄+Cu is a  reaction (displacement). Gain of oxygen is  (oxidation). Loss of oxygen is  (reduction). CaO+H₂O→Ca(OH)₂ is  (combination). Heat symbol over the arrow is  (Δ). Insoluble solid formed is a  (precipitate). Oils turning smelly is  (rancidity). Metals corroding in air/moisture is  (corrosion).
+
+SHORT/LONG. Short: Balance and classify: Pb(NO₃)₂ + KI → PbI₂ + KNO₃. (Pb(NO₃)₂+2KI→PbI₂↓+2KNO₃; double displacement/precipitation.) Long (model): "Explain oxidation and reduction with an example, and why they occur together." Model — Oxidation is gain of oxygen/loss of hydrogen/loss of electrons; reduction is the reverse. In CuO + H₂ → Cu + H₂O, CuO loses oxygen (reduced) while H₂ gains oxygen (oxidised). One species' electrons are taken by another, so oxidation and reduction always occur simultaneously — a redox reaction.
+
+HOTS. Why does a white silver chloride turn grey in sunlight, and where is this used? (Photodecomposition to silver; used in photography/photochromic lenses.) Balance and identify: KClO₃ —Δ→ KCl + O₂. (2KClO₃→2KCl+3O₂; decomposition.) Explain why respiration is called a combustion-like exothermic reaction. (Glucose is oxidised releasing energy, like slow combustion.)
+
+MISCONCEPTIONS. "Balancing means changing formulae" → change coefficients only. "Bubbles always mean boiling" → gas evolution can signal a chemical reaction. "Rusting is physical" → it forms a new substance (hydrated iron oxide). "Oxidation always needs oxygen gas" → it's more generally loss of electrons.
+
+REVISION. Reaction = new substances; balance for conservation of mass (coefficients); five reaction types; redox (oxidation/reduction together); exo/endothermic; corrosion & rancidity and their prevention.
+Fact sheet: conservation of mass; states (s,l,g,aq); Δ = heat; combination/decomposition/displacement/double-displacement/redox; oxidation = +O/−H/−e⁻; reduction = −O/+H/+e⁻.
+
+ADAPTIVE — "balancing equations". L1: "Balancing means making the number of each kind of atom the same on both sides." L2: "In H₂+O₂→H₂O, oxygen is unequal, so we write 2H₂+O₂→2H₂O to match 4 H and 2 O on each side — adjusting the big front numbers, never the small subscripts." L3: "Balancing enforces stoichiometric conservation of atoms per the law of conservation of mass, achieved by choosing integer coefficients." L4: "Like a fair trade: no atom appears from nowhere or disappears — the ledger must match on both sides of the arrow." L5: "Factories rely on balanced equations to know exactly how much raw material yields a product, wasting nothing."
+`json
+{"messages":[{"role":"user","content":"How do I balance a chemical equation? Explain with H2 + O2 → H2O."},{"role":"assistant","content":"Balancing makes each element's atom count equal on both sides (conservation of mass). Start: H₂ + O₂ → H₂O. Oxygen: 2 on the left, 1 on the right — unequal. Put a 2 before H₂O: H₂ + O₂ → 2H₂O (now 2 O each side). But that gives 4 H on the right, so put 2 before H₂: 2H₂ + O₂ → 2H₂O. Check: H = 4=4 ✓, O = 2=2 ✓. Golden rule: change the big COEFFICIENTS, never the small subscripts!"}]}
+{"messages":[{"role":"user","content":"Explain oxidation and reduction simply."},{"role":"assistant","content":"Oxidation = gaining oxygen (or losing hydrogen/electrons). Reduction = losing oxygen (or gaining hydrogen/electrons). They always happen together — that's a 'redox' reaction. Example: CuO + H₂ → Cu + H₂O. The copper oxide LOSES oxygen (reduced) and hydrogen GAINS oxygen (oxidised). Memory trick: OIL RIG — Oxidation Is Loss, Reduction Is Gain (of electrons)."}]}
+`
+
+GRADE 10 (NCERT) — SCIENCE: Remaining (compact)
+RECORDTYPE: LESSON  |  GRADE 10  |  NCERT  |  Science(Chem)  |  CHAPTER: Acids, Bases & Salts  |  CONCEPT: pH, neutralisation, salts
+EXPLANATION: Acids give H⁺, bases OH⁻; pH scale 0–14 (7 neutral); indicators; neutralisation → salt+water; common salts (NaCl, washing soda, baking soda, bleaching powder, POP) and uses.  |  QUESTION: pH of a neutral solution? ANSWER: 7.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 10  |  NCERT  |  Science(Chem)  |  CHAPTER: Metals & Non-metals / Carbon & its Compounds  |  CONCEPT: Reactivity series; covalent carbon chemistry
+EXPLANATION: Metallic/non-metallic properties; reactivity series & displacement; ionic vs covalent bonding; carbon catenation & tetravalency; hydrocarbons, functional groups, ethanol/ethanoic acid, soaps/micelles.  |  QUESTION: Which is more reactive, Zn or Cu? ANSWER: Zn.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 10  |  NCERT  |  Science(Bio)  |  CHAPTER: Life Processes  |  CONCEPT: Nutrition, respiration, transport, excretion
+EXPLANATION: Autotrophic/heterotrophic nutrition; human digestion; aerobic/anaerobic respiration; double circulation (heart), transport in plants (xylem/phloem, transpiration); excretion (nephron, kidney).  |  QUESTION: Functional unit of the kidney? ANSWER: Nephron.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 10  |  NCERT  |  Science(Bio)  |  CHAPTER: Control & Coordination / Reproduction / Heredity  |  CONCEPT: Nervous & hormonal control; reproduction; genetics
+EXPLANATION: Reflex arc, brain, neuron; plant/animal hormones; asexual/sexual reproduction; Mendel's laws, dominant/recessive traits, sex determination.  |  QUESTION: Chromosome pair determining a boy? ANSWER: XY.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 10  |  NCERT  |  Science(Phys)  |  CHAPTER: Light – Reflection & Refraction / Human Eye  |  CONCEPT: Mirrors, lenses, vision
+EXPLANATION: Laws of reflection/refraction; mirror & lens formula 1/v−1/u=1/f (sign convention); magnification; refractive index; eye defects (myopia, hypermetropia) & correction.  |  QUESTION: Lens formula? ANSWER: 1/v − 1/u = 1/f.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 10  |  NCERT  |  Science(Phys)  |  CHAPTER: Electricity / Magnetic Effects of Current  |  CONCEPT: Ohm's law, circuits, electromagnetism
+EXPLANATION: V=IR; series/parallel resistances; power P=VI=I²R; heating effect; magnetic field of current, right-hand rule, motor/generator principle, electromagnetic induction.  |  QUESTION: Ohm's law? ANSWER: V = IR.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 10  |  NCERT  |  Science  |  CHAPTER: Our Environment  |  CONCEPT: Ecosystem, food chains, waste
+EXPLANATION: Trophic levels, energy flow (10% law), decomposers, ozone depletion, biodegradable vs non-biodegradable waste.  |  QUESTION: Producers in a food chain are usually? ANSWER: Green plants.  |  DIFFICULTY: Medium
+
+===== GRADE 10 (NCERT) — SOCIAL SCIENCE =====
+
+CHAPTER G10SS-NAT — History: Nationalism in India / Rise of Nationalism — MEDIUM ANCHOR
+METADATA. Grade 10 · NCERT · Social Science (History) · Prereq: colonial rule basics · Medium · Objectives: understand the growth of nationalism in colonial India; key movements (Non-Cooperation, Civil Disobedience) and figures; the role of Gandhi; distinguish fact/interpretation/opinion.
+TEACHING. Nationalism grew as diverse Indians came to feel a shared identity under colonial rule. Economic hardship, the First World War's burdens, the Rowlatt Act and Jallianwala Bagh (1919) fuelled anger. Gandhi's Satyagraha (truth-force/non-violence) mobilised mass movements: Non-Cooperation (1920–22) (boycott of British goods, titles, institutions), Civil Disobedience/Salt March (1930) (breaking the salt law), and Quit India (1942). Different groups — peasants, workers, business classes, women, tribals — joined with their own hopes, sometimes creating tensions.
+FACT vs INTERPRETATION vs OPINION. FACT: The Salt March began in 1930 from Sabarmati to Dandi. INTERPRETATION: Historians argue mass participation reshaped the freedom struggle's character. OPINION: "Non-violence was the only right path" is a value judgement.
+DEFINITIONS (8). nationalism, Satyagraha, Non-Cooperation, Civil Disobedience, boycott, Rowlatt Act, Swaraj, Quit India.
+Q&A. Easy: Who led the Salt March? (Gandhi.) Medium: What triggered nationwide outrage in 1919? (Jallianwala Bagh massacre / Rowlatt Act.) Application: Why boycott British cloth? (To hurt colonial economy and promote swadeshi.) Reasoning: Why did different classes interpret "Swaraj" differently? (Their distinct grievances and aspirations.)
+MCQs (6). Salt March year: 1930; Satyagraha means: truth-force/non-violent resistance; Non-Cooperation started: 1920; Jallianwala Bagh: 1919; "Quit India": 1942; swadeshi = use of indigenous goods.
+HOTS. How can one event be described as both a "massacre" and a "clash" depending on the source — what does this teach about reading history? (Perspective/interpretation; check evidence and bias.) Why might a business class and a peasant support the same movement for different reasons?
+MISCONCEPTIONS. "Nationalism appeared suddenly" → it grew gradually from many causes. "All Indians agreed on methods" → there were real debates (e.g., non-violence vs revolution).
+REVISION. Causes of nationalism; Gandhi's method; three mass movements; varied social participation; fact/interpretation/opinion.
+ADAPTIVE — "nationalism". L1: "Nationalism is a shared feeling of belonging to one nation." L2: "Under colonial rule, diverse Indians began seeing themselves as one people seeking self-rule (Swaraj)." L3: "Nationalism is a collective political identity mobilised around sovereignty, often forged in opposition to imperial domination." L4: "Like many streams joining into one river — peasants, workers, students, women — flowing toward a common goal of freedom." L5: "The Salt March turned an everyday necessity (salt) into a powerful symbol uniting millions against an unjust law."
+`json
+{"messages":[{"role":"user","content":"Explain the Non-Cooperation Movement for a Grade 10 exam."},{"role":"assistant","content":"Launched by Gandhi in 1920, the Non-Cooperation Movement asked Indians to peacefully withdraw cooperation from British rule — boycotting British goods, schools, courts, titles and elections, and promoting swadeshi (Indian-made goods) and khadi. It drew in peasants, workers, students and the middle class, making the freedom struggle a mass movement. Gandhi called it off in 1922 after the violent Chauri Chaura incident, staying true to non-violence. Note: 'it was the turning point' is interpretation; the dates and events are fact."}]}
+`
+
+G10 Social Science — Compact (Geography, Civics, Economics)
+RECORDTYPE: LESSON  |  GRADE 10  |  NCERT  |  Social Science(Geography)  |  CONCEPT: Resources, agriculture, minerals, industries, transport
+EXPLANATION: Resource types & conservation; soils; water resources & dams; farming types; minerals & energy; manufacturing; lifelines (transport/communication).  |  QUESTION: Which farming grows crops for sale? ANSWER: Commercial farming.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 10  |  NCERT  |  Social Science(Civics)  |  CONCEPT: Democracy, federalism, diversity, parties
+EXPLANATION: Power-sharing; federalism; gender/religion/caste in politics; political parties & challenges to democracy.  |  QUESTION: India's government type? ANSWER: Federal democratic republic.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 10  |  NCERT  |  Social Science(Economics)  |  CONCEPT: Development, sectors, money, globalisation, consumer rights
+EXPLANATION: Measuring development (income, HDI); primary/secondary/tertiary sectors; money & credit; globalisation & MNCs; consumer protection.  |  QUESTION: Which sector includes services? ANSWER: Tertiary.  |  DIFFICULTY: Medium
+
+===== GRADE 9 (NCERT) — Compact (transition year: new NEP books rolling out) =====
+Class 9 moved to new NEP books in 2026 (Maths Ganita Manjari, new Science/English/Sanskrit; Social Science Part 2 finalising). Concepts remain the stable foundation for Class 10. Compact anchors:
+
+RECORDTYPE: LESSON  |  GRADE 9  |  NCERT  |  Maths  |  CONCEPT: Number systems, polynomials, coordinate geometry, linear equations (two variables), Euclid's geometry, lines & angles, triangles, quadrilaterals, circles, Heron's formula, surface areas/volumes, statistics
+EXPLANATION: Real numbers & irrationals; polynomial identities & factor/remainder theorems; Cartesian plane; ax+by+c=0; congruence of triangles; angle-sum & properties; area by Heron's formula √(s(s−a)(s−b)(s−c)); mensuration; data measures.  |  QUESTION: Heron's area for sides 3,4,5? ANSWER: 6 sq units.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 9  |  NCERT  |  Science  |  CONCEPT: Matter, atoms & molecules, cell, tissues, motion, force & laws, gravitation, work-energy, sound, natural resources
+EXPLANATION: States of matter & changes; mole concept & atomic structure; cell as basic unit, plant/animal tissues; kinematics (v=u+at, s=ut+½at², v²=u²+2as); Newton's three laws & momentum; universal gravitation, g; work=F·d, KE=½mv², PE=mgh; sound waves; air/water cycles.  |  QUESTION: Newton's second law formula? ANSWER: F=ma.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 9  |  NCERT  |  Social Science  |  CONCEPT: French Revolution/Nazism; physical India & climate; democracy & constitution; economics (Palampur, poverty, food security)
+EXPLANATION: Revolutions & rise of Nazism (fact vs interpretation); India's relief, drainage, climate, vegetation; what is democracy, constitutional design, electoral politics; village economy, poverty, food security.  |  QUESTION: Which body wrote India's Constitution? ANSWER: The Constituent Assembly.  |  DIFFICULTY: Medium
+
+
+=================================================================
+BRANCH B — MAHARASHTRA SSC (Std 9 & 10)
+=================================================================
+Signature structure preserved: Mathematics Part I (Algebra) + Part II (Geometry); Science & Technology Part 1 + Part 2; History & Political Science; Geography. Concepts parallel NCERT but with Balbharati sequence/terminology and Maharashtra context. Kept separate from NCERT.
+
+MATHEMATICS PART I — ALGEBRA (Std 10) — Anchor: Quadratic Equations
+TEACHING (parallels NCERT flagship). वर्गसमीकरण (quadratic equation): प्रमाणित रूप ax²+bx+c=0, a≠0; अवयव पद्धती (factorisation), पूर्ण वर्ग पद्धती (completing the square), सूत्र पद्धती (formula x=(−b±√(b²−4ac))/2a); विवेचक/निर्धारक D=b²−4ac व मुळांचे स्वरूप; मुळांची बेरीज −b/a, गुणाकार c/a. Maharashtra Algebra Part I also covers linear equations in two variables, quadratic equations, arithmetic progression, financial planning (GST, shares), probability, statistics.
+Difference to preserve: Maharashtra explicitly splits Maths into Algebra (Part I) and Geometry (Part II) with separate textbooks/papers, and includes Financial Planning (GST, shares & dividend) and applied statistics in Std 10 Algebra — content framing distinct from NCERT's single Maths book. Keep branches separate.
+ADAPTIVE — "वर्गसमीकरण (quadratic)". L1: "वर्गसमीकरण म्हणजे x चा सर्वोच्च घात 2 असलेले समीकरण." L2: "ax²+bx+c=0 (a≠0) — अवयव, पूर्ण वर्ग किंवा सूत्राने सोडवता येते; जास्तीत जास्त दोन मुळे." L3: "Degree-2 polynomial equation; roots via x=(−b±√D)/2a, D=b²−4ac दर्शवितो मुळांचे स्वरूप." L4: "पॅराबोला x-अक्ष कोठे छेदतो तीच मुळे — दोनदा/एकदा/मुळीच नाही (D नुसार)." L5: "क्षेत्रफळ, वेग-वेळ, वयाचे प्रश्न वर्गसमीकरणाने सुटतात; अशक्य (ऋण) उत्तर वगळावे."
+`json
+{"messages":[{"role":"user","content":"Std 10 Algebra: solve x² − 5x + 6 = 0 in English."},{"role":"assistant","content":"Factor method: two numbers with product 6 and sum −5 → −2 and −3. So x²−2x−3x+6=0 → x(x−2)−3(x−2)=0 → (x−2)(x−3)=0 → x=2 or x=3. This is the same method as NCERT; Maharashtra also expects you to state the discriminant D=b²−4ac=25>0, confirming two distinct real roots."}]}
+``
+
+MATHEMATICS PART II — GEOMETRY (Std 10) — compact
+RECORDTYPE: LESSON  |  GRADE 10  |  Maharashtra  |  Maths (Geometry, Part II)  |  CONCEPT: Similarity, Pythagoras, circles, trigonometry, coordinate geometry, mensuration
+EXPLANATION: Similar triangles & area ratios; Pythagoras & converse; circle theorems (chord, tangent, inscribed angle); trigonometric ratios & identities; distance/section formulae; areas & volumes of solids. Separate paper from Algebra.  |  QUESTION: Tangent meets radius at what angle? ANSWER: 90°.  |  DIFFICULTY: Medium
+
+SCIENCE & TECHNOLOGY PART 1 & PART 2 (Std 10) — compact
+RECORDTYPE: LESSON  |  GRADE 10  |  Maharashtra  |  Science & Technology Part 1  |  CONCEPT: Physics + Chemistry emphasis
+EXPLANATION: Gravitation & laws; periodic classification of elements; chemical reactions & equations; effects of electric current; heat; refraction/lenses; metallurgy; carbon compounds.  |  QUESTION: Modern periodic law is based on? ANSWER: Atomic number.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 10  |  Maharashtra  |  Science & Technology Part 2  |  CONCEPT: Biology emphasis
+EXPLANATION: Life processes (nutrition, respiration, circulation, excretion, control); reproduction; heredity & evolution; environmental management; biotechnology; social health; cell biology & disease.  |  QUESTION: Functional unit of the kidney? ANSWER: Nephron.  |  DIFFICULTY: Medium
+Difference to preserve: Maharashtra deliberately splits Science into Part 1 (physics/chemistry-leaning) and Part 2 (biology/environment/tech-leaning) with two papers; NCERT keeps a single combined Science book. Do not merge.
+
+HISTORY & POLITICAL SCIENCE / GEOGRAPHY (Std 9–10) — compact
+RECORDTYPE: LESSON  |  GRADE 9–10  |  Maharashtra  |  History & Political Science  |  CONCEPT: Modern India & Maharashtra; working of democracy
+EXPLANATION: Freedom struggle with Maharashtra context; post-independence India; sports/heritage (Std 10 History themes); the Constitution, elections, and government working. FACT/INTERPRETATION/OPINION flagged.  |  QUESTION: India became a republic on? ANSWER: 26 January 1950.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 9–10  |  Maharashtra  |  Geography  |  CONCEPT: India–Brazil comparative geography (Std 10 theme), field study
+EXPLANATION: Location, relief, climate, drainage, natural vegetation, population, economy — often via India–Brazil comparison; map-filling & field observation skills.  |  QUESTION: The Equator passes through which of India/Brazil? ANSWER: Brazil.  |  DIFFICULTY: Medium
+
+LANGUAGES (Std 9–10, both boards) — compact
+RECORDTYPE: LESSON  |  GRADE 9–10  |  NCERT & Maharashtra  |  Languages (English/Hindi/Marathi/Sanskrit)  |  CONCEPT: Advanced grammar, literature & composition
+EXPLANATION: Tenses, voice, narration (direct/indirect), clauses, transformation of sentences; literature — themes/character/critical analysis (no texts reproduced); writing — essays, letters (formal/informal), reports, notices, speeches, précis, dialogue; Marathi: अलंकार, समास, वृत्त; Sanskrit: शब्दरूप, धातुरूप, सन्धि, समास.  |  QUESTION: Indirect: He said, "I am tired." → ANSWER: He said that he was tired.  |  DIFFICULTY: Medium
+
+
+=================================================================
+BATCH 5 — CONSOLIDATED CROSS-BRANCH LESSON RECORDS
+=================================================================
+RECORDTYPE: LESSON  |  GRADE 10  |  NCERT  |  Maths  |  UNIT: Algebra  |  CHAPTER: Quadratic Equations  |  SECTION: Solving & nature  |  CONCEPT: Roots, methods, discriminant
+PREREQUISITES: Polynomials, factorisation, square roots  |  LEARNINGOBJECTIVE: Solve quadratics & analyse roots
+EXPLANATION: Standard form ax²+bx+c=0 (a≠0); solve by factorisation/completing-square/formula x=(−b±√(b²−4ac))/2a; D=b²−4ac gives nature (>0 distinct, =0 equal, <0 none); sum=−b/a, product=c/a; graph is a parabola whose x-intercepts are roots; reject impossible roots.  |  EXAMPLE: x²−5x+6=0 → 2,3  |  APPLICATION: Area, speed, age, projectile problems  |  COMMONMISCONCEPTION: Sum of roots = b/a  |  QUESTION: Solve 3x²−5x+2=0  |  ANSWER: x=1, 2/3  |  DIFFICULTY: Hard
+
+RECORDTYPE: LESSON  |  GRADE 10  |  NCERT  |  Science(Chem)  |  CHAPTER: Chemical Reactions & Equations  |  SECTION: Balancing & types  |  CONCEPT: Reactions & redox
+PREREQUISITES: Symbols, formulae, valency  |  LEARNINGOBJECTIVE: Balance equations & classify reactions
+EXPLANATION: New substances form; balance by coefficients (conservation of mass); combination/decomposition/displacement/double-displacement/redox; oxidation=+O/−e⁻, reduction=−O/+e⁻; exo/endothermic; corrosion & rancidity.  |  EXAMPLE: 2H₂+O₂→2H₂O; Fe+CuSO₄→FeSO₄+Cu  |  APPLICATION: N₂-flushed food packaging (anti-rancidity)  |  COMMONMISCONCEPTION: Balancing changes subscripts  |  QUESTION: Balance H₂+O₂→H₂O  |  ANSWER: 2H₂+O₂→2H₂O  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 10  |  Maharashtra  |  Maths (Algebra Part I)  |  CHAPTER: वर्गसमीकरण  |  CONCEPT: Quadratic equations (parallel)
+EXPLANATION: Same mathematics as NCERT; Maharashtra separates Algebra (Part I) & Geometry (Part II) into two papers and adds Financial Planning (GST, shares).  |  EXAMPLE: x²−5x+6=0 → 2,3  |  COMMONMISCONCEPTION: Merging Algebra & Geometry papers  |  QUESTION: D of x²+x+1=0?  |  ANSWER: −3 (no real roots)  |  DIFFICULTY: Hard
+
+RECORDTYPE: LESSON  |  GRADE 10  |  Maharashtra  |  Science & Technology  |  CONCEPT: Two-part science structure
+EXPLANATION: Maharashtra splits Science into Part 1 (physics/chemistry) & Part 2 (biology/environment/tech) with separate papers; NCERT uses one combined Science book — preserve the distinction.  |  QUESTION: Modern periodic law basis?  |  ANSWER: Atomic number  |  DIFFICULTY: Medium
+
+
+BATCH 5 COVERAGE SUMMARY
+• NCERT Grade 10 Maths: ★ Quadratic Equations — full flagship apparatus built to the exact requested spec (equation→degree→standard form→coefficients→roots→graph→factorisation→completing the square→formula→discriminant→nature→roots-coefficients→word problems→applications→worked examples→20 MCQs→exam Q&A→solutions→adaptive→instruction records); Trigonometry medium anchor; compact records for Real Numbers, Polynomials, Linear Equations, AP, Triangles, Coordinate Geometry, Applications/Circles/Areas/Volumes, Statistics & Probability.
+• NCERT Grade 10 Science: ★ Chemical Reactions & Equations — full apparatus; compact for acids-bases-salts, metals/non-metals, carbon compounds, life processes, control & coordination, reproduction, heredity, light, electricity, magnetism, environment.
+• NCERT Grade 10 Social Science: Nationalism (History) medium anchor with FACT/INTERPRETATION/OPINION; compact Geography, Civics, Economics.
+• NCERT Grade 9: compact anchors across Maths (incl. Ganita Manjari transition noted), Science, Social Science.
+• Maharashtra SSC: Algebra Part I quadratic anchor + Geometry Part II compact; Science & Technology Part 1 & 2 compact; History & Political Science, Geography (India–Brazil), languages — with the Algebra/Geometry and Science Part 1/Part 2 splits and Financial Planning content preserved as distinct.
+• Boards kept separate; Class 10 correctly treated as existing-syllabus, Class 9 as new-NEP transition.
+
+END OF BATCH 5. Next: BATCH 6 — Grade 11 Science (Physics, Chemistry, Biology, Mathematics at senior-secondary depth; NCERT Class 11 continues existing books for 2026–27; Maharashtra HSC Science stream with bifocal note). This is where content becomes college-preparatory and each subject deepens substantially.

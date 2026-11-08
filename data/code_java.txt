@@ -1,0 +1,4431 @@
+// ==== Strings.java ====
+/*
+ * Copyright (C) 2010 The Guava Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
+ * in compliance with the License. You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under the License
+ * is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+ * or implied. See the License for the specific language governing permissions and limitations under
+ * the License.
+ */
+
+package com.google.common.base;
+
+import static com.google.common.base.Preconditions.checkArgument;
+import static com.google.common.base.Preconditions.checkNotNull;
+import static java.lang.Math.min;
+import static java.lang.System.arraycopy;
+import static java.util.logging.Level.WARNING;
+
+import com.google.common.annotations.GwtCompatible;
+import com.google.common.annotations.VisibleForTesting;
+import com.google.errorprone.annotations.InlineMe;
+import com.google.errorprone.annotations.InlineMeValidationDisabled;
+import java.util.logging.Logger;
+import org.jspecify.annotations.Nullable;
+
+/**
+ * Static utility methods pertaining to {@code String} or {@code CharSequence} instances.
+ *
+ * @author Kevin Bourrillion
+ * @since 3.0
+ */
+@GwtCompatible
+public final class Strings {
+  private Strings() {}
+
+  /**
+   * Returns the given string if it is non-null; the empty string otherwise.
+   *
+   * @param string the string to test and possibly return
+   * @return {@code string} itself if it is non-null; {@code ""} if it is null
+   */
+  public static String nullToEmpty(@Nullable String string) {
+    return Platform.nullToEmpty(string);
+  }
+
+  /**
+   * Returns the given string if it is nonempty; {@code null} otherwise.
+   *
+   * @param string the string to test and possibly return
+   * @return {@code string} itself if it is nonempty; {@code null} if it is empty or null
+   */
+  public static @Nullable String emptyToNull(@Nullable String string) {
+    return Platform.emptyToNull(string);
+  }
+
+  /**
+   * Returns {@code true} if the given string is null or is the empty string.
+   *
+   * <p>Consider normalizing your string references with {@link #nullToEmpty}. If you do, you can
+   * use {@link String#isEmpty()} instead of this method, and you won't need special null-safe forms
+   * of methods like {@link String#toUpperCase} either. Or, if you'd like to normalize "in the other
+   * direction" (converting empty strings to {@code null}), you can use {@link #emptyToNull}.
+   *
+   * @param string a string reference to check
+   * @return {@code true} if the string is null or is the empty string
+   */
+  public static boolean isNullOrEmpty(@Nullable String string) {
+    return Platform.stringIsNullOrEmpty(string);
+  }
+
+  /**
+   * Returns a string, of length at least {@code minLength}, consisting of {@code string} prepended
+   * with as many copies of {@code padChar} as are necessary to reach that length. For example,
+   *
+   * <ul>
+   *   <li>{@code padStart("7", 3, '0')} returns {@code "007"}
+   *   <li>{@code padStart("2010", 3, '0')} returns {@code "2010"}
+   * </ul>
+   *
+   * <p>See {@link java.util.Formatter} for a richer set of formatting capabilities.
+   *
+   * @param string the string which should appear at the end of the result
+   * @param minLength the minimum length the resulting string must have. Can be zero or negative, in
+   *     which case the input string is always returned.
+   * @param padChar the character to insert at the beginning of the result until the minimum length
+   *     is reached
+   * @return the padded string
+   */
+  public static String padStart(String string, int minLength, char padChar) {
+    checkNotNull(string); // eager for GWT.
+    if (string.length() >= minLength) {
+      return string;
+    }
+    StringBuilder sb = new StringBuilder(minLength);
+    for (int i = string.length(); i < minLength; i++) {
+      sb.append(padChar);
+    }
+    sb.append(string);
+    return sb.toString();
+  }
+
+  /**
+   * Returns a string, of length at least {@code minLength}, consisting of {@code string} appended
+   * with as many copies of {@code padChar} as are necessary to reach that length. For example,
+   *
+   * <ul>
+   *   <li>{@code padEnd("4.", 5, '0')} returns {@code "4.000"}
+   *   <li>{@code padEnd("2010", 3, '!')} returns {@code "2010"}
+   * </ul>
+   *
+   * <p>See {@link java.util.Formatter} for a richer set of formatting capabilities.
+   *
+   * @param string the string which should appear at the beginning of the result
+   * @param minLength the minimum length the resulting string must have. Can be zero or negative, in
+   *     which case the input string is always returned.
+   * @param padChar the character to append to the end of the result until the minimum length is
+   *     reached
+   * @return the padded string
+   */
+  public static String padEnd(String string, int minLength, char padChar) {
+    checkNotNull(string); // eager for GWT.
+    if (string.length() >= minLength) {
+      return string;
+    }
+    StringBuilder sb = new StringBuilder(minLength);
+    sb.append(string);
+    for (int i = string.length(); i < minLength; i++) {
+      sb.append(padChar);
+    }
+    return sb.toString();
+  }
+
+  /**
+   * Returns a string consisting of a specific number of concatenated copies of an input string. For
+   * example, {@code repeat("hey", 3)} returns the string {@code "heyheyhey"}.
+   *
+   * <p><b>Java 11+ users and Android users:</b> use {@code string.repeat(count)} instead.
+   *
+   * @param string any non-null string
+   * @param count the number of times to repeat it; a nonnegative integer
+   * @return a string containing {@code string} repeated {@code count} times (the empty string if
+   *     {@code count} is zero)
+   * @throws IllegalArgumentException if {@code count} is negative
+   */
+  @InlineMe(replacement = "string.repeat(count)")
+  @InlineMeValidationDisabled("Java 11+ API only")
+  public static String repeat(String string, int count) {
+    checkNotNull(string); // eager for GWT.
+
+    if (count <= 1) {
+      checkArgument(count >= 0, "invalid count: %s", count);
+      return (count == 0) ? "" : string;
+    }
+
+    // IF YOU MODIFY THE CODE HERE, you must update StringsRepeatBenchmark
+    int len = string.length();
+    long longSize = (long) len * (long) count;
+    int size = (int) longSize;
+    if (size != longSize) {
+      throw new ArrayIndexOutOfBoundsException("Required array size too large: " + longSize);
+    }
+
+    char[] array = new char[size];
+    string.getChars(0, len, array, 0);
+    int n;
+    for (n = len; n < size - n; n <<= 1) {
+      arraycopy(array, 0, array, n, n);
+    }
+    arraycopy(array, 0, array, n, size - n);
+    return new String(array);
+  }
+
+  /**
+   * Returns the longest string {@code prefix} such that {@code a.toString().startsWith(prefix) &&
+   * b.toString().startsWith(prefix)}, taking care not to split surrogate pairs. If {@code a} and
+   * {@code b} have no common prefix, returns the empty string.
+   *
+   * @since 11.0
+   */
+  public static String commonPrefix(CharSequence a, CharSequence b) {
+    checkNotNull(a);
+    checkNotNull(b);
+
+    int maxPrefixLength = min(a.length(), b.length());
+    int p = 0;
+    while (p < maxPrefixLength && a.charAt(p) == b.charAt(p)) {
+      p++;
+    }
+    if (validSurrogatePairAt(a, p - 1) || validSurrogatePairAt(b, p - 1)) {
+      p--;
+    }
+    return a.subSequence(0, p).toString();
+  }
+
+  /**
+   * Returns the longest string {@code suffix} such that {@code a.toString().endsWith(suffix) &&
+   * b.toString().endsWith(suffix)}, taking care not to split surrogate pairs. If {@code a} and
+   * {@code b} have no common suffix, returns the empty string.
+   *
+   * @since 11.0
+   */
+  public static String commonSuffix(CharSequence a, CharSequence b) {
+    checkNotNull(a);
+    checkNotNull(b);
+
+    int maxSuffixLength = min(a.length(), b.length());
+    int s = 0;
+    while (s < maxSuffixLength && a.charAt(a.length() - s - 1) == b.charAt(b.length() - s - 1)) {
+      s++;
+    }
+    if (validSurrogatePairAt(a, a.length() - s - 1)
+        || validSurrogatePairAt(b, b.length() - s - 1)) {
+      s--;
+    }
+    return a.subSequence(a.length() - s, a.length()).toString();
+  }
+
+  /**
+   * True when a valid surrogate pair starts at the given {@code index} in the given {@code string}.
+   * Out-of-range indexes return false.
+   */
+  @VisibleForTesting
+  static boolean validSurrogatePairAt(CharSequence string, int index) {
+    return index >= 0
+        && index <= (string.length() - 2)
+        && Character.isHighSurrogate(string.charAt(index))
+        && Character.isLowSurrogate(string.charAt(index + 1));
+  }
+
+  /**
+   * Returns the given {@code template} string with each occurrence of {@code "%s"} replaced with
+   * the corresponding argument value from {@code args}; or, if the placeholder and argument counts
+   * do not match, returns a best-effort form of that string. Will not throw an exception under
+   * normal conditions.
+   *
+   * <p><b>Note:</b> For most string-formatting needs, use {@link String#format String.format},
+   * {@link java.io.PrintWriter#format PrintWriter.format}, and related methods. These support the
+   * full range of {@linkplain java.util.Formatter##syntax format specifiers}, and alert you to
+   * usage errors by throwing {@link java.util.IllegalFormatException}.
+   *
+   * <p>In certain cases, such as outputting debugging information or constructing a message to be
+   * used for another unchecked exception, an exception during string formatting would serve little
+   * purpose except to supplant the real information you were trying to provide. These are the cases
+   * this method is made for; it instead generates a best-effort string with all supplied argument
+   * values present. This method is also useful in environments such as GWT where {@code
+   * String.format} is not available. As an example, method implementations of the {@link
+   * Preconditions} class use this formatter, for both of the reasons just discussed.
+   *
+   * <p><b>Warning:</b> Only the exact two-character placeholder sequence {@code "%s"} is
+   * recognized.
+   *
+   * @param template a string containing zero or more {@code "%s"} placeholder sequences. {@code
+   *     null} is treated as the four-character string {@code "null"}.
+   * @param args the arguments to be substituted into the message template. The first argument
+   *     specified is substituted for the first occurrence of {@code "%s"} in the template, and so
+   *     forth. A {@code null} argument is converted to the four-character string {@code "null"};
+   *     non-null values are converted to strings using {@link Object#toString()}.
+   * @since 25.1
+   */
+  // TODO(b/136042644): consider using Arrays.toString() for array parameters
+  public static String lenientFormat(
+      @Nullable String template, @Nullable Object @Nullable ... args) {
+    template = String.valueOf(template); // null -> "null"
+
+    if (args == null) {
+      args = new Object[] {"(Object[])null"};
+    }
+
+    // start substituting the arguments into the '%s' placeholders
+    StringBuilder builder = new StringBuilder(template.length() + 16 * args.length);
+    int templateStart = 0;
+    int i = 0;
+    while (i < args.length) {
+      int placeholderStart = template.indexOf("%s", templateStart);
+      if (placeholderStart == -1) {
+        break;
+      }
+      builder.append(template, templateStart, placeholderStart);
+      builder.append(lenientToString(args[i++]));
+      templateStart = placeholderStart + 2;
+    }
+    builder.append(template, templateStart, template.length());
+
+    // if we run out of placeholders, append the extra args in square brackets
+    if (i < args.length) {
+      String prefix = " [";
+      for (; i < args.length; i++) {
+        builder.append(prefix);
+        builder.append(lenientToString(args[i]));
+        prefix = ", ";
+      }
+      builder.append(']');
+    }
+
+    return builder.toString();
+  }
+
+  @SuppressWarnings("CatchingUnchecked") // sneaky checked exception
+  private static String lenientToString(@Nullable Object o) {
+    if (o == null) {
+      return "null";
+    }
+    try {
+      return o.toString();
+    } catch (Exception e) { // sneaky checked exception
+      // Default toString() behavior - see Object.toString()
+      String objectToString =
+          o.getClass().getName() + '@' + Integer.toHexString(System.identityHashCode(o));
+      // Logger is created inline with fixed name to avoid forcing Proguard to create another class.
+      Logger.getLogger("com.google.common.base.Strings")
+          .log(WARNING, "Exception during lenientFormat for " + objectToString, e);
+      return "<" + objectToString + " threw " + e.getClass().getName() + ">";
+    }
+  }
+}
+
+
+// ==== Preconditions.java ====
+/*
+ * Copyright (C) 2007 The Guava Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
+ * in compliance with the License. You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under the License
+ * is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+ * or implied. See the License for the specific language governing permissions and limitations under
+ * the License.
+ */
+
+package com.google.common.base;
+
+import static com.google.common.base.Strings.lenientFormat;
+
+import com.google.common.annotations.GwtCompatible;
+import com.google.errorprone.annotations.CanIgnoreReturnValue;
+import java.util.Objects;
+import org.jspecify.annotations.Nullable;
+
+/**
+ * Static convenience methods that help a method or constructor check whether it was invoked
+ * correctly (that is, whether its <i>preconditions</i> were met).
+ *
+ * <p>If the precondition is not met, the {@code Preconditions} method throws an unchecked exception
+ * of a specified type, which helps the method in which the exception was thrown communicate that
+ * its caller has made a mistake. This allows constructs such as
+ *
+ * {@snippet :
+ * public static double sqrt(double value) {
+ *   if (value < 0) {
+ *     throw new IllegalArgumentException("input is negative: " + value);
+ *   }
+ *   // calculate square root
+ * }
+ * }
+ *
+ * <p>to be replaced with the more compact
+ *
+ * {@snippet :
+ * public static double sqrt(double value) {
+ *   checkArgument(value >= 0, "input is negative: %s", value);
+ *   // calculate square root
+ * }
+ * }
+ *
+ * <p>so that a hypothetical bad caller of this method, such as:
+ *
+ * {@snippet :
+ * void exampleBadCaller() {
+ *   double d = sqrt(-1.0);
+ * }
+ * }
+ *
+ * <p>would be flagged as having called {@code sqrt()} with an illegal argument.
+ *
+ * <h2>Performance</h2>
+ *
+ * <p>Avoid passing message arguments that are expensive to compute; your code will always compute
+ * them, even though they usually won't be needed. If you have such arguments, use the conventional
+ * if/throw idiom instead.
+ *
+ * <p>Depending on your message arguments, memory may be allocated for boxing and varargs array
+ * creation. However, the methods of this class have a large number of overloads that prevent such
+ * allocations in many common cases.
+ *
+ * <p>The message string is not formatted unless the exception will be thrown, so the cost of the
+ * string formatting itself should not be a concern.
+ *
+ * <p>As with any performance concerns, you should consider profiling your code (in a production
+ * environment if possible) before spending a lot of effort on tweaking a particular element.
+ *
+ * <h2>Other types of preconditions</h2>
+ *
+ * <p>Not every type of precondition failure is supported by these methods. Continue to throw
+ * standard JDK exceptions such as {@link java.util.NoSuchElementException} or {@link
+ * UnsupportedOperationException} in the situations they are intended for.
+ *
+ * <h2>Non-preconditions</h2>
+ *
+ * <p>It is of course possible to use the methods of this class to check for invalid conditions
+ * which are <i>not the caller's fault</i>. Doing so is <b>not recommended</b> because it is
+ * misleading to future readers of the code and of stack traces. See <a
+ * href="https://github.com/google/guava/wiki/ConditionalFailuresExplained">Conditional failures
+ * explained</a> in the Guava User Guide for more advice. Notably, {@link Verify} offers assertions
+ * similar to those in this class for non-precondition checks.
+ *
+ * <h2>{@code java.util.Objects.requireNonNull()}</h2>
+ *
+ * <p>Projects which use {@code com.google.common} should generally avoid the use of {@link
+ * Objects#requireNonNull(Object)}. Instead, use whichever of {@link #checkNotNull(Object)} or
+ * {@link Verify#verifyNotNull(Object)} is appropriate to the situation. (The same goes for the
+ * message-accepting overloads.)
+ *
+ * <h2>Only {@code %s} is supported</h2>
+ *
+ * <p>{@code Preconditions} uses {@link Strings#lenientFormat} to format error message template
+ * strings. This only supports the {@code "%s"} specifier, not the full range of {@link
+ * java.util.Formatter} specifiers. However, note that if the number of arguments does not match the
+ * number of occurrences of {@code "%s"} in the format string, {@code Preconditions} will still
+ * behave as expected, and will still include all argument values in the error message; the message
+ * will simply not be formatted exactly as intended.
+ *
+ * <h2>More information</h2>
+ *
+ * <p>See the Guava User Guide on <a
+ * href="https://github.com/google/guava/wiki/PreconditionsExplained">using {@code
+ * Preconditions}</a>.
+ *
+ * @author Kevin Bourrillion
+ * @since 2.0
+ */
+@GwtCompatible
+public final class Preconditions {
+  private Preconditions() {}
+
+  /**
+   * Ensures the truth of an expression involving one or more parameters to the calling method.
+   *
+   * @param expression a boolean expression
+   * @throws IllegalArgumentException if {@code expression} is false
+   */
+  public static void checkArgument(boolean expression) {
+    if (!expression) {
+      throw new IllegalArgumentException();
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving one or more parameters to the calling method.
+   *
+   * @param expression a boolean expression
+   * @param errorMessage the exception message to use if the check fails; will be converted to a
+   *     string using {@link String#valueOf(Object)}
+   * @throws IllegalArgumentException if {@code expression} is false
+   */
+  public static void checkArgument(boolean expression, @Nullable Object errorMessage) {
+    if (!expression) {
+      throw new IllegalArgumentException(Platform.stringValueOf(errorMessage));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving one or more parameters to the calling method.
+   *
+   * @param expression a boolean expression
+   * @param errorMessageTemplate a template for the exception message should the check fail. The
+   *     message is formed by replacing each {@code %s} placeholder in the template with an
+   *     argument. These are matched by position - the first {@code %s} gets {@code
+   *     errorMessageArgs[0]}, etc. Unmatched arguments will be appended to the formatted message in
+   *     square braces. Unmatched placeholders will be left as-is.
+   * @param errorMessageArgs the arguments to be substituted into the message template. Arguments
+   *     are converted to strings using {@link String#valueOf(Object)}.
+   * @throws IllegalArgumentException if {@code expression} is false
+   */
+  public static void checkArgument(
+      boolean expression,
+      String errorMessageTemplate,
+      @Nullable Object @Nullable ... errorMessageArgs) {
+    if (!expression) {
+      throw new IllegalArgumentException(
+          Platform.lenientFormat(errorMessageTemplate, errorMessageArgs));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving one or more parameters to the calling method.
+   *
+   * <p>See {@link #checkArgument(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkArgument(
+      boolean expression, String errorMessageTemplate, char p1) {
+    if (!expression) {
+      throw new IllegalArgumentException(lenientFormat(errorMessageTemplate, p1));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving one or more parameters to the calling method.
+   *
+   * <p>See {@link #checkArgument(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkArgument(
+      boolean expression, String errorMessageTemplate, int p1) {
+    if (!expression) {
+      throw new IllegalArgumentException(lenientFormat(errorMessageTemplate, p1));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving one or more parameters to the calling method.
+   *
+   * <p>See {@link #checkArgument(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkArgument(
+      boolean expression, String errorMessageTemplate, long p1) {
+    if (!expression) {
+      throw new IllegalArgumentException(lenientFormat(errorMessageTemplate, p1));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving one or more parameters to the calling method.
+   *
+   * <p>See {@link #checkArgument(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkArgument(
+      boolean expression, String errorMessageTemplate, @Nullable Object p1) {
+    if (!expression) {
+      throw new IllegalArgumentException(Platform.lenientFormat(errorMessageTemplate, p1));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving one or more parameters to the calling method.
+   *
+   * <p>See {@link #checkArgument(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkArgument(
+      boolean expression, String errorMessageTemplate, char p1, char p2) {
+    if (!expression) {
+      throw new IllegalArgumentException(lenientFormat(errorMessageTemplate, p1, p2));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving one or more parameters to the calling method.
+   *
+   * <p>See {@link #checkArgument(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkArgument(
+      boolean expression, String errorMessageTemplate, char p1, int p2) {
+    if (!expression) {
+      throw new IllegalArgumentException(lenientFormat(errorMessageTemplate, p1, p2));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving one or more parameters to the calling method.
+   *
+   * <p>See {@link #checkArgument(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkArgument(
+      boolean expression, String errorMessageTemplate, char p1, long p2) {
+    if (!expression) {
+      throw new IllegalArgumentException(lenientFormat(errorMessageTemplate, p1, p2));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving one or more parameters to the calling method.
+   *
+   * <p>See {@link #checkArgument(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkArgument(
+      boolean expression,
+      String errorMessageTemplate,
+      char p1,
+      @Nullable Object p2) {
+    if (!expression) {
+      throw new IllegalArgumentException(Platform.lenientFormat(errorMessageTemplate, p1, p2));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving one or more parameters to the calling method.
+   *
+   * <p>See {@link #checkArgument(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkArgument(
+      boolean expression, String errorMessageTemplate, int p1, char p2) {
+    if (!expression) {
+      throw new IllegalArgumentException(lenientFormat(errorMessageTemplate, p1, p2));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving one or more parameters to the calling method.
+   *
+   * <p>See {@link #checkArgument(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkArgument(
+      boolean expression, String errorMessageTemplate, int p1, int p2) {
+    if (!expression) {
+      throw new IllegalArgumentException(lenientFormat(errorMessageTemplate, p1, p2));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving one or more parameters to the calling method.
+   *
+   * <p>See {@link #checkArgument(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkArgument(
+      boolean expression, String errorMessageTemplate, int p1, long p2) {
+    if (!expression) {
+      throw new IllegalArgumentException(lenientFormat(errorMessageTemplate, p1, p2));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving one or more parameters to the calling method.
+   *
+   * <p>See {@link #checkArgument(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkArgument(
+      boolean expression,
+      String errorMessageTemplate,
+      int p1,
+      @Nullable Object p2) {
+    if (!expression) {
+      throw new IllegalArgumentException(Platform.lenientFormat(errorMessageTemplate, p1, p2));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving one or more parameters to the calling method.
+   *
+   * <p>See {@link #checkArgument(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkArgument(
+      boolean expression, String errorMessageTemplate, long p1, char p2) {
+    if (!expression) {
+      throw new IllegalArgumentException(lenientFormat(errorMessageTemplate, p1, p2));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving one or more parameters to the calling method.
+   *
+   * <p>See {@link #checkArgument(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkArgument(
+      boolean expression, String errorMessageTemplate, long p1, int p2) {
+    if (!expression) {
+      throw new IllegalArgumentException(lenientFormat(errorMessageTemplate, p1, p2));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving one or more parameters to the calling method.
+   *
+   * <p>See {@link #checkArgument(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkArgument(
+      boolean expression, String errorMessageTemplate, long p1, long p2) {
+    if (!expression) {
+      throw new IllegalArgumentException(lenientFormat(errorMessageTemplate, p1, p2));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving one or more parameters to the calling method.
+   *
+   * <p>See {@link #checkArgument(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkArgument(
+      boolean expression,
+      String errorMessageTemplate,
+      long p1,
+      @Nullable Object p2) {
+    if (!expression) {
+      throw new IllegalArgumentException(Platform.lenientFormat(errorMessageTemplate, p1, p2));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving one or more parameters to the calling method.
+   *
+   * <p>See {@link #checkArgument(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkArgument(
+      boolean expression,
+      String errorMessageTemplate,
+      @Nullable Object p1,
+      char p2) {
+    if (!expression) {
+      throw new IllegalArgumentException(Platform.lenientFormat(errorMessageTemplate, p1, p2));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving one or more parameters to the calling method.
+   *
+   * <p>See {@link #checkArgument(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkArgument(
+      boolean expression,
+      String errorMessageTemplate,
+      @Nullable Object p1,
+      int p2) {
+    if (!expression) {
+      throw new IllegalArgumentException(Platform.lenientFormat(errorMessageTemplate, p1, p2));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving one or more parameters to the calling method.
+   *
+   * <p>See {@link #checkArgument(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkArgument(
+      boolean expression,
+      String errorMessageTemplate,
+      @Nullable Object p1,
+      long p2) {
+    if (!expression) {
+      throw new IllegalArgumentException(Platform.lenientFormat(errorMessageTemplate, p1, p2));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving one or more parameters to the calling method.
+   *
+   * <p>See {@link #checkArgument(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkArgument(
+      boolean expression,
+      // TODO(user): Make errorMessageTemplate consistently @Nullable across overloads.
+      @Nullable String errorMessageTemplate,
+      @Nullable Object p1,
+      @Nullable Object p2) {
+    if (!expression) {
+      throw new IllegalArgumentException(Platform.lenientFormat(errorMessageTemplate, p1, p2));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving one or more parameters to the calling method.
+   *
+   * <p>See {@link #checkArgument(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkArgument(
+      boolean expression,
+      String errorMessageTemplate,
+      @Nullable Object p1,
+      @Nullable Object p2,
+      @Nullable Object p3) {
+    if (!expression) {
+      throw new IllegalArgumentException(Platform.lenientFormat(errorMessageTemplate, p1, p2, p3));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving one or more parameters to the calling method.
+   *
+   * <p>See {@link #checkArgument(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkArgument(
+      boolean expression,
+      String errorMessageTemplate,
+      @Nullable Object p1,
+      @Nullable Object p2,
+      @Nullable Object p3,
+      @Nullable Object p4) {
+    if (!expression) {
+      throw new IllegalArgumentException(
+          Platform.lenientFormat(errorMessageTemplate, p1, p2, p3, p4));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving the state of the calling instance, but not
+   * involving any parameters to the calling method.
+   *
+   * @param expression a boolean expression
+   * @throws IllegalStateException if {@code expression} is false
+   * @see Verify#verify Verify.verify()
+   */
+  public static void checkState(boolean expression) {
+    if (!expression) {
+      throw new IllegalStateException();
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving the state of the calling instance, but not
+   * involving any parameters to the calling method.
+   *
+   * @param expression a boolean expression
+   * @param errorMessage the exception message to use if the check fails; will be converted to a
+   *     string using {@link String#valueOf(Object)}
+   * @throws IllegalStateException if {@code expression} is false
+   * @see Verify#verify Verify.verify()
+   */
+  public static void checkState(boolean expression, @Nullable Object errorMessage) {
+    if (!expression) {
+      throw new IllegalStateException(Platform.stringValueOf(errorMessage));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving the state of the calling instance, but not
+   * involving any parameters to the calling method.
+   *
+   * @param expression a boolean expression
+   * @param errorMessageTemplate a template for the exception message should the check fail. The
+   *     message is formed by replacing each {@code %s} placeholder in the template with an
+   *     argument. These are matched by position - the first {@code %s} gets {@code
+   *     errorMessageArgs[0]}, etc. Unmatched arguments will be appended to the formatted message in
+   *     square braces. Unmatched placeholders will be left as-is.
+   * @param errorMessageArgs the arguments to be substituted into the message template. Arguments
+   *     are converted to strings using {@link String#valueOf(Object)}.
+   * @throws IllegalStateException if {@code expression} is false
+   * @see Verify#verify Verify.verify()
+   */
+  public static void checkState(
+      boolean expression,
+      /*
+       * TODO(cpovirk): Consider removing @Nullable here, as we've done with the other methods'
+       * errorMessageTemplate parameters: It is unlikely that callers intend for their string
+       * template to be null (though we do handle that case gracefully at runtime). I've left this
+       * one as it is because one of our users has defined a wrapper API around Preconditions,
+       * declaring a checkState method that accepts a possibly null template. So we'd need to update
+       * that user first.
+       */
+      @Nullable String errorMessageTemplate,
+      @Nullable Object @Nullable ... errorMessageArgs) {
+    if (!expression) {
+      throw new IllegalStateException(
+          Platform.lenientFormat(errorMessageTemplate, errorMessageArgs));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving the state of the calling instance, but not
+   * involving any parameters to the calling method.
+   *
+   * <p>See {@link #checkState(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkState(
+      boolean expression, String errorMessageTemplate, char p1) {
+    if (!expression) {
+      throw new IllegalStateException(lenientFormat(errorMessageTemplate, p1));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving the state of the calling instance, but not
+   * involving any parameters to the calling method.
+   *
+   * <p>See {@link #checkState(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkState(
+      boolean expression, String errorMessageTemplate, int p1) {
+    if (!expression) {
+      throw new IllegalStateException(lenientFormat(errorMessageTemplate, p1));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving the state of the calling instance, but not
+   * involving any parameters to the calling method.
+   *
+   * <p>See {@link #checkState(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkState(
+      boolean expression, String errorMessageTemplate, long p1) {
+    if (!expression) {
+      throw new IllegalStateException(lenientFormat(errorMessageTemplate, p1));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving the state of the calling instance, but not
+   * involving any parameters to the calling method.
+   *
+   * <p>See {@link #checkState(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkState(
+      boolean expression, String errorMessageTemplate, @Nullable Object p1) {
+    if (!expression) {
+      throw new IllegalStateException(Platform.lenientFormat(errorMessageTemplate, p1));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving the state of the calling instance, but not
+   * involving any parameters to the calling method.
+   *
+   * <p>See {@link #checkState(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkState(
+      boolean expression, String errorMessageTemplate, char p1, char p2) {
+    if (!expression) {
+      throw new IllegalStateException(lenientFormat(errorMessageTemplate, p1, p2));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving the state of the calling instance, but not
+   * involving any parameters to the calling method.
+   *
+   * <p>See {@link #checkState(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkState(
+      boolean expression, String errorMessageTemplate, char p1, int p2) {
+    if (!expression) {
+      throw new IllegalStateException(lenientFormat(errorMessageTemplate, p1, p2));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving the state of the calling instance, but not
+   * involving any parameters to the calling method.
+   *
+   * <p>See {@link #checkState(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkState(
+      boolean expression, String errorMessageTemplate, char p1, long p2) {
+    if (!expression) {
+      throw new IllegalStateException(lenientFormat(errorMessageTemplate, p1, p2));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving the state of the calling instance, but not
+   * involving any parameters to the calling method.
+   *
+   * <p>See {@link #checkState(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkState(
+      boolean expression,
+      String errorMessageTemplate,
+      char p1,
+      @Nullable Object p2) {
+    if (!expression) {
+      throw new IllegalStateException(Platform.lenientFormat(errorMessageTemplate, p1, p2));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving the state of the calling instance, but not
+   * involving any parameters to the calling method.
+   *
+   * <p>See {@link #checkState(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkState(
+      boolean expression, String errorMessageTemplate, int p1, char p2) {
+    if (!expression) {
+      throw new IllegalStateException(lenientFormat(errorMessageTemplate, p1, p2));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving the state of the calling instance, but not
+   * involving any parameters to the calling method.
+   *
+   * <p>See {@link #checkState(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkState(
+      boolean expression, String errorMessageTemplate, int p1, int p2) {
+    if (!expression) {
+      throw new IllegalStateException(lenientFormat(errorMessageTemplate, p1, p2));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving the state of the calling instance, but not
+   * involving any parameters to the calling method.
+   *
+   * <p>See {@link #checkState(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkState(
+      boolean expression, String errorMessageTemplate, int p1, long p2) {
+    if (!expression) {
+      throw new IllegalStateException(lenientFormat(errorMessageTemplate, p1, p2));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving the state of the calling instance, but not
+   * involving any parameters to the calling method.
+   *
+   * <p>See {@link #checkState(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkState(
+      boolean expression,
+      String errorMessageTemplate,
+      int p1,
+      @Nullable Object p2) {
+    if (!expression) {
+      throw new IllegalStateException(Platform.lenientFormat(errorMessageTemplate, p1, p2));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving the state of the calling instance, but not
+   * involving any parameters to the calling method.
+   *
+   * <p>See {@link #checkState(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkState(
+      boolean expression, String errorMessageTemplate, long p1, char p2) {
+    if (!expression) {
+      throw new IllegalStateException(lenientFormat(errorMessageTemplate, p1, p2));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving the state of the calling instance, but not
+   * involving any parameters to the calling method.
+   *
+   * <p>See {@link #checkState(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkState(
+      boolean expression, String errorMessageTemplate, long p1, int p2) {
+    if (!expression) {
+      throw new IllegalStateException(lenientFormat(errorMessageTemplate, p1, p2));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving the state of the calling instance, but not
+   * involving any parameters to the calling method.
+   *
+   * <p>See {@link #checkState(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkState(
+      boolean expression, String errorMessageTemplate, long p1, long p2) {
+    if (!expression) {
+      throw new IllegalStateException(lenientFormat(errorMessageTemplate, p1, p2));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving the state of the calling instance, but not
+   * involving any parameters to the calling method.
+   *
+   * <p>See {@link #checkState(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkState(
+      boolean expression,
+      String errorMessageTemplate,
+      long p1,
+      @Nullable Object p2) {
+    if (!expression) {
+      throw new IllegalStateException(Platform.lenientFormat(errorMessageTemplate, p1, p2));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving the state of the calling instance, but not
+   * involving any parameters to the calling method.
+   *
+   * <p>See {@link #checkState(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkState(
+      boolean expression,
+      String errorMessageTemplate,
+      @Nullable Object p1,
+      char p2) {
+    if (!expression) {
+      throw new IllegalStateException(Platform.lenientFormat(errorMessageTemplate, p1, p2));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving the state of the calling instance, but not
+   * involving any parameters to the calling method.
+   *
+   * <p>See {@link #checkState(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkState(
+      boolean expression,
+      String errorMessageTemplate,
+      @Nullable Object p1,
+      int p2) {
+    if (!expression) {
+      throw new IllegalStateException(Platform.lenientFormat(errorMessageTemplate, p1, p2));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving the state of the calling instance, but not
+   * involving any parameters to the calling method.
+   *
+   * <p>See {@link #checkState(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkState(
+      boolean expression,
+      String errorMessageTemplate,
+      @Nullable Object p1,
+      long p2) {
+    if (!expression) {
+      throw new IllegalStateException(Platform.lenientFormat(errorMessageTemplate, p1, p2));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving the state of the calling instance, but not
+   * involving any parameters to the calling method.
+   *
+   * <p>See {@link #checkState(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkState(
+      boolean expression,
+      String errorMessageTemplate,
+      @Nullable Object p1,
+      @Nullable Object p2) {
+    if (!expression) {
+      throw new IllegalStateException(Platform.lenientFormat(errorMessageTemplate, p1, p2));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving the state of the calling instance, but not
+   * involving any parameters to the calling method.
+   *
+   * <p>See {@link #checkState(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkState(
+      boolean expression,
+      String errorMessageTemplate,
+      @Nullable Object p1,
+      @Nullable Object p2,
+      @Nullable Object p3) {
+    if (!expression) {
+      throw new IllegalStateException(Platform.lenientFormat(errorMessageTemplate, p1, p2, p3));
+    }
+  }
+
+  /**
+   * Ensures the truth of an expression involving the state of the calling instance, but not
+   * involving any parameters to the calling method.
+   *
+   * <p>See {@link #checkState(boolean, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  public static void checkState(
+      boolean expression,
+      String errorMessageTemplate,
+      @Nullable Object p1,
+      @Nullable Object p2,
+      @Nullable Object p3,
+      @Nullable Object p4) {
+    if (!expression) {
+      throw new IllegalStateException(Platform.lenientFormat(errorMessageTemplate, p1, p2, p3, p4));
+    }
+  }
+
+  /*
+   * Preconditions.checkNotNull is *intended* for performing eager null checks on parameters that a
+   * nullness checker can already "prove" are non-null. That means that the first parameter to
+   * checkNotNull *should* be annotated to require it to be non-null.
+   *
+   * However, for a variety of reasons, Google developers have written a ton of code over the past
+   * decade that assumes that they can use checkNotNull for non-precondition checks. I had hoped to
+   * take a principled stand on this, but the amount of such code is simply overwhelming. To avoid
+   * creating a lot of compile errors that users would not find to be informative, we're giving in
+   * and allowing callers to pass arguments that a nullness checker believes could be null.
+   *
+   * We still encourage people to use requireNonNull over checkNotNull for non-precondition checks.
+   */
+
+  /**
+   * Ensures that an object reference passed as a parameter to the calling method is not null.
+   *
+   * @param reference an object reference
+   * @return the non-null reference that was validated
+   * @throws NullPointerException if {@code reference} is null
+   * @see Verify#verifyNotNull Verify.verifyNotNull()
+   */
+  @CanIgnoreReturnValue
+  public static <T> T checkNotNull(@Nullable T reference) {
+    if (reference == null) {
+      throw new NullPointerException();
+    }
+    return reference;
+  }
+
+  /**
+   * Ensures that an object reference passed as a parameter to the calling method is not null.
+   *
+   * @param reference an object reference
+   * @param errorMessage the exception message to use if the check fails; will be converted to a
+   *     string using {@link String#valueOf(Object)}
+   * @return the non-null reference that was validated
+   * @throws NullPointerException if {@code reference} is null
+   * @see Verify#verifyNotNull Verify.verifyNotNull()
+   */
+  @CanIgnoreReturnValue
+  public static <T> T checkNotNull(@Nullable T reference, @Nullable Object errorMessage) {
+    if (reference == null) {
+      throw new NullPointerException(Platform.stringValueOf(errorMessage));
+    }
+    return reference;
+  }
+
+  /**
+   * Ensures that an object reference passed as a parameter to the calling method is not null.
+   *
+   * @param reference an object reference
+   * @param errorMessageTemplate a template for the exception message should the check fail. The
+   *     message is formed by replacing each {@code %s} placeholder in the template with an
+   *     argument. These are matched by position - the first {@code %s} gets {@code
+   *     errorMessageArgs[0]}, etc. Unmatched arguments will be appended to the formatted message in
+   *     square braces. Unmatched placeholders will be left as-is.
+   * @param errorMessageArgs the arguments to be substituted into the message template. Arguments
+   *     are converted to strings using {@link String#valueOf(Object)}.
+   * @return the non-null reference that was validated
+   * @throws NullPointerException if {@code reference} is null
+   * @see Verify#verifyNotNull Verify.verifyNotNull()
+   */
+  @CanIgnoreReturnValue
+  public static <T> T checkNotNull(
+      @Nullable T reference,
+      String errorMessageTemplate,
+      @Nullable Object @Nullable ... errorMessageArgs) {
+    if (reference == null) {
+      throw new NullPointerException(
+          Platform.lenientFormat(errorMessageTemplate, errorMessageArgs));
+    }
+    return reference;
+  }
+
+  /**
+   * Ensures that an object reference passed as a parameter to the calling method is not null.
+   *
+   * <p>See {@link #checkNotNull(Object, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  @CanIgnoreReturnValue
+  public static <T> T checkNotNull(
+      @Nullable T reference, String errorMessageTemplate, char p1) {
+    if (reference == null) {
+      throw new NullPointerException(lenientFormat(errorMessageTemplate, p1));
+    }
+    return reference;
+  }
+
+  /**
+   * Ensures that an object reference passed as a parameter to the calling method is not null.
+   *
+   * <p>See {@link #checkNotNull(Object, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  @CanIgnoreReturnValue
+  public static <T> T checkNotNull(
+      @Nullable T reference, String errorMessageTemplate, int p1) {
+    if (reference == null) {
+      throw new NullPointerException(lenientFormat(errorMessageTemplate, p1));
+    }
+    return reference;
+  }
+
+  /**
+   * Ensures that an object reference passed as a parameter to the calling method is not null.
+   *
+   * <p>See {@link #checkNotNull(Object, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  @CanIgnoreReturnValue
+  public static <T> T checkNotNull(
+      @Nullable T reference, String errorMessageTemplate, long p1) {
+    if (reference == null) {
+      throw new NullPointerException(lenientFormat(errorMessageTemplate, p1));
+    }
+    return reference;
+  }
+
+  /**
+   * Ensures that an object reference passed as a parameter to the calling method is not null.
+   *
+   * <p>See {@link #checkNotNull(Object, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  @CanIgnoreReturnValue
+  public static <T> T checkNotNull(
+      @Nullable T reference,
+      String errorMessageTemplate,
+      @Nullable Object p1) {
+    if (reference == null) {
+      throw new NullPointerException(Platform.lenientFormat(errorMessageTemplate, p1));
+    }
+    return reference;
+  }
+
+  /**
+   * Ensures that an object reference passed as a parameter to the calling method is not null.
+   *
+   * <p>See {@link #checkNotNull(Object, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  @CanIgnoreReturnValue
+  public static <T> T checkNotNull(
+      @Nullable T reference, String errorMessageTemplate, char p1, char p2) {
+    if (reference == null) {
+      throw new NullPointerException(lenientFormat(errorMessageTemplate, p1, p2));
+    }
+    return reference;
+  }
+
+  /**
+   * Ensures that an object reference passed as a parameter to the calling method is not null.
+   *
+   * <p>See {@link #checkNotNull(Object, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  @CanIgnoreReturnValue
+  public static <T> T checkNotNull(
+      @Nullable T reference, String errorMessageTemplate, char p1, int p2) {
+    if (reference == null) {
+      throw new NullPointerException(lenientFormat(errorMessageTemplate, p1, p2));
+    }
+    return reference;
+  }
+
+  /**
+   * Ensures that an object reference passed as a parameter to the calling method is not null.
+   *
+   * <p>See {@link #checkNotNull(Object, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  @CanIgnoreReturnValue
+  public static <T> T checkNotNull(
+      @Nullable T reference, String errorMessageTemplate, char p1, long p2) {
+    if (reference == null) {
+      throw new NullPointerException(lenientFormat(errorMessageTemplate, p1, p2));
+    }
+    return reference;
+  }
+
+  /**
+   * Ensures that an object reference passed as a parameter to the calling method is not null.
+   *
+   * <p>See {@link #checkNotNull(Object, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  @CanIgnoreReturnValue
+  public static <T> T checkNotNull(
+      @Nullable T reference,
+      String errorMessageTemplate,
+      char p1,
+      @Nullable Object p2) {
+    if (reference == null) {
+      throw new NullPointerException(Platform.lenientFormat(errorMessageTemplate, p1, p2));
+    }
+    return reference;
+  }
+
+  /**
+   * Ensures that an object reference passed as a parameter to the calling method is not null.
+   *
+   * <p>See {@link #checkNotNull(Object, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  @CanIgnoreReturnValue
+  public static <T> T checkNotNull(
+      @Nullable T reference, String errorMessageTemplate, int p1, char p2) {
+    if (reference == null) {
+      throw new NullPointerException(lenientFormat(errorMessageTemplate, p1, p2));
+    }
+    return reference;
+  }
+
+  /**
+   * Ensures that an object reference passed as a parameter to the calling method is not null.
+   *
+   * <p>See {@link #checkNotNull(Object, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  @CanIgnoreReturnValue
+  public static <T> T checkNotNull(
+      @Nullable T reference, String errorMessageTemplate, int p1, int p2) {
+    if (reference == null) {
+      throw new NullPointerException(lenientFormat(errorMessageTemplate, p1, p2));
+    }
+    return reference;
+  }
+
+  /**
+   * Ensures that an object reference passed as a parameter to the calling method is not null.
+   *
+   * <p>See {@link #checkNotNull(Object, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  @CanIgnoreReturnValue
+  public static <T> T checkNotNull(
+      @Nullable T reference, String errorMessageTemplate, int p1, long p2) {
+    if (reference == null) {
+      throw new NullPointerException(lenientFormat(errorMessageTemplate, p1, p2));
+    }
+    return reference;
+  }
+
+  /**
+   * Ensures that an object reference passed as a parameter to the calling method is not null.
+   *
+   * <p>See {@link #checkNotNull(Object, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  @CanIgnoreReturnValue
+  public static <T> T checkNotNull(
+      @Nullable T reference,
+      String errorMessageTemplate,
+      int p1,
+      @Nullable Object p2) {
+    if (reference == null) {
+      throw new NullPointerException(Platform.lenientFormat(errorMessageTemplate, p1, p2));
+    }
+    return reference;
+  }
+
+  /**
+   * Ensures that an object reference passed as a parameter to the calling method is not null.
+   *
+   * <p>See {@link #checkNotNull(Object, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  @CanIgnoreReturnValue
+  public static <T> T checkNotNull(
+      @Nullable T reference, String errorMessageTemplate, long p1, char p2) {
+    if (reference == null) {
+      throw new NullPointerException(lenientFormat(errorMessageTemplate, p1, p2));
+    }
+    return reference;
+  }
+
+  /**
+   * Ensures that an object reference passed as a parameter to the calling method is not null.
+   *
+   * <p>See {@link #checkNotNull(Object, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  @CanIgnoreReturnValue
+  public static <T> T checkNotNull(
+      @Nullable T reference, String errorMessageTemplate, long p1, int p2) {
+    if (reference == null) {
+      throw new NullPointerException(lenientFormat(errorMessageTemplate, p1, p2));
+    }
+    return reference;
+  }
+
+  /**
+   * Ensures that an object reference passed as a parameter to the calling method is not null.
+   *
+   * <p>See {@link #checkNotNull(Object, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  @CanIgnoreReturnValue
+  public static <T> T checkNotNull(
+      @Nullable T reference, String errorMessageTemplate, long p1, long p2) {
+    if (reference == null) {
+      throw new NullPointerException(lenientFormat(errorMessageTemplate, p1, p2));
+    }
+    return reference;
+  }
+
+  /**
+   * Ensures that an object reference passed as a parameter to the calling method is not null.
+   *
+   * <p>See {@link #checkNotNull(Object, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  @CanIgnoreReturnValue
+  public static <T> T checkNotNull(
+      @Nullable T reference,
+      String errorMessageTemplate,
+      long p1,
+      @Nullable Object p2) {
+    if (reference == null) {
+      throw new NullPointerException(Platform.lenientFormat(errorMessageTemplate, p1, p2));
+    }
+    return reference;
+  }
+
+  /**
+   * Ensures that an object reference passed as a parameter to the calling method is not null.
+   *
+   * <p>See {@link #checkNotNull(Object, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  @CanIgnoreReturnValue
+  public static <T> T checkNotNull(
+      @Nullable T reference,
+      String errorMessageTemplate,
+      @Nullable Object p1,
+      char p2) {
+    if (reference == null) {
+      throw new NullPointerException(Platform.lenientFormat(errorMessageTemplate, p1, p2));
+    }
+    return reference;
+  }
+
+  /**
+   * Ensures that an object reference passed as a parameter to the calling method is not null.
+   *
+   * <p>See {@link #checkNotNull(Object, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  @CanIgnoreReturnValue
+  public static <T> T checkNotNull(
+      @Nullable T reference,
+      String errorMessageTemplate,
+      @Nullable Object p1,
+      int p2) {
+    if (reference == null) {
+      throw new NullPointerException(Platform.lenientFormat(errorMessageTemplate, p1, p2));
+    }
+    return reference;
+  }
+
+  /**
+   * Ensures that an object reference passed as a parameter to the calling method is not null.
+   *
+   * <p>See {@link #checkNotNull(Object, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  @CanIgnoreReturnValue
+  public static <T> T checkNotNull(
+      @Nullable T reference,
+      String errorMessageTemplate,
+      @Nullable Object p1,
+      long p2) {
+    if (reference == null) {
+      throw new NullPointerException(Platform.lenientFormat(errorMessageTemplate, p1, p2));
+    }
+    return reference;
+  }
+
+  /**
+   * Ensures that an object reference passed as a parameter to the calling method is not null.
+   *
+   * <p>See {@link #checkNotNull(Object, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  @CanIgnoreReturnValue
+  public static <T> T checkNotNull(
+      @Nullable T reference,
+      String errorMessageTemplate,
+      @Nullable Object p1,
+      @Nullable Object p2) {
+    if (reference == null) {
+      throw new NullPointerException(Platform.lenientFormat(errorMessageTemplate, p1, p2));
+    }
+    return reference;
+  }
+
+  /**
+   * Ensures that an object reference passed as a parameter to the calling method is not null.
+   *
+   * <p>See {@link #checkNotNull(Object, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  @CanIgnoreReturnValue
+  public static <T> T checkNotNull(
+      @Nullable T reference,
+      String errorMessageTemplate,
+      @Nullable Object p1,
+      @Nullable Object p2,
+      @Nullable Object p3) {
+    if (reference == null) {
+      throw new NullPointerException(Platform.lenientFormat(errorMessageTemplate, p1, p2, p3));
+    }
+    return reference;
+  }
+
+  /**
+   * Ensures that an object reference passed as a parameter to the calling method is not null.
+   *
+   * <p>See {@link #checkNotNull(Object, String, Object...)} for details.
+   *
+   * @since 20.0 (varargs overload since 2.0)
+   */
+  @CanIgnoreReturnValue
+  public static <T> T checkNotNull(
+      @Nullable T reference,
+      String errorMessageTemplate,
+      @Nullable Object p1,
+      @Nullable Object p2,
+      @Nullable Object p3,
+      @Nullable Object p4) {
+    if (reference == null) {
+      throw new NullPointerException(Platform.lenientFormat(errorMessageTemplate, p1, p2, p3, p4));
+    }
+    return reference;
+  }
+
+  /*
+   * All recent hotspots (as of 2009) *really* like to have the natural code
+   *
+   * if (guardExpression) {
+   *    throw new BadException(messageExpression);
+   * }
+   *
+   * refactored so that messageExpression is moved to a separate String-returning method.
+   *
+   * if (guardExpression) {
+   *    throw new BadException(badMsg(...));
+   * }
+   *
+   * The alternative natural refactorings into void or Exception-returning methods are much slower.
+   * This is a big deal - we're talking factors of 2-8 in microbenchmarks, not just 10-20%. (This is
+   * a hotspot optimizer bug, which should be fixed, but that's a separate, big project).
+   *
+   * The coding pattern above is heavily used in java.util, e.g. in ArrayList. There is a
+   * RangeCheckMicroBenchmark in the JDK that was used to test this.
+   *
+   * But the methods in this class want to throw different exceptions, depending on the args, so it
+   * appears that this pattern is not directly applicable. But we can use the ridiculous, devious
+   * trick of throwing an exception in the middle of the construction of another exception. Hotspot
+   * is fine with that.
+   */
+
+  /**
+   * Ensures that {@code index} specifies a valid <i>element</i> in an array, list or string of size
+   * {@code size}. An element index may range from zero, inclusive, to {@code size}, exclusive.
+   *
+   * @param index a user-supplied index identifying an element of an array, list or string
+   * @param size the size of that array, list or string
+   * @return the value of {@code index}
+   * @throws IndexOutOfBoundsException if {@code index} is negative or is not less than {@code size}
+   * @throws IllegalArgumentException if {@code size} is negative
+   */
+  @CanIgnoreReturnValue
+  public static int checkElementIndex(int index, int size) {
+    return checkElementIndex(index, size, "index");
+  }
+
+  /**
+   * Ensures that {@code index} specifies a valid <i>element</i> in an array, list or string of size
+   * {@code size}. An element index may range from zero, inclusive, to {@code size}, exclusive.
+   *
+   * @param index a user-supplied index identifying an element of an array, list or string
+   * @param size the size of that array, list or string
+   * @param desc the text to use to describe this index in an error message
+   * @return the value of {@code index}
+   * @throws IndexOutOfBoundsException if {@code index} is negative or is not less than {@code size}
+   * @throws IllegalArgumentException if {@code size} is negative
+   */
+  @CanIgnoreReturnValue
+  public static int checkElementIndex(int index, int size, String desc) {
+    // Carefully optimized for execution by hotspot (explanatory comment above)
+    if (index < 0 || index >= size) {
+      throw new IndexOutOfBoundsException(badElementIndex(index, size, desc));
+    }
+    return index;
+  }
+
+  private static String badElementIndex(int index, int size, String desc) {
+    if (index < 0) {
+      return lenientFormat("%s (%s) must not be negative", desc, index);
+    } else if (size < 0) {
+      throw new IllegalArgumentException("negative size: " + size);
+    } else { // index >= size
+      return lenientFormat("%s (%s) must be less than size (%s)", desc, index, size);
+    }
+  }
+
+  /**
+   * Ensures that {@code index} specifies a valid <i>position</i> in an array, list or string of
+   * size {@code size}. A position index may range from zero to {@code size}, inclusive.
+   *
+   * <p><b>Java 9 users:</b> consider using {@link Objects#checkIndex} instead. However, note that
+   * {@code checkIndex()} throws {@code IndexOutOfBoundsException} when {@code size} is negative,
+   * while this method throws {@code IllegalArgumentException}.
+   *
+   * @param index a user-supplied index identifying a position in an array, list or string
+   * @param size the size of that array, list or string
+   * @return the value of {@code index}
+   * @throws IndexOutOfBoundsException if {@code index} is negative or is greater than {@code size}
+   * @throws IllegalArgumentException if {@code size} is negative
+   */
+  @CanIgnoreReturnValue
+  public static int checkPositionIndex(int index, int size) {
+    return checkPositionIndex(index, size, "index");
+  }
+
+  /**
+   * Ensures that {@code index} specifies a valid <i>position</i> in an array, list or string of
+   * size {@code size}. A position index may range from zero to {@code size}, inclusive.
+   *
+   * @param index a user-supplied index identifying a position in an array, list or string
+   * @param size the size of that array, list or string
+   * @param desc the text to use to describe this index in an error message
+   * @return the value of {@code index}
+   * @throws IndexOutOfBoundsException if {@code index} is negative or is greater than {@code size}
+   * @throws IllegalArgumentException if {@code size} is negative
+   */
+  @CanIgnoreReturnValue
+  public static int checkPositionIndex(int index, int size, String desc) {
+    // Carefully optimized for execution by hotspot (explanatory comment above)
+    if (index < 0 || index > size) {
+      throw new IndexOutOfBoundsException(badPositionIndex(index, size, desc));
+    }
+    return index;
+  }
+
+  private static String badPositionIndex(int index, int size, String desc) {
+    if (index < 0) {
+      return lenientFormat("%s (%s) must not be negative", desc, index);
+    } else if (size < 0) {
+      throw new IllegalArgumentException("negative size: " + size);
+    } else { // index > size
+      return lenientFormat("%s (%s) must not be greater than size (%s)", desc, index, size);
+    }
+  }
+
+  /**
+   * Ensures that {@code start} and {@code end} specify valid <i>positions</i> in an array, list or
+   * string of size {@code size}, and are in order. A position index may range from zero to {@code
+   * size}, inclusive.
+   *
+   * @param start a user-supplied index identifying a starting position in an array, list or string
+   * @param end a user-supplied index identifying an ending position in an array, list or string
+   * @param size the size of that array, list or string
+   * @throws IndexOutOfBoundsException if either index is negative or is greater than {@code size},
+   *     or if {@code end} is less than {@code start}
+   * @throws IllegalArgumentException if {@code size} is negative
+   */
+  public static void checkPositionIndexes(int start, int end, int size) {
+    // Carefully optimized for execution by hotspot (explanatory comment above)
+    if (start < 0 || end < start || end > size) {
+      throw new IndexOutOfBoundsException(badPositionIndexes(start, end, size));
+    }
+  }
+
+  private static String badPositionIndexes(int start, int end, int size) {
+    if (start < 0 || start > size) {
+      return badPositionIndex(start, size, "start index");
+    }
+    if (end < 0 || end > size) {
+      return badPositionIndex(end, size, "end index");
+    }
+    // end < start
+    return lenientFormat("end index (%s) must not be less than start index (%s)", end, start);
+  }
+}
+
+
+// ==== Lists.java ====
+/*
+ * Copyright (C) 2007 The Guava Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.google.common.collect;
+
+import static com.google.common.base.Preconditions.checkArgument;
+import static com.google.common.base.Preconditions.checkElementIndex;
+import static com.google.common.base.Preconditions.checkNotNull;
+import static com.google.common.base.Preconditions.checkPositionIndex;
+import static com.google.common.base.Preconditions.checkPositionIndexes;
+import static com.google.common.base.Preconditions.checkState;
+import static com.google.common.collect.CollectPreconditions.checkNonnegative;
+import static com.google.common.collect.CollectPreconditions.checkRemove;
+import static com.google.common.collect.Iterators.addAll;
+import static com.google.common.collect.Iterators.elementsEqual;
+import static java.lang.Math.min;
+
+import com.google.common.annotations.GwtCompatible;
+import com.google.common.annotations.GwtIncompatible;
+import com.google.common.annotations.J2ktIncompatible;
+import com.google.common.annotations.VisibleForTesting;
+import com.google.common.base.Function;
+import com.google.common.math.IntMath;
+import com.google.common.primitives.Ints;
+import com.google.errorprone.annotations.InlineMe;
+import java.io.Serializable;
+import java.math.RoundingMode;
+import java.util.AbstractList;
+import java.util.AbstractSequentialList;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.ListIterator;
+import java.util.NoSuchElementException;
+import java.util.Objects;
+import java.util.RandomAccess;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.function.Predicate;
+import org.jspecify.annotations.Nullable;
+
+/**
+ * Static utility methods pertaining to {@link List} instances. Also see this class's counterparts
+ * {@link Sets}, {@link Maps} and {@link Queues}.
+ *
+ * <p>See the Guava User Guide article on <a href=
+ * "https://github.com/google/guava/wiki/CollectionUtilitiesExplained#lists">{@code Lists}</a>.
+ *
+ * @author Kevin Bourrillion
+ * @author Mike Bostock
+ * @author Louis Wasserman
+ * @since 2.0
+ */
+@GwtCompatible
+public final class Lists {
+  private Lists() {}
+
+  // ArrayList
+
+  /**
+   * Creates a <i>mutable</i>, empty {@code ArrayList} instance.
+   *
+   * <p><b>Note:</b> if mutability is not required, use {@link ImmutableList#of()} instead.
+   *
+   * <p><b>Note:</b> this method is now unnecessary and should be treated as deprecated. Instead,
+   * use the {@code ArrayList} {@linkplain ArrayList#ArrayList() constructor} directly, taking
+   * advantage of <a
+   * href="https://docs.oracle.com/javase/tutorial/java/generics/genTypeInference.html#type-inference-instantiation">"diamond"
+   * syntax</a>.
+   */
+  @SuppressWarnings("NonApiType") // acts as a direct substitute for a constructor call
+  public static <E extends @Nullable Object> ArrayList<E> newArrayList() {
+    return new ArrayList<>();
+  }
+
+  /**
+   * Creates a <i>mutable</i> {@code ArrayList} instance containing the given elements.
+   *
+   * <p><b>Note:</b> essentially the only reason to use this method is when you will need to add or
+   * remove elements later. Otherwise, for non-null elements use {@link ImmutableList#of()} (for
+   * varargs) or {@link ImmutableList#copyOf(Object[])} (for an array) instead. If any elements
+   * might be null, or you need support for {@link List#set(int, Object)}, use {@link
+   * Arrays#asList}.
+   *
+   * <p>Note that even when you do need the ability to add or remove, this method provides only a
+   * tiny bit of syntactic sugar for {@code new ArrayList<>(}{@link Arrays#asList asList}{@code
+   * (...))}, or for creating an empty list then calling {@link Collections#addAll}. This method is
+   * not actually very useful.
+   */
+  @SafeVarargs
+  @SuppressWarnings("NonApiType") // acts as a direct substitute for a constructor call
+  public static <E extends @Nullable Object> ArrayList<E> newArrayList(E... elements) {
+    checkNotNull(elements); // for GWT
+    // Avoid integer overflow when a large array is passed in
+    int capacity = computeArrayListCapacity(elements.length);
+    ArrayList<E> list = new ArrayList<>(capacity);
+    Collections.addAll(list, elements);
+    return list;
+  }
+
+  /**
+   * Creates a <i>mutable</i> {@code ArrayList} instance containing the given elements; a very thin
+   * shortcut for creating an empty list then calling {@link Iterables#addAll}.
+   *
+   * <p><b>Note:</b> if mutability is not required and the elements are non-null, use {@link
+   * ImmutableList#copyOf(Iterable)} instead. (Or, change {@code elements} to be a {@link
+   * FluentIterable} and call {@code elements.toList()}.)
+   *
+   * <p><b>Note:</b> if {@code elements} is a {@link Collection}, you don't need this method. Use
+   * the {@code ArrayList} {@linkplain ArrayList#ArrayList(Collection) constructor} directly, taking
+   * advantage of <a
+   * href="https://docs.oracle.com/javase/tutorial/java/generics/genTypeInference.html#type-inference-instantiation">"diamond"
+   * syntax</a>.
+   */
+  @SuppressWarnings("NonApiType") // acts as a direct substitute for a constructor call
+  public static <E extends @Nullable Object> ArrayList<E> newArrayList(
+      Iterable<? extends E> elements) {
+    checkNotNull(elements); // for GWT
+    // Let ArrayList's sizing logic work, if possible
+    return (elements instanceof Collection)
+        ? new ArrayList<>((Collection<? extends E>) elements)
+        : newArrayList(elements.iterator());
+  }
+
+  /**
+   * Creates a <i>mutable</i> {@code ArrayList} instance containing the given elements; a very thin
+   * shortcut for creating an empty list and then calling {@link Iterators#addAll}.
+   *
+   * <p><b>Note:</b> if mutability is not required and the elements are non-null, use {@link
+   * ImmutableList#copyOf(Iterator)} instead.
+   */
+  @SuppressWarnings("NonApiType") // acts as a direct substitute for a constructor call
+  public static <E extends @Nullable Object> ArrayList<E> newArrayList(
+      Iterator<? extends E> elements) {
+    ArrayList<E> list = new ArrayList<>();
+    addAll(list, elements);
+    return list;
+  }
+
+  @VisibleForTesting
+  static int computeArrayListCapacity(int arraySize) {
+    checkNonnegative(arraySize, "arraySize");
+
+    // TODO(kevinb): Figure out the right behavior, and document it
+    return Ints.saturatedCast(5L + arraySize + (arraySize / 10));
+  }
+
+  /**
+   * Creates an {@code ArrayList} instance backed by an array with the specified initial size;
+   * simply delegates to {@link ArrayList#ArrayList(int)}.
+   *
+   * <p><b>Note:</b> this method is now unnecessary and should be treated as deprecated. Instead,
+   * use {@code new }{@link ArrayList#ArrayList(int) ArrayList}{@code <>(int)} directly, taking
+   * advantage of <a
+   * href="https://docs.oracle.com/javase/tutorial/java/generics/genTypeInference.html#type-inference-instantiation">"diamond"
+   * syntax</a>. (Unlike here, there is no risk of overload ambiguity, since the {@code ArrayList}
+   * constructors very wisely did not accept varargs.)
+   *
+   * @param initialArraySize the exact size of the initial backing array for the returned array list
+   *     ({@code ArrayList} documentation calls this value the "capacity")
+   * @return a new, empty {@code ArrayList} which is guaranteed not to resize itself unless its size
+   *     reaches {@code initialArraySize + 1}
+   * @throws IllegalArgumentException if {@code initialArraySize} is negative
+   */
+  @SuppressWarnings("NonApiType") // acts as a direct substitute for a constructor call
+  public static <E extends @Nullable Object> ArrayList<E> newArrayListWithCapacity(
+      int initialArraySize) {
+    checkNonnegative(initialArraySize, "initialArraySize"); // for GWT.
+    return new ArrayList<>(initialArraySize);
+  }
+
+  /**
+   * Creates an {@code ArrayList} instance to hold {@code estimatedSize} elements, <i>plus</i> an
+   * unspecified amount of padding; **don't do this**. Instead, use {@code new }{@link
+   * ArrayList#ArrayList(int) ArrayList}{@code <>(int)} directly and choose an explicit padding
+   * amount.
+   *
+   * @param estimatedSize an estimate of the eventual {@link List#size()} of the new list
+   * @return a new, empty {@code ArrayList}, sized appropriately to hold the estimated number of
+   *     elements
+   * @throws IllegalArgumentException if {@code estimatedSize} is negative
+   */
+  @SuppressWarnings("NonApiType") // acts as a direct substitute for a constructor call
+  public static <E extends @Nullable Object> ArrayList<E> newArrayListWithExpectedSize(
+      int estimatedSize) {
+    return new ArrayList<>(computeArrayListCapacity(estimatedSize));
+  }
+
+  // LinkedList
+
+  /**
+   * Creates a <i>mutable</i>, empty {@code LinkedList} instance.
+   *
+   * <p><b>Note:</b> if you won't be adding any elements to the list, use {@link ImmutableList#of()}
+   * instead.
+   *
+   * <p><b>Performance note:</b> {@link ArrayList} and {@link java.util.ArrayDeque} consistently
+   * outperform {@code LinkedList} except in certain rare and specific situations. Unless you have
+   * spent a lot of time benchmarking your specific needs, use one of those instead.
+   *
+   * <p><b>Note:</b> this method is now unnecessary and should be treated as deprecated. Instead,
+   * use the {@code LinkedList} {@linkplain LinkedList#LinkedList() constructor} directly, taking
+   * advantage of <a
+   * href="https://docs.oracle.com/javase/tutorial/java/generics/genTypeInference.html#type-inference-instantiation">"diamond"
+   * syntax</a>.
+   */
+  @SuppressWarnings({
+    "NonApiType", // acts as a direct substitute for a constructor call
+    "JdkObsolete", // We recommend against this method but need to keep it for compatibility.
+  })
+  public static <E extends @Nullable Object> LinkedList<E> newLinkedList() {
+    return new LinkedList<>();
+  }
+
+  /**
+   * Creates a <i>mutable</i> {@code LinkedList} instance containing the given elements; a very thin
+   * shortcut for creating an empty list then calling {@link Iterables#addAll}.
+   *
+   * <p><b>Note:</b> if mutability is not required and the elements are non-null, use {@link
+   * ImmutableList#copyOf(Iterable)} instead.
+   *
+   * <p><b>Performance note:</b> {@link ArrayList} and {@link java.util.ArrayDeque} consistently
+   * outperform {@code LinkedList} except in certain rare and specific situations. Unless you have
+   * spent a lot of time benchmarking your specific needs, use one of those instead.
+   *
+   * <p><b>Note:</b> if {@code elements} is a {@link Collection}, you don't need this method. Use
+   * the {@code LinkedList} {@linkplain LinkedList#LinkedList(Collection) constructor} directly,
+   * taking advantage of <a
+   * href="https://docs.oracle.com/javase/tutorial/java/generics/genTypeInference.html#type-inference-instantiation">"diamond"
+   * syntax</a>.
+   */
+  @SuppressWarnings("NonApiType") // acts as a direct substitute for a constructor call
+  public static <E extends @Nullable Object> LinkedList<E> newLinkedList(
+      Iterable<? extends E> elements) {
+    LinkedList<E> list = new LinkedList<>();
+    Iterables.addAll(list, elements);
+    return list;
+  }
+
+  /**
+   * Creates an empty {@code CopyOnWriteArrayList} instance.
+   *
+   * <p><b>Note:</b> if you need an immutable empty {@link List}, use {@link Collections#emptyList}
+   * instead.
+   *
+   * @return a new, empty {@code CopyOnWriteArrayList}
+   * @since 12.0
+   */
+  @J2ktIncompatible
+  @GwtIncompatible // CopyOnWriteArrayList
+  @InlineMe(
+      replacement = "new CopyOnWriteArrayList<>()",
+      imports = {"java.util.concurrent.CopyOnWriteArrayList"})
+  public static <E extends @Nullable Object> CopyOnWriteArrayList<E> newCopyOnWriteArrayList() {
+    return new CopyOnWriteArrayList<>();
+  }
+
+  /**
+   * Creates a {@code CopyOnWriteArrayList} instance containing the given elements.
+   *
+   * @param elements the elements that the list should contain, in order
+   * @return a new {@code CopyOnWriteArrayList} containing those elements
+   * @since 12.0
+   */
+  @J2ktIncompatible
+  @GwtIncompatible // CopyOnWriteArrayList
+  public static <E extends @Nullable Object> CopyOnWriteArrayList<E> newCopyOnWriteArrayList(
+      Iterable<? extends E> elements) {
+    // We copy elements to an ArrayList first, rather than incurring the
+    // quadratic cost of adding them to the COWAL directly.
+    Collection<? extends E> elementsCollection =
+        (elements instanceof Collection)
+            ? (Collection<? extends E>) elements
+            : newArrayList(elements);
+    return new CopyOnWriteArrayList<>(elementsCollection);
+  }
+
+  /**
+   * Returns an unmodifiable list containing the specified first element and backed by the specified
+   * array of additional elements. Changes to the {@code rest} array will be reflected in the
+   * returned list. Unlike {@link Arrays#asList}, the returned list is unmodifiable.
+   *
+   * <p>This is useful when a varargs method needs to use a signature such as {@code (Foo firstFoo,
+   * Foo... moreFoos)}, in order to avoid overload ambiguity or to enforce a minimum argument count.
+   *
+   * <p>The returned list is serializable and implements {@link RandomAccess}.
+   *
+   * @param first the first element
+   * @param rest an array of additional elements, possibly empty
+   * @return an unmodifiable list containing the specified elements
+   */
+  public static <E extends @Nullable Object> List<E> asList(@ParametricNullness E first, E[] rest) {
+    return new OnePlusArrayList<>(first, rest);
+  }
+
+  /**
+   * Returns an unmodifiable list containing the specified first and second element, and backed by
+   * the specified array of additional elements. Changes to the {@code rest} array will be reflected
+   * in the returned list. Unlike {@link Arrays#asList}, the returned list is unmodifiable.
+   *
+   * <p>This is useful when a varargs method needs to use a signature such as {@code (Foo firstFoo,
+   * Foo secondFoo, Foo... moreFoos)}, in order to avoid overload ambiguity or to enforce a minimum
+   * argument count.
+   *
+   * <p>The returned list is serializable and implements {@link RandomAccess}.
+   *
+   * @param first the first element
+   * @param second the second element
+   * @param rest an array of additional elements, possibly empty
+   * @return an unmodifiable list containing the specified elements
+   */
+  public static <E extends @Nullable Object> List<E> asList(
+      @ParametricNullness E first, @ParametricNullness E second, E[] rest) {
+    return new TwoPlusArrayList<>(first, second, rest);
+  }
+
+  /**
+   * @see Lists#asList(Object, Object[])
+   */
+  private static final class OnePlusArrayList<E extends @Nullable Object> extends AbstractList<E>
+      implements Serializable, RandomAccess {
+    @ParametricNullness final E first;
+    final E[] rest;
+
+    OnePlusArrayList(@ParametricNullness E first, E[] rest) {
+      this.first = first;
+      this.rest = checkNotNull(rest);
+    }
+
+    @Override
+    public int size() {
+      return IntMath.saturatedAdd(rest.length, 1);
+    }
+
+    @Override
+    @ParametricNullness
+    public E get(int index) {
+      // check explicitly so the IOOBE will have the right message
+      checkElementIndex(index, size());
+      return (index == 0) ? first : rest[index - 1];
+    }
+
+    @GwtIncompatible @J2ktIncompatible private static final long serialVersionUID = 0;
+  }
+
+  /**
+   * @see Lists#asList(Object, Object, Object[])
+   */
+  private static final class TwoPlusArrayList<E extends @Nullable Object> extends AbstractList<E>
+      implements Serializable, RandomAccess {
+    @ParametricNullness final E first;
+    @ParametricNullness final E second;
+    final E[] rest;
+
+    TwoPlusArrayList(@ParametricNullness E first, @ParametricNullness E second, E[] rest) {
+      this.first = first;
+      this.second = second;
+      this.rest = checkNotNull(rest);
+    }
+
+    @Override
+    public int size() {
+      return IntMath.saturatedAdd(rest.length, 2);
+    }
+
+    @Override
+    @ParametricNullness
+    public E get(int index) {
+      switch (index) {
+        case 0:
+          return first;
+        case 1:
+          return second;
+        default:
+          // check explicitly so the IOOBE will have the right message
+          checkElementIndex(index, size());
+          return rest[index - 2];
+      }
+    }
+
+    @GwtIncompatible @J2ktIncompatible private static final long serialVersionUID = 0;
+  }
+
+  /**
+   * Returns every possible list that can be formed by choosing one element from each of the given
+   * lists in order; the "n-ary <a href="http://en.wikipedia.org/wiki/Cartesian_product">Cartesian
+   * product</a>" of the lists. For example:
+   *
+   * {@snippet :
+   * Lists.cartesianProduct(ImmutableList.of(
+   *     ImmutableList.of(1, 2),
+   *     ImmutableList.of("A", "B", "C")))
+   * }
+   *
+   * <p>returns a list containing six lists in the following order:
+   *
+   * <ul>
+   *   <li>{@code ImmutableList.of(1, "A")}
+   *   <li>{@code ImmutableList.of(1, "B")}
+   *   <li>{@code ImmutableList.of(1, "C")}
+   *   <li>{@code ImmutableList.of(2, "A")}
+   *   <li>{@code ImmutableList.of(2, "B")}
+   *   <li>{@code ImmutableList.of(2, "C")}
+   * </ul>
+   *
+   * <p>The result is guaranteed to be in the "traditional", lexicographical order for Cartesian
+   * products that you would get from nesting for loops:
+   *
+   * {@snippet :
+   * for (B b0 : lists.get(0)) {
+   *   for (B b1 : lists.get(1)) {
+   *     ...
+   *     ImmutableList<B> tuple = ImmutableList.of(b0, b1, ...);
+   *     // operate on tuple
+   *   }
+   * }
+   * }
+   *
+   * <p>Note that if any input list is empty, the Cartesian product will also be empty. If no lists
+   * at all are provided (an empty list), the resulting Cartesian product has one element, an empty
+   * list (counter-intuitive, but mathematically consistent).
+   *
+   * <p><i>Performance notes:</i> while the cartesian product of lists of size {@code m, n, p} is a
+   * list of size {@code m x n x p}, its actual memory consumption is much smaller. When the
+   * cartesian product is constructed, the input lists are merely copied. Only as the resulting list
+   * is iterated are the individual lists created, and these are not retained after iteration.
+   *
+   * @param lists the lists to choose elements from, in the order that the elements chosen from
+   *     those lists should appear in the resulting lists
+   * @param <B> any common base class shared by all axes (often just {@link Object})
+   * @return the Cartesian product, as an immutable list containing immutable lists
+   * @throws IllegalArgumentException if the size of the cartesian product would be greater than
+   *     {@link Integer#MAX_VALUE}
+   * @throws NullPointerException if {@code lists}, any one of the {@code lists}, or any element of
+   *     a provided list is null
+   * @since 19.0
+   */
+  public static <B> List<List<B>> cartesianProduct(List<? extends List<? extends B>> lists) {
+    return CartesianList.create(lists);
+  }
+
+  /**
+   * Returns every possible list that can be formed by choosing one element from each of the given
+   * lists in order; the "n-ary <a href="http://en.wikipedia.org/wiki/Cartesian_product">Cartesian
+   * product</a>" of the lists. For example:
+   *
+   * {@snippet :
+   * Lists.cartesianProduct(ImmutableList.of(
+   *     ImmutableList.of(1, 2),
+   *     ImmutableList.of("A", "B", "C")))
+   * }
+   *
+   * <p>returns a list containing six lists in the following order:
+   *
+   * <ul>
+   *   <li>{@code ImmutableList.of(1, "A")}
+   *   <li>{@code ImmutableList.of(1, "B")}
+   *   <li>{@code ImmutableList.of(1, "C")}
+   *   <li>{@code ImmutableList.of(2, "A")}
+   *   <li>{@code ImmutableList.of(2, "B")}
+   *   <li>{@code ImmutableList.of(2, "C")}
+   * </ul>
+   *
+   * <p>The result is guaranteed to be in the "traditional", lexicographical order for Cartesian
+   * products that you would get from nesting for loops:
+   *
+   * {@snippet :
+   * for (B b0 : lists.get(0)) {
+   *   for (B b1 : lists.get(1)) {
+   *     ...
+   *     ImmutableList<B> tuple = ImmutableList.of(b0, b1, ...);
+   *     // operate on tuple
+   *   }
+   * }
+   * }
+   *
+   * <p>Note that if any input list is empty, the Cartesian product will also be empty. If no lists
+   * at all are provided (an empty list), the resulting Cartesian product has one element, an empty
+   * list (counter-intuitive, but mathematically consistent).
+   *
+   * <p><i>Performance notes:</i> while the cartesian product of lists of size {@code m, n, p} is a
+   * list of size {@code m x n x p}, its actual memory consumption is much smaller. When the
+   * cartesian product is constructed, the input lists are merely copied. Only as the resulting list
+   * is iterated are the individual lists created, and these are not retained after iteration.
+   *
+   * @param lists the lists to choose elements from, in the order that the elements chosen from
+   *     those lists should appear in the resulting lists
+   * @param <B> any common base class shared by all axes (often just {@link Object})
+   * @return the Cartesian product, as an immutable list containing immutable lists
+   * @throws IllegalArgumentException if the size of the cartesian product would be greater than
+   *     {@link Integer#MAX_VALUE}
+   * @throws NullPointerException if {@code lists}, any one of the {@code lists}, or any element of
+   *     a provided list is null
+   * @since 19.0
+   */
+  @SafeVarargs
+  public static <B> List<List<B>> cartesianProduct(List<? extends B>... lists) {
+    return cartesianProduct(Arrays.asList(lists));
+  }
+
+  /**
+   * Returns a list that applies {@code function} to each element of {@code fromList}. The returned
+   * list is a transformed view of {@code fromList}; changes to {@code fromList} will be reflected
+   * in the returned list and vice versa.
+   *
+   * <p>Since functions are not reversible, the transform is one-way and new items cannot be stored
+   * in the returned list. The {@code add}, {@code addAll} and {@code set} methods are unsupported
+   * in the returned list.
+   *
+   * <p>The function is applied lazily, invoked when needed. This is necessary for the returned list
+   * to be a view, but it means that the function will be applied many times for bulk operations
+   * like {@link List#contains} and {@link List#hashCode}. For this to perform well, {@code
+   * function} should be fast. To avoid lazy evaluation when the returned list doesn't need to be a
+   * view, copy the returned list into a new list of your choosing.
+   *
+   * <p>If {@code fromList} implements {@link RandomAccess}, so will the returned list. The returned
+   * list is threadsafe if the supplied list and function are.
+   *
+   * <p>If only a {@code Collection} or {@code Iterable} input is available, use {@link
+   * Collections2#transform} or {@link Iterables#transform}.
+   *
+   * <p><b>Note:</b> serializing the returned list is implemented by serializing {@code fromList},
+   * its contents, and {@code function} -- <i>not</i> by serializing the transformed values. This
+   * can lead to surprising behavior, so serializing the returned list is <b>not recommended</b>.
+   * Instead, copy the list using {@link ImmutableList#copyOf(Collection)} (for example), then
+   * serialize the copy. Other methods similar to this do not implement serialization at all for
+   * this reason.
+   *
+   * <p><b>Java 8+ users:</b> many use cases for this method are better addressed by {@link
+   * java.util.stream.Stream#map}. This method is not being deprecated, but we gently encourage you
+   * to migrate to streams.
+   */
+  public static <F extends @Nullable Object, T extends @Nullable Object> List<T> transform(
+      List<F> fromList, Function<? super F, ? extends T> function) {
+    return (fromList instanceof RandomAccess)
+        ? new TransformingRandomAccessList<>(fromList, function)
+        : new TransformingSequentialList<>(fromList, function);
+  }
+
+  /**
+   * Implementation of a sequential transforming list.
+   *
+   * @see Lists#transform
+   */
+  private static final class TransformingSequentialList<
+          F extends @Nullable Object, T extends @Nullable Object>
+      extends AbstractSequentialList<T> implements Serializable {
+    final List<F> fromList;
+    final Function<? super F, ? extends T> function;
+
+    TransformingSequentialList(List<F> fromList, Function<? super F, ? extends T> function) {
+      this.fromList = checkNotNull(fromList);
+      this.function = checkNotNull(function);
+    }
+
+    /**
+     * The default implementation inherited is based on iteration and removal of each element which
+     * can be overkill. That's why we forward this call directly to the backing list.
+     */
+    @Override
+    protected void removeRange(int fromIndex, int toIndex) {
+      fromList.subList(fromIndex, toIndex).clear();
+    }
+
+    @Override
+    public int size() {
+      return fromList.size();
+    }
+
+    @Override
+    public boolean isEmpty() {
+      return fromList.isEmpty();
+    }
+
+    @Override
+    public ListIterator<T> listIterator(int index) {
+      return new TransformedListIterator<F, T>(fromList.listIterator(index)) {
+        @Override
+        @ParametricNullness
+        T transform(@ParametricNullness F from) {
+          return function.apply(from);
+        }
+      };
+    }
+
+    @Override
+    public boolean removeIf(Predicate<? super T> filter) {
+      checkNotNull(filter);
+      return fromList.removeIf(element -> filter.test(function.apply(element)));
+    }
+
+    @GwtIncompatible @J2ktIncompatible private static final long serialVersionUID = 0;
+  }
+
+  /**
+   * Implementation of a transforming random access list. We try to make as many of these methods
+   * pass-through to the source list as possible so that the performance characteristics of the
+   * source list and transformed list are similar.
+   *
+   * @see Lists#transform
+   */
+  private static final class TransformingRandomAccessList<
+          F extends @Nullable Object, T extends @Nullable Object>
+      extends AbstractList<T> implements RandomAccess, Serializable {
+    final List<F> fromList;
+    final Function<? super F, ? extends T> function;
+
+    TransformingRandomAccessList(List<F> fromList, Function<? super F, ? extends T> function) {
+      this.fromList = checkNotNull(fromList);
+      this.function = checkNotNull(function);
+    }
+
+    /**
+     * The default implementation inherited is based on iteration and removal of each element which
+     * can be overkill. That's why we forward this call directly to the backing list.
+     */
+    @Override
+    protected void removeRange(int fromIndex, int toIndex) {
+      fromList.subList(fromIndex, toIndex).clear();
+    }
+
+    @Override
+    @ParametricNullness
+    public T get(int index) {
+      return function.apply(fromList.get(index));
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+      return listIterator();
+    }
+
+    @Override
+    public ListIterator<T> listIterator(int index) {
+      return new TransformedListIterator<F, T>(fromList.listIterator(index)) {
+        @Override
+        T transform(F from) {
+          return function.apply(from);
+        }
+      };
+    }
+
+    @Override
+    public boolean isEmpty() {
+      return fromList.isEmpty();
+    }
+
+    @Override
+    public boolean removeIf(Predicate<? super T> filter) {
+      checkNotNull(filter);
+      return fromList.removeIf(element -> filter.test(function.apply(element)));
+    }
+
+    @Override
+    @ParametricNullness
+    public T remove(int index) {
+      return function.apply(fromList.remove(index));
+    }
+
+    @Override
+    public int size() {
+      return fromList.size();
+    }
+
+    @GwtIncompatible @J2ktIncompatible private static final long serialVersionUID = 0;
+  }
+
+  /**
+   * Returns consecutive {@linkplain List#subList(int, int) sublists} of a list, each of the same
+   * size (the final list may be smaller). For example, partitioning a list containing {@code [a, b,
+   * c, d, e]} with a partition size of 3 yields {@code [[a, b, c], [d, e]]} -- an outer list
+   * containing two inner lists of three and two elements, all in the original order.
+   *
+   * <p>The outer list is unmodifiable, but reflects the latest state of the source list. The inner
+   * lists are sublist views of the original list, produced on demand using {@link List#subList(int,
+   * int)}, and are subject to all the usual caveats about modification as explained in that API.
+   *
+   * @param list the list to return consecutive sublists of
+   * @param size the desired size of each sublist (the last may be smaller)
+   * @return a list of consecutive sublists
+   * @throws IllegalArgumentException if {@code partitionSize} is nonpositive
+   */
+  public static <T extends @Nullable Object> List<List<T>> partition(List<T> list, int size) {
+    checkNotNull(list);
+    checkArgument(size > 0);
+    return (list instanceof RandomAccess)
+        ? new RandomAccessPartition<>(list, size)
+        : new Partition<>(list, size);
+  }
+
+  private static class Partition<T extends @Nullable Object> extends AbstractList<List<T>> {
+    final List<T> list;
+    final int size;
+
+    Partition(List<T> list, int size) {
+      this.list = list;
+      this.size = size;
+    }
+
+    @Override
+    public List<T> get(int index) {
+      checkElementIndex(index, size());
+      int start = index * size;
+      int end = min(start + size, list.size());
+      return list.subList(start, end);
+    }
+
+    @Override
+    public int size() {
+      return IntMath.divide(list.size(), size, RoundingMode.CEILING);
+    }
+
+    @Override
+    public boolean isEmpty() {
+      return list.isEmpty();
+    }
+  }
+
+  private static final class RandomAccessPartition<T extends @Nullable Object> extends Partition<T>
+      implements RandomAccess {
+    RandomAccessPartition(List<T> list, int size) {
+      super(list, size);
+    }
+  }
+
+  /**
+   * Returns a view of the specified string as an immutable list of {@code Character} values.
+   *
+   * @since 7.0
+   */
+  public static ImmutableList<Character> charactersOf(String string) {
+    return new StringAsImmutableList(checkNotNull(string));
+  }
+
+  /**
+   * Returns a view of the specified {@code CharSequence} as a {@code List<Character>}, viewing
+   * {@code sequence} as a sequence of Unicode code units. The view does not support any
+   * modification operations, but reflects any changes to the underlying character sequence.
+   *
+   * @param sequence the character sequence to view as a {@code List} of characters
+   * @return an {@code List<Character>} view of the character sequence
+   * @since 7.0
+   */
+  public static List<Character> charactersOf(CharSequence sequence) {
+    return new CharSequenceAsList(checkNotNull(sequence));
+  }
+
+  @SuppressWarnings("serial") // serialized using ImmutableList serialization
+  private static final class StringAsImmutableList extends ImmutableList<Character> {
+
+    private final String string;
+
+    StringAsImmutableList(String string) {
+      this.string = string;
+    }
+
+    @Override
+    public int indexOf(@Nullable Object object) {
+      return (object instanceof Character) ? string.indexOf((Character) object) : -1;
+    }
+
+    @Override
+    public int lastIndexOf(@Nullable Object object) {
+      return (object instanceof Character) ? string.lastIndexOf((Character) object) : -1;
+    }
+
+    @Override
+    public ImmutableList<Character> subList(int fromIndex, int toIndex) {
+      checkPositionIndexes(fromIndex, toIndex, size()); // for GWT
+      return charactersOf(string.substring(fromIndex, toIndex));
+    }
+
+    @Override
+    boolean isPartialView() {
+      return false;
+    }
+
+    @Override
+    public Character get(int index) {
+      checkElementIndex(index, size()); // for GWT
+      return string.charAt(index);
+    }
+
+    @Override
+    public int size() {
+      return string.length();
+    }
+
+    // redeclare to help optimizers with b/310253115
+    @SuppressWarnings("RedundantOverride")
+    @Override
+    @J2ktIncompatible
+    @GwtIncompatible
+        Object writeReplace() {
+      return super.writeReplace();
+    }
+  }
+
+  private static final class CharSequenceAsList extends AbstractList<Character> {
+    private final CharSequence sequence;
+
+    CharSequenceAsList(CharSequence sequence) {
+      this.sequence = sequence;
+    }
+
+    @Override
+    public Character get(int index) {
+      checkElementIndex(index, size()); // for GWT
+      return sequence.charAt(index);
+    }
+
+    @Override
+    public int size() {
+      return sequence.length();
+    }
+  }
+
+  /**
+   * Returns a reversed view of the specified list. For example, {@code
+   * Lists.reverse(Arrays.asList(1, 2, 3))} returns a list containing {@code 3, 2, 1}. The returned
+   * list is backed by this list, so changes in the returned list are reflected in this list, and
+   * vice-versa. The returned list supports all of the optional list operations supported by this
+   * list.
+   *
+   * <p>The returned list is random-access if the specified list is random access.
+   *
+   * @since 7.0
+   */
+  public static <T extends @Nullable Object> List<T> reverse(List<T> list) {
+    if (list instanceof ImmutableList) {
+      // Avoid nullness warnings.
+      List<?> reversed = ((ImmutableList<?>) list).reverse();
+      @SuppressWarnings("unchecked")
+      List<T> result = (List<T>) reversed;
+      return result;
+    } else if (list instanceof ReverseList) {
+      return ((ReverseList<T>) list).getForwardList();
+    } else if (list instanceof RandomAccess) {
+      return new RandomAccessReverseList<>(list);
+    } else {
+      return new ReverseList<>(list);
+    }
+  }
+
+  private static class ReverseList<T extends @Nullable Object> extends AbstractList<T> {
+    private final List<T> forwardList;
+
+    ReverseList(List<T> forwardList) {
+      this.forwardList = checkNotNull(forwardList);
+    }
+
+    List<T> getForwardList() {
+      return forwardList;
+    }
+
+    private int reverseIndex(int index) {
+      int size = size();
+      checkElementIndex(index, size);
+      return (size - 1) - index;
+    }
+
+    private int reversePosition(int index) {
+      int size = size();
+      checkPositionIndex(index, size);
+      return size - index;
+    }
+
+    @Override
+    public void add(int index, @ParametricNullness T element) {
+      forwardList.add(reversePosition(index), element);
+    }
+
+    @Override
+    public void clear() {
+      forwardList.clear();
+    }
+
+    @Override
+    @ParametricNullness
+    public T remove(int index) {
+      return forwardList.remove(reverseIndex(index));
+    }
+
+    @Override
+    protected void removeRange(int fromIndex, int toIndex) {
+      subList(fromIndex, toIndex).clear();
+    }
+
+    @Override
+    @ParametricNullness
+    public T set(int index, @ParametricNullness T element) {
+      return forwardList.set(reverseIndex(index), element);
+    }
+
+    @Override
+    @ParametricNullness
+    public T get(int index) {
+      return forwardList.get(reverseIndex(index));
+    }
+
+    @Override
+    public int size() {
+      return forwardList.size();
+    }
+
+    @Override
+    public List<T> subList(int fromIndex, int toIndex) {
+      checkPositionIndexes(fromIndex, toIndex, size());
+      return reverse(forwardList.subList(reversePosition(toIndex), reversePosition(fromIndex)));
+    }
+
+    @Override
+    public Iterator<T> iterator() {
+      return listIterator();
+    }
+
+    @Override
+    public ListIterator<T> listIterator(int index) {
+      int start = reversePosition(index);
+      ListIterator<T> forwardIterator = forwardList.listIterator(start);
+      return new ListIterator<T>() {
+
+        boolean canRemoveOrSet;
+
+        @Override
+        public void add(@ParametricNullness T e) {
+          forwardIterator.add(e);
+          forwardIterator.previous();
+          canRemoveOrSet = false;
+        }
+
+        @Override
+        public boolean hasNext() {
+          return forwardIterator.hasPrevious();
+        }
+
+        @Override
+        public boolean hasPrevious() {
+          return forwardIterator.hasNext();
+        }
+
+        @Override
+        @ParametricNullness
+        public T next() {
+          if (!hasNext()) {
+            throw new NoSuchElementException();
+          }
+          canRemoveOrSet = true;
+          return forwardIterator.previous();
+        }
+
+        @Override
+        public int nextIndex() {
+          return reversePosition(forwardIterator.nextIndex());
+        }
+
+        @Override
+        @ParametricNullness
+        public T previous() {
+          if (!hasPrevious()) {
+            throw new NoSuchElementException();
+          }
+          canRemoveOrSet = true;
+          return forwardIterator.next();
+        }
+
+        @Override
+        public int previousIndex() {
+          return nextIndex() - 1;
+        }
+
+        @Override
+        public void remove() {
+          checkRemove(canRemoveOrSet);
+          forwardIterator.remove();
+          canRemoveOrSet = false;
+        }
+
+        @Override
+        public void set(@ParametricNullness T e) {
+          checkState(canRemoveOrSet);
+          forwardIterator.set(e);
+        }
+      };
+    }
+  }
+
+  private static final class RandomAccessReverseList<T extends @Nullable Object>
+      extends ReverseList<T> implements RandomAccess {
+    RandomAccessReverseList(List<T> forwardList) {
+      super(forwardList);
+    }
+  }
+
+  /** An implementation of {@link List#hashCode()}. */
+  static int hashCodeImpl(List<?> list) {
+    // TODO(lowasser): worth optimizing for RandomAccess?
+    int hashCode = 1;
+    for (Object o : list) {
+      hashCode = 31 * hashCode + (o == null ? 0 : o.hashCode());
+
+      hashCode = ~~hashCode;
+      // needed to deal with GWT integer overflow
+    }
+    return hashCode;
+  }
+
+  /** An implementation of {@link List#equals(Object)}. */
+  @SuppressWarnings("ReferenceEquality") // == fast path
+  static boolean equalsImpl(List<?> thisList, @Nullable Object other) {
+    if (other == checkNotNull(thisList)) {
+      return true;
+    }
+    if (!(other instanceof List)) {
+      return false;
+    }
+    List<?> otherList = (List<?>) other;
+    int size = thisList.size();
+    if (size != otherList.size()) {
+      return false;
+    }
+    if (thisList instanceof RandomAccess && otherList instanceof RandomAccess) {
+      // avoid allocation and use the faster loop
+      for (int i = 0; i < size; i++) {
+        if (!Objects.equals(thisList.get(i), otherList.get(i))) {
+          return false;
+        }
+      }
+      return true;
+    } else {
+      return elementsEqual(thisList.iterator(), otherList.iterator());
+    }
+  }
+
+  /** An implementation of {@link List#addAll(int, Collection)}. */
+  static <E extends @Nullable Object> boolean addAllImpl(
+      List<E> list, int index, Iterable<? extends E> elements) {
+    boolean changed = false;
+    ListIterator<E> listIterator = list.listIterator(index);
+    for (E e : elements) {
+      listIterator.add(e);
+      changed = true;
+    }
+    return changed;
+  }
+
+  /** An implementation of {@link List#indexOf(Object)}. */
+  static int indexOfImpl(List<?> list, @Nullable Object element) {
+    if (list instanceof RandomAccess) {
+      return indexOfRandomAccess(list, element);
+    } else {
+      ListIterator<?> listIterator = list.listIterator();
+      while (listIterator.hasNext()) {
+        if (Objects.equals(element, listIterator.next())) {
+          return listIterator.previousIndex();
+        }
+      }
+      return -1;
+    }
+  }
+
+  private static int indexOfRandomAccess(List<?> list, @Nullable Object element) {
+    int size = list.size();
+    if (element == null) {
+      for (int i = 0; i < size; i++) {
+        if (list.get(i) == null) {
+          return i;
+        }
+      }
+    } else {
+      for (int i = 0; i < size; i++) {
+        if (element.equals(list.get(i))) {
+          return i;
+        }
+      }
+    }
+    return -1;
+  }
+
+  /** An implementation of {@link List#lastIndexOf(Object)}. */
+  static int lastIndexOfImpl(List<?> list, @Nullable Object element) {
+    if (list instanceof RandomAccess) {
+      return lastIndexOfRandomAccess(list, element);
+    } else {
+      ListIterator<?> listIterator = list.listIterator(list.size());
+      while (listIterator.hasPrevious()) {
+        if (Objects.equals(element, listIterator.previous())) {
+          return listIterator.nextIndex();
+        }
+      }
+      return -1;
+    }
+  }
+
+  private static int lastIndexOfRandomAccess(List<?> list, @Nullable Object element) {
+    if (element == null) {
+      for (int i = list.size() - 1; i >= 0; i--) {
+        if (list.get(i) == null) {
+          return i;
+        }
+      }
+    } else {
+      for (int i = list.size() - 1; i >= 0; i--) {
+        if (element.equals(list.get(i))) {
+          return i;
+        }
+      }
+    }
+    return -1;
+  }
+
+  /** Returns an implementation of {@link List#listIterator(int)}. */
+  static <E extends @Nullable Object> ListIterator<E> listIteratorImpl(List<E> list, int index) {
+    return new AbstractListWrapper<>(list).listIterator(index);
+  }
+
+  /** An implementation of {@link List#subList(int, int)}. */
+  static <E extends @Nullable Object> List<E> subListImpl(
+      List<E> list, int fromIndex, int toIndex) {
+    List<E> wrapper;
+    if (list instanceof RandomAccess) {
+      wrapper =
+          new RandomAccessListWrapper<E>(list) {
+            @Override
+            public ListIterator<E> listIterator(int index) {
+              return backingList.listIterator(index);
+            }
+
+            @GwtIncompatible @J2ktIncompatible             private static final long serialVersionUID = 0;
+          };
+    } else {
+      wrapper =
+          new AbstractListWrapper<E>(list) {
+            @Override
+            public ListIterator<E> listIterator(int index) {
+              return backingList.listIterator(index);
+            }
+
+            @GwtIncompatible @J2ktIncompatible             private static final long serialVersionUID = 0;
+          };
+    }
+    return wrapper.subList(fromIndex, toIndex);
+  }
+
+  private static class AbstractListWrapper<E extends @Nullable Object> extends AbstractList<E> {
+    final List<E> backingList;
+
+    AbstractListWrapper(List<E> backingList) {
+      this.backingList = checkNotNull(backingList);
+    }
+
+    @Override
+    public void add(int index, @ParametricNullness E element) {
+      backingList.add(index, element);
+    }
+
+    @Override
+    public boolean addAll(int index, Collection<? extends E> c) {
+      return backingList.addAll(index, c);
+    }
+
+    @Override
+    @ParametricNullness
+    public E get(int index) {
+      return backingList.get(index);
+    }
+
+    @Override
+    @ParametricNullness
+    public E remove(int index) {
+      return backingList.remove(index);
+    }
+
+    @Override
+    @ParametricNullness
+    public E set(int index, @ParametricNullness E element) {
+      return backingList.set(index, element);
+    }
+
+    @Override
+    public boolean contains(@Nullable Object o) {
+      return backingList.contains(o);
+    }
+
+    @Override
+    public int size() {
+      return backingList.size();
+    }
+  }
+
+  private static class RandomAccessListWrapper<E extends @Nullable Object>
+      extends AbstractListWrapper<E> implements RandomAccess {
+    RandomAccessListWrapper(List<E> backingList) {
+      super(backingList);
+    }
+  }
+}
+
+
+// ==== ByteStreams.java ====
+/*
+ * Copyright (C) 2007 The Guava Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
+ * in compliance with the License. You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under the License
+ * is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+ * or implied. See the License for the specific language governing permissions and limitations under
+ * the License.
+ */
+
+package com.google.common.io;
+
+import static com.google.common.base.Preconditions.checkArgument;
+import static com.google.common.base.Preconditions.checkNotNull;
+import static com.google.common.base.Preconditions.checkPositionIndex;
+import static com.google.common.base.Preconditions.checkPositionIndexes;
+import static java.lang.Math.max;
+import static java.lang.Math.min;
+import static java.lang.System.arraycopy;
+
+import com.google.common.annotations.GwtIncompatible;
+import com.google.common.annotations.J2ktIncompatible;
+import com.google.common.math.IntMath;
+import com.google.errorprone.annotations.CanIgnoreReturnValue;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.DataInput;
+import java.io.DataInputStream;
+import java.io.DataOutput;
+import java.io.DataOutputStream;
+import java.io.EOFException;
+import java.io.FilterInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.nio.ByteBuffer;
+import java.nio.channels.FileChannel;
+import java.nio.channels.ReadableByteChannel;
+import java.nio.channels.WritableByteChannel;
+import java.util.ArrayDeque;
+import java.util.Arrays;
+import java.util.Queue;
+import org.jspecify.annotations.Nullable;
+
+/**
+ * Provides utility methods for working with byte arrays and I/O streams.
+ *
+ * @author Chris Nokleberg
+ * @author Colin Decker
+ * @since 1.0
+ */
+@GwtIncompatible
+public final class ByteStreams {
+
+  private static final int BUFFER_SIZE = 8192;
+
+  /** Creates a new byte array for buffering reads or writes. */
+  static byte[] createBuffer() {
+    return new byte[BUFFER_SIZE];
+  }
+
+  /**
+   * There are three methods to implement {@link FileChannel#transferTo(long, long,
+   * WritableByteChannel)}:
+   *
+   * <ol>
+   *   <li>Use sendfile(2) or equivalent. Requires that both the input channel and the output
+   *       channel have their own file descriptors. Generally this only happens when both channels
+   *       are files or sockets. This performs zero copies - the bytes never enter userspace.
+   *   <li>Use mmap(2) or equivalent. Requires that either the input channel or the output channel
+   *       have file descriptors. Bytes are copied from the file into a kernel buffer, then directly
+   *       into the other buffer (userspace). Note that if the file is very large, a naive
+   *       implementation will effectively put the whole file in memory. On many systems with paging
+   *       and virtual memory, this is not a problem - because it is mapped read-only, the kernel
+   *       can always page it to disk "for free". However, on systems where killing processes
+   *       happens all the time in normal conditions (i.e., android) the OS must make a tradeoff
+   *       between paging memory and killing other processes - so allocating a gigantic buffer and
+   *       then sequentially accessing it could result in other processes dying. This is solvable
+   *       via madvise(2), but that obviously doesn't exist in java.
+   *   <li>Ordinary copy. Kernel copies bytes into a kernel buffer, from a kernel buffer into a
+   *       userspace buffer (byte[] or ByteBuffer), then copies them from that buffer into the
+   *       destination channel.
+   * </ol>
+   *
+   * This value is intended to be large enough to make the overhead of system calls negligible,
+   * without being so large that it causes problems for systems with atypical memory management if
+   * approaches 2 or 3 are used.
+   */
+  private static final int ZERO_COPY_CHUNK_SIZE = 512 * 1024;
+
+  private ByteStreams() {}
+
+  /**
+   * Copies all bytes from the input stream to the output stream. Does not close or flush either
+   * stream.
+   *
+   * <p><b>Java 9 users and later:</b> this method should be treated as deprecated; use the
+   * equivalent {@link InputStream#transferTo} method instead.
+   *
+   * @param from the input stream to read from
+   * @param to the output stream to write to
+   * @return the number of bytes copied
+   * @throws IOException if an I/O error occurs
+   */
+  @CanIgnoreReturnValue
+  public static long copy(InputStream from, OutputStream to) throws IOException {
+    checkNotNull(from);
+    checkNotNull(to);
+    byte[] buf = createBuffer();
+    long total = 0;
+    while (true) {
+      int r = from.read(buf);
+      if (r == -1) {
+        break;
+      }
+      to.write(buf, 0, r);
+      total += r;
+    }
+    return total;
+  }
+
+  /**
+   * Copies all bytes from the readable channel to the writable channel. Does not close or flush
+   * either channel.
+   *
+   * @param from the readable channel to read from
+   * @param to the writable channel to write to
+   * @return the number of bytes copied
+   * @throws IOException if an I/O error occurs
+   */
+  @J2ktIncompatible
+  @CanIgnoreReturnValue
+  public static long copy(ReadableByteChannel from, WritableByteChannel to) throws IOException {
+    checkNotNull(from);
+    checkNotNull(to);
+    if (from instanceof FileChannel) {
+      FileChannel sourceChannel = (FileChannel) from;
+      long oldPosition = sourceChannel.position();
+      long position = oldPosition;
+      long copied;
+      do {
+        copied = sourceChannel.transferTo(position, ZERO_COPY_CHUNK_SIZE, to);
+        position += copied;
+        sourceChannel.position(position);
+      } while (copied > 0 || position < sourceChannel.size());
+      return position - oldPosition;
+    }
+
+    ByteBuffer buf = ByteBuffer.wrap(createBuffer());
+    long total = 0;
+    while (from.read(buf) != -1) {
+      Java8Compatibility.flip(buf);
+      while (buf.hasRemaining()) {
+        total += to.write(buf);
+      }
+      Java8Compatibility.clear(buf);
+    }
+    return total;
+  }
+
+  /** Max array length on JVM. */
+  private static final int MAX_ARRAY_LEN = Integer.MAX_VALUE - 8;
+
+  /** Large enough to never need to expand, given the geometric progression of buffer sizes. */
+  private static final int TO_BYTE_ARRAY_DEQUE_SIZE = 20;
+
+  /**
+   * Returns a byte array containing the bytes from the buffers already in {@code bufs} (which have
+   * a total combined length of {@code totalLen} bytes) followed by all bytes remaining in the given
+   * input stream.
+   */
+  private static byte[] toByteArrayInternal(InputStream in, Queue<byte[]> bufs, int totalLen)
+      throws IOException {
+    // Roughly size to match what has been read already. Some file systems, such as procfs, return 0
+    // as their length. These files are very small, so it's wasteful to allocate an 8KB buffer.
+    int initialBufferSize = min(BUFFER_SIZE, max(128, Integer.highestOneBit(totalLen) * 2));
+    // Starting with an 8k buffer, double the size of each successive buffer. Smaller buffers
+    // quadruple in size until they reach 8k, to minimize the number of small reads for longer
+    // streams. Buffers are retained in a deque so that there's no copying between buffers while
+    // reading and so all of the bytes in each new allocated buffer are available for reading from
+    // the stream.
+    for (int bufSize = initialBufferSize;
+        totalLen < MAX_ARRAY_LEN;
+        bufSize = IntMath.saturatedMultiply(bufSize, bufSize < 4096 ? 4 : 2)) {
+      byte[] buf = new byte[min(bufSize, MAX_ARRAY_LEN - totalLen)];
+      bufs.add(buf);
+      int off = 0;
+      while (off < buf.length) {
+        // always OK to fill buf; its size plus the rest of bufs is never more than MAX_ARRAY_LEN
+        int r = in.read(buf, off, buf.length - off);
+        if (r == -1) {
+          return combineBuffers(bufs, totalLen);
+        }
+        off += r;
+        totalLen += r;
+      }
+    }
+
+    // read MAX_ARRAY_LEN bytes without seeing end of stream
+    if (in.read() == -1) {
+      // oh, there's the end of the stream
+      return combineBuffers(bufs, MAX_ARRAY_LEN);
+    } else {
+      throw new OutOfMemoryError("input is too large to fit in a byte array");
+    }
+  }
+
+  private static byte[] combineBuffers(Queue<byte[]> bufs, int totalLen) {
+    if (bufs.isEmpty()) {
+      return new byte[0];
+    }
+    byte[] result = bufs.remove();
+    if (result.length == totalLen) {
+      return result;
+    }
+    int remaining = totalLen - result.length;
+    result = Arrays.copyOf(result, totalLen);
+    while (remaining > 0) {
+      byte[] buf = bufs.remove();
+      int bytesToCopy = min(remaining, buf.length);
+      int resultOffset = totalLen - remaining;
+      arraycopy(buf, 0, result, resultOffset, bytesToCopy);
+      remaining -= bytesToCopy;
+    }
+    return result;
+  }
+
+  /**
+   * Reads all bytes from an input stream into a byte array. Does not close the stream.
+   *
+   * <p><b>Java 9+ users:</b> use {@code in#readAllBytes()} instead.
+   *
+   * @param in the input stream to read from
+   * @return a byte array containing all the bytes from the stream
+   * @throws IOException if an I/O error occurs
+   */
+  public static byte[] toByteArray(InputStream in) throws IOException {
+    checkNotNull(in);
+    return toByteArrayInternal(in, new ArrayDeque<byte[]>(TO_BYTE_ARRAY_DEQUE_SIZE), 0);
+  }
+
+  /**
+   * Reads all bytes from an input stream into a byte array. The given expected size is used to
+   * create an initial byte array, but if the actual number of bytes read from the stream differs,
+   * the correct result will be returned anyway.
+   */
+  static byte[] toByteArray(InputStream in, long expectedSize) throws IOException {
+    checkArgument(expectedSize >= 0, "expectedSize (%s) must be non-negative", expectedSize);
+    if (expectedSize > MAX_ARRAY_LEN) {
+      throw new OutOfMemoryError(expectedSize + " bytes is too large to fit in a byte array");
+    }
+
+    byte[] bytes = new byte[(int) expectedSize];
+    int remaining = (int) expectedSize;
+
+    while (remaining > 0) {
+      int off = (int) expectedSize - remaining;
+      int read = in.read(bytes, off, remaining);
+      if (read == -1) {
+        // end of stream before reading expectedSize bytes
+        // just return the bytes read so far
+        return Arrays.copyOf(bytes, off);
+      }
+      remaining -= read;
+    }
+
+    // bytes is now full
+    int b = in.read();
+    if (b == -1) {
+      return bytes;
+    }
+
+    // the stream was longer, so read the rest normally
+    Queue<byte[]> bufs = new ArrayDeque<>(TO_BYTE_ARRAY_DEQUE_SIZE + 2);
+    bufs.add(bytes);
+    bufs.add(new byte[] {(byte) b});
+    return toByteArrayInternal(in, bufs, bytes.length + 1);
+  }
+
+  /**
+   * Reads and discards data from the given {@code InputStream} until the end of the stream is
+   * reached. Returns the total number of bytes read. Does not close the stream.
+   *
+   * @since 20.0
+   */
+  @CanIgnoreReturnValue
+  public static long exhaust(InputStream in) throws IOException {
+    long total = 0;
+    long read;
+    byte[] buf = createBuffer();
+    while ((read = in.read(buf)) != -1) {
+      total += read;
+    }
+    return total;
+  }
+
+  /**
+   * Returns a new {@link ByteArrayDataInput} instance to read from the {@code bytes} array from the
+   * beginning.
+   */
+  @J2ktIncompatible
+  public static ByteArrayDataInput newDataInput(byte[] bytes) {
+    return newDataInput(new ByteArrayInputStream(bytes));
+  }
+
+  /**
+   * Returns a new {@link ByteArrayDataInput} instance to read from the {@code bytes} array,
+   * starting at the given position.
+   *
+   * @throws IndexOutOfBoundsException if {@code start} is negative or greater than the length of
+   *     the array
+   */
+  @J2ktIncompatible
+  public static ByteArrayDataInput newDataInput(byte[] bytes, int start) {
+    checkPositionIndex(start, bytes.length);
+    return newDataInput(new ByteArrayInputStream(bytes, start, bytes.length - start));
+  }
+
+  /**
+   * Returns a new {@link ByteArrayDataInput} instance to read from the given {@code
+   * ByteArrayInputStream}. The given input stream is not reset before being read from by the
+   * returned {@code ByteArrayDataInput}.
+   *
+   * @since 17.0
+   */
+  @J2ktIncompatible
+  public static ByteArrayDataInput newDataInput(ByteArrayInputStream byteArrayInputStream) {
+    return new ByteArrayDataInputStream(checkNotNull(byteArrayInputStream));
+  }
+
+  @J2ktIncompatible
+  private static final class ByteArrayDataInputStream implements ByteArrayDataInput {
+    final DataInput input;
+
+    ByteArrayDataInputStream(ByteArrayInputStream byteArrayInputStream) {
+      this.input = new DataInputStream(byteArrayInputStream);
+    }
+
+    @Override
+    public void readFully(byte[] b) {
+      try {
+        input.readFully(b);
+      } catch (IOException e) {
+        throw new IllegalStateException(e);
+      }
+    }
+
+    @Override
+    public void readFully(byte[] b, int off, int len) {
+      try {
+        input.readFully(b, off, len);
+      } catch (IOException e) {
+        throw new IllegalStateException(e);
+      }
+    }
+
+    @Override
+    public int skipBytes(int n) {
+      try {
+        return input.skipBytes(n);
+      } catch (IOException e) {
+        throw new IllegalStateException(e);
+      }
+    }
+
+    @Override
+    public boolean readBoolean() {
+      try {
+        return input.readBoolean();
+      } catch (IOException e) {
+        throw new IllegalStateException(e);
+      }
+    }
+
+    @Override
+    public byte readByte() {
+      try {
+        return input.readByte();
+      } catch (EOFException e) {
+        throw new IllegalStateException(e);
+      } catch (IOException impossible) {
+        throw new AssertionError(impossible);
+      }
+    }
+
+    @Override
+    public int readUnsignedByte() {
+      try {
+        return input.readUnsignedByte();
+      } catch (IOException e) {
+        throw new IllegalStateException(e);
+      }
+    }
+
+    @Override
+    public short readShort() {
+      try {
+        return input.readShort();
+      } catch (IOException e) {
+        throw new IllegalStateException(e);
+      }
+    }
+
+    @Override
+    public int readUnsignedShort() {
+      try {
+        return input.readUnsignedShort();
+      } catch (IOException e) {
+        throw new IllegalStateException(e);
+      }
+    }
+
+    @Override
+    public char readChar() {
+      try {
+        return input.readChar();
+      } catch (IOException e) {
+        throw new IllegalStateException(e);
+      }
+    }
+
+    @Override
+    public int readInt() {
+      try {
+        return input.readInt();
+      } catch (IOException e) {
+        throw new IllegalStateException(e);
+      }
+    }
+
+    @Override
+    public long readLong() {
+      try {
+        return input.readLong();
+      } catch (IOException e) {
+        throw new IllegalStateException(e);
+      }
+    }
+
+    @Override
+    public float readFloat() {
+      try {
+        return input.readFloat();
+      } catch (IOException e) {
+        throw new IllegalStateException(e);
+      }
+    }
+
+    @Override
+    public double readDouble() {
+      try {
+        return input.readDouble();
+      } catch (IOException e) {
+        throw new IllegalStateException(e);
+      }
+    }
+
+    @Override
+    public @Nullable String readLine() {
+      try {
+        return input.readLine();
+      } catch (IOException e) {
+        throw new IllegalStateException(e);
+      }
+    }
+
+    @Override
+    public String readUTF() {
+      try {
+        return input.readUTF();
+      } catch (IOException e) {
+        throw new IllegalStateException(e);
+      }
+    }
+  }
+
+  /** Returns a new {@link ByteArrayDataOutput} instance with a default size. */
+  @J2ktIncompatible
+  public static ByteArrayDataOutput newDataOutput() {
+    return newDataOutput(new ByteArrayOutputStream());
+  }
+
+  /**
+   * Returns a new {@link ByteArrayDataOutput} instance sized to hold {@code size} bytes before
+   * resizing.
+   *
+   * @throws IllegalArgumentException if {@code size} is negative
+   */
+  @J2ktIncompatible
+  public static ByteArrayDataOutput newDataOutput(int size) {
+    // When called at high frequency, boxing size generates too much garbage,
+    // so avoid doing that if we can.
+    checkArgument(size >= 0, "Invalid size: %s", size);
+    return newDataOutput(new ByteArrayOutputStream(size));
+  }
+
+  /**
+   * Returns a new {@link ByteArrayDataOutput} instance which writes to the given {@code
+   * ByteArrayOutputStream}. The given output stream is not reset before being written to by the
+   * returned {@code ByteArrayDataOutput} and new data will be appended to any existing content.
+   *
+   * <p>Note that if the given output stream was not empty or is modified after the {@code
+   * ByteArrayDataOutput} is created, the contract for {@link ByteArrayDataOutput#toByteArray} will
+   * not be honored (the bytes returned in the byte array may not be exactly what was written via
+   * calls to {@code ByteArrayDataOutput}).
+   *
+   * @since 17.0
+   */
+  @J2ktIncompatible
+  public static ByteArrayDataOutput newDataOutput(ByteArrayOutputStream byteArrayOutputStream) {
+    return new ByteArrayDataOutputStream(checkNotNull(byteArrayOutputStream));
+  }
+
+  @J2ktIncompatible
+  private static final class ByteArrayDataOutputStream implements ByteArrayDataOutput {
+
+    final DataOutput output;
+    final ByteArrayOutputStream byteArrayOutputStream;
+
+    ByteArrayDataOutputStream(ByteArrayOutputStream byteArrayOutputStream) {
+      this.byteArrayOutputStream = byteArrayOutputStream;
+      output = new DataOutputStream(byteArrayOutputStream);
+    }
+
+    @Override
+    public void write(int b) {
+      try {
+        output.write(b);
+      } catch (IOException impossible) {
+        throw new AssertionError(impossible);
+      }
+    }
+
+    @Override
+    public void write(byte[] b) {
+      try {
+        output.write(b);
+      } catch (IOException impossible) {
+        throw new AssertionError(impossible);
+      }
+    }
+
+    @Override
+    public void write(byte[] b, int off, int len) {
+      try {
+        output.write(b, off, len);
+      } catch (IOException impossible) {
+        throw new AssertionError(impossible);
+      }
+    }
+
+    @Override
+    public void writeBoolean(boolean v) {
+      try {
+        output.writeBoolean(v);
+      } catch (IOException impossible) {
+        throw new AssertionError(impossible);
+      }
+    }
+
+    @Override
+    public void writeByte(int v) {
+      try {
+        output.writeByte(v);
+      } catch (IOException impossible) {
+        throw new AssertionError(impossible);
+      }
+    }
+
+    @Override
+    public void writeBytes(String s) {
+      try {
+        output.writeBytes(s);
+      } catch (IOException impossible) {
+        throw new AssertionError(impossible);
+      }
+    }
+
+    @Override
+    public void writeChar(int v) {
+      try {
+        output.writeChar(v);
+      } catch (IOException impossible) {
+        throw new AssertionError(impossible);
+      }
+    }
+
+    @Override
+    public void writeChars(String s) {
+      try {
+        output.writeChars(s);
+      } catch (IOException impossible) {
+        throw new AssertionError(impossible);
+      }
+    }
+
+    @Override
+    public void writeDouble(double v) {
+      try {
+        output.writeDouble(v);
+      } catch (IOException impossible) {
+        throw new AssertionError(impossible);
+      }
+    }
+
+    @Override
+    public void writeFloat(float v) {
+      try {
+        output.writeFloat(v);
+      } catch (IOException impossible) {
+        throw new AssertionError(impossible);
+      }
+    }
+
+    @Override
+    public void writeInt(int v) {
+      try {
+        output.writeInt(v);
+      } catch (IOException impossible) {
+        throw new AssertionError(impossible);
+      }
+    }
+
+    @Override
+    public void writeLong(long v) {
+      try {
+        output.writeLong(v);
+      } catch (IOException impossible) {
+        throw new AssertionError(impossible);
+      }
+    }
+
+    @Override
+    public void writeShort(int v) {
+      try {
+        output.writeShort(v);
+      } catch (IOException impossible) {
+        throw new AssertionError(impossible);
+      }
+    }
+
+    @Override
+    public void writeUTF(String s) {
+      try {
+        output.writeUTF(s);
+      } catch (IOException impossible) {
+        throw new AssertionError(impossible);
+      }
+    }
+
+    @Override
+    public byte[] toByteArray() {
+      return byteArrayOutputStream.toByteArray();
+    }
+  }
+
+  private static final OutputStream NULL_OUTPUT_STREAM =
+      new OutputStream() {
+        /** Discards the specified byte. */
+        @Override
+        public void write(int b) {}
+
+        /** Discards the specified byte array. */
+        @Override
+        public void write(byte[] b) {
+          checkNotNull(b);
+        }
+
+        /** Discards the specified byte array. */
+        @Override
+        public void write(byte[] b, int off, int len) {
+          checkNotNull(b);
+          checkPositionIndexes(off, off + len, b.length);
+        }
+
+        @Override
+        public String toString() {
+          return "ByteStreams.nullOutputStream()";
+        }
+      };
+
+  /**
+   * Returns an {@link OutputStream} that simply discards written bytes.
+   *
+   * <p><b>Java 11+ users:</b> use {@link OutputStream#nullOutputStream()} instead. Note that the
+   * {@link ByteStreams} method returns a singleton stream whose {@code close} method has no effect,
+   * while the {@link OutputStream} method returns a new instance whose {@code write} methods throw
+   * if called on a closed stream.
+   *
+   * @since 14.0 (since 1.0 as com.google.common.io.NullOutputStream)
+   */
+  public static OutputStream nullOutputStream() {
+    return NULL_OUTPUT_STREAM;
+  }
+
+  /**
+   * Wraps a {@link InputStream}, limiting the number of bytes which can be read.
+   *
+   * @param in the input stream to be wrapped
+   * @param limit the maximum number of bytes to be read
+   * @return a length-limited {@link InputStream}
+   * @since 14.0 (since 1.0 as com.google.common.io.LimitInputStream)
+   */
+  @J2ktIncompatible
+  public static InputStream limit(InputStream in, long limit) {
+    return new LimitedInputStream(in, limit);
+  }
+
+  @J2ktIncompatible
+  private static final class LimitedInputStream extends FilterInputStream {
+
+    private long left;
+    private long mark = -1;
+
+    LimitedInputStream(InputStream in, long limit) {
+      super(in);
+      checkNotNull(in);
+      checkArgument(limit >= 0, "limit must be non-negative");
+      left = limit;
+    }
+
+    @Override
+    public int available() throws IOException {
+      return (int) min(in.available(), left);
+    }
+
+    // it's okay to mark even if mark isn't supported, as reset won't work
+    @Override
+    public synchronized void mark(int readLimit) {
+      in.mark(readLimit);
+      mark = left;
+    }
+
+    @Override
+    public int read() throws IOException {
+      if (left == 0) {
+        return -1;
+      }
+
+      int result = in.read();
+      if (result != -1) {
+        --left;
+      }
+      return result;
+    }
+
+    @Override
+    public int read(byte[] b, int off, int len) throws IOException {
+      if (left == 0) {
+        return -1;
+      }
+
+      len = (int) min(len, left);
+      int result = in.read(b, off, len);
+      if (result != -1) {
+        left -= result;
+      }
+      return result;
+    }
+
+    @Override
+    public synchronized void reset() throws IOException {
+      if (!in.markSupported()) {
+        throw new IOException("Mark not supported");
+      }
+      if (mark == -1) {
+        throw new IOException("Mark not set");
+      }
+
+      in.reset();
+      left = mark;
+    }
+
+    @Override
+    public long skip(long n) throws IOException {
+      n = min(n, left);
+      long skipped = in.skip(n);
+      left -= skipped;
+      return skipped;
+    }
+  }
+
+  /**
+   * Attempts to read enough bytes from the stream to fill the given byte array, with the same
+   * behavior as {@link DataInput#readFully(byte[])}. Does not close the stream.
+   *
+   * @param in the input stream to read from.
+   * @param b the buffer into which the data is read.
+   * @throws EOFException if this stream reaches the end before reading all the bytes.
+   * @throws IOException if an I/O error occurs.
+   */
+  public static void readFully(InputStream in, byte[] b) throws IOException {
+    readFully(in, b, 0, b.length);
+  }
+
+  /**
+   * Attempts to read {@code len} bytes from the stream into the given array starting at {@code
+   * off}, with the same behavior as {@link DataInput#readFully(byte[], int, int)}. Does not close
+   * the stream.
+   *
+   * @param in the input stream to read from.
+   * @param b the buffer into which the data is read.
+   * @param off an int specifying the offset into the data.
+   * @param len an int specifying the number of bytes to read.
+   * @throws EOFException if this stream reaches the end before reading all the bytes.
+   * @throws IOException if an I/O error occurs.
+   */
+  public static void readFully(InputStream in, byte[] b, int off, int len) throws IOException {
+    int read = read(in, b, off, len);
+    if (read != len) {
+      throw new EOFException(
+          "reached end of stream after reading " + read + " bytes; " + len + " bytes expected");
+    }
+  }
+
+  /**
+   * Discards {@code n} bytes of data from the input stream. This method will block until the full
+   * amount has been skipped. Does not close the stream.
+   *
+   * @param in the input stream to read from
+   * @param n the number of bytes to skip
+   * @throws EOFException if this stream reaches the end before skipping all the bytes
+   * @throws IOException if an I/O error occurs, or the stream does not support skipping
+   */
+  public static void skipFully(InputStream in, long n) throws IOException {
+    long skipped = skipUpTo(in, n);
+    if (skipped < n) {
+      throw new EOFException(
+          "reached end of stream after skipping " + skipped + " bytes; " + n + " bytes expected");
+    }
+  }
+
+  /**
+   * Discards up to {@code n} bytes of data from the input stream. This method will block until
+   * either the full amount has been skipped or until the end of the stream is reached, whichever
+   * happens first. Returns the total number of bytes skipped.
+   */
+  static long skipUpTo(InputStream in, long n) throws IOException {
+    long totalSkipped = 0;
+    // A buffer is allocated if skipSafely does not skip any bytes.
+    byte[] buf = null;
+
+    while (totalSkipped < n) {
+      long remaining = n - totalSkipped;
+      long skipped = skipSafely(in, remaining);
+
+      if (skipped == 0) {
+        // Do a buffered read since skipSafely could return 0 repeatedly, for example if
+        // in.available() always returns 0 (the default).
+        int skip = (int) min(remaining, BUFFER_SIZE);
+        if (buf == null) {
+          // Allocate a buffer bounded by the maximum size that can be requested, for
+          // example an array of BUFFER_SIZE is unnecessary when the value of remaining
+          // is smaller.
+          buf = new byte[skip];
+        }
+        if ((skipped = in.read(buf, 0, skip)) == -1) {
+          // Reached EOF
+          break;
+        }
+      }
+
+      totalSkipped += skipped;
+    }
+
+    return totalSkipped;
+  }
+
+  /**
+   * Attempts to skip up to {@code n} bytes from the given input stream, but not more than {@code
+   * in.available()} bytes. This prevents {@code FileInputStream} from skipping more bytes than
+   * actually remain in the file, something that it {@linkplain java.io.FileInputStream#skip(long)
+   * specifies} it can do in its Javadoc despite the fact that it is violating the contract of
+   * {@code InputStream.skip()}.
+   */
+  private static long skipSafely(InputStream in, long n) throws IOException {
+    int available = in.available();
+    return available == 0 ? 0 : in.skip(min(available, n));
+  }
+
+  /**
+   * Process the bytes of the given input stream using the given processor.
+   *
+   * @param input the input stream to process
+   * @param processor the object to which to pass the bytes of the stream
+   * @return the result of the byte processor
+   * @throws IOException if an I/O error occurs
+   * @since 14.0
+   */
+  @CanIgnoreReturnValue // some processors won't return a useful result
+  @ParametricNullness
+  @J2ktIncompatible
+  public static <T extends @Nullable Object> T readBytes(
+      InputStream input, ByteProcessor<T> processor) throws IOException {
+    checkNotNull(input);
+    checkNotNull(processor);
+
+    byte[] buf = createBuffer();
+    int read;
+    do {
+      read = input.read(buf);
+    } while (read != -1 && processor.processBytes(buf, 0, read));
+    return processor.getResult();
+  }
+
+  /**
+   * Reads some bytes from an input stream and stores them into the buffer array {@code b}. This
+   * method blocks until {@code len} bytes of input data have been read into the array, or end of
+   * file is detected. The number of bytes read is returned, possibly zero. Does not close the
+   * stream.
+   *
+   * <p>A caller can detect EOF if the number of bytes read is less than {@code len}. All subsequent
+   * calls on the same stream will return zero.
+   *
+   * <p>If {@code b} is null, a {@code NullPointerException} is thrown. If {@code off} is negative,
+   * or {@code len} is negative, or {@code off+len} is greater than the length of the array {@code
+   * b}, then an {@code IndexOutOfBoundsException} is thrown. If {@code len} is zero, then no bytes
+   * are read. Otherwise, the first byte read is stored into element {@code b[off]}, the next one
+   * into {@code b[off+1]}, and so on. The number of bytes read is, at most, equal to {@code len}.
+   *
+   * @param in the input stream to read from
+   * @param b the buffer into which the data is read
+   * @param off an int specifying the offset into the data
+   * @param len an int specifying the number of bytes to read
+   * @return the number of bytes read
+   * @throws IOException if an I/O error occurs
+   * @throws IndexOutOfBoundsException if {@code off} is negative, if {@code len} is negative, or if
+   *     {@code off + len} is greater than {@code b.length}
+   */
+  @CanIgnoreReturnValue
+  // Sometimes you don't care how many bytes you actually read, I guess.
+  // (You know that it's either going to read len bytes or stop at EOF.)
+  public static int read(InputStream in, byte[] b, int off, int len) throws IOException {
+    checkNotNull(in);
+    checkNotNull(b);
+    if (len < 0) {
+      throw new IndexOutOfBoundsException(String.format("len (%s) cannot be negative", len));
+    }
+    checkPositionIndexes(off, off + len, b.length);
+    int total = 0;
+    while (total < len) {
+      int result = in.read(b, off + total, len - total);
+      if (result == -1) {
+        break;
+      }
+      total += result;
+    }
+    return total;
+  }
+
+  /** Compares the contents of the two {@link InputStream}s for equality. */
+  static boolean contentsEqual(InputStream in1, InputStream in2) throws IOException {
+    byte[] buf1 = createBuffer();
+    byte[] buf2 = createBuffer();
+    while (true) {
+      int read1 = read(in1, buf1, 0, BUFFER_SIZE);
+      int read2 = read(in2, buf2, 0, BUFFER_SIZE);
+      if (read1 != read2 || !arraysEqual(buf1, buf2, read1)) {
+        return false;
+      } else if (read1 != BUFFER_SIZE) {
+        return true;
+      }
+    }
+  }
+
+  // The Arrays.equals(<arraytype>, int, int, <arraytype>, int, int) methods were not added until
+  // Java 9. This function is just returns the same result that
+  // Arrays.equals(array1, 0, count, array2, 0, count) would. It assumes that both arrays have a
+  // length of at least count.
+  private static boolean arraysEqual(byte[] array1, byte[] array2, int count) {
+    for (int i = 0; i < count; i++) {
+      if (array1[i] != array2[i]) {
+        return false;
+      }
+    }
+    return true;
+  }
+}
+
+
+// ==== Optional.java ====
+/*
+ * Copyright (C) 2011 The Guava Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
+ * in compliance with the License. You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under the License
+ * is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
+ * or implied. See the License for the specific language governing permissions and limitations under
+ * the License.
+ */
+
+package com.google.common.base;
+
+import static com.google.common.base.Preconditions.checkNotNull;
+
+import com.google.common.annotations.GwtCompatible;
+import com.google.common.annotations.GwtIncompatible;
+import com.google.common.annotations.J2ktIncompatible;
+import com.google.errorprone.annotations.DoNotMock;
+import java.io.Serializable;
+import java.util.Iterator;
+import java.util.Set;
+import org.jspecify.annotations.Nullable;
+
+/**
+ * An immutable object that may contain a non-null reference to another object. Each instance of
+ * this type either contains a non-null reference, or contains nothing (in which case we say that
+ * the reference is "absent"); it is never said to "contain {@code null}".
+ *
+ * <p>A non-null {@code Optional<T>} reference can be used as a replacement for a nullable {@code T}
+ * reference. It allows you to represent "a {@code T} that must be present" and a "a {@code T} that
+ * might be absent" as two distinct types in your program, which can aid clarity.
+ *
+ * <p>Some uses of this class include
+ *
+ * <ul>
+ *   <li>As a method return type, as an alternative to returning {@code null} to indicate that no
+ *       value was available
+ *   <li>To distinguish between "unknown" (for example, not present in a map) and "known to have no
+ *       value" (present in the map, with value {@code Optional.absent()})
+ *   <li>To wrap nullable references for storage in a collection that does not support {@code null}
+ *       (though there are <a
+ *       href="https://github.com/google/guava/wiki/LivingWithNullHostileCollections">several other
+ *       approaches to this</a> that should be considered first)
+ * </ul>
+ *
+ * <p>A common alternative to using this class is to find or create a suitable <a
+ * href="http://en.wikipedia.org/wiki/Null_Object_pattern">null object</a> for the type in question.
+ *
+ * <p>This class is not intended as a direct analogue of any existing "option" or "maybe" construct
+ * from other programming environments, though it may bear some similarities.
+ *
+ * <p>An instance of this class is serializable if its reference is absent or is a serializable
+ * object.
+ *
+ * <p><b>Comparison to {@code java.util.Optional} (JDK 8 and higher):</b> A new {@code Optional}
+ * class was added for Java 8. The two classes are extremely similar, but incompatible (they cannot
+ * share a common supertype). <i>All</i> known differences are listed either here or with the
+ * relevant methods below.
+ *
+ * <ul>
+ *   <li>This class is serializable; {@code java.util.Optional} is not.
+ *   <li>{@code java.util.Optional} has the additional methods {@code ifPresent}, {@code filter},
+ *       {@code flatMap}, and {@code orElseThrow}.
+ *   <li>{@code java.util} offers the primitive-specialized versions {@code OptionalInt}, {@code
+ *       OptionalLong} and {@code OptionalDouble}, the use of which is recommended; Guava does not
+ *       have these.
+ * </ul>
+ *
+ * <p><b>There are no plans to deprecate this class in the foreseeable future.</b> However, we do
+ * gently recommend that you prefer the new, standard Java class whenever possible.
+ *
+ * <p>See the Guava User Guide article on <a
+ * href="https://github.com/google/guava/wiki/UsingAndAvoidingNullExplained#optional">using {@code
+ * Optional}</a>.
+ *
+ * @param <T> the type of instance that can be contained. {@code Optional} is naturally covariant on
+ *     this type, so it is safe to cast an {@code Optional<T>} to {@code Optional<S>} for any
+ *     supertype {@code S} of {@code T}.
+ * @author Kurt Alfred Kluever
+ * @author Kevin Bourrillion
+ * @since 10.0
+ */
+@DoNotMock("Use Optional.of(value) or Optional.absent()")
+@GwtCompatible
+public abstract class Optional<T> implements Serializable {
+  /**
+   * Returns an {@code Optional} instance with no contained reference.
+   *
+   * <p><b>Comparison to {@code java.util.Optional}:</b> this method is equivalent to Java 8's
+   * {@code Optional.empty}.
+   */
+  public static <T> Optional<T> absent() {
+    return Absent.withType();
+  }
+
+  /**
+   * Returns an {@code Optional} instance containing the given non-null reference. To have {@code
+   * null} treated as {@link #absent}, use {@link #fromNullable} instead.
+   *
+   * <p><b>Comparison to {@code java.util.Optional}:</b> no differences.
+   *
+   * @throws NullPointerException if {@code reference} is null
+   */
+  public static <T> Optional<T> of(T reference) {
+    return new Present<>(checkNotNull(reference));
+  }
+
+  /**
+   * If {@code nullableReference} is non-null, returns an {@code Optional} instance containing that
+   * reference; otherwise returns {@link Optional#absent}.
+   *
+   * <p><b>Comparison to {@code java.util.Optional}:</b> this method is equivalent to Java 8's
+   * {@code Optional.ofNullable}.
+   */
+  public static <T> Optional<T> fromNullable(@Nullable T nullableReference) {
+    return nullableReference == null ? absent() : new Present<>(nullableReference);
+  }
+
+  /**
+   * Returns the equivalent {@code com.google.common.base.Optional} value to the given {@code
+   * java.util.Optional}, or {@code null} if the argument is null.
+   *
+   * @since 21.0 (but only since 33.4.0 in the Android flavor)
+   */
+  @SuppressWarnings("NullableOptional") // Null passthrough is reasonable for type conversions
+  public static <T> @Nullable Optional<T> fromJavaUtil(
+      java.util.@Nullable Optional<T> javaUtilOptional) {
+    return (javaUtilOptional == null) ? null : fromNullable(javaUtilOptional.orElse(null));
+  }
+
+  /**
+   * Returns the equivalent {@code java.util.Optional} value to the given {@code
+   * com.google.common.base.Optional}, or {@code null} if the argument is null.
+   *
+   * <p>If {@code googleOptional} is known to be non-null, use {@code googleOptional.toJavaUtil()}
+   * instead.
+   *
+   * <p>Unfortunately, the method reference {@code Optional::toJavaUtil} will not work, because it
+   * could refer to either the static or instance version of this method. Write out the lambda
+   * expression {@code o -> Optional.toJavaUtil(o)} instead.
+   *
+   * @since 21.0 (but only since 33.4.0 in the Android flavor)
+   */
+  @SuppressWarnings({
+    "AmbiguousMethodReference", // We chose the name despite knowing this risk.
+    "NullableOptional", // Null passthrough is reasonable for type conversions
+  })
+  public static <T> java.util.@Nullable Optional<T> toJavaUtil(
+      @Nullable Optional<T> googleOptional) {
+    return googleOptional == null ? null : googleOptional.toJavaUtil();
+  }
+
+  /**
+   * Returns the equivalent {@code java.util.Optional} value to this optional.
+   *
+   * <p>Unfortunately, the method reference {@code Optional::toJavaUtil} will not work, because it
+   * could refer to either the static or instance version of this method. Write out the lambda
+   * expression {@code o -> o.toJavaUtil()} instead.
+   *
+   * @since 21.0 (but only since 33.4.0 in the Android flavor)
+   */
+  @SuppressWarnings("AmbiguousMethodReference") // We chose the name despite knowing this risk.
+  public java.util.Optional<T> toJavaUtil() {
+    return java.util.Optional.ofNullable(orNull());
+  }
+
+  Optional() {}
+
+  /**
+   * Returns {@code true} if this holder contains a (non-null) instance.
+   *
+   * <p><b>Comparison to {@code java.util.Optional}:</b> no differences.
+   */
+  public abstract boolean isPresent();
+
+  /**
+   * Returns the contained instance, which must be present. If the instance might be absent, use
+   * {@link #or(Object)} or {@link #orNull} instead.
+   *
+   * <p><b>Comparison to {@code java.util.Optional}:</b> when the value is absent, this method
+   * throws {@link IllegalStateException}, whereas the {@code java.util} counterpart throws {@link
+   * java.util.NoSuchElementException NoSuchElementException}.
+   *
+   * @throws IllegalStateException if the instance is absent ({@link #isPresent} returns {@code
+   *     false}); depending on this <i>specific</i> exception type (over the more general {@link
+   *     RuntimeException}) is discouraged
+   */
+  public abstract T get();
+
+  /**
+   * Returns the contained instance if it is present; {@code defaultValue} otherwise. If no default
+   * value should be required because the instance is known to be present, use {@link #get()}
+   * instead. For a default value of {@code null}, use {@link #orNull}.
+   *
+   * <p>Note about generics: The signature {@code public T or(T defaultValue)} is overly
+   * restrictive. However, the ideal signature, {@code public <S super T> S or(S)}, is not legal
+   * Java. As a result, some sensible operations involving subtypes are compile errors:
+   *
+   * {@snippet :
+   * Optional<Integer> optionalInt = getSomeOptionalInt();
+   * Number value = optionalInt.or(0.5); // error
+   *
+   * FluentIterable<? extends Number> numbers = getSomeNumbers();
+   * Optional<? extends Number> first = numbers.first();
+   * Number value = first.or(0.5); // error
+   * }
+   *
+   * <p>As a workaround, it is always safe to cast an {@code Optional<? extends T>} to {@code
+   * Optional<T>}. Casting either of the above example {@code Optional} instances to {@code
+   * Optional<Number>} (where {@code Number} is the desired output type) solves the problem:
+   *
+   * {@snippet :
+   * Optional<Number> optionalInt = (Optional) getSomeOptionalInt();
+   * Number value = optionalInt.or(0.5); // fine
+   *
+   * FluentIterable<? extends Number> numbers = getSomeNumbers();
+   * Optional<Number> first = (Optional) numbers.first();
+   * Number value = first.or(0.5); // fine
+   * }
+   *
+   * <p><b>Comparison to {@code java.util.Optional}:</b> this method is similar to Java 8's {@code
+   * Optional.orElse}, but will not accept {@code null} as a {@code defaultValue} ({@link #orNull}
+   * must be used instead). As a result, the value returned by this method is guaranteed non-null,
+   * which is not the case for the {@code java.util} equivalent.
+   */
+  public abstract T or(T defaultValue);
+
+  /**
+   * Returns this {@code Optional} if it has a value present; {@code secondChoice} otherwise.
+   *
+   * <p><b>Comparison to {@code java.util.Optional}:</b> this method has no equivalent in Java 8's
+   * {@code Optional} class; write {@code thisOptional.isPresent() ? thisOptional : secondChoice}
+   * instead.
+   */
+  public abstract Optional<T> or(Optional<? extends T> secondChoice);
+
+  /**
+   * Returns the contained instance if it is present; {@code supplier.get()} otherwise.
+   *
+   * <p><b>Comparison to {@code java.util.Optional}:</b> this method is similar to Java 8's {@code
+   * Optional.orElseGet}, except when {@code supplier} returns {@code null}. In this case this
+   * method throws an exception, whereas the Java 8+ method returns the {@code null} to the caller.
+   *
+   * @throws NullPointerException if this optional's value is absent and the supplier returns {@code
+   *     null}
+   */
+  public abstract T or(Supplier<? extends T> supplier);
+
+  /**
+   * Returns the contained instance if it is present; {@code null} otherwise. If the instance is
+   * known to be present, use {@link #get()} instead.
+   *
+   * <p><b>Comparison to {@code java.util.Optional}:</b> this method is equivalent to Java 8's
+   * {@code Optional.orElse(null)}.
+   */
+  public abstract @Nullable T orNull();
+
+  /**
+   * Returns an immutable singleton {@link Set} whose only element is the contained instance if it
+   * is present; an empty immutable {@link Set} otherwise.
+   *
+   * <p><b>Comparison to {@code java.util.Optional}:</b> this method has no equivalent in Java 8's
+   * {@code Optional} class. However, this common usage:
+   *
+   * {@snippet :
+   * for (Foo foo : possibleFoo.asSet()) {
+   *   doSomethingWith(foo);
+   * }
+   * }
+   *
+   * ... can be replaced with:
+   *
+   * {@snippet :
+   * possibleFoo.ifPresent(foo -> doSomethingWith(foo));
+   * }
+   *
+   * <p><b>Java 9 users:</b> some use cases can be written with calls to {@code optional.stream()}.
+   *
+   * @since 11.0
+   */
+  public abstract Set<T> asSet();
+
+  /**
+   * If the instance is present, it is transformed with the given {@link Function}; otherwise,
+   * {@link Optional#absent} is returned.
+   *
+   * <p><b>Comparison to {@code java.util.Optional}:</b> this method is similar to Java 8's {@code
+   * Optional.map}, except when {@code function} returns {@code null}. In this case this method
+   * throws an exception, whereas the Java 8+ method returns {@code Optional.absent()}.
+   *
+   * @throws NullPointerException if the function returns {@code null}
+   * @since 12.0
+   */
+  public abstract <V> Optional<V> transform(Function<? super T, V> function);
+
+  /**
+   * Returns {@code true} if {@code object} is an {@code Optional} instance, and either the
+   * contained references are {@linkplain Object#equals equal} to each other or both are absent.
+   * Note that {@code Optional} instances of differing parameterized types can be equal.
+   *
+   * <p><b>Comparison to {@code java.util.Optional}:</b> no differences.
+   */
+  @Override
+  public abstract boolean equals(@Nullable Object object);
+
+  /**
+   * Returns a hash code for this instance.
+   *
+   * <p><b>Comparison to {@code java.util.Optional}:</b> this class leaves the specific choice of
+   * hash code unspecified, unlike the Java 8+ equivalent.
+   */
+  @Override
+  public abstract int hashCode();
+
+  /**
+   * Returns a string representation for this instance.
+   *
+   * <p><b>Comparison to {@code java.util.Optional}:</b> this class leaves the specific string
+   * representation unspecified, unlike the Java 8+ equivalent.
+   */
+  @Override
+  public abstract String toString();
+
+  /**
+   * Returns the value of each present instance from the supplied {@code optionals}, in order,
+   * skipping over occurrences of {@link Optional#absent}. Iterators are unmodifiable and are
+   * evaluated lazily.
+   *
+   * <p><b>Comparison to {@code java.util.Optional}:</b> this method has no equivalent in Java 8's
+   * {@code Optional} class; use {@code
+   * optionals.stream().filter(Optional::isPresent).map(Optional::get)} instead.
+   *
+   * <p><b>Java 9 users:</b> use {@code optionals.stream().flatMap(Optional::stream)} instead.
+   *
+   * @since 11.0 (generics widened in 13.0)
+   */
+  public static <T> Iterable<T> presentInstances(
+      Iterable<? extends Optional<? extends T>> optionals) {
+    checkNotNull(optionals);
+    return () ->
+        new AbstractIterator<T>() {
+          private final Iterator<? extends Optional<? extends T>> iterator =
+              checkNotNull(optionals.iterator());
+
+          @Override
+          protected @Nullable T computeNext() {
+            while (iterator.hasNext()) {
+              Optional<? extends T> optional = iterator.next();
+              if (optional.isPresent()) {
+                return optional.get();
+              }
+            }
+            return endOfData();
+          }
+        };
+  }
+
+  @GwtIncompatible @J2ktIncompatible private static final long serialVersionUID = 0;
+}
+

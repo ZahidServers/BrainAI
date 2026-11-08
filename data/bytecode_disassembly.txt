@@ -1,0 +1,1414 @@
+BYTECODE AND DISASSEMBLY
+========================================
+
+CPython bytecode (real output of the dis module):
+
+# source: gcd
+    def gcd(a, b):
+        while b:
+            a, b = b, a % b
+        return a
+# disassembly of gcd:
+105           RESUME                   0
+
+106           LOAD_FAST                1 (b)
+              TO_BOOL
+              POP_JUMP_IF_FALSE       14 (to L2)
+
+107   L1:     LOAD_FAST_LOAD_FAST     16 (b, a)
+              LOAD_FAST                1 (b)
+              BINARY_OP                6 (%)
+              STORE_FAST_STORE_FAST   16 (b, a)
+
+106           LOAD_FAST                1 (b)
+              TO_BOOL
+              POP_JUMP_IF_FALSE        2 (to L2)
+              JUMP_BACKWARD           14 (to L1)
+
+108   L2:     LOAD_FAST                0 (a)
+              RETURN_VALUE
+
+# source: factorial
+    def factorial(n):
+        result = 1
+        for i in range(2, n + 1):
+            result *= i
+        return result
+# disassembly of factorial:
+110           RESUME                   0
+
+111           LOAD_CONST               1 (1)
+              STORE_FAST               1 (result)
+
+112           LOAD_GLOBAL              1 (range + NULL)
+              LOAD_CONST               2 (2)
+              LOAD_FAST                0 (n)
+              LOAD_CONST               1 (1)
+              BINARY_OP                0 (+)
+              CALL                     2
+              GET_ITER
+      L1:     FOR_ITER                 7 (to L2)
+              STORE_FAST               2 (i)
+
+113           LOAD_FAST_LOAD_FAST     18 (result, i)
+              BINARY_OP               18 (*=)
+              STORE_FAST               1 (result)
+              JUMP_BACKWARD            9 (to L1)
+
+112   L2:     END_FOR
+              POP_TOP
+
+114           LOAD_FAST                1 (result)
+              RETURN_VALUE
+
+# source: fib
+    def fib(n):
+        a, b = 0, 1
+        for _ in range(n):
+            a, b = b, a + b
+        return a
+# disassembly of fib:
+116           RESUME                   0
+
+117           LOAD_CONST               1 ((0, 1))
+              UNPACK_SEQUENCE          2
+              STORE_FAST_STORE_FAST   18 (a, b)
+
+118           LOAD_GLOBAL              1 (range + NULL)
+              LOAD_FAST                0 (n)
+              CALL                     1
+              GET_ITER
+      L1:     FOR_ITER                 8 (to L2)
+              STORE_FAST               3 (_)
+
+119           LOAD_FAST_LOAD_FAST     33 (b, a)
+              LOAD_FAST                2 (b)
+              BINARY_OP                0 (+)
+              STORE_FAST_STORE_FAST   33 (b, a)
+              JUMP_BACKWARD           10 (to L1)
+
+118   L2:     END_FOR
+              POP_TOP
+
+120           LOAD_FAST                1 (a)
+              RETURN_VALUE
+
+JVM-style bytecode (illustrative, javap -c form):
+
+// int add(int a, int b) { return a + b; }
+  0: iload_0
+  1: iload_1
+  2: iadd
+  3: ireturn
+
+// static int square(int n) { return n * n; }
+  0: iload_0
+  1: iload_0
+  2: imul
+  3: ireturn
+
+Common JVM opcodes: iconst, bipush, iload, istore, iadd, isub, imul, idiv, ireturn, invokevirtual, invokestatic, getfield, putfield, new, goto, if_icmpeq.
+
+.NET CIL (illustrative, ildasm form):
+  ldarg.0
+  ldarg.1
+  add
+  ret
+
+
+BYTECODE AND DISASSEMBLY
+========================================
+
+CPython bytecode (real output of the dis module):
+
+# source: gcd
+    def gcd(a, b):
+        while b:
+            a, b = b, a % b
+        return a
+# disassembly of gcd:
+105           RESUME                   0
+
+106           LOAD_FAST                1 (b)
+              TO_BOOL
+              POP_JUMP_IF_FALSE       14 (to L2)
+
+107   L1:     LOAD_FAST_LOAD_FAST     16 (b, a)
+              LOAD_FAST                1 (b)
+              BINARY_OP                6 (%)
+              STORE_FAST_STORE_FAST   16 (b, a)
+
+106           LOAD_FAST                1 (b)
+              TO_BOOL
+              POP_JUMP_IF_FALSE        2 (to L2)
+              JUMP_BACKWARD           14 (to L1)
+
+108   L2:     LOAD_FAST                0 (a)
+              RETURN_VALUE
+
+# source: factorial
+    def factorial(n):
+        result = 1
+        for i in range(2, n + 1):
+            result *= i
+        return result
+# disassembly of factorial:
+110           RESUME                   0
+
+111           LOAD_CONST               1 (1)
+              STORE_FAST               1 (result)
+
+112           LOAD_GLOBAL              1 (range + NULL)
+              LOAD_CONST               2 (2)
+              LOAD_FAST                0 (n)
+              LOAD_CONST               1 (1)
+              BINARY_OP                0 (+)
+              CALL                     2
+              GET_ITER
+      L1:     FOR_ITER                 7 (to L2)
+              STORE_FAST               2 (i)
+
+113           LOAD_FAST_LOAD_FAST     18 (result, i)
+              BINARY_OP               18 (*=)
+              STORE_FAST               1 (result)
+              JUMP_BACKWARD            9 (to L1)
+
+112   L2:     END_FOR
+              POP_TOP
+
+114           LOAD_FAST                1 (result)
+              RETURN_VALUE
+
+# source: fib
+    def fib(n):
+        a, b = 0, 1
+        for _ in range(n):
+            a, b = b, a + b
+        return a
+# disassembly of fib:
+116           RESUME                   0
+
+117           LOAD_CONST               1 ((0, 1))
+              UNPACK_SEQUENCE          2
+              STORE_FAST_STORE_FAST   18 (a, b)
+
+118           LOAD_GLOBAL              1 (range + NULL)
+              LOAD_FAST                0 (n)
+              CALL                     1
+              GET_ITER
+      L1:     FOR_ITER                 8 (to L2)
+              STORE_FAST               3 (_)
+
+119           LOAD_FAST_LOAD_FAST     33 (b, a)
+              LOAD_FAST                2 (b)
+              BINARY_OP                0 (+)
+              STORE_FAST_STORE_FAST   33 (b, a)
+              JUMP_BACKWARD           10 (to L1)
+
+118   L2:     END_FOR
+              POP_TOP
+
+120           LOAD_FAST                1 (a)
+              RETURN_VALUE
+
+JVM-style bytecode (illustrative, javap -c form):
+
+// int add(int a, int b) { return a + b; }
+  0: iload_0
+  1: iload_1
+  2: iadd
+  3: ireturn
+
+// static int square(int n) { return n * n; }
+  0: iload_0
+  1: iload_0
+  2: imul
+  3: ireturn
+
+Common JVM opcodes: iconst, bipush, iload, istore, iadd, isub, imul, idiv, ireturn, invokevirtual, invokestatic, getfield, putfield, new, goto, if_icmpeq.
+
+.NET CIL (illustrative, ildasm form):
+  ldarg.0
+  ldarg.1
+  add
+  ret
+
+
+BYTECODE AND DISASSEMBLY
+========================================
+
+CPython bytecode (real output of the dis module):
+
+# source: gcd
+    def gcd(a, b):
+        while b:
+            a, b = b, a % b
+        return a
+# disassembly of gcd:
+105           RESUME                   0
+
+106           LOAD_FAST                1 (b)
+              TO_BOOL
+              POP_JUMP_IF_FALSE       14 (to L2)
+
+107   L1:     LOAD_FAST_LOAD_FAST     16 (b, a)
+              LOAD_FAST                1 (b)
+              BINARY_OP                6 (%)
+              STORE_FAST_STORE_FAST   16 (b, a)
+
+106           LOAD_FAST                1 (b)
+              TO_BOOL
+              POP_JUMP_IF_FALSE        2 (to L2)
+              JUMP_BACKWARD           14 (to L1)
+
+108   L2:     LOAD_FAST                0 (a)
+              RETURN_VALUE
+
+# source: factorial
+    def factorial(n):
+        result = 1
+        for i in range(2, n + 1):
+            result *= i
+        return result
+# disassembly of factorial:
+110           RESUME                   0
+
+111           LOAD_CONST               1 (1)
+              STORE_FAST               1 (result)
+
+112           LOAD_GLOBAL              1 (range + NULL)
+              LOAD_CONST               2 (2)
+              LOAD_FAST                0 (n)
+              LOAD_CONST               1 (1)
+              BINARY_OP                0 (+)
+              CALL                     2
+              GET_ITER
+      L1:     FOR_ITER                 7 (to L2)
+              STORE_FAST               2 (i)
+
+113           LOAD_FAST_LOAD_FAST     18 (result, i)
+              BINARY_OP               18 (*=)
+              STORE_FAST               1 (result)
+              JUMP_BACKWARD            9 (to L1)
+
+112   L2:     END_FOR
+              POP_TOP
+
+114           LOAD_FAST                1 (result)
+              RETURN_VALUE
+
+# source: fib
+    def fib(n):
+        a, b = 0, 1
+        for _ in range(n):
+            a, b = b, a + b
+        return a
+# disassembly of fib:
+116           RESUME                   0
+
+117           LOAD_CONST               1 ((0, 1))
+              UNPACK_SEQUENCE          2
+              STORE_FAST_STORE_FAST   18 (a, b)
+
+118           LOAD_GLOBAL              1 (range + NULL)
+              LOAD_FAST                0 (n)
+              CALL                     1
+              GET_ITER
+      L1:     FOR_ITER                 8 (to L2)
+              STORE_FAST               3 (_)
+
+119           LOAD_FAST_LOAD_FAST     33 (b, a)
+              LOAD_FAST                2 (b)
+              BINARY_OP                0 (+)
+              STORE_FAST_STORE_FAST   33 (b, a)
+              JUMP_BACKWARD           10 (to L1)
+
+118   L2:     END_FOR
+              POP_TOP
+
+120           LOAD_FAST                1 (a)
+              RETURN_VALUE
+
+JVM-style bytecode (illustrative, javap -c form):
+
+// int add(int a, int b) { return a + b; }
+  0: iload_0
+  1: iload_1
+  2: iadd
+  3: ireturn
+
+// static int square(int n) { return n * n; }
+  0: iload_0
+  1: iload_0
+  2: imul
+  3: ireturn
+
+Common JVM opcodes: iconst, bipush, iload, istore, iadd, isub, imul, idiv, ireturn, invokevirtual, invokestatic, getfield, putfield, new, goto, if_icmpeq.
+
+.NET CIL (illustrative, ildasm form):
+  ldarg.0
+  ldarg.1
+  add
+  ret
+
+
+BYTECODE AND DISASSEMBLY
+========================================
+
+CPython bytecode (real output of the dis module):
+
+# source: gcd
+    def gcd(a, b):
+        while b:
+            a, b = b, a % b
+        return a
+# disassembly of gcd:
+105           RESUME                   0
+
+106           LOAD_FAST                1 (b)
+              TO_BOOL
+              POP_JUMP_IF_FALSE       14 (to L2)
+
+107   L1:     LOAD_FAST_LOAD_FAST     16 (b, a)
+              LOAD_FAST                1 (b)
+              BINARY_OP                6 (%)
+              STORE_FAST_STORE_FAST   16 (b, a)
+
+106           LOAD_FAST                1 (b)
+              TO_BOOL
+              POP_JUMP_IF_FALSE        2 (to L2)
+              JUMP_BACKWARD           14 (to L1)
+
+108   L2:     LOAD_FAST                0 (a)
+              RETURN_VALUE
+
+# source: factorial
+    def factorial(n):
+        result = 1
+        for i in range(2, n + 1):
+            result *= i
+        return result
+# disassembly of factorial:
+110           RESUME                   0
+
+111           LOAD_CONST               1 (1)
+              STORE_FAST               1 (result)
+
+112           LOAD_GLOBAL              1 (range + NULL)
+              LOAD_CONST               2 (2)
+              LOAD_FAST                0 (n)
+              LOAD_CONST               1 (1)
+              BINARY_OP                0 (+)
+              CALL                     2
+              GET_ITER
+      L1:     FOR_ITER                 7 (to L2)
+              STORE_FAST               2 (i)
+
+113           LOAD_FAST_LOAD_FAST     18 (result, i)
+              BINARY_OP               18 (*=)
+              STORE_FAST               1 (result)
+              JUMP_BACKWARD            9 (to L1)
+
+112   L2:     END_FOR
+              POP_TOP
+
+114           LOAD_FAST                1 (result)
+              RETURN_VALUE
+
+# source: fib
+    def fib(n):
+        a, b = 0, 1
+        for _ in range(n):
+            a, b = b, a + b
+        return a
+# disassembly of fib:
+116           RESUME                   0
+
+117           LOAD_CONST               1 ((0, 1))
+              UNPACK_SEQUENCE          2
+              STORE_FAST_STORE_FAST   18 (a, b)
+
+118           LOAD_GLOBAL              1 (range + NULL)
+              LOAD_FAST                0 (n)
+              CALL                     1
+              GET_ITER
+      L1:     FOR_ITER                 8 (to L2)
+              STORE_FAST               3 (_)
+
+119           LOAD_FAST_LOAD_FAST     33 (b, a)
+              LOAD_FAST                2 (b)
+              BINARY_OP                0 (+)
+              STORE_FAST_STORE_FAST   33 (b, a)
+              JUMP_BACKWARD           10 (to L1)
+
+118   L2:     END_FOR
+              POP_TOP
+
+120           LOAD_FAST                1 (a)
+              RETURN_VALUE
+
+JVM-style bytecode (illustrative, javap -c form):
+
+// int add(int a, int b) { return a + b; }
+  0: iload_0
+  1: iload_1
+  2: iadd
+  3: ireturn
+
+// static int square(int n) { return n * n; }
+  0: iload_0
+  1: iload_0
+  2: imul
+  3: ireturn
+
+Common JVM opcodes: iconst, bipush, iload, istore, iadd, isub, imul, idiv, ireturn, invokevirtual, invokestatic, getfield, putfield, new, goto, if_icmpeq.
+
+.NET CIL (illustrative, ildasm form):
+  ldarg.0
+  ldarg.1
+  add
+  ret
+
+
+BYTECODE AND DISASSEMBLY
+========================================
+
+CPython bytecode (real output of the dis module):
+
+# source: gcd
+    def gcd(a, b):
+        while b:
+            a, b = b, a % b
+        return a
+# disassembly of gcd:
+105           RESUME                   0
+
+106           LOAD_FAST                1 (b)
+              TO_BOOL
+              POP_JUMP_IF_FALSE       14 (to L2)
+
+107   L1:     LOAD_FAST_LOAD_FAST     16 (b, a)
+              LOAD_FAST                1 (b)
+              BINARY_OP                6 (%)
+              STORE_FAST_STORE_FAST   16 (b, a)
+
+106           LOAD_FAST                1 (b)
+              TO_BOOL
+              POP_JUMP_IF_FALSE        2 (to L2)
+              JUMP_BACKWARD           14 (to L1)
+
+108   L2:     LOAD_FAST                0 (a)
+              RETURN_VALUE
+
+# source: factorial
+    def factorial(n):
+        result = 1
+        for i in range(2, n + 1):
+            result *= i
+        return result
+# disassembly of factorial:
+110           RESUME                   0
+
+111           LOAD_CONST               1 (1)
+              STORE_FAST               1 (result)
+
+112           LOAD_GLOBAL              1 (range + NULL)
+              LOAD_CONST               2 (2)
+              LOAD_FAST                0 (n)
+              LOAD_CONST               1 (1)
+              BINARY_OP                0 (+)
+              CALL                     2
+              GET_ITER
+      L1:     FOR_ITER                 7 (to L2)
+              STORE_FAST               2 (i)
+
+113           LOAD_FAST_LOAD_FAST     18 (result, i)
+              BINARY_OP               18 (*=)
+              STORE_FAST               1 (result)
+              JUMP_BACKWARD            9 (to L1)
+
+112   L2:     END_FOR
+              POP_TOP
+
+114           LOAD_FAST                1 (result)
+              RETURN_VALUE
+
+# source: fib
+    def fib(n):
+        a, b = 0, 1
+        for _ in range(n):
+            a, b = b, a + b
+        return a
+# disassembly of fib:
+116           RESUME                   0
+
+117           LOAD_CONST               1 ((0, 1))
+              UNPACK_SEQUENCE          2
+              STORE_FAST_STORE_FAST   18 (a, b)
+
+118           LOAD_GLOBAL              1 (range + NULL)
+              LOAD_FAST                0 (n)
+              CALL                     1
+              GET_ITER
+      L1:     FOR_ITER                 8 (to L2)
+              STORE_FAST               3 (_)
+
+119           LOAD_FAST_LOAD_FAST     33 (b, a)
+              LOAD_FAST                2 (b)
+              BINARY_OP                0 (+)
+              STORE_FAST_STORE_FAST   33 (b, a)
+              JUMP_BACKWARD           10 (to L1)
+
+118   L2:     END_FOR
+              POP_TOP
+
+120           LOAD_FAST                1 (a)
+              RETURN_VALUE
+
+JVM-style bytecode (illustrative, javap -c form):
+
+// int add(int a, int b) { return a + b; }
+  0: iload_0
+  1: iload_1
+  2: iadd
+  3: ireturn
+
+// static int square(int n) { return n * n; }
+  0: iload_0
+  1: iload_0
+  2: imul
+  3: ireturn
+
+Common JVM opcodes: iconst, bipush, iload, istore, iadd, isub, imul, idiv, ireturn, invokevirtual, invokestatic, getfield, putfield, new, goto, if_icmpeq.
+
+.NET CIL (illustrative, ildasm form):
+  ldarg.0
+  ldarg.1
+  add
+  ret
+
+
+BYTECODE AND DISASSEMBLY
+========================================
+
+CPython bytecode (real output of the dis module):
+
+# source: gcd
+    def gcd(a, b):
+        while b:
+            a, b = b, a % b
+        return a
+# disassembly of gcd:
+105           RESUME                   0
+
+106           LOAD_FAST                1 (b)
+              TO_BOOL
+              POP_JUMP_IF_FALSE       14 (to L2)
+
+107   L1:     LOAD_FAST_LOAD_FAST     16 (b, a)
+              LOAD_FAST                1 (b)
+              BINARY_OP                6 (%)
+              STORE_FAST_STORE_FAST   16 (b, a)
+
+106           LOAD_FAST                1 (b)
+              TO_BOOL
+              POP_JUMP_IF_FALSE        2 (to L2)
+              JUMP_BACKWARD           14 (to L1)
+
+108   L2:     LOAD_FAST                0 (a)
+              RETURN_VALUE
+
+# source: factorial
+    def factorial(n):
+        result = 1
+        for i in range(2, n + 1):
+            result *= i
+        return result
+# disassembly of factorial:
+110           RESUME                   0
+
+111           LOAD_CONST               1 (1)
+              STORE_FAST               1 (result)
+
+112           LOAD_GLOBAL              1 (range + NULL)
+              LOAD_CONST               2 (2)
+              LOAD_FAST                0 (n)
+              LOAD_CONST               1 (1)
+              BINARY_OP                0 (+)
+              CALL                     2
+              GET_ITER
+      L1:     FOR_ITER                 7 (to L2)
+              STORE_FAST               2 (i)
+
+113           LOAD_FAST_LOAD_FAST     18 (result, i)
+              BINARY_OP               18 (*=)
+              STORE_FAST               1 (result)
+              JUMP_BACKWARD            9 (to L1)
+
+112   L2:     END_FOR
+              POP_TOP
+
+114           LOAD_FAST                1 (result)
+              RETURN_VALUE
+
+# source: fib
+    def fib(n):
+        a, b = 0, 1
+        for _ in range(n):
+            a, b = b, a + b
+        return a
+# disassembly of fib:
+116           RESUME                   0
+
+117           LOAD_CONST               1 ((0, 1))
+              UNPACK_SEQUENCE          2
+              STORE_FAST_STORE_FAST   18 (a, b)
+
+118           LOAD_GLOBAL              1 (range + NULL)
+              LOAD_FAST                0 (n)
+              CALL                     1
+              GET_ITER
+      L1:     FOR_ITER                 8 (to L2)
+              STORE_FAST               3 (_)
+
+119           LOAD_FAST_LOAD_FAST     33 (b, a)
+              LOAD_FAST                2 (b)
+              BINARY_OP                0 (+)
+              STORE_FAST_STORE_FAST   33 (b, a)
+              JUMP_BACKWARD           10 (to L1)
+
+118   L2:     END_FOR
+              POP_TOP
+
+120           LOAD_FAST                1 (a)
+              RETURN_VALUE
+
+JVM-style bytecode (illustrative, javap -c form):
+
+// int add(int a, int b) { return a + b; }
+  0: iload_0
+  1: iload_1
+  2: iadd
+  3: ireturn
+
+// static int square(int n) { return n * n; }
+  0: iload_0
+  1: iload_0
+  2: imul
+  3: ireturn
+
+Common JVM opcodes: iconst, bipush, iload, istore, iadd, isub, imul, idiv, ireturn, invokevirtual, invokestatic, getfield, putfield, new, goto, if_icmpeq.
+
+.NET CIL (illustrative, ildasm form):
+  ldarg.0
+  ldarg.1
+  add
+  ret
+
+
+BYTECODE AND DISASSEMBLY
+========================================
+
+CPython bytecode (real output of the dis module):
+
+# source: gcd
+    def gcd(a, b):
+        while b:
+            a, b = b, a % b
+        return a
+# disassembly of gcd:
+105           RESUME                   0
+
+106           LOAD_FAST                1 (b)
+              TO_BOOL
+              POP_JUMP_IF_FALSE       14 (to L2)
+
+107   L1:     LOAD_FAST_LOAD_FAST     16 (b, a)
+              LOAD_FAST                1 (b)
+              BINARY_OP                6 (%)
+              STORE_FAST_STORE_FAST   16 (b, a)
+
+106           LOAD_FAST                1 (b)
+              TO_BOOL
+              POP_JUMP_IF_FALSE        2 (to L2)
+              JUMP_BACKWARD           14 (to L1)
+
+108   L2:     LOAD_FAST                0 (a)
+              RETURN_VALUE
+
+# source: factorial
+    def factorial(n):
+        result = 1
+        for i in range(2, n + 1):
+            result *= i
+        return result
+# disassembly of factorial:
+110           RESUME                   0
+
+111           LOAD_CONST               1 (1)
+              STORE_FAST               1 (result)
+
+112           LOAD_GLOBAL              1 (range + NULL)
+              LOAD_CONST               2 (2)
+              LOAD_FAST                0 (n)
+              LOAD_CONST               1 (1)
+              BINARY_OP                0 (+)
+              CALL                     2
+              GET_ITER
+      L1:     FOR_ITER                 7 (to L2)
+              STORE_FAST               2 (i)
+
+113           LOAD_FAST_LOAD_FAST     18 (result, i)
+              BINARY_OP               18 (*=)
+              STORE_FAST               1 (result)
+              JUMP_BACKWARD            9 (to L1)
+
+112   L2:     END_FOR
+              POP_TOP
+
+114           LOAD_FAST                1 (result)
+              RETURN_VALUE
+
+# source: fib
+    def fib(n):
+        a, b = 0, 1
+        for _ in range(n):
+            a, b = b, a + b
+        return a
+# disassembly of fib:
+116           RESUME                   0
+
+117           LOAD_CONST               1 ((0, 1))
+              UNPACK_SEQUENCE          2
+              STORE_FAST_STORE_FAST   18 (a, b)
+
+118           LOAD_GLOBAL              1 (range + NULL)
+              LOAD_FAST                0 (n)
+              CALL                     1
+              GET_ITER
+      L1:     FOR_ITER                 8 (to L2)
+              STORE_FAST               3 (_)
+
+119           LOAD_FAST_LOAD_FAST     33 (b, a)
+              LOAD_FAST                2 (b)
+              BINARY_OP                0 (+)
+              STORE_FAST_STORE_FAST   33 (b, a)
+              JUMP_BACKWARD           10 (to L1)
+
+118   L2:     END_FOR
+              POP_TOP
+
+120           LOAD_FAST                1 (a)
+              RETURN_VALUE
+
+JVM-style bytecode (illustrative, javap -c form):
+
+// int add(int a, int b) { return a + b; }
+  0: iload_0
+  1: iload_1
+  2: iadd
+  3: ireturn
+
+// static int square(int n) { return n * n; }
+  0: iload_0
+  1: iload_0
+  2: imul
+  3: ireturn
+
+Common JVM opcodes: iconst, bipush, iload, istore, iadd, isub, imul, idiv, ireturn, invokevirtual, invokestatic, getfield, putfield, new, goto, if_icmpeq.
+
+.NET CIL (illustrative, ildasm form):
+  ldarg.0
+  ldarg.1
+  add
+  ret
+
+
+BYTECODE AND DISASSEMBLY
+========================================
+
+CPython bytecode (real output of the dis module):
+
+# source: gcd
+    def gcd(a, b):
+        while b:
+            a, b = b, a % b
+        return a
+# disassembly of gcd:
+105           RESUME                   0
+
+106           LOAD_FAST                1 (b)
+              TO_BOOL
+              POP_JUMP_IF_FALSE       14 (to L2)
+
+107   L1:     LOAD_FAST_LOAD_FAST     16 (b, a)
+              LOAD_FAST                1 (b)
+              BINARY_OP                6 (%)
+              STORE_FAST_STORE_FAST   16 (b, a)
+
+106           LOAD_FAST                1 (b)
+              TO_BOOL
+              POP_JUMP_IF_FALSE        2 (to L2)
+              JUMP_BACKWARD           14 (to L1)
+
+108   L2:     LOAD_FAST                0 (a)
+              RETURN_VALUE
+
+# source: factorial
+    def factorial(n):
+        result = 1
+        for i in range(2, n + 1):
+            result *= i
+        return result
+# disassembly of factorial:
+110           RESUME                   0
+
+111           LOAD_CONST               1 (1)
+              STORE_FAST               1 (result)
+
+112           LOAD_GLOBAL              1 (range + NULL)
+              LOAD_CONST               2 (2)
+              LOAD_FAST                0 (n)
+              LOAD_CONST               1 (1)
+              BINARY_OP                0 (+)
+              CALL                     2
+              GET_ITER
+      L1:     FOR_ITER                 7 (to L2)
+              STORE_FAST               2 (i)
+
+113           LOAD_FAST_LOAD_FAST     18 (result, i)
+              BINARY_OP               18 (*=)
+              STORE_FAST               1 (result)
+              JUMP_BACKWARD            9 (to L1)
+
+112   L2:     END_FOR
+              POP_TOP
+
+114           LOAD_FAST                1 (result)
+              RETURN_VALUE
+
+# source: fib
+    def fib(n):
+        a, b = 0, 1
+        for _ in range(n):
+            a, b = b, a + b
+        return a
+# disassembly of fib:
+116           RESUME                   0
+
+117           LOAD_CONST               1 ((0, 1))
+              UNPACK_SEQUENCE          2
+              STORE_FAST_STORE_FAST   18 (a, b)
+
+118           LOAD_GLOBAL              1 (range + NULL)
+              LOAD_FAST                0 (n)
+              CALL                     1
+              GET_ITER
+      L1:     FOR_ITER                 8 (to L2)
+              STORE_FAST               3 (_)
+
+119           LOAD_FAST_LOAD_FAST     33 (b, a)
+              LOAD_FAST                2 (b)
+              BINARY_OP                0 (+)
+              STORE_FAST_STORE_FAST   33 (b, a)
+              JUMP_BACKWARD           10 (to L1)
+
+118   L2:     END_FOR
+              POP_TOP
+
+120           LOAD_FAST                1 (a)
+              RETURN_VALUE
+
+JVM-style bytecode (illustrative, javap -c form):
+
+// int add(int a, int b) { return a + b; }
+  0: iload_0
+  1: iload_1
+  2: iadd
+  3: ireturn
+
+// static int square(int n) { return n * n; }
+  0: iload_0
+  1: iload_0
+  2: imul
+  3: ireturn
+
+Common JVM opcodes: iconst, bipush, iload, istore, iadd, isub, imul, idiv, ireturn, invokevirtual, invokestatic, getfield, putfield, new, goto, if_icmpeq.
+
+.NET CIL (illustrative, ildasm form):
+  ldarg.0
+  ldarg.1
+  add
+  ret
+
+
+BYTECODE AND DISASSEMBLY
+========================================
+
+CPython bytecode (real output of the dis module):
+
+# source: gcd
+    def gcd(a, b):
+        while b:
+            a, b = b, a % b
+        return a
+# disassembly of gcd:
+105           RESUME                   0
+
+106           LOAD_FAST                1 (b)
+              TO_BOOL
+              POP_JUMP_IF_FALSE       14 (to L2)
+
+107   L1:     LOAD_FAST_LOAD_FAST     16 (b, a)
+              LOAD_FAST                1 (b)
+              BINARY_OP                6 (%)
+              STORE_FAST_STORE_FAST   16 (b, a)
+
+106           LOAD_FAST                1 (b)
+              TO_BOOL
+              POP_JUMP_IF_FALSE        2 (to L2)
+              JUMP_BACKWARD           14 (to L1)
+
+108   L2:     LOAD_FAST                0 (a)
+              RETURN_VALUE
+
+# source: factorial
+    def factorial(n):
+        result = 1
+        for i in range(2, n + 1):
+            result *= i
+        return result
+# disassembly of factorial:
+110           RESUME                   0
+
+111           LOAD_CONST               1 (1)
+              STORE_FAST               1 (result)
+
+112           LOAD_GLOBAL              1 (range + NULL)
+              LOAD_CONST               2 (2)
+              LOAD_FAST                0 (n)
+              LOAD_CONST               1 (1)
+              BINARY_OP                0 (+)
+              CALL                     2
+              GET_ITER
+      L1:     FOR_ITER                 7 (to L2)
+              STORE_FAST               2 (i)
+
+113           LOAD_FAST_LOAD_FAST     18 (result, i)
+              BINARY_OP               18 (*=)
+              STORE_FAST               1 (result)
+              JUMP_BACKWARD            9 (to L1)
+
+112   L2:     END_FOR
+              POP_TOP
+
+114           LOAD_FAST                1 (result)
+              RETURN_VALUE
+
+# source: fib
+    def fib(n):
+        a, b = 0, 1
+        for _ in range(n):
+            a, b = b, a + b
+        return a
+# disassembly of fib:
+116           RESUME                   0
+
+117           LOAD_CONST               1 ((0, 1))
+              UNPACK_SEQUENCE          2
+              STORE_FAST_STORE_FAST   18 (a, b)
+
+118           LOAD_GLOBAL              1 (range + NULL)
+              LOAD_FAST                0 (n)
+              CALL                     1
+              GET_ITER
+      L1:     FOR_ITER                 8 (to L2)
+              STORE_FAST               3 (_)
+
+119           LOAD_FAST_LOAD_FAST     33 (b, a)
+              LOAD_FAST                2 (b)
+              BINARY_OP                0 (+)
+              STORE_FAST_STORE_FAST   33 (b, a)
+              JUMP_BACKWARD           10 (to L1)
+
+118   L2:     END_FOR
+              POP_TOP
+
+120           LOAD_FAST                1 (a)
+              RETURN_VALUE
+
+JVM-style bytecode (illustrative, javap -c form):
+
+// int add(int a, int b) { return a + b; }
+  0: iload_0
+  1: iload_1
+  2: iadd
+  3: ireturn
+
+// static int square(int n) { return n * n; }
+  0: iload_0
+  1: iload_0
+  2: imul
+  3: ireturn
+
+Common JVM opcodes: iconst, bipush, iload, istore, iadd, isub, imul, idiv, ireturn, invokevirtual, invokestatic, getfield, putfield, new, goto, if_icmpeq.
+
+.NET CIL (illustrative, ildasm form):
+  ldarg.0
+  ldarg.1
+  add
+  ret
+
+
+BYTECODE AND DISASSEMBLY
+========================================
+
+CPython bytecode (real output of the dis module):
+
+# source: gcd
+    def gcd(a, b):
+        while b:
+            a, b = b, a % b
+        return a
+# disassembly of gcd:
+105           RESUME                   0
+
+106           LOAD_FAST                1 (b)
+              TO_BOOL
+              POP_JUMP_IF_FALSE       14 (to L2)
+
+107   L1:     LOAD_FAST_LOAD_FAST     16 (b, a)
+              LOAD_FAST                1 (b)
+              BINARY_OP                6 (%)
+              STORE_FAST_STORE_FAST   16 (b, a)
+
+106           LOAD_FAST                1 (b)
+              TO_BOOL
+              POP_JUMP_IF_FALSE        2 (to L2)
+              JUMP_BACKWARD           14 (to L1)
+
+108   L2:     LOAD_FAST                0 (a)
+              RETURN_VALUE
+
+# source: factorial
+    def factorial(n):
+        result = 1
+        for i in range(2, n + 1):
+            result *= i
+        return result
+# disassembly of factorial:
+110           RESUME                   0
+
+111           LOAD_CONST               1 (1)
+              STORE_FAST               1 (result)
+
+112           LOAD_GLOBAL              1 (range + NULL)
+              LOAD_CONST               2 (2)
+              LOAD_FAST                0 (n)
+              LOAD_CONST               1 (1)
+              BINARY_OP                0 (+)
+              CALL                     2
+              GET_ITER
+      L1:     FOR_ITER                 7 (to L2)
+              STORE_FAST               2 (i)
+
+113           LOAD_FAST_LOAD_FAST     18 (result, i)
+              BINARY_OP               18 (*=)
+              STORE_FAST               1 (result)
+              JUMP_BACKWARD            9 (to L1)
+
+112   L2:     END_FOR
+              POP_TOP
+
+114           LOAD_FAST                1 (result)
+              RETURN_VALUE
+
+# source: fib
+    def fib(n):
+        a, b = 0, 1
+        for _ in range(n):
+            a, b = b, a + b
+        return a
+# disassembly of fib:
+116           RESUME                   0
+
+117           LOAD_CONST               1 ((0, 1))
+              UNPACK_SEQUENCE          2
+              STORE_FAST_STORE_FAST   18 (a, b)
+
+118           LOAD_GLOBAL              1 (range + NULL)
+              LOAD_FAST                0 (n)
+              CALL                     1
+              GET_ITER
+      L1:     FOR_ITER                 8 (to L2)
+              STORE_FAST               3 (_)
+
+119           LOAD_FAST_LOAD_FAST     33 (b, a)
+              LOAD_FAST                2 (b)
+              BINARY_OP                0 (+)
+              STORE_FAST_STORE_FAST   33 (b, a)
+              JUMP_BACKWARD           10 (to L1)
+
+118   L2:     END_FOR
+              POP_TOP
+
+120           LOAD_FAST                1 (a)
+              RETURN_VALUE
+
+JVM-style bytecode (illustrative, javap -c form):
+
+// int add(int a, int b) { return a + b; }
+  0: iload_0
+  1: iload_1
+  2: iadd
+  3: ireturn
+
+// static int square(int n) { return n * n; }
+  0: iload_0
+  1: iload_0
+  2: imul
+  3: ireturn
+
+Common JVM opcodes: iconst, bipush, iload, istore, iadd, isub, imul, idiv, ireturn, invokevirtual, invokestatic, getfield, putfield, new, goto, if_icmpeq.
+
+.NET CIL (illustrative, ildasm form):
+  ldarg.0
+  ldarg.1
+  add
+  ret
+
+
+BYTECODE AND DISASSEMBLY
+========================================
+
+CPython bytecode (real output of the dis module):
+
+# source: gcd
+    def gcd(a, b):
+        while b:
+            a, b = b, a % b
+        return a
+# disassembly of gcd:
+105           RESUME                   0
+
+106           LOAD_FAST                1 (b)
+              TO_BOOL
+              POP_JUMP_IF_FALSE       14 (to L2)
+
+107   L1:     LOAD_FAST_LOAD_FAST     16 (b, a)
+              LOAD_FAST                1 (b)
+              BINARY_OP                6 (%)
+              STORE_FAST_STORE_FAST   16 (b, a)
+
+106           LOAD_FAST                1 (b)
+              TO_BOOL
+              POP_JUMP_IF_FALSE        2 (to L2)
+              JUMP_BACKWARD           14 (to L1)
+
+108   L2:     LOAD_FAST                0 (a)
+              RETURN_VALUE
+
+# source: factorial
+    def factorial(n):
+        result = 1
+        for i in range(2, n + 1):
+            result *= i
+        return result
+# disassembly of factorial:
+110           RESUME                   0
+
+111           LOAD_CONST               1 (1)
+              STORE_FAST               1 (result)
+
+112           LOAD_GLOBAL              1 (range + NULL)
+              LOAD_CONST               2 (2)
+              LOAD_FAST                0 (n)
+              LOAD_CONST               1 (1)
+              BINARY_OP                0 (+)
+              CALL                     2
+              GET_ITER
+      L1:     FOR_ITER                 7 (to L2)
+              STORE_FAST               2 (i)
+
+113           LOAD_FAST_LOAD_FAST     18 (result, i)
+              BINARY_OP               18 (*=)
+              STORE_FAST               1 (result)
+              JUMP_BACKWARD            9 (to L1)
+
+112   L2:     END_FOR
+              POP_TOP
+
+114           LOAD_FAST                1 (result)
+              RETURN_VALUE
+
+# source: fib
+    def fib(n):
+        a, b = 0, 1
+        for _ in range(n):
+            a, b = b, a + b
+        return a
+# disassembly of fib:
+116           RESUME                   0
+
+117           LOAD_CONST               1 ((0, 1))
+              UNPACK_SEQUENCE          2
+              STORE_FAST_STORE_FAST   18 (a, b)
+
+118           LOAD_GLOBAL              1 (range + NULL)
+              LOAD_FAST                0 (n)
+              CALL                     1
+              GET_ITER
+      L1:     FOR_ITER                 8 (to L2)
+              STORE_FAST               3 (_)
+
+119           LOAD_FAST_LOAD_FAST     33 (b, a)
+              LOAD_FAST                2 (b)
+              BINARY_OP                0 (+)
+              STORE_FAST_STORE_FAST   33 (b, a)
+              JUMP_BACKWARD           10 (to L1)
+
+118   L2:     END_FOR
+              POP_TOP
+
+120           LOAD_FAST                1 (a)
+              RETURN_VALUE
+
+JVM-style bytecode (illustrative, javap -c form):
+
+// int add(int a, int b) { return a + b; }
+  0: iload_0
+  1: iload_1
+  2: iadd
+  3: ireturn
+
+// static int square(int n) { return n * n; }
+  0: iload_0
+  1: iload_0
+  2: imul
+  3: ireturn
+
+Common JVM opcodes: iconst, bipush, iload, istore, iadd, isub, imul, idiv, ireturn, invokevirtual, invokestatic, getfield, putfield, new, goto, if_icmpeq.
+
+.NET CIL (illustrative, ildasm form):
+  ldarg.0
+  ldarg.1
+  add
+  ret
+
+
+BYTECODE AND DISASSEMBLY
+========================================
+
+CPython bytecode (real output of the dis module):
+
+# source: gcd
+    def gcd(a, b):
+        while b:
+            a, b = b, a % b
+        return a
+# disassembly of gcd:
+105           RESUME                   0
+
+106           LOAD_FAST                1 (b)
+              TO_BOOL
+              POP_JUMP_IF_FALSE       14 (to L2)
+
+107   L1:     LOAD_FAST_LOAD_FAST     16 (b, a)
+              LOAD_FAST                1 (b)
+              BINARY_OP                6 (%)
+              STORE_FAST_STORE_FAST   16 (b, a)
+
+106           LOAD_FAST                1 (b)
+              TO_BOOL
+              POP_JUMP_IF_FALSE        2 (to L2)
+              JUMP_BACKWARD           14 (to L1)
+
+108   L2:     LOAD_FAST                0 (a)
+              RETURN_VALUE
+
+# source: factorial
+    def factorial(n):
+        result = 1
+        for i in range(2, n + 1):
+            result *= i
+        return result
+# disassembly of factorial:
+110           RESUME                   0
+
+111           LOAD_CONST               1 (1)
+              STORE_FAST               1 (result)
+
+112           LOAD_GLOBAL              1 (range + NULL)
+              LOAD_CONST               2 (2)
+              LOAD_FAST                0 (n)
+              LOAD_CONST               1 (1)
+              BINARY_OP                0 (+)
+              CALL                     2
+              GET_ITER
+      L1:     FOR_ITER                 7 (to L2)
+              STORE_FAST               2 (i)
+
+113           LOAD_FAST_LOAD_FAST     18 (result, i)
+              BINARY_OP               18 (*=)
+              STORE_FAST               1 (result)
+              JUMP_BACKWARD            9 (to L1)
+
+112   L2:     END_FOR
+              POP_TOP
+
+114           LOAD_FAST                1 (result)
+              RETURN_VALUE
+
+# source: fib
+    def fib(n):
+        a, b = 0, 1
+        for _ in range(n):
+            a, b = b, a + b
+        return a
+# disassembly of fib:
+116           RESUME                   0
+
+117           LOAD_CONST               1 ((0, 1))
+              UNPACK_SEQUENCE          2
+              STORE_FAST_STORE_FAST   18 (a, b)
+
+118           LOAD_GLOBAL              1 (range + NULL)
+              LOAD_FAST                0 (n)
+              CALL                     1
+              GET_ITER
+      L1:     FOR_ITER                 8 (to L2)
+              STORE_FAST               3 (_)
+
+119           LOAD_FAST_LOAD_FAST     33 (b, a)
+              LOAD_FAST                2 (b)
+              BINARY_OP                0 (+)
+              STORE_FAST_STORE_FAST   33 (b, a)
+              JUMP_BACKWARD           10 (to L1)
+
+118   L2:     END_FOR
+              POP_TOP
+
+120           LOAD_FAST                1 (a)
+              RETURN_VALUE
+
+JVM-style bytecode (illustrative, javap -c form):
+
+// int add(int a, int b) { return a + b; }
+  0: iload_0
+  1: iload_1
+  2: iadd
+  3: ireturn
+
+// static int square(int n) { return n * n; }
+  0: iload_0
+  1: iload_0
+  2: imul
+  3: ireturn
+
+Common JVM opcodes: iconst, bipush, iload, istore, iadd, isub, imul, idiv, ireturn, invokevirtual, invokestatic, getfield, putfield, new, goto, if_icmpeq.
+
+.NET CIL (illustrative, ildasm form):
+  ldarg.0
+  ldarg.1
+  add
+  ret

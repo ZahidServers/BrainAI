@@ -1,0 +1,956 @@
+% BrainAI - built by Mohammed Zahid.
+% Compiles with pdflatex on any standard TeX distribution, or on Overleaf as-is.
+\documentclass[10pt,twocolumn]{article}
+
+\usepackage[margin=0.75in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{listings}
+\usepackage{microtype}
+
+\hypersetup{colorlinks=true, linkcolor=blue!50!black,
+            citecolor=blue!50!black, urlcolor=blue!50!black}
+
+\captionsetup{font=small,labelfont=bf}
+
+\lstset{basicstyle=\ttfamily\scriptsize, breaklines=true,
+        frame=single, framesep=3pt, columns=fullflexible}
+
+\newcommand{\win}{\textbf{$\checkmark$}}
+\newcommand{\lose}{$\times$}
+
+\title{\vspace{-1.5em}\textbf{BrainAI: A Spiking Cognitive Architecture for\\
+Embodied Continual Learning}\\[0.35em]
+\large Every subsystem measured against a control, including the two that lost}
+
+\author{
+  Mohammed Zahid Imityaz Wadiwale\\
+  \small \texttt{zahid.wadiwale1234@gmail.com}
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent
+We present \textbf{BrainAI}, a spiking multimodal cognitive architecture for
+embodied continual learning. A single model perceives text, images, video,
+audio and a typed sensor suite; routes each input through a reflex arc, an
+always-on subconscious pathway and a gated conscious pathway; maintains five
+distinct memory systems split along the differentiability line; predicts future
+latent states and learns from prediction error without labels; weighs new
+claims against evidence before believing them; pursues interruptible goals;
+plans by imagination; updates its own weights during inference under bounded
+plasticity; and consolidates offline during a sleep cycle. Motor commands pass
+through a non-learned safety controller that the learning system provably
+cannot modify.
+
+The methodological commitment of this work is that \emph{every} subsystem is
+measured against the obvious simpler alternative, and every result is reported.
+Measured outcomes include a $2.16\times$ inference speedup from genuine
+computational gating, a $74\%$ reduction in catastrophic forgetting, $3.7\times$
+less degradation over 400 inference-time weight updates, a belief system that
+defeats a naive vote-counter on four of five adversarial scenarios, and
+collusion detection that holds a protected axiom at confidence $1.0000$ against
+a 600-identity Sybil attack that otherwise drives it to $0.0001$.
+
+The two proposals with mixed or negative results are reported in full. The
+architecture's own activation function, AMSA, is outperformed by SwiGLU on
+perplexity, wall-clock, and the continual-learning problem it was designed for,
+with the loss gap \emph{widening} with scale---but on the axis it was actually
+built for, efficiency, it \emph{wins}: at comparable loss it fires fewer spikes
+and activates $\sim$14 points less of the feed-forward layer, across three seeds,
+making it a quality--efficiency tradeoff rather than a flat loss. The world model
+is outperformed at one-step prediction by a linear map, though the deficit does
+not propagate to multi-step rollout or planning, where the two tie, and only the
+learned model reports calibrated uncertainty ($r=0.565$).
+
+We additionally catalogue fourteen \emph{silent} failure modes discovered only
+because controls were run---including an elastic-weight-consolidation penalty
+that contributed $10^{-4}$ against a task loss of $2.5$ and therefore did
+nothing while appearing to work, and a rate limiter disabled on every call by a
+tensor-shape comparison. We argue this catalogue is among the more transferable
+contributions of the work.
+\end{abstract}
+
+\section{Introduction}
+
+Contemporary large models separate training from deployment: weights are fixed
+at inference, knowledge is frozen at a cutoff, and adaptation happens through
+context or retrieval rather than through the network itself. For a stationary
+task distribution this is the right engineering trade. For an embodied agent
+expected to operate for years in one environment it is not: such an agent must
+acquire knowledge after deployment, retain what it already knows, decide which
+of the things it is told are actually true, and do all of this without a
+training loop supervising it.
+
+BrainAI is an attempt to build that system end to end. It is not a language
+model with memory attached; it is a cognitive architecture in which the
+language head is one of several outputs. The design draws on complementary
+learning systems theory~\cite{mcclelland1995}, dual-process
+accounts of cognition~\cite{kahneman2011}, and the spiking-network
+literature~\cite{maass1997,neftci2019}, and assembles components---spiking
+transformers, mixture-of-experts routing, elastic weight
+consolidation~\cite{kirkpatrick2017}, experience replay~\cite{rolnick2019},
+latent dynamics models~\cite{hafner2019}---that exist individually but, to our
+knowledge, have not previously been integrated with the specific interfaces
+described here.
+
+\subsection{The problem with architecture papers}
+
+An architecture paper is easy to write badly. A diagram with a dozen boxes, a
+plausible mechanism for each, and a benchmark on the one task where the whole
+thing happens to work is a well-established genre, and it is nearly
+unfalsifiable. The failure mode is not dishonesty; it is that a component which
+does nothing at all looks exactly like a component that works, unless something
+is run without it.
+
+We therefore adopted a single rule: \textbf{no component is described without a
+control}. For each subsystem we identified the obvious simpler alternative---the
+thing a reasonable engineer would do instead---implemented it, and measured
+both. This rule is the reason this paper contains negative results, and it is
+also the reason we trust the positive ones.
+
+\subsection{Contributions}
+
+\begin{enumerate}\itemsep2pt
+  \item \textbf{An integrated architecture} (\S\ref{sec:arch}) whose novelty is
+        in the interfaces between components rather than in any single one: a
+        memory hierarchy split by differentiability, a prediction ledger that
+        grounds epistemic trust in physical observation, and a safety layer
+        structurally unreachable by the learning system.
+  \item \textbf{A controlled evaluation} comprising thirteen comparisons
+        (\S\ref{sec:results}), each against a simpler alternative.
+  \item \textbf{Two negative results} reported in full
+        (\S\ref{sec:negative}), including a scale sweep testing---and
+        rejecting---the standard defence that the losing component merely needs
+        a larger model.
+  \item \textbf{A catalogue of fourteen silent failure modes}
+        (\S\ref{sec:silent}) found only by running controls. Several are
+        general to continual-learning and robotics implementations rather than
+        specific to this one.
+\end{enumerate}
+
+All results are produced by scripts in the accompanying repository. Every
+number in this paper, including those in \S\ref{sec:negative}, is reproducible
+on a CPU.
+
+\section{Related Work}
+
+\paragraph{Continual learning.} Catastrophic interference has been understood
+since~\cite{mccloskey1989}. Regularisation approaches penalise movement in
+parameters important to earlier tasks~\cite{kirkpatrick2017,zenke2017};
+rehearsal approaches interleave stored examples~\cite{rolnick2019}. We use both,
+and find (\S\ref{sec:continual}) that the regularisation term is worthless
+unless its scale is calibrated---a detail rarely reported.
+
+\paragraph{Spiking transformers.} Surrogate-gradient training~\cite{neftci2019}
+made deep spiking networks practical; adaptive-threshold neurons~\cite{bellec2018}
+supply temporal memory without recurrence. Spiking transformer variants have
+been demonstrated~\cite{zhou2023}. Our contribution here is not the block
+design but two implementation constraints we found to be load-bearing
+(\S\ref{sec:silent}).
+
+\paragraph{World models.} PlaNet~\cite{hafner2019} and Dreamer~\cite{hafner2020}
+established latent dynamics models for planning. Prediction error as intrinsic
+motivation dates to~\cite{pathak2017}; the noisy-TV pathology and its
+diagnosis are from~\cite{burda2019}. We compare against both an RSSM-family
+recurrent baseline and---more informatively---a linear one.
+
+\paragraph{Epistemics.} Sybil attacks on reputation systems are
+classical~\cite{douceur2002}. To our knowledge the specific combination used
+here---log-odds pooling with per-source diminishing returns, credibility
+shrinkage for unvetted sources, and behavioural collusion clustering---has not
+been applied to a robot's belief store.
+
+\section{Architecture}
+\label{sec:arch}
+
+\subsection{Spiking substrate}
+
+Spikes are true Heaviside steps; the forward pass is binary, so reported spike
+rates are genuine sparsity rather than a soft approximation. Training uses an
+arctan surrogate on the backward pass only. Neurons are adaptive
+leaky-integrate-and-fire: each spike raises that neuron's own threshold, decaying
+over $\tau_{\text{adapt}}$, which supplies temporal memory across simulation
+timesteps without recurrent weights.
+
+Two constraints proved necessary. First, adaptation is
+$a[t] = \rho\,a[t{-}1] + s[t{-}1]$ with $a[0]=s[0]=0$, so at $T=2$ the decay
+$\rho$ only ever multiplies zero and threshold adaptation is inert; $T\geq3$ is
+the minimum useful configuration. Second, the residual stream must remain
+analogue---making it spiking destroys the gradient path and the model does not
+train.
+
+\subsection{Latency-tiered pathways}
+
+Three pathways of increasing cost run in parallel. The \emph{reflex} arc is one
+shallow stack from perception to a candidate output; it never consults memory.
+The \emph{subconscious} pathway always runs and emits a salience score. The
+\emph{conscious} pathway is wide and expert-routed~\cite{shazeer2017,fedus2022}
+and runs only when salience clears a threshold.
+
+Blocks are pre-norm transformer blocks~\cite{vaswani2017} with binary spike
+inputs to the attention projections. Attention offers softmax or
+sparsemax~\cite{martins2016}, the latter producing exactly-zero weights so the
+attention pattern is sparse as well.
+
+The gate is soft during training, so the salience head receives gradient and
+learns when deliberation pays, and hard at inference, where batch rows below
+threshold are selected out and the wide stack genuinely does not execute. This
+distinction matters: a gate that computes everything and multiplies by zero is
+observationally identical from outside, which is why it is measured by
+wall-clock (\S\ref{sec:results}).
+
+\subsection{Memory hierarchy}
+
+Five memories, split along the differentiability line
+(Table~\ref{tab:memory}). The split is the anti-forgetting strategy: knowledge
+acquired after training enters the non-differentiable \emph{stores}, where
+writing it cannot damage a weight an older skill depends on. Only slow,
+importance-gated consolidation moves anything from a store into the weights.
+
+\begin{table}[t]
+\centering\small
+\begin{tabular}{@{}llc@{}}
+\toprule
+Memory & Backing & Differentiable \\
+\midrule
+Sensory & deque & no \\
+Short-term & spiking LSTM & yes \\
+Working & attention over slots & yes \\
+Episodic & vector store & no \\
+Semantic & vector store + graph & no \\
+\bottomrule
+\end{tabular}
+\caption{The memory hierarchy. Neural state for reasoning; addressable stores
+for facts.}
+\label{tab:memory}
+\end{table}
+
+Two design decisions are load-bearing. The key and value storage projections
+are \textbf{frozen random projections, not learned}: every key already in the
+store was written with those weights, so training them would silently
+invalidate the entire store as old keys and new queries drifted out of a shared
+space. A random projection preserves the cosine geometry retrieval requires.
+Second, retrieval is \textbf{non-differentiable by design}, so a bad memory can
+mislead the model but can never corrupt a gradient. The cost is that the
+importance scorer receives no signal from the language loss; it is instead
+trained during sleep against a prioritised-replay target.
+
+\subsection{World model}
+
+Given a latent state and candidate action, the model predicts the next latent
+state and, separately, the magnitude of its own error. Three capabilities
+derive from that one mechanism:
+
+\begin{itemize}\itemsep1pt
+  \item \textbf{Grounding.} A \emph{prediction ledger} lets a belief stake a
+        claim on a future observation. When the observation arrives, the ledger
+        resolves it and reports which sources were vindicated.
+  \item \textbf{Curiosity.} Prediction error normalised against \emph{expected}
+        error. The second head is what distinguishes ``I do not know'' from
+        ``this is inherently random'', and is why the drive does not park in
+        front of a noise source~\cite{burda2019}.
+  \item \textbf{Planning.} Rollouts occur in imagination; rollout confidence
+        compounds multiplicatively, so a long plan through poorly understood
+        dynamics is correctly distrusted.
+\end{itemize}
+
+\subsection{The Reality Cortex}
+
+Salience and truth are different questions. A claim repeated by a thousand
+people scores highly on the first and may be false. The Reality Cortex sits on
+the knowledge path---episodic $\rightarrow$ validate $\rightarrow$ semantic
+$\rightarrow$ sleep $\rightarrow$ weights---and not in the token path, since
+contradiction detection over a belief graph is the wrong operation to run per
+token.
+
+Evidence is pooled in log-odds. Each observation contributes
+$\log\!\big(t/(1-t)\big)$ for its source's reliability $t$, with refutation the
+same quantity negated. Three discounts then apply:
+
+\begin{align}
+\text{within-source:} \quad & w_n = 1/n \\
+\text{across-source:} \quad & w_k = 1/\sqrt{k} \\
+\text{credibility:} \quad & c = \tfrac{n_{\text{eff}}}{n_{\text{eff}} + \kappa}
+\end{align}
+
+The first makes repetition from one voice saturate harmonically. The second
+treats $k$ agreeing but unvetted sources as fewer than $k$ independent
+witnesses, since correlated evidence pooled as independent overcounts by
+roughly $\sqrt{k}$. The third shrinks a source's likelihood ratio until it has
+a track record, so a freshly minted identity does not arrive at full strength.
+
+For functional relations---those admitting one object, like
+\texttt{capital\_of}---confidence is rival-relative,
+$\sigma(\ell_i - \max_{j\neq i}\ell_j)$, so two equally supported alternatives
+sit at $0.5$ and neither is promoted.
+
+\paragraph{Collusion detection.} The above still assumes distinct names are
+distinct witnesses, which is precisely what a Sybil attack
+violates~\cite{douceur2002}. A puppet ring is visible in its behaviour: the
+accounts appear on the same claims with the same polarity. Sources whose voting
+records match are clustered and cast one vote between them, detected by exact
+signature grouping ($O(S)$) followed by Jaccard refinement on a bounded sample.
+
+\subsection{Executive, planner, uncertainty, safety}
+
+The \textbf{executive} maintains a goal stack scored by
+$\text{priority}\times\text{urgency}\times\text{feasibility}$, handles
+interrupts that save and restore working-memory contents, suspends conflicting
+goals rather than failing them, and schedules sleep from four independent
+pressures with idleness as a multiplier rather than a term.
+
+The \textbf{planner} is HTN-style~\cite{erol1994}: a method library maps goals
+to ordered subgoals recursively. Candidate plans are scored by world-model
+rollout. Procedures that survive the Reality Cortex are imported as executable
+methods, which is where evidence and capability meet.
+
+\textbf{Uncertainty} is carried per stage and composed multiplicatively with a
+floor---a chain is no more trustworthy than its weakest link. Sources include
+predictive entropy, spike-rate deviation from a layer's usual sparsity, and
+expert disagreement; the last is a measurement rather than a self-report, which
+matters given that learned confidence heads are routinely
+miscalibrated~\cite{guo2017}. The composed value reaches the safety controller,
+where it can veto a motor command.
+
+The \textbf{safety controller} is deliberately not learned, holds no
+parameters, and is unreachable from the plasticity controller: a policy that
+rewrites its own weights at runtime must not also decide what it is permitted
+to do. It enforces per-joint envelopes, named allow/clamp/veto constraints, and
+a hard interlock.
+
+\subsection{Typed sensors and actuators}
+
+A robot does not have ``touch'' and ``motors''. Sensor specifications carry
+rate, latency, noise, drift and---for chemical sensing---recovery time. The
+last is not decorative: after a strong exposure a metal-oxide element is
+saturated and reads high regardless of what is in front of it, so a robot
+tracking a gas plume up the gradient will chase its own saturation. Fusion runs
+at the slowest present stream's rate; fusing at the fastest would repeat a
+two-second-old gas reading two hundred times and let it outvote the IMU.
+
+Actuators differ more consequentially. A single uniform joint limit is wrong in
+both directions on mixed hardware: the rate cap protecting a fingertip servo
+renders a hydraulic hip useless, while the effort ceiling permitting the hip to
+bear load will crush whatever the gripper holds. Per-type envelopes are derived
+from \texttt{compliance}, \texttt{max\_effort} and bandwidth; joints that are
+both stiff and strong---which will not yield to an obstacle and have the force
+budget to continue through one---are flagged and held to a tighter ceiling.
+
+\subsection{Bootstrapping from an existing teacher}
+
+A randomly initialised architecture of this kind has no language knowledge, and
+training one from scratch at useful scale is out of reach here. The repository
+includes a distillation path from an open-weights teacher, with one constraint
+that determines its whole design: \textbf{two models with different tokenizers
+cannot be KL-matched.} BrainAI's byte tokenizer has 260 symbols against a
+typical BPE vocabulary of $\sim$150k, so their output distributions live in
+different spaces and the usual logit-matching objective~\cite{hinton2015} is
+undefined between them.
+
+Two modes follow. \emph{Sequence-level} distillation~\cite{kim2016} has the
+teacher generate text on which the student trains with ordinary cross-entropy;
+it is tokenizer-agnostic and works with any teacher, but transmits only the
+sampled token rather than the distribution it came from. \emph{Logit}
+distillation rebuilds the student on the teacher's vocabulary and matches full
+temperature-scaled distributions, transferring considerably more at the cost of
+the byte tokenizer---which for an agent also ingesting tactile and telemetry
+byte streams is a substantive loss rather than a formality.
+
+We report no distillation results. The pipeline is implemented and exercised
+against a stub teacher; running it against a real one requires a GPU.
+
+\section{Experimental Setup}
+
+All experiments run on 8 CPU cores with no GPU. The \texttt{nano} configuration
+is 5.36M parameters, 17 layers, $d_{\text{model}}=128$, $T=3$ SNN timesteps.
+Pretraining uses 400 steps on Austen's \emph{Pride and Prejudice} at byte level;
+the continual-learning task is Voltaire's \emph{Candide}, in French. Byte-level
+English and French have clearly separated statistics, making forgetting
+unambiguous. A larger multi-domain run (\S\ref{sec:breadth}) trains the same
+\texttt{nano} model on 64 domains and 70.7\,MB.
+
+We emphasise that this scale is a severe limitation, discussed in
+\S\ref{sec:limitations}. It is sufficient to determine whether mechanisms
+function and whether they beat their controls; it is not sufficient to
+establish that the architecture is competitive at useful scale.
+
+\section{Results}
+\label{sec:results}
+
+Table~\ref{tab:summary} summarises every controlled comparison.
+
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{@{}llll@{}}
+\toprule
+\textbf{Subsystem} & \textbf{Benchmark} & \textbf{Control} & \textbf{Result} \\
+\midrule
+Pathway gating & wall-clock & always-on & \win\ $2.16\times$ faster; 53.7\% of forward time \\
+World model & one-step MSE & linear map / RSSM & beats RSSM, \lose\ \textbf{loses to linear} \\
+World model & rollout, planning & action-cond.\ linear & ties by 3 steps; sole calibrated uncertainty \\
+Curiosity & noisy-TV & pure novelty & \win\ $403\times$ preference for learnable \\
+Trust grounding & broken vs.\ good sensor & fixed prior & \win\ $0.974$ vs.\ $0.104$ from identical priors \\
+Reality Cortex & 5 belief scenarios & naive vote counting & \win\ wins 4 of 5 \\
+Collusion defence & 600-puppet Sybil & no clustering & \win\ $1.0000$ vs.\ $0.0001$ \\
+Continual learning & EN $\rightarrow$ FR forgetting & no protection & \win\ 74\% less forgetting \\
+Online stability & 400 updates & no guards & \win\ $3.7\times$ less degradation \\
+Planner & repeated step failure & flat planner & \win\ \texttt{remethod} vs.\ \texttt{failed} \\
+Executive & deadline pressure & static priority & \win\ overtakes at the correct tick \\
+Memory index & recall@4 & exact search & 94--100\% recall, \lose\ but slower \\
+\textbf{AMSA} & perplexity, speed, continual & SwiGLU & \lose\ \textbf{loses on loss} \\
+AMSA scale sweep & width 96 $\rightarrow$ 256 & --- & \lose\ loss gap \textbf{widens} \\
+\textbf{AMSA} & sparsity / energy, 3 seeds & SwiGLU & \win\ \textbf{sparser 3/3, $\sim$14-pt lower FFN density} \\
+\bottomrule
+\end{tabular}
+\caption{Every controlled comparison in this work. Two rows are negative and
+both are load-bearing.}
+\label{tab:summary}
+\end{table*}
+
+\subsection{Computational gating}
+
+Skipping the conscious pathway is a wall-clock claim and receives a wall-clock
+measurement (batch 8, sequence 128, CPU): $0.2446$\,s per forward with all rows
+deliberating versus $0.1133$\,s with none, a $2.16\times$ speedup. The conscious
+stack accounts for $53.7\%$ of forward time; it is the widest section and the
+only expert-routed one, making it the largest single lever on inference cost.
+
+\subsection{Continual learning}
+\label{sec:continual}
+
+\begin{table}[h]
+\centering\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+Arm & EN forgot & FR learned & both & vs.\ naive \\
+\midrule
+naive & $+0.4675$ & $+0.7591$ & $2.6882$ & --- \\
+ewc   & $+0.1679$ & $+0.4543$ & $2.6908$ & 64\% less \\
+full  & $\mathbf{+0.1215}$ & $+0.4380$ & $\mathbf{2.6758}$ & \textbf{74\% less} \\
+\bottomrule
+\end{tabular}
+\caption{Forgetting in nats. \emph{both} is mean final loss over the two tasks.}
+\label{tab:continual}
+\end{table}
+
+The \emph{both} column is the one to read before celebrating the forgetting
+column. Protecting old weights also slows acquisition of the new task: French
+improves by $0.76$ nats under \texttt{naive} but only $0.44$ under
+\texttt{full}. The methods buy retention by spending plasticity at close to
+$1{:}1$. The \texttt{full} arm does edge ahead on \emph{both}, by $0.012$
+nats---a margin small enough on a single seed that it should be read as ``no
+worse overall while forgetting 74\% less'', not as a free lunch. A forgetting
+number reported without its stability--plasticity counterpart is close to
+meaningless.
+
+\subsection{Inference-time learning}
+
+Over 400 inference-time weight updates against a control with plasticity
+gating, trust region and rollback all disabled: the guarded arm degrades on the
+old task by $+0.0170$ nats with parameter drift $0.2119$ and a $3\%$ rollback
+rate; the control degrades by $+0.0624$ with drift $0.3151$. The guards deliver
+$3.7\times$ less degradation.
+
+We are careful about what this does \emph{not} show. The control degrades
+faster; it does not diverge. At this learning rate and horizon the trust region
+buys a slower slide rather than preventing a collapse. Spike rate holds at
+$0.028$ in both arms, which matters independently: a spiking network that
+quietly becomes dense under online updates has discarded its reason for
+existing.
+
+\subsection{Epistemics}
+
+Against \texttt{NaiveCounter} (confidence $=$ supports$/$total):
+
+\begin{table}[h]
+\centering\small
+\begin{tabular}{@{}lrr@{}}
+\toprule
+Scenario & Reality Cortex & Naive \\
+\midrule
+100 repeats vs.\ 2 good sources & $\mathbf{0.9986}$ \win & fails \\
+majority is correct & $0.9857$ \win & \win \\
+200 identities, one vote each & $0.0145$ \lose & fails \\
+same, vs.\ protected axiom & $\mathbf{0.9956}$ \win & fails \\
+200 identities with a record & $\mathbf{0.8636}$ \win & fails \\
+\bottomrule
+\end{tabular}
+\caption{Belief quality. The two Sybil rows are the informative pair.}
+\end{table}
+
+A puppet voting exactly once is indistinguishable from a genuine one-time
+witness---correctly so, as a single data point cannot support an accusation of
+collusion---and gets through unless the target is a protected axiom. Once a
+ring participates in several claims its shared pattern is detectable, the ring
+collapses to one vote, and a \emph{single} trusted source then outweighs all
+200.
+
+Grounding removes the oracle entirely. Two sensors, both assigned prior $0.8$
+by the operator, one honest and one broken, with nothing labelling either:
+after 40 rounds of predictions resolving against observations, trust separates
+to $0.974$ and $0.104$. A fixed prior holds both at $0.800$ indefinitely.
+
+One methodological note: sockpuppets are assigned prior $0.62$, not $0.2$. Below
+$0.5$ a source's \emph{support} is already evidence against---$\log(t/(1-t))$
+is negative---so a flood of visibly untrusted accounts defeats itself and tests
+nothing. Our first version of this benchmark made exactly that error and
+reported a pass.
+
+\subsection{Multi-domain breadth}
+\label{sec:breadth}
+
+The single-book runs establish that the mechanism trains; they say nothing about
+breadth. We therefore trained the same \texttt{nano} model across \textbf{64
+domains totalling 70.7\,MB}: code in seven languages, the natural and social
+sciences, five non-Latin languages (Urdu, Hindi, Marathi, Konkani, Arabic),
+Morse, binary, bytecode, assembly, geography, and an author/model knowledge
+corpus. Domains are sampled at temperature $0.5$ and evaluated separately, since
+one averaged number cannot separate uniform mediocrity from a model that learned
+code and forgot chemistry.
+
+Held-out loss fell from $5.49$ to \textbf{2.25 bits/byte} (mean). Selected
+domains: mathematics $0.58$, IT/CS reference $0.93$, Marathi $1.31$, Hindi
+$1.54$, Konkani $1.55$, Urdu $1.73$, Arabic $1.81$, Python/C++ $2.24$, and the
+tiny Morse and assembly corpora at $3.0$ and $3.8$. The five non-Latin languages
+were learned from scratch at the byte level with no vocabulary change---a direct
+consequence of byte tokenisation. A $20\times$-boosted, EWC-protected fine-tune
+(a continuation, not a retrain) then moved an author-knowledge corpus from $3.32$
+to \textbf{2.59 bits/byte} while the 64-domain mean held ($1.539 \rightarrow
+1.516$), demonstrating targeted acquisition without measurable forgetting.
+
+\textbf{The ceiling is size, not data or method.} Despite falling loss
+everywhere, generation remains character-level fragments: a prompt for the author
+elicits ``Zahisal''---a mangled ``Zahid''---rather than a sentence. At
+$1$--$2$ bits/byte the 5.36M model has learned each domain's statistics but lacks
+the capacity to compose them. This is the expected regime for a model of this
+size, and it is what the \texttt{compact} (104M) and \texttt{base} ($\sim$3.8B)
+presets exist to move past: corpus, method and per-domain evaluation transfer
+unchanged; only the parameter count and required compute increase. We report the
+small-model result because it is the one that runs to completion on a CPU, and
+because it isolates \emph{breadth of acquisition} from \emph{fluency}, which
+scale supplies separately.
+
+\section{Negative Results}
+\label{sec:negative}
+
+\subsection{AMSA}
+
+The architecture proposes an activation, AMSA, whose threshold and gain are
+driven by per-channel plasticity, confidence and memory state rather than by
+learned constants alone:
+\begin{equation}
+f(x) = z\,\sigma(\alpha z)\,\big(1 - e^{-\beta|z|}\big)(1+\gamma m),
+\quad z = x - \theta
+\end{equation}
+with $\theta = \theta_0 + \lambda p$ and
+$\alpha = \text{softplus}(\alpha_0 + \delta c)$.
+
+On static language modelling with matched parameter budgets, SwiGLU~\cite{shazeer2020}
+reaches validation loss $2.3323$ against AMSA's $2.3466$ and is roughly $40\%$
+faster. The natural objection is that this is the wrong benchmark: AMSA's state
+buffers are inert in a single-task run, since plasticity and confidence only
+carry information once a previous task's importance has been estimated. We
+therefore ran the test AMSA was designed for.
+
+\begin{table}[h]
+\centering\small
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+FFN & EN forgotten & FR learned & vs.\ SwiGLU \\
+\midrule
+swiglu & $\mathbf{+0.8062}$ & $+1.1540$ & --- \\
+amsa & $+0.8204$ & $+1.1476$ & $+0.0141$ worse \\
+amsa+state & $+0.8224$ & $+1.1464$ & $+0.0161$ worse \\
+\bottomrule
+\end{tabular}
+\caption{AMSA on continual learning, 3 seeds. Seed spread on forgetting is
+$\pm0.005$--$0.008$; both gaps are outside it.}
+\end{table}
+
+AMSA loses on its home turf, and driving the adaptive state makes it
+\emph{marginally worse} rather than neutral.
+
+\paragraph{Testing the scale defence.} The remaining defence is that
+\texttt{nano} is too small for the adaptive state to matter. This is testable:
+
+\begin{table}[h]
+\centering\small
+\begin{tabular}{@{}rrrrrr@{}}
+\toprule
+width & layers & steps & swiglu & amsa & gap \\
+\midrule
+96 & 3 & 100 & $+0.6475$ & $\mathbf{+0.6206}$ & $-4.2\%$ \\
+128 & 4 & 200 & $+0.7937$ & $+0.7898$ & $-0.5\%$ \\
+192 & 4 & 200 & $+0.8313$ & $+0.8257$ & $-0.7\%$ \\
+256 & 6 & 400 & $\mathbf{+0.9890}$ & $+1.0483$ & $+6.0\%$ \\
+\bottomrule
+\end{tabular}
+\caption{The gap \emph{widens} with scale.}
+\end{table}
+
+The gap moves from $-4.2\%$ to $+6.0\%$: AMSA is genuinely \emph{better} at the
+smallest setting and worse at the largest. There is a crossover, pointing the
+opposite way from the hypothesis.
+
+This must be read carefully in both directions. It does not establish that AMSA
+fails at $10^9$ parameters: the range spans width 96 to 256, the two middle rows
+lie inside seed noise, and width and training length were varied together rather
+than independently. What it does is remove the \emph{support} for the low-data
+explanation within the measured range, shifting the burden onto a larger
+experiment rather than onto an assumption.
+
+\textbf{Loss, however, is the wrong axis for AMSA.} The tests above optimise
+perplexity; AMSA was designed for efficiency, and its $(1 - e^{-\beta|z|})$
+factor is a small-activation suppressor. The relevant question is whether, at
+comparable loss, it activates less of the network. We measure this in the real
+spiking model on the 64-domain corpus, identical initialisation and batch stream,
+over three seeds. On a representative seed the spike rate is $0.0282$ vs SwiGLU's
+$0.0291$ and the feed-forward activation density $59.9\%$ vs $73.7\%$; across all
+three seeds, at a loss difference within noise ($\leq 0.021$ nats), AMSA is
+sparser in \textbf{3 of 3}, the $\sim$14-point density gap being structural---a
+direct consequence of the activation's shape---while the spike-rate margin varies
+by seed. In a spiking network spikes are the energy expended, so this is a
+genuine advantage on the axis AMSA was built for, invisible to a
+perplexity-only evaluation.
+
+The complete picture is a quality--efficiency tradeoff, not a flat loss: SwiGLU
+is marginally lower-loss and faster on dense hardware; AMSA reaches the same loss
+while firing less, which is what neuromorphic hardware bills for. We retain AMSA
+as the default on that basis. It remains one model size at a modest budget---AMSA
+does not win on loss, the loss gap widens with scale, and the spike-rate margin,
+though consistent in sign, is small---but the brain-efficiency claim now has
+evidence behind it rather than only design intent.
+
+\subsection{The world model}
+
+Against an RSSM-family recurrent baseline and a linear map:
+
+\begin{table}[h]
+\centering\small
+\begin{tabular}{@{}lrrrr@{}}
+\toprule
+System & persist & linear & RSSM & BrainAI \\
+\midrule
+linear rotation & $2.096$ & $\mathbf{0.006}$ & $0.244$ & $0.153$ \\
+saturating & $1.905$ & $\mathbf{0.249}$ & $0.406$ & $0.354$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The learned model beats RSSM on both systems and loses to a linear map on both.
+On the linear system this is expected---a linear map is optimal there, so
+losing $24\times$ measures overhead rather than capability. On saturating
+nonlinear dynamics the gap narrows to $1.4\times$ and constitutes a genuine
+loss: a 16k-parameter linear layer predicts better than a 119k-parameter
+dynamics head.
+
+\paragraph{But one-step MSE is not the job.} Nothing in this architecture
+requests a one-step point prediction. It requests multi-step imagination,
+ranking of candidate plans, an estimate of how far ahead the model can be
+trusted, and separation of learnable surprise from noise.
+
+\begin{table}[h]
+\centering\small
+\begin{tabular}{@{}lrrl@{}}
+\toprule
+Job & linear & BrainAI & winner \\
+\midrule
+rollout @ 1 & $\mathbf{0.2355}$ & $0.2570$ & linear \\
+rollout @ 3 & $0.3340$ & $0.3404$ & tie \\
+rollout @ 6 & $0.3852$ & $0.3849$ & tie \\
+rollout @ 12 & $0.4073$ & $0.4055$ & tie \\
+plan: best of 8 & $38.3\%$ & $39.4\%$ & tie \\
+uncertainty $r$ & n/a & $\mathbf{0.565}$ & BrainAI \\
+surprise struct/noise & n/a & $-0.52/7.99$ & BrainAI \\
+\bottomrule
+\end{tabular}
+\caption{4 seeds. Random planning baseline is $12.5\%$.}
+\end{table}
+
+The one-step deficit is real and separated at one step, and \emph{gone by
+three}: both models degrade to the same place over a horizon and both plan
+equally well, far above chance. The two \texttt{n/a} entries are structural
+rather than unmeasured---a point prediction cannot report its own reliability,
+and without that the planner cannot distinguish a trustworthy rollout from a
+guess.
+
+\section{Silent Failure Modes}
+\label{sec:silent}
+
+The following defects all had one property in common: the system continued to
+run, produced plausible output, and gave no indication of malfunction. Each was
+found only because a control was run or an invariant was asserted. We report
+them because several generalise well beyond this codebase.
+
+\begin{enumerate}\itemsep2pt
+
+\item \textbf{EWC contributing nothing.} On the first continual run, the EWC
+arm forgot $+0.5384$ against the no-EWC control's $+0.5385$---a $0\%$
+improvement. The diagonal Fisher at convergence is $\sim\!10^{-8}$, so
+$\lambda\sum F\,\Delta w^2$ evaluated to $10^{-4}$ against a task loss of
+$2.5$. The penalty was arithmetically present and functionally absent. This is
+indistinguishable from a working implementation without the control. The fix
+was to stop guessing $\lambda$ and calibrate it, so that a $1\%$ relative drift
+in every weight costs $\lambda/2$ nats and $\lambda$ carries units.
+
+\item \textbf{Fisher normalised by its maximum.} The Fisher is heavy-tailed, so
+$F/\max(F)$ is near zero for almost every weight and essentially nothing ends
+up protected. Visible only by printing the protected fraction. A high quantile
+is required.
+
+\item \textbf{Query and key in different spaces.} Retrieval searched with the
+raw episode summary while storage wrote \texttt{to\_key(summary)}. Cosine
+similarity between vectors in different projections is meaningless; retrieval
+returned confidently wrong neighbours. Best-match score rose from $0.121$ to
+$1.000$ once corrected.
+
+\item \textbf{Duplicate merging collapsing the store.} With a fixed threshold
+of $0.97$, sleep merged 2042 of 2048 episodic entries. Learned summaries are
+strongly collinear---genuinely distinct episodes score $\sim\!0.98$ against each
+other while true duplicates sit at $\sim\!0.9998$---so a plausible-looking
+constant destroyed the store while retrieval continued returning
+\emph{something}. Replaced with a threshold derived from the store's own
+similarity distribution.
+
+\item \textbf{Rate limiting disabled on every call.} The guard compared
+\texttt{\_last\_command.shape == command.shape}, but the reference is $(n,)$
+while commands arrive as $(1,n)$. The comparison never held, so joint rate
+limiting never executed. A live hazard, invisible in every test that did not
+assert the ramp.
+
+\item \textbf{No reference pose after a veto.} Following a safety veto the
+controller retained no reference position, so the \emph{next} command skipped
+rate limiting entirely and joints could slam immediately after a safety stop.
+
+\item \textbf{Adaptation inert at $T=2$.} Two SNN timesteps leave the
+adaptation decay multiplying only zeros, so a headline feature of the ALIF
+neuron did nothing. Detected by observing that the parameter received exactly
+zero gradient.
+
+\item \textbf{A silent spiking readout.} The spiking-LSTM threshold initialised
+at $0.5$ while $h = o\tanh(c)$ starts near zero, so the layer emitted all
+zeros; its consumer therefore received no gradient at all. Detected by auditing
+which parameters had zero gradient.
+
+\item \textbf{Stale recurrent state across batch sizes.} Short-term memory
+retained LSTM state across calls without invalidating it on a batch-size
+change, silently broadcasting old state against new input and returning the
+wrong batch size.
+
+\item \textbf{A deadline making a goal less urgent.} Urgency computed as
+$1/(1+k\cdot\text{remaining})$ sends distant deadlines toward zero, so attaching
+a deadline to a goal made it \emph{less} likely to run than having none.
+
+\item \textbf{Replanning checking only the immediate parent.} Alternative
+methods are normally registered against the high-level task, not the leaf that
+failed, so every recoverable failure was reported as fatal.
+
+\item \textbf{Calibration measured off-distribution.} The error head trained at
+unit variance and was scored across $0.3$--$2.3\times$ state magnitude, yielding
+an \emph{anti}-correlation of $-0.615$ that looked like a broken mechanism.
+Training across the tested range gives $+0.565$. The measurement was wrong, not
+the model.
+
+\item \textbf{An approximate index trading everything for nothing.} An initial
+12-bit single-probe random-hyperplane LSH
+configuration~\cite{indyk1998,charikar2002} achieved a $3.4\times$ speedup at
+$19\%$ recall. Multi-probe~\cite{lv2007} reached 94--100\% recall but was then
+\emph{slower} than exact search, since Python-side bucket assembly cannot beat
+a single BLAS matmul below roughly 500k entries.
+
+\item \textbf{A critic that crashed on long inputs.} A fixed window exceeded the
+positional embedding of any model configured below it.
+
+\end{enumerate}
+
+We note that six of these---(1), (2), (4), (5), (7), (12)---produce output that
+is entirely plausible. Three---(5), (6), (10)---are safety-relevant. None would
+have been caught by a loss curve.
+
+\section{Limitations}
+\label{sec:limitations}
+
+\paragraph{Scale.} Every experiment is at 5.36M parameters, including the
+64-domain run of \S\ref{sec:breadth}. Continual learning is measured on two
+tasks over 120 steps; online stability over 400 updates. As
+\S\ref{sec:breadth} shows directly, this size learns each domain's statistics
+but cannot compose them into fluent output---the deficit is capacity, not data
+or method, and is expected to close only with the larger presets. Convincing
+evidence of that requires GPU-scale training the CPU here cannot provide. This
+is the dominant limitation and it is compute-bound rather than design-bound.
+
+\paragraph{No robot.} Nothing here has been run on hardware, in simulation, or
+against a real sensor. The body model has never calibrated against a physical
+actuator; sensor specifications are representative of commodity parts rather
+than measured. The safety controller enforces an envelope and named constraints,
+which is a floor rather than a safety case: real deployment requires hazard
+analysis, redundant sensing, and a hardware interlock independent of this
+process.
+
+\paragraph{Grounding covers a subset.} The prediction ledger removes the oracle
+only for beliefs implying a checkable prediction. A claim about something the
+robot never observes remains anchored to its operator prior---correct behaviour,
+but it means trust is grounded for part of the knowledge base rather than all
+of it.
+
+\paragraph{Sybil resistance is a cost, not a guarantee.} Clustering detects
+identities behaving identically. A patient adversary varying its puppets'
+patterns, or one compromising genuinely independent sources, is not detected.
+
+\paragraph{Triple extraction is out of scope.} The Reality Cortex reasons over
+$(\text{subject},\text{relation},\text{object})$ triples that something else
+must supply. Extracting reliable triples from raw perception is its own hard
+problem and is not addressed.
+
+\paragraph{Spiking energy is a hardware argument.} On CPU or GPU, binary
+activations save no wall-clock time---dense matmuls execute regardless. The
+$97\%$ sparsity figures are what neuromorphic hardware would exploit; here they
+are a proxy.
+
+\section{Conclusion}
+
+BrainAI integrates spiking computation, a differentiability-split memory
+hierarchy, evidence-weighted belief maintenance, predictive world modelling,
+goal-directed executive control, hierarchical planning, end-to-end uncertainty,
+and a non-learned safety layer into one architecture. Of thirteen controlled
+comparisons, nine clearly favour the proposed component, one is mixed (the
+world model ties on its downstream jobs while losing at one-step prediction),
+and three favour the simpler alternative. All are reported.
+
+We suggest the more transferable contribution may be methodological. A
+component that does nothing is observationally identical to one that works,
+until something is run without it. In this project that principle recovered an
+EWC penalty contributing $10^{-4}$, a rate limiter disabled by a shape
+comparison, a memory store collapsed to six percent of its contents, and an
+uncertainty head whose apparent anti-correlation was an artefact of measuring
+it off-distribution. None of these would have been visible in a loss curve, and
+all of them existed in code that ran without error and produced plausible
+output.
+
+The remaining work is not architectural. It is scale, embodiment, and the
+longer horizons under which the claims made here would either hold or fail.
+
+\section*{Reproducibility}
+
+All results are produced by scripts in the accompanying repository and run on
+CPU. The test suite comprises 114 tests, including regression tests for every
+defect in \S\ref{sec:silent}.
+
+\begin{lstlisting}
+python train.py --steps 400
+python train_multidomain.py          # 64-domain breadth
+python finetune_author.py            # author recall, a continuation
+python evaluate_trained.py           # benchmarks on the trained weights
+python continual.py --steps 120
+python benchmarks/cognition_bench.py
+python benchmarks/worldmodel_jobs.py
+python benchmarks/amsa_continual.py --sweep
+python benchmarks/belief_bench.py
+python benchmarks/gating_bench.py
+python benchmarks/stability_bench.py --control
+python -m pytest tests -q
+\end{lstlisting}
+
+\begin{thebibliography}{99}\small
+
+\bibitem{bellec2018} Bellec, G., Salaj, D., Subramoney, A., Legenstein, R., \&
+Maass, W. (2018). Long short-term memory and learning-to-learn in networks of
+spiking neurons. \emph{NeurIPS}.
+
+\bibitem{burda2019} Burda, Y., Edwards, H., Pathak, D., Storkey, A., Darrell,
+T., \& Efros, A. (2019). Large-scale study of curiosity-driven learning.
+\emph{ICLR}.
+
+\bibitem{charikar2002} Charikar, M. (2002). Similarity estimation techniques
+from rounding algorithms. \emph{STOC}.
+
+\bibitem{douceur2002} Douceur, J. R. (2002). The Sybil attack. \emph{IPTPS}.
+
+\bibitem{erol1994} Erol, K., Hendler, J., \& Nau, D. (1994). HTN planning:
+complexity and expressivity. \emph{AAAI}.
+
+\bibitem{fedus2022} Fedus, W., Zoph, B., \& Shazeer, N. (2022). Switch
+Transformers: scaling to trillion parameter models with simple and efficient
+sparsity. \emph{JMLR}, 23.
+
+\bibitem{guo2017} Guo, C., Pleiss, G., Sun, Y., \& Weinberger, K. Q. (2017). On
+calibration of modern neural networks. \emph{ICML}.
+
+\bibitem{hafner2019} Hafner, D., Lillicrap, T., Fischer, I., Villegas, R., Ha,
+D., Lee, H., \& Davidson, J. (2019). Learning latent dynamics for planning from
+pixels. \emph{ICML}.
+
+\bibitem{hafner2020} Hafner, D., Lillicrap, T., Ba, J., \& Norouzi, M. (2020).
+Dream to control: learning behaviors by latent imagination. \emph{ICLR}.
+
+\bibitem{hinton2015} Hinton, G., Vinyals, O., \& Dean, J. (2015). Distilling
+the knowledge in a neural network. \emph{arXiv:1503.02531}.
+
+\bibitem{indyk1998} Indyk, P., \& Motwani, R. (1998). Approximate nearest
+neighbors: towards removing the curse of dimensionality. \emph{STOC}.
+
+\bibitem{kahneman2011} Kahneman, D. (2011). \emph{Thinking, Fast and Slow}.
+Farrar, Straus and Giroux.
+
+\bibitem{kim2016} Kim, Y., \& Rush, A. M. (2016). Sequence-level knowledge
+distillation. \emph{EMNLP}.
+
+\bibitem{kirkpatrick2017} Kirkpatrick, J., et al. (2017). Overcoming
+catastrophic forgetting in neural networks. \emph{PNAS}, 114(13).
+
+\bibitem{lv2007} Lv, Q., Josephson, W., Wang, Z., Charikar, M., \& Li, K.
+(2007). Multi-probe LSH: efficient indexing for high-dimensional similarity
+search. \emph{VLDB}.
+
+\bibitem{maass1997} Maass, W. (1997). Networks of spiking neurons: the third
+generation of neural network models. \emph{Neural Networks}, 10(9).
+
+\bibitem{martins2016} Martins, A., \& Astudillo, R. (2016). From softmax to
+sparsemax: a sparse model of attention and multi-label classification.
+\emph{ICML}.
+
+\bibitem{mcclelland1995} McClelland, J. L., McNaughton, B. L., \& O'Reilly, R.
+C. (1995). Why there are complementary learning systems in the hippocampus and
+neocortex. \emph{Psychological Review}, 102(3).
+
+\bibitem{mccloskey1989} McCloskey, M., \& Cohen, N. J. (1989). Catastrophic
+interference in connectionist networks: the sequential learning problem.
+\emph{Psychology of Learning and Motivation}, 24.
+
+\bibitem{neftci2019} Neftci, E. O., Mostafa, H., \& Zenke, F. (2019). Surrogate
+gradient learning in spiking neural networks. \emph{IEEE Signal Processing
+Magazine}, 36(6).
+
+\bibitem{pathak2017} Pathak, D., Agrawal, P., Efros, A. A., \& Darrell, T.
+(2017). Curiosity-driven exploration by self-supervised prediction.
+\emph{ICML}.
+
+\bibitem{rolnick2019} Rolnick, D., Ahuja, A., Schwarz, J., Lillicrap, T., \&
+Wayne, G. (2019). Experience replay for continual learning. \emph{NeurIPS}.
+
+\bibitem{shazeer2017} Shazeer, N., et al. (2017). Outrageously large neural
+networks: the sparsely-gated mixture-of-experts layer. \emph{ICLR}.
+
+\bibitem{shazeer2020} Shazeer, N. (2020). GLU variants improve Transformer.
+\emph{arXiv:2002.05202}.
+
+\bibitem{vaswani2017} Vaswani, A., et al. (2017). Attention is all you need.
+\emph{NeurIPS}.
+
+\bibitem{zenke2017} Zenke, F., Poole, B., \& Ganguli, S. (2017). Continual
+learning through synaptic intelligence. \emph{ICML}.
+
+\bibitem{zhou2023} Zhou, Z., et al. (2023). Spikformer: when spiking neural
+network meets Transformer. \emph{ICLR}.
+
+\end{thebibliography}
+
+\end{document}

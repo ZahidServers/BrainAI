@@ -1,0 +1,9 @@
+# BrainAI - built by Mohammed Zahid.
+torch>=2.0
+
+# Tests
+pytest>=7.0
+
+# Only needed for distill.py against a real Qwen teacher.
+# transformers>=4.40
+# accelerate>=0.30

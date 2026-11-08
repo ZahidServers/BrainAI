@@ -1,0 +1,434 @@
+BrainAI EDUCATIONAL CORPUS
+BATCH 2 — GRADES 1 & 2 (NCERT branch + Maharashtra Balbharati branch)
+Original teaching corpus. No textbook is reproduced; poems and stories are referenced only by original summary/theme/skill. Chapter scaffolding is grounded in the current (NEP 2020 / NCF-FS) textbook structure verified 2026: NCERT — Joyful Mathematics, Mridang (English), Sarangi (Hindi); Maharashtra Balbharati — integrated textbook (एकात्मिक पाठ्यपुस्तक) covering Marathi, English, Mathematics and EVS. The two boards are kept as separate curriculum branches and must not be merged.
+A note on scope, kept honest: Grades 1–2 span three subjects × two grades × two boards. This file delivers the core academic spine at real teaching depth — Mathematics and Language/Literacy for both grades and both boards, plus foundational EVS — with the full training-data apparatus (definitions, tiered Q&A, MCQs, T/F, fill-blanks, short/long, HOTS, misconceptions, revision, 5-level adaptive explanations, instruction records) on anchor chapters, and compact LESSON records for the remaining chapters. Any single chapter can be expanded to full apparatus on request.
+
+
+=================================================================
+BRANCH A — NCERT / CBSE
+=================================================================
+
+===== GRADE 1 (NCERT) =====
+
+SUBJECT: MATHEMATICS — Joyful Mathematics (Class 1)
+Verified chapter arc: (1) Finding the Furry Cat! — pre-number concepts; (2) What is Long? What is Round? — shapes; (3) Mango Treat — numbers 1–9; (4) Making 10 — numbers 10–20; (5) How Many? — counting & grouping; (6) addition; (7) subtraction; (8) larger numbers to ~99; (9) measurement; (10) patterns; (11) time; (12) money; (13) So Many Toys — data handling.
+
+
+CHAPTER G1M-1 — Pre-number Concepts ("Finding the Furry Cat!")
+
+METADATA. Grade 1 · Board NCERT/CBSE · Subject Mathematics · Unit Number readiness · Prerequisites: KG counting to 10 · Difficulty: Easy · Objectives: use position words (in/out, above/below, near/far); compare (big/small, more/less, heavy/light); sort and classify objects; recognise "as many as" (one-to-one matching).
+
+TEACHING MATERIAL.
+Before numbers come ideas about quantity and position. A child must be able to say where a thing is and whether one group has more than another before formal counting means anything.
+• Position/spatial words. Inside/outside (the cat is inside the basket), above/below, on/under, near/far, front/behind, left/right. These describe where things are.
+• Comparison words. Big/small, tall/short, long/short, heavy/light, more/less/equal, fast/slow. Comparison always needs two things: "The elephant is bigger than the cat."
+• Sorting/classifying. Grouping things that are alike — by colour, shape, size, or kind. Sorting trains the logic that underlies place value later.
+• One-to-one matching ("as many as"). Draw a line from each cup to one saucer. If none is left over on either side, there are "as many cups as saucers" — equal. This is the seed of the equals sign.
+
+Visual/diagram description. A basket with three kittens inside and two outside; arrows label inside/outside. Below, cups matched to saucers by connecting lines.
+
+Common misconceptions. "The taller glass has more water" — not always; a wide short glass can hold more. Compare by matching or measuring, not by looking. "More things = takes more space" — five marbles take less space than one football.
+
+DEFINITIONS (10). 1. Compare — to see how two things differ in size/number. 2. Sort — group alike things. 3. Classify — sort by a chosen rule. 4. More — greater amount. 5. Less — smaller amount. 6. Equal / as many as — same number. 7. Inside — within the boundary. 8. Outside — beyond the boundary. 9. Heavy — hard to lift; more weight. 10. One-to-one matching — pairing each item of one group with one of another.
+
+Q&A. Easy: Is a bus big or small next to a cycle? (Big.) Where is a fish — inside or outside water? (Inside.) Medium: If 4 spoons match 4 bowls with none left, are they equal? (Yes.) Sort: apple, ball, banana — by "fruit." (Apple, banana.) Application: You have 3 red and 5 blue beads — which is more? (Blue.) Put the toy under the table — where is it? (Below the table.)
+
+MCQs (10, abridged). 1. Opposite of big — (A)small (B)tall (C)more (D)up. 2. The cat sits  the box (it's covered): (A)inside (B)far (C)fast (D)equal. 3. Which is heavy? (A)feather (B)stone (C)paper (D)leaf. 4. 3 cups, 3 plates matched, none left → (A)more cups (B)more plates (C)equal (D)none. 5. Which holds more? (A)spoon (B)bucket (C)cup (D)glass. 6. Opposite of fast — (A)slow (B)big (C)near (D)more. 7. Sort out the odd one: dog, cat, car, cow → car (not an animal). 8. Fewer: 2 or 6? (A)2 (B)6. 9. Near is opposite of — (A)far (B)small (C)under. 10. A group of only round things should include — (A)ball (B)book (C)box (D)brick.
+
+T/F (5). More means a smaller amount — F (greater). A stone is heavier than a feather — T. Inside and outside mean the same — F. Matching each cup to a saucer checks equality — T. A short wide glass can hold more than a tall thin one — T.
+
+FILL BLANKS (5). Opposite of tall is  (short). If none is left over after matching, the groups are  (equal). A rock is  than a leaf (heavier). The cat is  the basket when covered (inside). 6 is  than 2 (more).
+
+HOTS. Two glasses look different but hold the same water — how can you check? (Pour one into the other.) You matched forks to plates and 1 fork is left over — which is more? (Forks, by one.)
+
+MISCONCEPTIONS corrected. Taller ≠ more (depends on width). More objects ≠ more space. Comparison needs two items, not one.
+
+REVISION. Position words, comparison words (need two things), sorting by a rule, one-to-one matching → equal/more/less.
+
+ADAPTIVE — "as many as / equal". L1: "Equal means the same number." L2: "Match each cup to a saucer; if none is left, there are as many cups as saucers — equal." L3: "Equality of two sets means a bijection exists — every element pairs with exactly one in the other set." L4: "Like musical chairs where every child gets a chair and no chair is empty — a perfect match." L5: "One roti per person at dinner: if plates and rotis run out together, they were equal."
+
+INSTRUCTION RECORDS.
+``json
+{"messages":[{"role":"user","content":"How do I explain 'more and less' to a Grade 1 kid?"},{"role":"assistant","content":"Use matching, not guessing! Line up the two groups and pair one-to-one: put each red bead next to a blue bead. Whichever group has leftovers has MORE; the other has LESS; if none is left over, they're EQUAL. This works even before the child can count the exact numbers."}]}
+{"messages":[{"role":"user","content":"Give me a tricky question on comparing sizes."},{"role":"assistant","content":"Here's one: A tall thin glass and a short wide glass — which holds more water? Trick answer: you can't tell just by looking at the height! Pour one glass into the other to find out. Height alone doesn't decide 'more'."}]}
+`
+
+
+CHAPTER G1M-2 — Shapes ("What is Long? What is Round?")
+METADATA. Grade 1 · NCERT · Maths · Unit Geometry basics · Prereq G1M-1 · Easy · Objectives: identify 2-D shapes (circle, triangle, square, rectangle) and 3-D solids (ball/sphere, box/cuboid, can/cylinder); describe by rolls/slides, corners, sides; find shapes in surroundings.
+
+TEACHING MATERIAL. Flat (2-D) shapes have length and width but no thickness — circle, triangle, square, rectangle. Solid (3-D) shapes take up space — a ball (sphere) rolls, a box (cuboid) slides and stacks, a can (cylinder) rolls on its side and stacks on its ends, a dice (cube) has 6 equal faces. We describe solids by whether they roll or slide, how many corners, faces, and edges. Circle: curved, no corner. Triangle: 3 sides, 3 corners. Square: 4 equal sides. Rectangle: 4 sides, opposite sides equal.
+
+Table — solids.
+ Solid  |  Rolls?  |  Slides/Stacks?  |  Real example 
+------------------------------
+ Sphere (ball)  |  Yes  |  No  |  football 
+ Cube (dice)  |  No  |  Yes  |  dice, box 
+ Cuboid (brick)  |  No  |  Yes  |  matchbox 
+ Cylinder (can)  |  Yes (on side)  |  Stacks on ends  |  tin, glass 
+ Cone  |  Rolls in circle  |  Stacks point-up  |  ice-cream cone 
+Common misconceptions. A ball is not a "circle" — a circle is flat, a ball is a solid (sphere). A square is a special rectangle (all sides equal), but at Grade 1 we treat them as separate named shapes.
+
+DEFINITIONS (10). flat shape, solid shape, circle, triangle, square, rectangle, corner (vertex), side, roll, slide.
+
+Q&A. Easy: How many corners has a triangle? (3.) Does a ball roll? (Yes.) Medium: Name a shape with 4 equal sides (square). Which solid can both roll and stack? (Cylinder.) Application: Find a rectangle in the room (door/book). Which solid is a dice? (Cube.)
+
+MCQs (10, abridged). Ball is a — sphere; dice has 6 faces; triangle has 3 corners; a can is a cylinder; circle has 0 corners; door ≈ rectangle; which rolls: ball; square has 4 equal sides; ice-cream cone shape: cone; stack biscuits like a — cylinder (tin).
+
+T/F (5). A ball is a flat shape — F (solid). A cube has 6 faces — T. A circle has 3 corners — F (none). A cylinder can roll — T. A rectangle has 4 sides — T.
+
+FILL BLANKS (5). A triangle has  sides (3). A  rolls (ball/sphere). A dice has  faces (6). A circle has  corners (0). A door is like a  (rectangle).
+
+HOTS. Why can you stack cans but a ball rolls away? (Flat ends vs. curved surface.) Sort solids into "rolls" and "does not roll." (Rolls: ball, cylinder, cone; not: cube, cuboid.)
+
+REVISION. 2-D flat vs 3-D solid; corners/sides/faces; roll vs slide; real-world shapes.
+
+ADAPTIVE — "sphere vs circle". L1: "A circle is flat; a ball is round like an orange." L2: "A circle is drawn on paper (2-D); a sphere is a solid you can hold (3-D)." L3: "A circle is a 2-D locus of points equidistant from a centre; a sphere is its 3-D analogue." L4: "A circle is the shadow a ball casts on the ground — flat — while the ball itself is full and solid." L5: "A coin's face is a circle; the marble is a sphere."
+
+INSTRUCTION RECORD.
+`json
+{"messages":[{"role":"user","content":"Explain why some shapes roll for a first grader."},{"role":"assistant","content":"Shapes with a CURVED surface roll — like a ball or a can lying on its side, because there are no flat corners to stop them. Shapes with only FLAT faces — like a box or dice — slide and stack but don't roll. Try it: push a tin on its side (it rolls!) then stand it up (it stacks!)."}]}
+`
+
+
+CHAPTER G1M-3 — Numbers 1 to 9 ("Mango Treat")
+METADATA. Grade 1 · NCERT · Maths · Prereq counting readiness · Easy · Objectives: count, read and write numerals 1–9; understand cardinality (last count = how many); order and compare; recognise zero as "none"; ordinal ideas (first–ninth).
+
+TEACHING MATERIAL. Each number has a quantity, a number-word, and a numeral. Zero (0) means nothing/none — an empty plate has 0 mangoes. Cardinality: the last number you say when counting tells how many altogether. Ordinals: first, second, third… tell position in a line. We compare using more/less/equal and the words greater/smaller. Writing numerals: correct stroke order (e.g., 2 starts with a curve then a flat base).
+
+Table. number-word ↔ numeral ↔ quantity for 0–9 (zero=•empty; one=•; two=••; … nine=•••••••••).
+
+Common misconceptions. Zero is a number (means "none"), not "nothing to write." Counting the last word = total (cardinality), not just reciting. Numeral reversal (writing 3 backwards, or 6/9 confusion) — corrected by starting-point cues.
+
+DEFINITIONS (10). numeral, number-word, zero, count, cardinal number, ordinal number, greater than, smaller than, order, digit.
+
+Q&A. Easy: Write the numeral for seven (7). How many are in an empty box? (0.) Medium: Which is greater, 6 or 9? (9.) Who is 3rd in line if Asha is 1st? (the third child.) Application: Arrange 4, 1, 7 smallest first (1,4,7). Count 8 mangoes and say the total (8).
+
+MCQs (10, abridged). Numeral for five: 5; "none" is written as 0; greater of 3 and 8: 8; after 6 comes 7; before 5 is 4; 2nd position word: second; smallest of 9,2,5: 2; how many dots ••• : 3; largest 1-digit number: 9; order 3,1,2 smallest-first: 1,2,3.
+
+T/F (5). Zero means none — T. 9 is smaller than 6 — F. The last count word tells how many — T. After 8 comes 10 — F (9). "First" tells position — T.
+
+FILL BLANKS (5). After 4 comes  (5).  means none (0/zero). The greatest 1-digit number is  (9). Before 7 is  (6). 3rd position is called  (third).
+
+HOTS. If you eat all 5 mangoes, how many are left and what number is that? (0.) Riya is 2nd, Sam is just behind her — what position is Sam? (3rd.)
+
+REVISION. 0–9 quantity/word/numeral; zero=none; cardinality; ordinals; compare & order.
+
+ADAPTIVE — "zero". L1: "Zero means nothing is there." L2: "If you had 3 sweets and ate all 3, you have 0 — zero — left." L3: "Zero is the additive identity and the cardinality of the empty set." L4: "Zero is an empty basket — it's still a basket (a number), just with nothing in it." L5: "The scoreboard shows 0 before the match starts — no goals yet."
+
+INSTRUCTION RECORD.
+`json
+{"messages":[{"role":"user","content":"Explain zero to a 6-year-old."},{"role":"assistant","content":"Zero means NONE — nothing there! If you have 4 biscuits and eat all 4, how many are left? Zero! We write it like a smooth oval: 0. Zero is a real number — it's the 'empty' number that tells us there's nothing to count right now."}]}
+`
+
+
+CHAPTERS G1M-4 to G1M-13 — Compact LESSON records
+(Full teaching apparatus available on request; these anchor the remaining Grade-1 NCERT maths arc.)
+
+RECORDTYPE: LESSON  |  GRADE: 1  |  BOARD: NCERT  |  SUBJECT: Maths  |  CHAPTER: Making 10 (Numbers 10–20)  |  CONCEPT: Teen numbers & bundling
+EXPLANATION: 10 is one bundle of ten. Teen numbers are ten and some ones: 13 = 1 ten + 3 ones. Number pairs that make 10 (0+10, 1+9, 2+8, 3+7, 4+6, 5+5) are key facts.
+EXAMPLE: 10 straws tied in a bundle + 4 loose = 14.  |  MISCONCEPTION: "13 means 3 then 1" — place matters; the 1 is a ten.  |  QUESTION: What makes 10 with 7? ANSWER: 3.  |  DIFFICULTY: Easy
+
+RECORDTYPE: LESSON  |  GRADE: 1  |  BOARD: NCERT  |  SUBJECT: Maths  |  CHAPTER: How Many? (Counting & grouping)  |  CONCEPT: Grouping to count faster
+EXPLANATION: Counting in groups (2s, 5s, 10s) is quicker and more accurate than by 1s for larger sets.  |  EXAMPLE: 20 pencils in 4 groups of 5.  |  QUESTION: Count 15 in fives. ANSWER: 5,10,15.  |  DIFFICULTY: Easy
+
+RECORDTYPE: LESSON  |  GRADE: 1  |  BOARD: NCERT  |  SUBJECT: Maths  |  CHAPTER: Addition  |  CONCEPT: Combining/counting on
+EXPLANATION: Addition combines groups; count on from the larger number. Symbols + and =. Adding 0 changes nothing. Order can be swapped (2+5=5+2).  |  EXAMPLE: 6+3: "six… seven, eight, nine" = 9.  |  MISCONCEPTION: Recounting both groups from 1.  |  QUESTION: 7+2? ANSWER: 9.  |  DIFFICULTY: Easy
+
+RECORDTYPE: LESSON  |  GRADE: 1  |  BOARD: NCERT  |  SUBJECT: Maths  |  CHAPTER: Subtraction  |  CONCEPT: Take away / difference / count back
+EXPLANATION: Subtraction removes from a group or finds the difference; sign is −. a−a=0; a−0=a. Count back for small numbers.  |  EXAMPLE: 8−3: "seven, six, five" = 5.  |  MISCONCEPTION: Subtraction is not commutative (5−2 ≠ 2−5).  |  QUESTION: 9−4? ANSWER: 5.  |  DIFFICULTY: Easy
+
+RECORDTYPE: LESSON  |  GRADE: 1  |  BOARD: NCERT  |  SUBJECT: Maths  |  CHAPTER: Numbers to 99  |  CONCEPT: Tens and ones (place value)
+EXPLANATION: A two-digit number has a tens place and a ones place: 47 = 4 tens + 7 ones. Count in tens to 90; fill ones between.  |  EXAMPLE: 52 = 5 bundles of ten + 2 loose.  |  MISCONCEPTION: Reading 52 as "5 and 2" instead of "fifty-two".  |  QUESTION: What is 6 tens + 3 ones? ANSWER: 63.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE: 1  |  BOARD: NCERT  |  SUBJECT: Maths  |  CHAPTER: Measurement  |  CONCEPT: Non-standard length/weight/capacity
+EXPLANATION: Measure length in hand-spans/steps, weight by balance (heavier side goes down), capacity by how many cups fill a jug — before standard units.  |  EXAMPLE: The table is 6 hand-spans long.  |  QUESTION: Which is heavier if the balance tips towards it? ANSWER: That object.  |  DIFFICULTY: Easy
+
+RECORDTYPE: LESSON  |  GRADE: 1  |  BOARD: NCERT  |  SUBJECT: Maths  |  CHAPTER: Patterns  |  CONCEPT: Repeating & growing patterns
+EXPLANATION: A pattern follows a rule and repeats (AB, ABB, AAB) or grows (1,2,3…). Identify the "unit" that repeats, then extend.  |  EXAMPLE: ▲■▲■ → ▲.  |  QUESTION: Next: red, red, blue, red, red, ? ANSWER: blue.  |  DIFFICULTY: Easy
+
+RECORDTYPE: LESSON  |  GRADE: 1  |  BOARD: NCERT  |  SUBJECT: Maths  |  CHAPTER: Time  |  CONCEPT: Sequence & day/night, days, o'clock
+EXPLANATION: Order events (morning→noon→night); name days of the week; read "o'clock" on a clock (short hand = hour).  |  EXAMPLE: We sleep at night, eat lunch at noon.  |  QUESTION: Day after Monday? ANSWER: Tuesday.  |  DIFFICULTY: Easy
+
+RECORDTYPE: LESSON  |  GRADE: 1  |  BOARD: NCERT  |  SUBJECT: Maths  |  CHAPTER: Money  |  CONCEPT: Coins/notes & simple value
+EXPLANATION: Recognise ₹1,₹2,₹5,₹10 coins and ₹10/₹20 notes; combine small coins to a value; more money buys more.  |  EXAMPLE: ₹5 = five ₹1 coins.  |  QUESTION: Two ₹2 coins = ? ANSWER: ₹4.  |  DIFFICULTY: Easy
+
+RECORDTYPE: LESSON  |  GRADE: 1  |  BOARD: NCERT  |  SUBJECT: Maths  |  CHAPTER: So Many Toys (Data handling)  |  CONCEPT: Sorting & simple pictographs
+EXPLANATION: Collect, sort, and show data as tally marks or pictures (one picture = one item); read "which has most/least".  |  EXAMPLE: 3 cars, 5 balls → balls are most.  |  QUESTION: If red=4, blue=6, which is most? ANSWER: Blue.  |  DIFFICULTY: Easy
+
+
+SUBJECT: ENGLISH — Mridang (Class 1)
+Nine units, each pairing a poem and a story with picture-talk and activities. Copyright note: poems/stories are NOT reproduced; below are the skills and themes they build, plus original teaching content.
+
+CHAPTER G1E-1 — Early Literacy Skills (anchor)
+METADATA. Grade 1 · NCERT · English · Unit 1–2 skills · Prereq KG phonics · Easy · Objectives: revise letter sounds; blend/segment CVC words; read simple sentences; recognise naming words (nouns) and a/an; listen to a story and answer who/what/where; speak in short sentences; copy letters/words neatly.
+
+TEACHING MATERIAL.
+• Phonics & decoding. Sound out CVC and simple CVCC/CCVC words (cat, ship, frog). Segment to spell (dog → /d/ /o/ /g/).
+• Sight words. the, a, is, in, it, and, to, I, you, we — read by memory.
+• Naming words (nouns). Words for people, animals, places, things (boy, cow, park, ball). Names of people/places start with a capital letter.
+• a / an. Use a before a consonant sound (a cat), an before a vowel sound (an apple).
+• Sentence sense. A sentence starts with a capital and ends with a full stop; it tells a complete idea.
+• Listening/speaking. Story-time builds vocabulary and sequence; picture-talk builds speaking.
+• Handwriting. Correct formation on four lines; spacing between words.
+
+Table — a/an. a book, a dog, a table  |  an apple, an egg, an umbrella.
+
+Common misconceptions. "an" is used before vowel sounds, not just vowel letters (an hour). All words don't start with capitals — only sentence-starts and names.
+
+DEFINITIONS (10). letter, sound, word, sentence, noun/naming word, vowel, consonant, capital letter, full stop, sight word.
+
+Q&A. Easy: Read: "The cat is fat." Who is fat? (The cat.) Medium: a or an before "egg"? (an.) Name three animals (nouns). Application: Make a sentence with "dog." Point to a naming word in the room.
+
+MCQs (10, abridged). a/an before apple: an; naming word: ball (not run); sentence ends with: full stop; capital needed for a person's name; blend d-o-g: dog; sight word: the; a  dog: a; vowel among b,e,t: e; start a sentence with a  letter: capital; "an" before: egg.
+
+T/F (5). Names begin with a capital — T. Use "an" before "cat" — F (a cat). A sentence needs a full stop — T. "Ball" is a naming word — T. Sight words are sounded out letter by letter — F.
+
+FILL BLANKS (5).  apple (an). A sentence ends with a  (full stop).  dog (a). Names start with a  letter (capital). c-a-t =  (cat).
+
+HOTS. Why "an hour" but "a house" when both start with h? (Sound: hour starts with a vowel sound, house with /h/.) Turn "cat" into a naming-word sentence. (e.g., "The cat ran.")
+
+REVISION. decode CVC, sight words, nouns, a/an by sound, sentence = capital + full stop.
+
+ADAPTIVE — "noun". L1: "A naming word names a person, animal, place or thing." L2: "boy, cat, park, ball are nouns — they name something." L3: "A noun is a word denoting an entity — concrete or abstract — that can head a noun phrase." L4: "Nouns are the name-tags of language — every person, place and thing wears one." L5: "In 'The girl kicked the ball in the park,' the name-tags are girl, ball, park."
+
+INSTRUCTION RECORDS.
+`json
+{"messages":[{"role":"user","content":"When do we use a and an? Explain for a Grade 1 child."},{"role":"assistant","content":"Listen to the FIRST SOUND of the next word! If it sounds like a vowel (a, e, i, o, u sound) — say 'an': an apple, an egg, an umbrella. If it sounds like a consonant — say 'a': a cat, a book, a dog. Trick: it's about the SOUND, so we say 'an hour' (the h is silent) but 'a house'."}]}
+{"messages":[{"role":"user","content":"Test me on naming words."},{"role":"assistant","content":"Find the naming word (the person/animal/place/thing) in each: 1) The dog barks. 2) Riya runs fast. 3) We play in the park. (Answers: dog; Riya; park.) Want a few harder ones with two naming words each?"}]}
+`
+
+CHAPTER G1E-2 — Reading, Comprehension & Simple Writing (compact)
+RECORDTYPE: LESSON  |  GRADE 1  |  NCERT  |  English  |  CONCEPT: Comprehension & sentence writing
+EXPLANATION: Read a short text; answer who/what/where/why; retell in sequence; write 2–3 simple sentences about a picture using naming and action words. Action words (verbs) show what someone does (run, eat, sing).  |  EXAMPLE: Picture of a park → "The boy plays. The girl runs."  |  MISCONCEPTION: Answering "who" with a place.  |  QUESTION: In "The bird flew," what is the action word? ANSWER: flew.  |  DIFFICULTY: Easy
+
+
+FOUNDATIONAL EVS (Grade 1, NCERT — woven through language/activity)
+At Grade 1, environmental content is integrated (family, plants, animals, food, water, festivals, good habits). Key LESSON records:
+
+RECORDTYPE: LESSON  |  GRADE 1  |  NCERT  |  EVS(integrated)  |  CONCEPT: My body & keeping clean
+EXPLANATION: Parts of the body and the five senses; daily hygiene — bath, brush teeth, wash hands, cut nails, wear clean clothes — prevents illness.  |  QUESTION: Why wash hands before eating? ANSWER: To remove germs and stay healthy.  |  DIFFICULTY: Easy
+
+RECORDTYPE: LESSON  |  GRADE 1  |  NCERT  |  EVS(integrated)  |  CONCEPT: Plants & animals around us
+EXPLANATION: Plants give food, shade, oxygen; parts: root, stem, leaf, flower. Animals: pet/farm/wild; uses (milk, eggs, wool) and care/kindness.  |  QUESTION: Which animal gives wool? ANSWER: Sheep.  |  DIFFICULTY: Easy
+
+RECORDTYPE: LESSON  |  GRADE 1  |  NCERT  |  EVS(integrated)  |  CONCEPT: Food, water & good habits
+EXPLANATION: Healthy vs sometimes-food; drink clean water and don't waste it; eat on time; share and be polite.  |  QUESTION: Name two healthy foods. ANSWER: Fruits and vegetables.  |  DIFFICULTY: Easy
+
+
+===== GRADE 2 (NCERT) =====
+
+SUBJECT: MATHEMATICS — Joyful Mathematics (Class 2)
+Arc builds on Class 1: numbers to 100+ with place value; addition/subtraction with regrouping (carry/borrow) introduced; repeated addition → readiness for multiplication; equal sharing → readiness for division; measurement with standard units begins (cm, litre, gram, rupee); shapes; patterns; time (half/quarter); money; simple data.
+
+CHAPTER G2M-1 — Place Value & Numbers to 100+ (anchor)
+METADATA. Grade 2 · NCERT · Maths · Prereq G1 numbers to 99 · Medium · Objectives: read/write/order numbers to 100 (and beyond to 999 informally); expand into tens & ones; compare using < > =; skip-count by 2s/5s/10s; identify even/odd.
+
+TEACHING MATERIAL.
+• Place value. In a two-digit number the left digit is tens, the right is ones: 47 = 40 + 7 = 4 tens + 7 ones. Expanded form: 63 = 60 + 3.
+• Comparing/ordering. Compare tens first, then ones. Symbols: > greater, < smaller, = equal (the open mouth "eats" the bigger number).
+• Skip counting. By 2s (2,4,6…), 5s (5,10,15…), 10s (10,20,30…) — foundation for multiplication.
+• Even/odd. Even numbers pair up with none left (2,4,6,8,0 at the end); odd have one left over (1,3,5,7,9 at the end).
+
+Table — place value of 58.  |  Tens  |  Ones  |  =  |  5  |  8  |  → 50 + 8.
+
+Common misconceptions. 45 vs 54 — same digits, different value (place matters). "Bigger digit means bigger number" — compare place by place from the left. The symbol < / > direction confuses many; teach "open side faces the bigger number."
+
+DEFINITIONS (10). place value, tens, ones, expanded form, compare, greater than (>), smaller than (<), skip count, even, odd.
+
+Q&A. Easy: What is the tens digit in 72? (7.) Even or odd: 8? (Even.) Medium: Expand 56 (50+6). Which is greater, 34 or 43? (43.) Application: Skip-count by 5 to 25 (5,10,15,20,25). Put >,<,= : 27  72 (<).
+
+MCQs (10, abridged). Tens digit of 39: 3; 45 expanded: 40+5; 61  16: >; even number: 10; skip by 2 after 6: 8; smallest of 23,32,22: 22; 7 tens 0 ones = 70; odd number: 15; number after 99: 100; compare 50  50: =.
+
+T/F (5). 45 and 54 are equal — F. 8 is even — T. The left digit of a 2-digit number is tens — T. > means smaller — F (greater). 10,20,30 is skip-counting by tens — T.
+
+FILL BLANKS (5). 63 =  + 3 (60). The ones digit of 47 is  (7). 5,10,15 counts by  (5). 9 is an  number (odd). 27  72 (< ).
+
+HOTS. Make the biggest 2-digit number from 3 and 7 (73) and the smallest (37). Why is 20 even but 25 odd? (20 pairs fully; 25 leaves one over.)
+
+REVISION. tens & ones, expanded form, compare place-by-place, skip counting, even/odd.
+
+ADAPTIVE — "place value". L1: "Where a digit sits changes how much it's worth." L2: "In 47, the 4 means 4 tens (40) and the 7 means 7 ones — position gives value." L3: "Positional notation weights each digit by a power of the base (base-10: …,10¹,10⁰)." L4: "Like seats in a stadium — the same person is worth more in the 'tens' seat than the 'ones' seat." L5: "₹40 and ₹4 use the same '4', but the place tells you it's ten times more money."
+
+INSTRUCTION RECORDS.
+`json
+{"messages":[{"role":"user","content":"My child mixes up 45 and 54. How to explain?"},{"role":"assistant","content":"Use bundles! Give 45 as 4 bundles of ten + 5 loose sticks = 45. Then 54 as 5 bundles + 4 loose = 54. Same digits, but the PLACE decides the value: the tens place is worth ten times the ones place. Line them up and count the bundles — the child will SEE 54 is bigger."}]}
+{"messages":[{"role":"user","content":"Give me an even/odd puzzle."},{"role":"assistant","content":"Try this: 7 children want to pair up for a game. Can everyone find a partner? (No — one child is left over, so 7 is ODD.) Now try 8 children. (Yes — all paired, so 8 is EVEN.) Even numbers pair up perfectly; odd numbers leave one out."}]}
+`
+
+CHAPTER G2M-2 — Addition & Subtraction with Regrouping (anchor, condensed)
+METADATA. Grade 2 · NCERT · Maths · Prereq place value · Medium · Objectives: add/subtract 2-digit numbers with and without regrouping; use place-value columns; solve one-step word problems; check by reversing.
+
+TEACHING MATERIAL. Add ones first, then tens. Carrying (regrouping in addition): if the ones add to 10 or more, carry one ten to the tens column (e.g., 27 + 15: 7+5=12 → write 2, carry 1; 1+2+1=4 → 42). Borrowing (regrouping in subtraction): if the top ones digit is too small, borrow one ten (make it 10 ones) (e.g., 42 − 15: 2−5 can't, borrow → 12−5=7; 3−1=2 → 27). Addition and subtraction are inverse — check 42−15=27 by 27+15=42.
+
+Worked example. 38 + 46: ones 8+6=14 → write 4 carry 1; tens 3+4+1=8 → 84. Check: 84−46=38. ✓
+
+Common misconceptions. Forgetting to carry; subtracting the smaller ones digit from the larger regardless of position (writing 42−15 ones as 5−2=3). Teach column alignment.
+
+DEFINITIONS (10). sum, difference, regroup, carry, borrow, column, place-value alignment, inverse operations, one-step problem, check.
+
+Q&A/MCQ/etc. (condensed). 27+15=42; 53−28=25; carry needed in 46+37? Yes; borrow in 71−36? Yes; check 60−24 by 36+24=60; word: "23 apples + 19 = ?" 42.
+
+HOTS. Find the missing digit: 3 + 15 = 52 (→ 37). Why must ones line up under ones? (Same place values add together.)
+
+ADAPTIVE — "carrying". L1: "When ones make ten or more, one ten moves to the tens column." L2: "7+5=12: keep 2 ones, carry the 1 ten next door." L3: "Regrouping conserves value across positional columns during addition overflow." L4: "Like a box that holds only 9 marbles — the 10th forces you to start a new box (a ten)." L5: "Buying items: 7 loose ₹1 coins + 5 = 12 → exchange 10 coins for one ₹10 note (a ten)."
+
+`json
+{"messages":[{"role":"user","content":"Solve 38 + 46 step by step for a Grade 2 student."},{"role":"assistant","content":"Line them up, ones under ones:\n  38\n+ 46\nStep 1 (ones): 8 + 6 = 14. Write 4, carry 1 ten.\nStep 2 (tens): 3 + 4 + 1(carried) = 8. Write 8.\nAnswer: 84. Check by subtracting: 84 − 46 = 38 ✓"}]}
+`
+
+CHAPTERS G2M-3+ — Compact LESSON records
+RECORDTYPE: LESSON  |  GRADE 2  |  NCERT  |  Maths  |  CHAPTER: Multiplication readiness  |  CONCEPT: Repeated addition → times
+EXPLANATION: 3 groups of 4 = 4+4+4 = 12 = "3 times 4" (3×4). Arrays (rows×columns) picture multiplication.  |  QUESTION: 5+5+5 as a times fact? ANSWER: 3×5=15.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 2  |  NCERT  |  Maths  |  CHAPTER: Division readiness  |  CONCEPT: Equal sharing/grouping
+EXPLANATION: Sharing 12 sweets among 4 children equally = 3 each (12÷4=3).  |  QUESTION: Share 10 among 2. ANSWER: 5 each.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 2  |  NCERT  |  Maths  |  CHAPTER: Measurement (standard units)  |  CONCEPT: cm, m, litre, gram, rupee
+EXPLANATION: Introduce standard units — length in cm/m, capacity in litres, mass in grams/kg, money in ₹ — and choose the right tool (ruler, measuring cup, balance).  |  QUESTION: Which unit for a pencil's length? ANSWER: cm.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 2  |  NCERT  |  Maths  |  CHAPTER: Time  |  CONCEPT: Hour, half, quarter; calendar
+EXPLANATION: Read o'clock, half-past; days/months; the short hand shows hours, long hand minutes.  |  QUESTION: Where is the long hand at half-past? ANSWER: On 6.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 2  |  NCERT  |  Maths  |  CHAPTER: Patterns & Data  |  CONCEPT: Number/shape patterns; tables & pictographs
+EXPLANATION: Extend number patterns (2,4,6,…); read simple tables and pictographs; answer most/least/how many more.  |  QUESTION: Next in 5,10,15,? ANSWER: 20.  |  DIFFICULTY: Medium
+
+SUBJECT: ENGLISH — Mridang (Class 2) & EVS — Compact records
+RECORDTYPE: LESSON  |  GRADE 2  |  NCERT  |  English  |  CONCEPT: Grammar foundations
+EXPLANATION: Naming words (nouns) incl. common vs proper (capital for proper); action words (verbs); describing words (adjectives: big, red); one/many (singular/plural with -s); this/that/these/those; simple sentence + full stop/question mark.  |  QUESTION: Plural of "cat"? ANSWER: cats.  |  DIFFICULTY: Easy
+
+RECORDTYPE: LESSON  |  GRADE 2  |  NCERT  |  English  |  CONCEPT: Reading comprehension & short writing
+EXPLANATION: Read short passages/poems; answer wh-questions; sequence events; write 3–4 sentences (about self, picture, or a simple recount) with capitals and full stops.  |  QUESTION: What punctuation ends a question? ANSWER: Question mark (?).  |  DIFFICULTY: Easy
+
+RECORDTYPE: LESSON  |  GRADE 2  |  NCERT  |  EVS(integrated)  |  CONCEPT: Family, neighbourhood, community helpers, safety, seasons, plants/animals needs
+EXPLANATION: Roles in family/neighbourhood; helpers (doctor, teacher, police, farmer); road/home/stranger safety; seasons & suitable clothes; needs of plants/animals; caring for the environment (don't litter, save water).  |  QUESTION: Who helps put out fires? ANSWER: Firefighter.  |  DIFFICULTY: Easy
+
+
+=================================================================
+BRANCH B — MAHARASHTRA STATE BOARD (Balbharati)
+=================================================================
+Grades 1–2 use the integrated textbook (एकात्मिक पाठ्यपुस्तक) in parts (भाग 1–4), blending Marathi, English, Mathematics (गणित) and EVS/Play-Do across themed units, available in Marathi, English and Semi-English mediums. Kept separate from the NCERT branch.
+
+===== GRADE 1 (Maharashtra) =====
+
+SUBJECT: MARATHI (Balbharati) — Anchor
+METADATA. Grade 1 · Maharashtra · Marathi (first language) · Prereq: spoken Marathi · Easy · Objectives: recognise and write मुळाक्षरे (vowels स्वर + consonants व्यंजन); read simple बारखडी (consonant+vowel matra combinations); read/write 2–3 letter words; picture-word reading; recite रांगोळी/rhymes; speak in short sentences.
+
+TEACHING MATERIAL (original).
+• स्वर (vowels): अ आ इ ई उ ऊ ए ऐ ओ औ अं अः. These are spoken with an open voice and can stand alone.
+• व्यंजन (consonants): क ख ग घ … ह ळ क्ष ज्ञ. A consonant carries an inherent 'अ' sound (क = "ka").
+• बारखडी (matra chart): each consonant combines with each vowel sign to form a syllable: क का कि की कु कू के कै को कौ कं कः. Reading Marathi = reading these syllables fluently.
+• Words: join syllables into words — कमळ (lotus), मका (corn), घर (house). Read left to right.
+• Reading/writing: correct stroke order; the top horizontal line (शिरोरेषा) joins letters.
+• Listening/speaking: rhymes and stories build vocabulary and pronunciation.
+
+Common misconceptions. A consonant is not silent — it already contains 'अ'. Matras (ा ि ी ु ू …) change the vowel sound, not the consonant. Reading is syllable-by-syllable, not letter-by-letter.
+
+DEFINITIONS (10). मुळाक्षरे (alphabet), स्वर (vowel), व्यंजन (consonant), बारखडी (syllable chart), मात्रा/काना-मात्रा (vowel sign), अक्षर (syllable/letter), शब्द (word), वाक्य (sentence), शिरोरेषा (top line), उच्चार (pronunciation).
+
+Q&A. Easy: पहिला स्वर कोणता? (अ.) 'क' मध्ये कोणता स्वर लपला आहे? (अ.) Medium: 'का' कसा तयार होतो? (क + आ-काना.) 'घर' मध्ये किती अक्षरे? (2: घ + र.) Application: चित्र बघून शब्द वाचा — कमळ. 'मी शाळेत जातो' — किती शब्द? (3.)
+
+MCQ (10, abridged, English gloss). First vowel — अ; 'क' holds vowel — अ; काना (ा) makes क → का; शिरोरेषा is the top line; number of स्वर shown (अ…अः) — 12; syllables in घर — 2; 'ि' matra with क → कि; a व्यंजन example — क; joining letters uses शिरोरेषा — True; word for house — घर.
+
+T/F (5). 'क' चा उच्चार फक्त 'क्' असा होतो — F (it's "ka", holds अ). मात्रा स्वराचा आवाज बदलते — T. मराठी डावीकडून उजवीकडे वाचतात — T. शिरोरेषा अक्षरे जोडते — T. अ हा व्यंजन आहे — F (स्वर).
+
+FILL BLANKS (5). पहिला स्वर  (अ). क + ा =  (का). 'घर' मध्ये  अक्षरे (2). अक्षरांना जोडणारी रेषा म्हणजे  (शिरोरेषा). अ, आ, इ यांना  म्हणतात (स्वर).
+
+HOTS. क, ख, ग यांत लपलेला समान स्वर कोणता व तो कसा ओळखायचा? (अ — प्रत्येक व्यंजनात inherent अ आहे.) 'का' आणि 'क' यांत काय फरक? (मात्रा 'ा' मुळे आ-आवाज आला.)
+
+REVISION. 12 स्वर, व्यंजन (inherent अ), बारखडी combos, शिरोरेषा, syllable reading.
+
+ADAPTIVE — "बारखडी / matra". L1: "एका व्यंजनाला वेगवेगळे स्वर लावले की वेगळे आवाज होतात." L2: "क ला काना लावला की का, वेलांटी लावली की कि — स्वरचिन्ह आवाज बदलते." L3: "बारखडी म्हणजे व्यंजन × स्वरचिन्ह यांचे syllabic matrix; प्रत्येक अक्षर एक अक्षर(syllable) दर्शवते." L4: "एकच व्यंजन म्हणजे रिकामी फ्रेम; मात्रा म्हणजे त्यात बसवलेला वेगळा रंग — रंग बदलला की चित्र बदलले." L5: "नावं वाचताना — कमल, किरण, कुणाल — तीच 'क' पण मात्रेमुळे वेगळा आवाज."
+
+INSTRUCTION RECORDS.
+`json
+{"messages":[{"role":"user","content":"मराठी बारखडी लहान मुलाला कशी शिकवावी?"},{"role":"assistant","content":"एका व्यंजनापासून सुरुवात करा, उदा. 'क'. आधी नुसते 'क' (त्यात 'अ' लपलेला असतो). मग स्वरचिन्ह जोडत जा: का (काना), कि (वेलांटी), की, कु, कू... प्रत्येक वेळी आवाज कसा बदलतो ते मोठ्याने म्हणा. रोज एकच व्यंजनाची पूर्ण बारखडी — गडबड न करता, गाण्यासारखी!"}]}
+{"messages":[{"role":"user","content":"Explain Marathi vowels and consonants simply in English."},{"role":"assistant","content":"Marathi has 12 vowels (स्वर: अ आ इ ई उ ऊ ए ऐ ओ औ अं अः) that you can say on their own. Consonants (व्यंजन: क ख ग...) each secretly carry an 'अ' sound, so 'क' is said 'ka', not just 'k'. Adding a vowel sign (मात्रा) changes that vowel sound: क + काना = का ('kaa')."}]}
+`
+
+SUBJECT: ENGLISH (My English Book / Balbharati, Grade 1) — Compact
+RECORDTYPE: LESSON  |  GRADE 1  |  Maharashtra  |  English  |  CONCEPT: Alphabet, phonics, simple words
+EXPLANATION: Recognise A–Z (capital & small); letter sounds; blend CVC words; sight words (the, a, is); name everyday objects; simple greetings ("Good morning", "Thank you"). Semi-English learners meet these alongside Marathi.  |  QUESTION: First sound in "sun"? ANSWER: /s/.  |  DIFFICULTY: Easy
+
+SUBJECT: MATHEMATICS (गणित, Grade 1) — Anchor (parallels NCERT with Balbharati sequence)
+METADATA. Grade 1 · Maharashtra · Mathematics · Easy · Objectives: numbers 1–100 (Maharashtra introduces up to 100 in Std 1 with number-names in Marathi/English); addition & subtraction within 20; shapes; comparison; simple patterns; Indian money & time basics.
+
+TEACHING MATERIAL. Content parallels the NCERT arc (counting, place value seed, add/subtract, shapes, patterns, measurement, money, time) but with the Balbharati sequence and Marathi number-names (एक, दोन, तीन… शंभर). Emphasis on oral number-names in both Marathi and English for semi-English classes. Addition/subtraction taught with objects and number line to 20; two-digit reading (२१ = एकवीस = twenty-one).
+
+Difference to preserve (NCERT vs Maharashtra): Maharashtra Std 1 commonly extends number reading toward 100 with Marathi number-names and links to daily contexts (bazaar/money in ₹), whereas NCERT Joyful Class 1 anchors more on 0–20 with playful pre-number work first. Keep both as separate branches.
+
+DEFINITIONS/Q&A/MCQ (condensed). संख्या (number), बेरीज (addition), वजाबाकी (subtraction), आकार (shape), नमुना (pattern). Q: ५ + ३ = ? (८). Q: १० − ४ = ? (६). Q: २१ चे नाव? (एकवीस). MCQ: बेरीज चिन्ह — +; ७+२ = ९; वजाबाकी of 9−3 = ६.
+
+ADAPTIVE — "बेरीज (addition)". L1: "बेरीज म्हणजे एकत्र करणे." L2: "३ आंबे + २ आंबे एकत्र केले की ५ आंबे — ३+२=५." L3: "Addition is the binary operation combining two addends into a sum; commutative." L4: "दोन पेल्यांतले पाणी एका भांड्यात ओतल्यासारखे — दोन्ही एकत्र." L5: "बाजारात ३ रुपये + २ रुपये = ५ रुपये."
+
+`json
+{"messages":[{"role":"user","content":"मराठीत बेरीज शिकवण्याचे सोपे उदाहरण द्या."},{"role":"assistant","content":"वस्तू वापरा! ३ खडे घ्या, अजून २ खडे जवळ ठेवा, आता सगळे मोजा: एक, दोन, तीन, चार, पाच. म्हणजे ३ + २ = ५. मोठ्या संख्येपासून पुढे मोजायला शिकवा: 'तीन...चार, पाच' — हे लवकर येते."}]}
+`
+
+EVS / PLAY-DO (Grade 1, Maharashtra) — Compact
+RECORDTYPE: LESSON  |  GRADE 1  |  Maharashtra  |  EVS(integrated)  |  CONCEPT: मी व माझा परिसर (Myself & surroundings)
+EXPLANATION: शरीराचे अवयव व पंचज्ञानेंद्रिये; कुटुंब; शाळा; स्वच्छता (हात धुणे, दात घासणे); पाणी वाचवा; रस्ता सुरक्षा.  |  QUESTION: पंचज्ञानेंद्रिये किती? ANSWER: पाच.  |  DIFFICULTY: Easy
+
+===== GRADE 2 (Maharashtra) =====
+
+MARATHI (Grade 2) — Compact
+RECORDTYPE: LESSON  |  GRADE 2  |  Maharashtra  |  Marathi  |  CONCEPT: वाचन, जोडाक्षरे, वाक्यरचना
+EXPLANATION: संपूर्ण बारखडी वाचन; जोडाक्षरे (conjunct letters: क्र, स्त, त्र) ओळख; लहान परिच्छेद वाचन व आकलन; नाम, क्रियापद ओळख; शुद्ध लेखन; ३–४ वाक्यांचे लेखन.  |  QUESTION: 'क्र' हे कोणत्या प्रकारचे अक्षर? ANSWER: जोडाक्षर.  |  DIFFICULTY: Medium
+
+ENGLISH (Grade 2) — Compact
+RECORDTYPE: LESSON  |  GRADE 2  |  Maharashtra  |  English  |  CONCEPT: Reading, grammar, writing
+EXPLANATION: Read short texts; nouns (common/proper), verbs, adjectives; singular/plural (-s); a/an/the; this/that; simple sentences and questions; guided 3–4 sentence writing.  |  QUESTION: Plural of "box"? ANSWER: boxes.  |  DIFFICULTY: Easy
+
+MATHEMATICS (गणित, Grade 2) — Anchor (condensed)
+METADATA. Grade 2 · Maharashtra · Mathematics · Medium · Objectives: numbers to 1000 (reading/place value: hundreds-tens-ones); add/subtract with carry/borrow; multiplication tables (2,3,4,5,10) introduced; equal sharing (division idea); standard measurement (cm/m, gram/kg, litre, ₹); time; shapes; patterns; simple data.
+
+TEACHING MATERIAL (original, key points).
+• Place value to hundreds: 3-digit numbers = hundreds + tens + ones (३४७ = ३०० + ४० + ७). Compare place-by-place.
+• Add/subtract with regrouping (as in NCERT G2M-2) but following Balbharati sequence and Marathi number-names.
+• Multiplication tables: Maharashtra emphasises early table learning (पाढे) — 2, 3, 4, 5, 10 — built from repeated addition and arrays. ३ × ४ = ४ + ४ + ४ = १२.
+• Division as sharing: १२ ÷ ३ = ४ (equal groups).
+• Measurement: standard units introduced with real tools (पट्टी/ruler, तराजू/balance, मापाचे भांडे/measuring vessel).
+
+Difference to preserve: Maharashtra Std 2 is known for early पाढे (times-tables) practice and 3-digit numbers; NCERT Joyful Class 2 emphasises multiplication readiness (repeated addition/arrays) more than rote tables. Keep branches distinct.
+
+DEFINITIONS/Q&A (condensed). शेकडा/hundreds place; पाढा/times-table; गुणाकार (multiplication); भागाकार (division). Q: ३ × ५ = ? (१५). Q: ३४७ मध्ये शेकड्याचा अंक? (३). Q: १२ ÷ ४ = ? (३).
+
+ADAPTIVE — "गुणाकार / multiplication". L1: "गुणाकार म्हणजे सारखे गट पुन्हा पुन्हा जोडणे." L2: "३ गट × ४ = ४+४+४ = १२." L3: "Multiplication is repeated addition / an array's row×column count; commutative." L4: "४ मुलांच्या ३ रांगा — सगळी मुले = ३×४ = १२ (एकेक न मोजता)." L5: "एका पेटीत ६ पेन, अशा ५ पेट्या = ५×६ = ३० पेन."
+
+`json
+{"messages":[{"role":"user","content":"Explain the 3 times table using repeated addition."},{"role":"assistant","content":"The 3 table is just adding 3 again and again! 3×1=3, 3×2=3+3=6, 3×3=6+3=9, 3×4=9+3=12, 3×5=12+3=15. Picture 5 plates with 3 laddoos each — count by 3s: 3,6,9,12,15. That's 5×3=15 without counting every laddoo!"}]}
+``
+
+EVS (Grade 2, Maharashtra) — Compact
+RECORDTYPE: LESSON  |  GRADE 2  |  Maharashtra  |  EVS(integrated)  |  CONCEPT: परिसर अभ्यास — कुटुंब, परिसर, ऋतू, अन्न-पाणी-हवा, सुरक्षा
+EXPLANATION: कुटुंब व शेजार; समाजातील मदतनीस; ऋतू व कपडे; अन्न, पाणी, हवा यांचे महत्त्व; सजीव-निर्जीव; रस्ता व घरातील सुरक्षा; परिसर स्वच्छता.  |  QUESTION: सजीवांना जगण्यासाठी काय लागते? ANSWER: हवा, पाणी, अन्न.  |  DIFFICULTY: Easy
+
+
+=================================================================
+BATCH 2 — CONSOLIDATED CROSS-BRANCH LESSON RECORDS
+=================================================================
+RECORDTYPE: LESSON  |  GRADE 1  |  BOARD: NCERT  |  SUBJECT: Maths  |  UNIT: Number  |  CHAPTER: Numbers to 99  |  SECTION: Place value  |  CONCEPT: Tens & ones
+PREREQUISITES: Count to 20  |  LEARNINGOBJECTIVE: Read/write 2-digit numbers as tens+ones
+EXPLANATION: A 2-digit number splits into a tens bundle and loose ones; 47 = 4 tens + 7 ones.  |  EXAMPLE: 63 = 60+3  |  APPLICATION: Counting rupees in ₹10 notes + ₹1 coins  |  COMMONMISCONCEPTION: Treating 47 as "4 and 7"  |  QUESTION: 8 tens + 2 ones = ?  |  ANSWER: 82  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 2  |  BOARD: NCERT  |  SUBJECT: Maths  |  CHAPTER: Addition with regrouping  |  SECTION: Carrying  |  CONCEPT: Regroup ones into a ten
+PREREQUISITES: Place value  |  LEARNINGOBJECTIVE: Add 2-digit numbers with carrying
+EXPLANATION: Add ones; if ≥10, carry a ten to the tens column, then add tens.  |  EXAMPLE: 27+15=42  |  APPLICATION: Totalling two shopping amounts  |  COMMONMISCONCEPTION: Not carrying the ten  |  QUESTION: 38+46  |  ANSWER: 84  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 1  |  BOARD: Maharashtra  |  SUBJECT: Marathi  |  CHAPTER: बारखडी  |  SECTION: स्वरचिन्हे  |  CONCEPT: व्यंजन + मात्रा
+PREREQUISITES: बोलीभाषा मराठी  |  LEARNINGOBJECTIVE: बारखडी वाचन
+EXPLANATION: व्यंजनात लपलेला अ; मात्रा जोडली की स्वर बदलतो (क→का→कि→की).  |  EXAMPLE: क का कि की कु कू  |  APPLICATION: नावं व शब्द वाचन  |  COMMONMISCONCEPTION: व्यंजन silent समजणे  |  QUESTION: क + ी = ?  |  ANSWER: की  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 2  |  BOARD: Maharashtra  |  SUBJECT: Maths  |  CHAPTER: पाढे/गुणाकार  |  SECTION: Repeated addition  |  CONCEPT: Multiplication as equal groups
+PREREQUISITES: Skip counting  |  LEARNINGOBJECTIVE: Build 2–5,10 tables
+EXPLANATION: गुणाकार = सारखे गट जोडणे; ३×४ = ४+४+४ = १२.  |  EXAMPLE: 5×3=15  |  APPLICATION: Rows of chairs, packs of items  |  COMMONMISCONCEPTION: Confusing 3×4 groups vs items  |  QUESTION: 4×5  |  ANSWER: 20  |  DIFFICULTY: Medium
+
+
+BATCH 2 COVERAGE SUMMARY
+• NCERT Grade 1: Mathematics (Joyful) — 3 anchor chapters at full apparatus (pre-number, shapes, numbers 1–9) + compact LESSON records for chapters 4–13; English (Mridang) — literacy anchor + comprehension/writing; foundational EVS records.
+• NCERT Grade 2: Mathematics (Joyful*) — place-value anchor + addition-with-regrouping anchor + compact records (multiplication/division readiness, measurement, time, patterns/data); English grammar/comprehension; EVS.
+• Maharashtra Grade 1: Marathi (बारखडी) full anchor; English, Mathematics (गणित) anchors with preserved NCERT-vs-Maharashtra differences; EVS/Play-Do.
+• Maharashtra Grade 2: Marathi (जोडाक्षरे/reading), English, Mathematics (place value to 1000, early पाढे/multiplication) anchors; EVS.
+• Boards kept as separate branches; differences explicitly flagged, never merged.
+
+END OF BATCH 2. Next: BATCH 3 — Grades 3–5 (NCERT + Maharashtra branches; subjects begin to separate into Maths, EVS→Science, and languages, with fuller per-chapter apparatus).

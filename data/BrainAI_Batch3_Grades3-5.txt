@@ -1,0 +1,390 @@
+BrainAI EDUCATIONAL CORPUS
+BATCH 3 — GRADES 3, 4 & 5 (NCERT branch + Maharashtra Balbharati branch)
+Original teaching corpus; no textbook reproduced. Structure grounded in current NEP-2020 / NCF-2023 books verified 2026: NCERT — Maths Mela (Maths), Santoor (English), Veena (Hindi), Our Wondrous World: The World Around Us (EVS). Maharashtra Balbharati — Marathi, Hindi, English, गणित (Mathematics), and परिसर अभ्यास भाग १ (EVS Part 1, science-leaning) + भाग २ (EVS Part 2, social-leaning) from Std 3. Boards kept as separate branches.
+Depth policy for this batch: the pivotal new concepts of Grades 3–5 — multiplication, division, fractions, decimals, geometry & measurement — get full apparatus (teaching + definitions + tiered Q&A + MCQs + T/F + fill-blanks + short/long + HOTS + misconceptions + revision + 5-level adaptive + instruction records). Remaining chapters get compact LESSON records that still teach the concept. Any chapter expands to full apparatus on request. Verified NCERT Class-3 Maths Mela chapter names used as scaffolding.
+
+
+=================================================================
+BRANCH A — NCERT / CBSE
+=================================================================
+
+===== GRADE 3 (NCERT) =====
+
+SUBJECT: MATHEMATICS — Maths Mela (Class 3)
+Verified 14-chapter arc: 1 What's in a Name?, 2 Toy Joy, 3 Double Century, 4 Vacation with My Nani Maa, 5 Fun with Shapes, 6 House of Hundreds–I, 7 Raksha Bandhan, 8 Fair Share, 9 House of Hundreds–II, 10 Fun at Class Party!, 11 Filling and Lifting, 12 Give and Take, 13 Time Goes On, 14 The Surajkund Fair. (These themes carry place value to 1000, addition/subtraction, multiplication, division/fractions-as-sharing, shapes, measurement, time and data.)
+
+
+CHAPTER G3M-A — Multiplication ("Give and Take" / tables) — FULL APPARATUS
+METADATA. Grade 3 · NCERT · Maths · Unit: Operations · Prereq: skip-counting, addition, arrays (G2) · Difficulty: Medium · Objectives: understand multiplication as repeated addition and as arrays; build and use tables (2–10); multiply a 2-digit number by a 1-digit number with and without regrouping; know properties (order/commutativity, ×1, ×0, ×10); solve word problems.
+
+TEACHING MATERIAL.
+Introduction. Multiplication is a fast way to add equal groups. Instead of 6+6+6+6, we say "4 groups of 6" = 4 × 6.
+Meaning 1 — repeated addition. 4 × 6 means six added four times → 24. The first number = how many groups; the second = size of each group.
+Meaning 2 — arrays. A rectangle of dots in 4 rows and 6 columns has 4 × 6 = 24 dots. Turning the array sideways (6 rows, 4 columns) still gives 24 — this shows order does not matter (commutative property): 4 × 6 = 6 × 4.
+Meaning 3 — number line jumps. Start at 0 and jump 6 four times → lands on 24.
+Key facts (properties). ×1 leaves a number unchanged (7×1=7); ×0 gives 0 (7×0=0); ×10 puts a 0 at the end (7×10=70); multiplying by 100 puts two zeros.
+Tables. Each table is repeated addition of that number. Patterns help memory: the 5-table ends in 5 or 0; the 9-table digits add to 9 (9,18,27… → 9,9,9); the 10-table ends in 0.
+2-digit × 1-digit (column method). Multiply ones, then tens, carrying when a product ≥10. Example 23 × 4: ones 3×4=12 → write 2 carry 1; tens 2×4=8, +1 = 9 → 92. With regrouping 27 × 6: 7×6=42 → 2 carry 4; 2×6=12, +4=16 → 162.
+
+Worked examples.
+1. 8 × 7 = 56 (memorise; check: 8×7 = 8×5 + 8×2 = 40+16 = 56).
+2. 34 × 3: 4×3=12 (2 carry 1); 3×3=9, +1=10 → 102.
+3. Word: "A box has 12 pencils. How many in 5 boxes?" → 12 × 5 = 60 pencils.
+
+Visual/diagram description. A 4×6 grid of dots labelled "4 rows, 6 in each = 24"; beside it the same grid rotated to "6 rows, 4 in each = 24" to show commutativity.
+
+DEFINITIONS (10). 1. Multiplication — repeated addition of equal groups. 2. Factor — a number being multiplied. 3. Product — the result. 4. Multiplicand/multiplier — the number multiplied / doing the multiplying. 5. Array — rows-and-columns arrangement. 6. Times table — list of a number's multiples. 7. Multiple — a product of a number and a whole number. 8. Commutative property — order doesn't change the product. 9. Regrouping/carrying — moving a ten during multiplication. 10. Identity (×1) / zero (×0) properties.
+
+Q&A. Easy: What is 6×3? (18.) 9×1? (9.) 5×0? (0.) Medium: Write 7+7+7+7 as a multiplication (4×7=28). Is 3×8 the same as 8×3? (Yes, 24.) Difficult: 46×5? (230.) 38×7? (266.) Application: 6 rows of 8 chairs — how many chairs? (48.) A pencil costs ₹4; cost of 15? (₹60.) Reasoning: Why does 7×10 end in 0? (Multiplying by ten shifts every place up, adding a zero.)
+
+MCQs (12, abridged). 4×6=24; 9×0=0; 8×1=8; 5×7=35; 12×3=36; 25×4=100; 7×10=70; commutative: 3×9=9×3; 6+6+6=3×6; 9-table digit sum of 27=9; array 5×4 dots=20; 23×4=92.
+
+T/F (10). 4×6=6×4 T. 8×0=8 F (=0). Multiplying by 1 changes the number F. 7×10=70 T. 3×5 means 5 groups of 3 or 3 groups of 5 (same product) T. 12×5=50 F (=60). Every multiple of 5 ends in 5 or 0 T. An array shows multiplication T. 9×9=81 T. Order matters in multiplication F.
+
+FILL BLANKS (10). 6×=42 (7). 8×5= (40). ×0=0 (any). 10×9= (90). 4×=24 (6). 7×7= (49). 3×=27 (9). 12×4= (48). ×1=15 (15). 5×6=6× (5).
+
+SHORT-ANSWER. State the commutative property with an example. Compute 27×6. Write the 4-table up to ×10.
+
+LONG-ANSWER (model). Q: Explain two ways to find 6 × 7 and check they agree. Model: (i) Repeated addition: 7+7+7+7+7+7 = 42. (ii) Break apart: 6×7 = 6×5 + 6×2 = 30+12 = 42. Both give 42, confirming the product.
+
+HOTS. If 8×6=48, use it to find 8×7 without a table. (48+8=56.) A shop stacks apples in 9 rows of 9; is that more or fewer than 80? (81 — one more than 80.) Find a number that gives the same result whether you add it to itself or multiply it by 2 (any number — a+a = 2×a).
+
+MISCONCEPTIONS. "×0 gives the number" → it gives 0. "3×4 and 3+4 are close" → 12 vs 7; different operations. "Order changes the product" → it doesn't (commutative). "Carrying is optional" → the carried ten must be added to the next column.
+
+REVISION. Multiplication = repeated addition = arrays; commutative; ×0=0, ×1=same, ×10 adds a zero; column method with carrying; tables 2–10 patterns.
+Formula/fact sheet: a×b = b×a; a×1=a; a×0=0; a×10 → append 0.
+
+ADAPTIVE — "multiplication". L1: "Multiplication is a quick way to add the same number many times." L2: "4×6 means four groups of six; add 6 four times to get 24, or picture 4 rows of 6 dots." L3: "Multiplication is a binary operation on whole numbers giving the cardinality of a×b arrays; it is commutative, associative, and distributes over addition." L4: "Like stamping the same shape in a grid — 4 rows, 6 stamps each — you count all stamps at once instead of one by one." L5: "At a party, 6 tables each seat 8 people — 6×8=48 guests, found instantly instead of counting every chair."
+
+INSTRUCTION RECORDS.
+``json
+{"messages":[{"role":"user","content":"Explain multiplication to a Grade 3 student."},{"role":"assistant","content":"Multiplication is fast adding of equal groups! '4 × 6' means 4 groups of 6. You could add 6+6+6+6 = 24, OR picture 4 rows with 6 dots each — count them all: 24. A cool secret: the order doesn't matter, so 4×6 = 6×4. Want to try 5×7 both ways?"}]}
+{"messages":[{"role":"user","content":"Solve 27 × 6 step by step."},{"role":"assistant","content":"  27\n×  6\nStep 1 (ones): 7×6 = 42. Write 2, carry 4.\nStep 2 (tens): 2×6 = 12, add the carried 4 → 16. Write 16.\nAnswer: 162. Check: 27×6 = (25×6)+(2×6) = 150+12 = 162 ✓"}]}
+{"messages":[{"role":"user","content":"Why does multiplying by 10 add a zero?"},{"role":"assistant","content":"Because multiplying by 10 pushes every digit up one place — ones become tens, tens become hundreds — and the ones place is left empty, which we fill with 0. So 7×10 = 70, 34×10 = 340. It's the place-value system doing the work!"}]}
+`
+
+
+CHAPTER G3M-B — Division & Fair Sharing ("Fair Share") — FULL APPARATUS
+METADATA. Grade 3 · NCERT · Maths · Prereq: multiplication · Medium · Objectives: understand division as equal sharing and as equal grouping; relate division to multiplication (inverse); divide within tables; understand remainder; introduce the unit-fraction idea of a "share."
+
+TEACHING MATERIAL.
+Two meanings. (i) Sharing: 12 sweets shared equally among 4 children → 3 each (12 ÷ 4 = 3). (ii) Grouping: 12 sweets put into groups of 4 → 3 groups (12 ÷ 4 = 3). Both give the same answer.
+Division undoes multiplication. Because 4 × 3 = 12, we have 12 ÷ 4 = 3 and 12 ÷ 3 = 4. Every "fact family" links two multiplications and two divisions.
+Remainder. Not every number shares evenly. 13 ÷ 4 = 3 with remainder 1 (3 each, 1 left over). The remainder is always smaller than the divisor.
+Terms. dividend ÷ divisor = quotient (remainder). In 13 ÷ 4: dividend 13, divisor 4, quotient 3, remainder 1.
+Fraction seed. Sharing 1 chapati between 2 = one-half (½) each — the beginning of fractions.
+
+Worked examples.
+1. 20 ÷ 5 = 4 (5×4=20). 2. 17 ÷ 3 = 5 r 2 (3×5=15, 17−15=2). 3. Word: "24 laddoos, 6 boxes, equal — how many per box?" → 24 ÷ 6 = 4.
+
+Visual/diagram description. 12 circles being dealt one-by-one into 4 boxes until each box holds 3 — showing equal sharing.
+
+DEFINITIONS (10). division, share equally, group equally, dividend, divisor, quotient, remainder, inverse operation, fact family, unit fraction (½, ⅓).
+
+Q&A. Easy: 15 ÷ 3? (5.) 10 ÷ 2? (5.) Medium: 19 ÷ 4? (4 r 3.) Write the fact family of 6, 4, 24. (4×6=24, 6×4=24, 24÷4=6, 24÷6=4.) Application: 28 students in 4 equal rows — per row? (7.) Share 25 pens among 5 → each? (5.) Reasoning: Why can't the remainder be 4 when dividing by 4? (It would make another full group.)
+
+MCQs (12, abridged). 20÷4=5; 18÷3=6; 13÷4=3 r 1; 24÷6=4; inverse of ×: ÷; remainder of 22÷5=2; 30÷5=6; 0÷7=0; 9÷1=9; share 12/3=4; dividend in 15÷5: 15; quotient of 35÷7: 5.
+
+T/F (10). Division is repeated subtraction of equal groups T. 12÷4 and 4÷12 are equal F. Remainder can equal the divisor F. 24÷6=4 because 6×4=24 T. 0÷5=0 T. 5÷0 has a normal answer F (undefined). Sharing and grouping give different answers F. Quotient is the answer of division T. Every remainder is less than the divisor T. 9÷1=9 T.
+
+FILL BLANKS (10). 16÷=4 (4). 21÷3= (7). 13÷4=3 r  (1). 24÷=6 (4). ÷5=6 (30). 0÷9= (0). 18÷2= (9). fact family of 3,7,21: 21÷7= (3). 45÷9= (5). remainder of 20÷6= (2).
+
+SHORT/LONG. Short: Divide 29 by 6, state quotient and remainder. Long (model): "Explain, with sharing and grouping, why 15 ÷ 3 = 5." Model — Sharing: deal 15 among 3 people → 5 each. Grouping: make groups of 3 from 15 → 5 groups. Same answer 5; and 3×5=15 confirms it.
+
+HOTS. Find a number that leaves remainder 2 when divided by 5 and remainder 0 when divided by 3 (e.g., 12: 12÷5=2 r2, 12÷3=4 r0). Why is 7÷0 impossible? (You can't make groups of nothing; nothing shared can total 7.)
+
+MISCONCEPTIONS. "Division is commutative" → it is not (12÷4≠4÷12). "Remainder can be any size" → it must be < divisor. "Dividing by 0 gives 0" → it is undefined.
+
+REVISION. Two meanings (share/group); division inverts multiplication; fact families; remainder < divisor; ÷1 unchanged, ÷ itself =1, 0÷n=0, n÷0 undefined.
+
+ADAPTIVE — "remainder". L1: "The remainder is what's left over when things can't be shared equally." L2: "Share 13 toffees among 4 kids: each gets 3 (that's 12) and 1 toffee is left — the remainder is 1." L3: "In Euclidean division a = bq + r with 0 ≤ r < b; r is the residue." L4: "Like seating people at tables of 4 — if one extra person arrives, they're the 'leftover' who can't fill a new table alone." L5: "Packing 22 eggs into cartons of 6: you fill 3 cartons and 4 eggs remain uncartoned — remainder 4."
+
+INSTRUCTION RECORDS.
+`json
+{"messages":[{"role":"user","content":"Explain division with a remainder to a child."},{"role":"assistant","content":"Sometimes things don't share out evenly! Say 13 chocolates among 4 friends. Give one to each, again, again — each friend gets 3 (that's 12 chocolates), and 1 chocolate is LEFT OVER. That leftover is the remainder. So 13 ÷ 4 = 3 remainder 1. The remainder is always smaller than the number of friends."}]}
+{"messages":[{"role":"user","content":"How is division connected to multiplication?"},{"role":"assistant","content":"They're opposites — they undo each other! Since 4 × 6 = 24, we instantly know 24 ÷ 4 = 6 and 24 ÷ 6 = 4. This is a 'fact family': the three numbers 4, 6, 24 give two multiplications and two divisions. Knowing your tables makes division much easier!"}]}
+`
+
+
+CHAPTERS G3M-C onward — Compact LESSON records
+RECORDTYPE: LESSON  |  GRADE 3  |  NCERT  |  Maths  |  CHAPTER: House of Hundreds I/II  |  CONCEPT: Numbers to 1000, place value
+EXPLANATION: 3-digit numbers = hundreds+tens+ones; expanded form (347=300+40+7); compare/order; number names to 999; skip-count in 100s.  |  QUESTION: Expand 508. ANSWER: 500+0+8.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 3  |  NCERT  |  Maths  |  CHAPTER: Double Century / Toy Joy  |  CONCEPT: Addition & subtraction to 1000 with regrouping
+EXPLANATION: Column add/subtract 3-digit numbers, carrying/borrowing across places; estimate then compute; check with the inverse.  |  QUESTION: 456+287? ANSWER: 743.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 3  |  NCERT  |  Maths  |  CHAPTER: Fun with Shapes  |  CONCEPT: 2-D shapes, sides/corners, tiling, symmetry intro
+EXPLANATION: Classify polygons by sides; lines (straight/curved); tiling patterns; simple line symmetry (a shape's mirror halves match).  |  QUESTION: How many sides has a pentagon? ANSWER: 5.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 3  |  NCERT  |  Maths  |  CHAPTER: Filling and Lifting  |  CONCEPT: Measurement — length, weight, capacity (standard units)
+EXPLANATION: Measure with cm/m, g/kg, mL/L; choose units; add/subtract measures; compare.  |  QUESTION: 1 kg = ? g. ANSWER: 1000 g.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 3  |  NCERT  |  Maths  |  CHAPTER: Time Goes On  |  CONCEPT: Clock, calendar, durations
+EXPLANATION: Read hours/minutes; a.m./p.m.; days/weeks/months; simple duration (from 3:00 to 4:30 = 1 h 30 min).  |  QUESTION: Minutes in 1 hour? ANSWER: 60.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 3  |  NCERT  |  Maths  |  CHAPTER: Surajkund Fair / Class Party (Data)  |  CONCEPT: Data handling — tallies, pictographs, bar ideas
+EXPLANATION: Collect and organise data; pictographs (a symbol = a value); read most/least/total.  |  QUESTION: If 1 star = 2 toys and there are 4 stars, how many toys? ANSWER: 8.  |  DIFFICULTY: Medium
+
+SUBJECT: EVS — Our Wondrous World (Class 3)
+Verified units: 1 Our Families and Communities (Family and Friends; Going to the Mela; Celebrating Festivals); 2 Life Around Us (Getting to Know Plants; Plants and Animals Live Together; Living in Harmony); 3 Gifts of Nature (Water—A Precious Gift; Food We Eat; Staying Healthy and Happy); 4 Things Around Us (This World of Things; Making Things; Taking Charge of Waste).
+
+CHAPTER G3E-A — Getting to Know Plants — FULL APPARATUS (anchor)
+METADATA. Grade 3 · NCERT · EVS · Unit: Life Around Us · Prereq: Grade 1–2 plant awareness · Easy–Medium · Objectives: name plant parts and their functions; classify plants (trees/shrubs/herbs/climbers/creepers); understand what plants need; know plants as food/oxygen sources; describe seed→plant growth.
+
+TEACHING MATERIAL.
+Parts and functions. Root anchors the plant and absorbs water/minerals from soil. Stem holds the plant up and carries water and food between roots and leaves. Leaf makes food using sunlight (photosynthesis — made formal later) and lets the plant "breathe." Flower is the plant's reproductive part; it becomes fruit. Fruit protects and carries seeds, which grow into new plants.
+Types of plants. Trees — tall, thick woody stems (mango, neem). Shrubs — medium, bushy, woody near base (rose, hibiscus). Herbs — small, soft stems (coriander, mint). Climbers — weak stems needing support (grapevine). Creepers — spread along the ground (pumpkin).
+Needs. Air, water, sunlight, soil (nutrients) and space. Remove any, and the plant weakens.
+Uses. Food (grains, fruits, vegetables), oxygen, wood, medicine, shade, and holding soil together.
+Growth. A seed sprouts (germination) → tiny root and shoot → leaves → mature plant → flowers → fruit/seeds → new plants (life cycle).
+
+Table — plant types.
+ Type  |  Stem  |  Height  |  Example 
+------------------------------
+ Tree  |  thick, woody  |  tall  |  mango 
+ Shrub  |  woody, bushy  |  medium  |  rose 
+ Herb  |  soft, green  |  short  |  mint 
+ Climber  |  weak, needs support  |  varies  |  grapevine 
+ Creeper  |  weak, along ground  |  low  |  pumpkin 
+Visual/diagram description. A labelled plant: roots underground, stem rising, leaves branching, a flower turning into a fruit with seeds inside.
+
+DEFINITIONS (10). root, stem, leaf, flower, fruit, seed, germination, herb, shrub, climber.
+
+Q&A. Easy: Which part makes food? (Leaf.) Which anchors the plant? (Root.) Medium: Give an example of a creeper (pumpkin). What does a stem carry? (Water and food.) Application: A plant kept in a dark cupboard — what happens? (It becomes weak/yellow; no sunlight to make food.) Reasoning: Why do desert plants have deep/spread roots? (To reach and gather scarce water.)
+
+MCQs (10, abridged). Food-making part: leaf; anchors plant: root; becomes fruit: flower; soft-stem small plant: herb; needs support: climber; seed grows in: soil; a tree example: mango; plants release: oxygen; seed sprouting is called: germination; carries water up: stem.
+
+T/F (10). Roots make food F (leaves do). Herbs have soft stems T. Flowers become fruits T. Plants need sunlight T. A creeper climbs a wall F (spreads on ground; a climber climbs). Seeds are inside fruits T. Stems carry water T. Plants give out carbon dioxide only F (release oxygen in light). Mango is a shrub F (tree). Germination is a seed sprouting T.
+
+FILL BLANKS (10). The  makes food (leaf). The  holds the plant upright (stem). Seeds are found inside the  (fruit). A small soft-stemmed plant is a  (herb). A plant needs air, water, soil and  (sunlight). Roots absorb  from soil (water/minerals). A  needs support to grow up (climber). Sprouting of a seed is  (germination).  is the reproductive part (flower). A rose plant is a  (shrub).
+
+SHORT/LONG. Short: List plant parts with one function each. Long (model): "Describe how a seed becomes a fruiting plant." Model — A seed germinates when given water/warmth; a root grows down and a shoot up; leaves develop and make food; the plant matures and produces flowers; pollinated flowers become fruits holding new seeds, continuing the cycle.
+
+HOTS. Two identical plants: one watered, one not — predict and explain the difference after a week. (Unwatered wilts/dries; water is essential for transport and turgor.) Why are green leaves important even to humans? (They release oxygen we breathe and are the base of food chains.)
+
+MISCONCEPTIONS. "Roots make food" → leaves do. "All plants are trees" → herbs/shrubs/climbers/creepers exist. "Plants don't need air" → they do (for respiration and photosynthesis).
+
+REVISION. Parts & functions (root/stem/leaf/flower/fruit/seed); plant types; needs (air, water, sunlight, soil); uses; germination → life cycle.
+
+ADAPTIVE — "why leaves are green / make food". L1: "Leaves make the plant's food using sunlight." L2: "Green leaves catch sunlight and, with water and air, make food for the whole plant — that's why a plant in the dark gets weak." L3: "Chlorophyll in leaves absorbs light energy to convert CO₂ and water into glucose and oxygen (photosynthesis)." L4: "A leaf is like a tiny solar kitchen — sunlight is the stove, water and air are the ingredients, and sugar is the meal it cooks." L5: "The grain and vegetables on your plate are food that leaves made using the sun — so sunlight ends up feeding you too."
+
+INSTRUCTION RECORDS.
+`json
+{"messages":[{"role":"user","content":"Explain the parts of a plant to a Grade 3 student."},{"role":"assistant","content":"A plant has jobs for each part! ROOTS grip the soil and drink water. The STEM stands tall and carries water and food up and down. LEAVES are little kitchens that make food using sunlight. FLOWERS are the pretty part that turns into FRUIT, and inside the fruit are SEEDS that grow into new plants. Can you point to these parts on a plant near you?"}]}
+{"messages":[{"role":"user","content":"Why does a plant die without sunlight? Simple please."},{"role":"assistant","content":"Because leaves need sunlight to cook the plant's food! Without light, the leaves can't make food, so the plant slowly gets weak, turns pale yellow, and can die — just like we'd get weak with no meals. Sunlight, water, air and soil together keep a plant healthy."}]}
+`
+
+G3E — Remaining EVS chapters (compact)
+RECORDTYPE: LESSON  |  GRADE 3  |  NCERT  |  EVS  |  CHAPTER: Water—A Precious Gift  |  CONCEPT: Sources, uses, conservation
+EXPLANATION: Sources (rain, rivers, wells, taps); uses (drinking, cooking, cleaning, farming); why to save water; the idea of clean/safe water.  |  QUESTION: Name two ways to save water. ANSWER: Close taps; reuse/collect rainwater.  |  DIFFICULTY: Easy
+
+RECORDTYPE: LESSON  |  GRADE 3  |  NCERT  |  EVS  |  CHAPTER: Food We Eat  |  CONCEPT: Food sources & balanced meals
+EXPLANATION: Food from plants and animals; food groups (energy, body-building, protective); eat variety; avoid waste.  |  QUESTION: Which food helps build the body? ANSWER: Protein foods (dal, milk, eggs).  |  DIFFICULTY: Easy
+
+RECORDTYPE: LESSON  |  GRADE 3  |  NCERT  |  EVS  |  CHAPTER: Plants & Animals Live Together / Living in Harmony  |  CONCEPT: Interdependence & environment care
+EXPLANATION: Plants and animals depend on each other and on air/water/soil; humans must protect nature; reduce/reuse/recycle waste.  |  QUESTION: Give one way plants help animals. ANSWER: Provide food and oxygen/shelter.  |  DIFFICULTY: Easy
+
+SUBJECT: ENGLISH — Santoor (Class 3) & Hindi — Veena (compact)
+RECORDTYPE: LESSON  |  GRADE 3  |  NCERT  |  English (Santoor)  |  CONCEPT: Grammar & writing
+EXPLANATION: Nouns (common/proper, singular/plural), pronouns (he/she/it/they), verbs & simple present tense, adjectives, articles a/an/the, punctuation (. ? !); paragraph & short story reading with wh-comprehension; guided writing (5–6 sentences), simple letters/messages.  |  QUESTION: Pronoun for "the girls"? ANSWER: they.  |  DIFFICULTY: Easy
+
+RECORDTYPE: LESSON  |  GRADE 3  |  NCERT  |  Hindi (Veena)  |  CONCEPT: व्याकरण व पठन
+EXPLANATION: वर्णमाला, मात्राएँ, संज्ञा, सर्वनाम, वचन, लिंग; सरल पठन व लेखन; अनुच्छेद व कहानी आकलन।  |  QUESTION: 'लड़का' का बहुवचन? ANSWER: लड़के।  |  DIFFICULTY: Easy
+
+===== GRADE 4 (NCERT) =====
+Class 4 continues Maths Mela, Santoor, Veena, Our Wondrous World. Concepts deepen: multi-digit multiplication/division, factors/multiples, fractions, geometry, perimeter/area intro, larger measurement, data.
+
+CHAPTER G4M-A — Fractions (Introduction) — FULL APPARATUS (anchor)
+METADATA. Grade 4 · NCERT · Maths · Prereq: division/sharing (G3) · Medium · Objectives: understand a fraction as equal parts of a whole/collection; read/write fractions; identify numerator/denominator; compare simple fractions; find equivalent fractions; recognise halves/thirds/quarters; add/subtract like fractions.
+
+TEACHING MATERIAL.
+What is a fraction? When a whole is divided into equal parts, a fraction names some of those parts. In ¾: the denominator (4) tells how many equal parts the whole is cut into; the numerator (3) tells how many are taken. Parts must be equal — three unequal pieces are not thirds.
+Fractions of a collection. Half of 8 apples = 4; a quarter of 12 = 3. "Fraction of a set" links to division.
+Equivalent fractions. Different fractions can name the same amount: ½ = 2/4 = 3/6. Multiplying numerator and denominator by the same number keeps the value.
+Comparing. With the same denominator, the bigger numerator is bigger (3/5 > 2/5). With the same numerator, the smaller denominator is bigger (½ > ⅓, because halves are larger pieces than thirds).
+Add/subtract like fractions. Same denominator: add/subtract numerators, keep the denominator (2/7 + 3/7 = 5/7).
+Types. Proper fraction (numerator < denominator, e.g., ¾), whole = 4/4 = 1.
+
+Worked examples.
+1. Shade 3 of 4 equal parts → ¾. 2. ½ of 10 = 5. 3. Is ½ = 3/6? Yes (×3 top and bottom). 4. 4/9 + 2/9 = 6/9.
+
+Visual/diagram description. A circle cut into 4 equal parts with 3 shaded = ¾; beside it a bar split into 2 (½) aligned with a bar split into 4 showing 2/4 covering the same length.
+
+DEFINITIONS (10). fraction, whole, equal parts, numerator, denominator, proper fraction, unit fraction, equivalent fractions, like fractions, half/third/quarter.
+
+Q&A. Easy: Write "three out of five" as a fraction (3/5). What is the denominator in ⅜? (8.) Medium: Which is bigger, ½ or ⅓? (½.) ½ of 14? (7.) Difficult: Find a fraction equal to ⅔ with denominator 9 (6/9). 5/8 − 2/8? (3/8.) Application: A pizza is cut into 8 slices; you eat 3 — what fraction is left? (5/8.) Reasoning: Why is ⅕ smaller than ¼? (Cutting into more parts makes each part smaller.)
+
+MCQs (12, abridged). ¾ numerator: 3; denominator of 2/7: 7; ½ = 2/4; bigger: ½ or ⅓ → ½; ⅓ of 9: 3; 1/5+2/5: 3/5; whole as fraction of fourths: 4/4; equal parts needed for thirds: 3; ½ of 20: 10; 6/8−2/8: 4/8; proper fraction: 3/5; ¼ of 12: 3.
+
+T/F (10). In ¾ the 4 is the numerator F (denominator). ½ = 3/6 T. Parts of a fraction must be equal T. ⅓ > ½ F. 2/5 + 1/5 = 3/5 T. 4/4 = 1 T. ⅕ is bigger than ¼ F. Numerator counts the parts taken T. Like fractions have the same denominator T. ½ of 8 is 5 F (4).
+
+FILL BLANKS (10). In 5/8, numerator is  (5). ½ = /4 (2). ⅓ of 12 =  (4). 2/9 + 4/9 = /9 (6). ¼ of 16 =  (4). Bigger of ¾ and ¼ is  (¾). 3/6 = /2 (1). Whole = /5 in fifths (5). Denominator of ⅐ is  (7). ½ of 18 =  (9).
+
+SHORT/LONG. Short: Compare 3/7 and 5/7; explain. Long (model): "Explain equivalent fractions with ½." Model — ½ means 1 of 2 equal parts. If each part is split again into 2, we get 2 of 4 parts (2/4) covering the same amount; split into 3 → 3/6. Multiplying top and bottom by the same number gives equivalent fractions: ½ = 2/4 = 3/6, all equal in value.
+
+HOTS. Two children share 3 chocolates equally — how much each? (1½ or 3/2.) Which is more: ⅔ or ¾? Justify. (¾; with equal wholes, 3/4 covers more — compare via 8/12 vs 9/12.) Order ½, ⅓, ¼ largest first (½, ⅓, ¼).
+
+MISCONCEPTIONS. "Bigger denominator = bigger fraction" → false; more parts means smaller each. "Any parts make a fraction" → parts must be equal. "Numerator and denominator can be added straight across when adding fractions" → only numerators add for like fractions; denominators stay.
+
+REVISION. Fraction = equal parts; numerator/denominator; equivalent fractions (×same); compare (same denom → numerator; same numerator → denom); add/subtract like fractions.
+Fact sheet: ½=2/4=3/6…; a/b + c/b = (a+c)/b; whole = n/n = 1.
+
+ADAPTIVE — "fraction". L1: "A fraction is a part of a whole that's cut into equal pieces." L2: "¾ means the whole is cut into 4 equal parts and we take 3 of them — like 3 of 4 equal pizza slices." L3: "A fraction a/b (b≠0) denotes a÷b — a parts of a whole partitioned into b equal parts; equivalence classes give the rationals." L4: "A fraction is a fair-sharing recipe: the bottom number is how many friends share, the top is how many shares you're talking about." L5: "If a chocolate bar has 8 squares and you eat 3, you ate 3/8 of it — fractions describe everyday sharing and leftovers."
+
+INSTRUCTION RECORDS.
+`json
+{"messages":[{"role":"user","content":"Explain fractions to a Grade 4 kid simply."},{"role":"assistant","content":"A fraction is a piece of a whole — but the pieces must be EQUAL! Cut a roti into 4 equal parts and take 3: that's 3/4. The bottom number (4) tells how many equal parts in all; the top number (3) tells how many you took. Try shading 2 of 5 equal boxes — what fraction is that? (2/5!)"}]}
+{"messages":[{"role":"user","content":"Why is 1/3 bigger than 1/4?"},{"role":"assistant","content":"Because the more pieces you cut a whole into, the SMALLER each piece becomes. Cut a cake into 3 — big slices (1/3). Cut it into 4 — smaller slices (1/4). Same cake, more cuts, tinier pieces. So 1/3 > 1/4. A bigger bottom number means a smaller fraction!"}]}
+`
+
+G4 — Remaining Maths & EVS (compact)
+RECORDTYPE: LESSON  |  GRADE 4  |  NCERT  |  Maths  |  CONCEPT: Multi-digit multiplication & long division
+EXPLANATION: Multiply 2–3 digit × 1–2 digit; long division of up to 3-digit by 1-digit with remainder; estimate; word problems.  |  QUESTION: 144 ÷ 6? ANSWER: 24.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 4  |  NCERT  |  Maths  |  CONCEPT: Factors & multiples
+EXPLANATION: Factors divide a number exactly; multiples are its times-table; primes have exactly two factors; even/odd; simple factor pairs.  |  QUESTION: Factors of 12? ANSWER: 1,2,3,4,6,12.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 4  |  NCERT  |  Maths  |  CONCEPT: Geometry, perimeter & area (intro)
+EXPLANATION: Lines/rays/angles (right/acute/obtuse informally); perimeter = distance around; area by counting unit squares; rectangle perimeter = 2(l+b).  |  QUESTION: Perimeter of a 3×5 rectangle? ANSWER: 16 units.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 4  |  NCERT  |  EVS  |  CONCEPT: Human body, food & health / water cycle basics
+EXPLANATION: Balanced diet & nutrients; teeth/digestion basics; safe water & the rain→river→sea→rain cycle; cleanliness & disease prevention.  |  QUESTION: What causes rain in the water cycle? ANSWER: Condensation of water vapour into clouds.  |  DIFFICULTY: Medium
+
+===== GRADE 5 (NCERT) =====
+Class 5 (Maths Mela, Santoor, Veena, Our Wondrous World). Concepts: large numbers & operations, factors/multiples with HCF/LCM readiness, fractions & decimals, geometry (angles), area/perimeter/volume, data & average, and EVS moving toward science (body systems, natural phenomena, maps).
+
+CHAPTER G5M-A — Decimals (Introduction) — FULL APPARATUS (anchor)
+METADATA. Grade 5 · NCERT · Maths · Prereq: fractions, place value · Medium · Objectives: understand decimals as tenths/hundredths; read/write decimals; place value after the point; relate fractions↔decimals; compare/order; add/subtract decimals; use in money and measurement.
+
+TEACHING MATERIAL.
+Why decimals? Some quantities fall between whole numbers — ₹2 and 50 paise, or 1 metre 5 cm. Decimals extend place value to the right of a decimal point for parts smaller than one.
+Place value after the point. First place = tenths (1/10 = 0.1), second = hundredths (1/100 = 0.01). So 0.7 = 7/10; 0.05 = 5/100; 0.35 = 35/100 = 3 tenths + 5 hundredths.
+Fraction ↔ decimal. ½ = 5/10 = 0.5; ¼ = 25/100 = 0.25; 3/10 = 0.3.
+Reading. 2.35 = "two point three five" = 2 wholes + 3 tenths + 5 hundredths.
+Comparing. Line up decimal points; compare place by place from the left. 0.7 > 0.65 (7 tenths > 6 tenths). Adding zeros to the right doesn't change value (0.7 = 0.70).
+Add/subtract. Line up the decimal points (and places) and add/subtract as usual, keeping the point aligned. 2.35 + 1.4 = 2.35 + 1.40 = 3.75.
+Money & measure. ₹2.50 = 2 rupees 50 paise; 1.05 m = 1 m 5 cm.
+
+Worked examples.
+1. Write 7/10 and 9/100 as decimals → 0.7 and 0.09. 2. 0.6 + 0.25 = 0.85. 3. 3.5 − 1.75 = 1.75. 4. Compare 0.4 and 0.40 → equal.
+
+Visual/diagram description. A 10×10 grid = 1 whole; shading 35 squares shows 0.35 = 35/100; a single column shaded = 0.1 (a tenth).
+
+DEFINITIONS (10). decimal, decimal point, tenths, hundredths, decimal place, whole part, fractional part, equivalent decimal, place-value alignment, terminating decimal.
+
+Q&A. Easy: Write 3/10 as a decimal (0.3). Read 0.9 (nine tenths). Medium: 0.5 + 0.3 (0.8). Which is bigger, 0.7 or 0.07? (0.7.) Difficult: 4.2 − 1.65 (2.55). Convert ¼ to a decimal (0.25). Application: A pen costs ₹12.50 and a book ₹35.75 — total? (₹48.25.) Reasoning: Why is 0.5 = 0.50? (Adding a zero in the hundredths place adds nothing; both are five tenths.)
+
+MCQs (12, abridged). 0.1 = 1/10; 7/10 = 0.7; tenths digit of 3.46: 4; 0.6+0.2: 0.8; bigger: 0.9 or 0.19 → 0.9; ¼ = 0.25; 0.05 = 5/100; 2.5−1.5: 1.0; ₹0.50 = 50 paise; 0.3+0.07: 0.37; equal to 0.4: 0.40; hundredths in 0.28: 8.
+
+T/F (10). 0.5 = 5/10 T. 0.7 < 0.07 F. 0.4 = 0.40 T. The first place after the point is hundredths F (tenths). ¼ = 0.25 T. To add decimals, line up the points T. 1.2 + 0.8 = 2.0 T. 0.9 has 9 hundredths F (9 tenths). Money uses two decimal places for paise T. 3/10 = 0.03 F (0.3).
+
+FILL BLANKS (10). 9/10 =  (0.9). The 2nd place after the point is  (hundredths). 0.5 + 0.25 =  (0.75). ½ as a decimal =  (0.5). 0.6 = /10 (6). ₹3.75 = 3 rupees  paise (75). 0.40 =  (0.4). 2.3 + 1.4 =  (3.7). Tenths digit of 5.82 is  (8). 25/100 =  (0.25).
+
+SHORT/LONG. Short: Add 12.6 + 3.45 (16.05). Long (model): "Explain how decimals extend place value and convert ¾ to a decimal." Model — Place value continues to the right of the point: tenths, hundredths, etc. ¾ = 75/100 (multiply top and bottom of ¾ by 25), and 75/100 = 0.75. So ¾ = 0.75, i.e., 7 tenths + 5 hundredths.
+
+HOTS. Arrange 0.5, 0.45, 0.505 in order (0.45, 0.5, 0.505). Why does money always show two decimal places (₹5.00)? (Paise are hundredths of a rupee.) Find a decimal between 0.3 and 0.4 (e.g., 0.35).
+
+MISCONCEPTIONS. "More digits after the point = bigger" → false (0.19 < 0.7). "0.5 and 0.05 are the same" → tenths vs hundredths. "Ignore the point when adding" → align points first.
+
+REVISION. Decimal = place value past the point (tenths, hundredths); fraction↔decimal; compare by aligning points; add/subtract with aligned points; money/measure uses.
+Fact sheet: 0.1=1/10, 0.01=1/100; ½=0.5, ¼=0.25, ¾=0.75; trailing zeros don't change value.
+
+ADAPTIVE — "decimal". L1: "A decimal shows parts of a whole using a dot, like 0.5 for a half." L2: "After the decimal point, the first place is tenths and the next is hundredths — so 0.35 is 3 tenths and 5 hundredths, which is 35/100." L3: "Decimals extend base-10 positional notation to negative powers of ten (10⁻¹, 10⁻²…), representing fractions with denominators that are powers of ten." L4: "A decimal is a ruler zoomed in between the whole-number marks — the point separates whole metres from the smaller centimetre bits." L5: "Prices like ₹49.99 are decimals — the part after the point is paise (hundredths of a rupee)."
+
+INSTRUCTION RECORDS.
+`json
+{"messages":[{"role":"user","content":"Explain decimals to a Grade 5 student."},{"role":"assistant","content":"Decimals let us write parts of a whole using a dot! The first spot after the point is TENTHS (0.1 = 1/10) and the next is HUNDREDTHS (0.01 = 1/100). So 0.35 means 3 tenths + 5 hundredths = 35/100. You already use decimals with money: ₹2.50 is 2 rupees and 50 paise!"}]}
+{"messages":[{"role":"user","content":"Add 12.6 and 3.45 step by step."},{"role":"assistant","content":"Line up the decimal points and fill a zero so both have two places:\n 12.60\n+ 3.45\nHundredths: 0+5=5. Tenths: 6+4=10 → write 0, carry 1. Ones: 2+3+1=6. Tens: 1.\nAnswer: 16.05. Always align the points before adding!"}]}
+{"messages":[{"role":"user","content":"Which is bigger, 0.7 or 0.65?"},{"role":"assistant","content":"0.7 is bigger! Compare place by place: tenths first. 0.7 has 7 tenths; 0.65 has only 6 tenths. Since 7 tenths > 6 tenths, 0.7 > 0.65 — even though 0.65 has more digits. More digits doesn't mean bigger with decimals!"}]}
+`
+
+G5 — Remaining Maths & EVS (compact)
+RECORDTYPE: LESSON  |  GRADE 5  |  NCERT  |  Maths  |  CONCEPT: Large numbers & operations
+EXPLANATION: Read/write numbers in lakhs (Indian system) and thousands; all four operations on large numbers; estimation & rounding.  |  QUESTION: 1 lakh = ? ANSWER: 1,00,000.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 5  |  NCERT  |  Maths  |  CONCEPT: Factors, multiples, HCF/LCM readiness
+EXPLANATION: Prime/composite; prime factorisation; common factors→HCF, common multiples→LCM (simple).  |  QUESTION: HCF of 12 and 18? ANSWER: 6.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 5  |  NCERT  |  Maths  |  CONCEPT: Area, perimeter, volume; angles; data & average
+EXPLANATION: Rectangle area = l×b, perimeter = 2(l+b); count cubes for volume; measure/compare angles; mean/average = total ÷ count; bar graphs.  |  QUESTION: Area of 6×4 rectangle? ANSWER: 24 sq units.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 5  |  NCERT  |  EVS  |  CONCEPT: Toward science — body systems, natural phenomena, maps
+EXPLANATION: Digestive/respiratory basics; states of matter & simple changes; natural resources & conservation; reading maps/directions; our country's diversity.  |  QUESTION: Which organ pumps blood? ANSWER: The heart.  |  DIFFICULTY: Medium
+
+ENGLISH (Santoor 4–5) & Hindi (Veena 4–5) — Compact
+RECORDTYPE: LESSON  |  GRADE 4–5  |  NCERT  |  English  |  CONCEPT: Grammar & composition progression
+EXPLANATION: Tenses (present/past/future simple + continuous intro), subject-verb agreement, adverbs, prepositions, conjunctions, articles; comprehension of prose & poems (themes, not reproduced); paragraph, informal letter, notice, story writing; dictionary use.  |  QUESTION: Past tense of "go"? ANSWER: went.  |  DIFFICULTY: Medium
+
+
+=================================================================
+BRANCH B — MAHARASHTRA STATE BOARD (Balbharati)
+=================================================================
+Std 3–5 subjects: Marathi, Hindi, English, गणित (Mathematics), and EVS split into परिसर अभ्यास भाग १ (science-leaning) and भाग २ (social-leaning). This EVS split is a defining Maharashtra feature and is preserved (do not merge with the single NCERT EVS book).
+
+===== GRADE 3–5 (Maharashtra) — Anchors + Compact =====
+
+MATHEMATICS (गणित) — Anchor: Multiplication & पाढे (Std 3) → Fractions/Decimals (Std 4–5)
+METADATA. Grade 3–5 · Maharashtra · Mathematics · Medium · Objectives mirror NCERT concepts (multiplication, division, fractions, decimals, geometry, measurement, data) but follow the Balbharati sequence with Marathi terminology and its well-known emphasis on पाढे (times-tables) mastery.
+
+TEACHING (key points, original). गुणाकार (multiplication) as सारखे गट जोडणे and arrays; पाढे 2–10 (and up to 20 in higher stds) practised for fluency; भागाकार (division) as समान वाटप/गटीकरण with बाकी (remainder); अपूर्णांक (fractions) as समान भागांतील भाग (अंश numerator/छेद denominator); दशांश (decimals) as दशांश चिन्हानंतरचे भाग; भूमिती (geometry) व मापन (measurement) in metric units; सामग्री/माहिती (data) as चित्रालेख/स्तंभालेख.
+
+Difference to preserve (NCERT vs Maharashtra): Maharashtra pushes rote पाढे and larger number-ranges earlier and keeps a distinct Marathi metalanguage (अंश/छेद, बाकी, दशांश), while NCERT Maths Mela front-loads conceptual/array-based understanding and themed activity chapters. Same mathematics, different sequence and language — keep branches separate.
+
+ADAPTIVE — "अपूर्णांक (fraction)". L1: "अपूर्णांक म्हणजे पूर्ण गोष्टीचा समान भाग." L2: "एक पोळी ४ समान भागांत कापून ३ घेतले तर ३/४ — छेद (४) एकूण भाग, अंश (३) घेतलेले भाग." L3: "a/b (b≠0) म्हणजे a ÷ b; समान भागांची संख्या छेदाने वाढल्यास प्रत्येक भाग लहान होतो." L4: "मित्रांमध्ये वाटपाची कृती — खालचा आकडा किती जण वाटून घेतात, वरचा किती भाग." L5: "चॉकलेटच्या ८ तुकड्यांतले ३ खाल्ले = ३/८ खाल्ले."
+
+`json
+{"messages":[{"role":"user","content":"मराठीत ५ चा पाढा शिकवा (repeated addition ने)."},{"role":"assistant","content":"५ चा पाढा म्हणजे ५ पुन्हा पुन्हा जोडणे! ५×१=५, ५×२=५+५=१०, ५×३=१५, ५×४=२०, ५×५=२५... प्रत्येक वेळी ५ जास्त. लक्षात ठेवण्याची युक्ती: ५ च्या पाढ्यातील उत्तरे नेहमी ५ किंवा ० वर संपतात!"}]}
+{"messages":[{"role":"user","content":"Explain दशांश (decimal) to a Std 5 Marathi-medium student in English."},{"role":"assistant","content":"A दशांश (decimal) shows parts smaller than one, using a decimal point (दशांश चिन्ह). The first place after it is दशांश (tenths, 1/10) and the next is शतांश (hundredths, 1/100). So 0.35 = 3 tenths + 5 hundredths = 35/100. You see this in money — ₹2.50 is 2 rupees, 50 paise!"}]}
+``
+
+EVS PART 1 (परिसर अभ्यास भाग १ — science-leaning) — Compact
+RECORDTYPE: LESSON  |  GRADE 3–5  |  Maharashtra  |  EVS Part 1  |  CONCEPT: सजीव सृष्टी, शरीर, अन्न-पाणी-हवा, नैसर्गिक साधने
+EXPLANATION: सजीव-निर्जीव; वनस्पती व प्राणी यांचे प्रकार व गरजा; मानवी शरीर व इंद्रिये; अन्न, पाणी, हवा यांचे महत्त्व व स्वच्छता; नैसर्गिक साधनसंपत्ती व संवर्धन; साधे विज्ञान-प्रयोग व निरीक्षण.  |  QUESTION: वनस्पती अन्न कोठे तयार करते? ANSWER: पानांत (सूर्यप्रकाशाच्या मदतीने).  |  DIFFICULTY: Easy–Medium
+
+EVS PART 2 (परिसर अभ्यास भाग २ — social-leaning) — Compact
+RECORDTYPE: LESSON  |  GRADE 3–5  |  Maharashtra  |  EVS Part 2  |  CONCEPT: कुटुंब-समाज, आपला परिसर/गाव-शहर, नकाशा-दिशा, आपले राज्य व देश
+EXPLANATION: कुटुंब व समाजातील नाती व मदतनीस; गाव, शहर, जिल्हा; दिशा व साधा नकाशा वाचन; महाराष्ट्र व भारत यांची ओळख; राष्ट्रीय चिन्हे; सण व विविधता; नागरिकांची कर्तव्ये.  |  QUESTION: सूर्य कोणत्या दिशेला उगवतो? ANSWER: पूर्वेला.  |  DIFFICULTY: Easy–Medium
+
+LANGUAGES (Marathi/Hindi/English, Std 3–5) — Compact
+RECORDTYPE: LESSON  |  GRADE 3–5  |  Maharashtra  |  Marathi  |  CONCEPT: व्याकरण व लेखन प्रगती
+EXPLANATION: जोडाक्षरे, नाम-सर्वनाम-क्रियापद-विशेषण, वचन-लिंग-काळ; समानार्थी/विरुद्धार्थी शब्द; परिच्छेद, पत्र, निबंध लेखन; पठन-आकलन (मूळ मजकूर न देता विषय/भाव).  |  QUESTION: 'सुंदर' चा विरुद्धार्थी शब्द? ANSWER: कुरूप.  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 3–5  |  Maharashtra  |  English  |  CONCEPT: Grammar & writing (parallels NCERT)
+EXPLANATION: Parts of speech, tenses, articles, punctuation; comprehension; paragraph/letter/notice writing; vocabulary.  |  QUESTION: Article before "hour"? ANSWER: an (silent h → vowel sound).  |  DIFFICULTY: Medium
+
+
+=================================================================
+BATCH 3 — CONSOLIDATED CROSS-BRANCH LESSON RECORDS
+=================================================================
+RECORDTYPE: LESSON  |  GRADE 3  |  NCERT  |  Maths  |  UNIT: Operations  |  CHAPTER: Give and Take  |  SECTION: Multiplication  |  CONCEPT: Repeated addition/arrays
+PREREQUISITES: Skip counting, addition  |  LEARNINGOBJECTIVE: Multiply & use tables/commutativity
+EXPLANATION: a×b = adding b, a times = an a-by-b array; a×b=b×a; ×0=0, ×1=same, ×10 appends 0.  |  EXAMPLE: 4×6=24  |  APPLICATION: Rows of chairs, packs  |  COMMONMISCONCEPTION: ×0 gives the number  |  QUESTION: 27×6  |  ANSWER: 162  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 3  |  NCERT  |  Maths  |  CHAPTER: Fair Share  |  SECTION: Division  |  CONCEPT: Equal sharing/grouping, remainder
+PREREQUISITES: Multiplication  |  LEARNINGOBJECTIVE: Divide within tables with remainder
+EXPLANATION: Division shares/groups equally; inverse of ×; remainder < divisor; n÷0 undefined.  |  EXAMPLE: 13÷4=3 r1  |  APPLICATION: Sharing sweets, seating rows  |  COMMONMISCONCEPTION: Division is commutative  |  QUESTION: 22÷5  |  ANSWER: 4 r 2  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 4  |  NCERT  |  Maths  |  CHAPTER: Fractions  |  SECTION: Meaning  |  CONCEPT: Equal parts / numerator-denominator
+PREREQUISITES: Division/sharing  |  LEARNINGOBJECTIVE: Read/compare/equivalent fractions
+EXPLANATION: a/b = a of b equal parts; more parts → smaller each; ½=2/4; like fractions add numerators.  |  EXAMPLE: ¾ shaded  |  APPLICATION: Pizza slices, sharing  |  COMMONMISCONCEPTION: Bigger denominator = bigger fraction  |  QUESTION: Compare ½ and ⅓  |  ANSWER: ½ is bigger  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 5  |  NCERT  |  Maths  |  CHAPTER: Decimals  |  SECTION: Place value  |  CONCEPT: Tenths/hundredths
+PREREQUISITES: Fractions, place value  |  LEARNINGOBJECTIVE: Read/compare/add decimals
+EXPLANATION: Places right of the point: tenths, hundredths; ½=0.5, ¼=0.25; align points to compute; trailing zeros keep value.  |  EXAMPLE: 0.35=35/100  |  APPLICATION: Money, measurement  |  COMMONMISCONCEPTION: More digits after point = bigger  |  QUESTION: Bigger: 0.7 or 0.65?  |  ANSWER: 0.7  |  DIFFICULTY: Medium
+
+RECORDTYPE: LESSON  |  GRADE 3  |  NCERT  |  EVS  |  CHAPTER: Getting to Know Plants  |  SECTION: Parts & needs  |  CONCEPT: Plant structure/function
+PREREQUISITES: Grade 1–2 plant awareness  |  LEARNINGOBJECTIVE: Parts, types, needs, life cycle
+EXPLANATION: Root/stem/leaf/flower/fruit/seed with functions; herb/shrub/tree/climber/creeper; needs air/water/sun/soil; germination cycle.  |  EXAMPLE: Leaf makes food; flower→fruit  |  APPLICATION: Kitchen-garden observation  |  COMMONMISCONCEPTION: Roots make food  |  QUESTION: Which part makes food?  |  ANSWER: The leaf  |  DIFFICULTY: Easy
+
+RECORDTYPE: LESSON  |  GRADE 3–5  |  Maharashtra  |  EVS Part 1 & 2  |  CONCEPT: Split EVS (science vs social)
+EXPLANATION: Maharashtra separates परिसर अभ्यास into भाग १ (living world, body, resources, simple science) and भाग २ (family/society, maps/directions, state & nation, civic sense) — distinct from the single integrated NCERT EVS book.  |  QUESTION: Sun rises in which direction?  |  ANSWER: East.  |  DIFFICULTY: Easy
+
+
+BATCH 3 COVERAGE SUMMARY
+• NCERT Grade 3: Maths (Maths Mela, 14 verified chapters) — full apparatus on Multiplication and Division/Fair-Share + compact records for place value, add/subtract, shapes, measurement, time, data; EVS (Our Wondrous World) — full apparatus on Plants + compact on water/food/interdependence; English (Santoor)/Hindi (Veena) grammar.
+• NCERT Grade 4: Maths — full apparatus on Fractions + compact (multi-digit ×/÷, factors/multiples, geometry/perimeter/area); EVS (body/health/water cycle); language progression.
+• NCERT Grade 5: Maths — full apparatus on Decimals + compact (large numbers, HCF/LCM readiness, area/volume/angles/average); EVS moving toward science; language.
+• Maharashtra Grade 3–5: Mathematics anchor (गुणाकार/पाढे → अपूर्णांक/दशांश) with NCERT-vs-Maharashtra differences flagged; EVS Part 1 (science) & Part 2 (social) preserved as distinct; Marathi/Hindi/English progression.
+• Boards kept as separate branches throughout; differences explicitly flagged.
+
+END OF BATCH 3. Next: BATCH 4 — Grades 6–8 (Science and Social Science become full separate subjects; Mathematics deepens into integers, algebra, ratio/proportion, geometry, mensuration; fuller per-chapter apparatus).
