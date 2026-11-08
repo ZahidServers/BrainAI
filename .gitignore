@@ -10,4 +10,3 @@ robot_data/
 *.log
 .claude/
 .pytest_cache/
-data/software_engineering_105000_code_enabled_txt_corpus.txt
