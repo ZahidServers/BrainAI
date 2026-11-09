@@ -192,11 +192,34 @@ class DomainSplit:
 
     def batch(self, size: int, generator: Optional[torch.Generator] = None):
         idx = torch.randint(0, self.train.shape[0], (size,), generator=generator)
-        return self.train[idx]
+        return self.train[idx].long()      # windows are stored int16 to save RAM
 
     def val_batches(self, size: int, limit: int = 6):
         for i in range(0, min(self.val.shape[0], size * limit), size):
-            yield self.val[i : i + size]
+            yield self.val[i : i + size].long()
+
+
+def read_sampled_bytes(path: Path, cap_bytes: int, block: int = 1 << 20,
+                       seed: int = 1234) -> bytes:
+    """At most ``cap_bytes`` of a file, taken as random 1 MB blocks spread over it.
+
+    Reading a whole 500 MB file just to keep ~30 MB of windows is what ran
+    Colab out of RAM. Small files are returned whole; big ones are sampled
+    across their full length so the sample is not just the file's beginning.
+    """
+    size = path.stat().st_size
+    if size <= cap_bytes:
+        return path.read_bytes()
+    import random
+    rng = random.Random(seed)
+    n_blocks = max(1, cap_bytes // block)
+    starts = sorted(rng.sample(range(0, max(1, (size - block) // block)), n_blocks))         if (size - block) // block >= n_blocks else [0]
+    parts = []
+    with open(path, "rb") as f:
+        for st in starts:
+            f.seek(st * block)
+            parts.append(f.read(block))
+    return b"".join(parts)
 
 
 class MultiDomainCorpus:
@@ -291,7 +314,10 @@ def load_multidomain(
             print(f"  [corpus] {name} ...", end=" ", flush=True)
         try:
             if name in disk:
-                text = disk[name].read_text(encoding="utf-8", errors="replace")
+                # Bounded read: never hold more than the windows we will keep.
+                text = read_sampled_bytes(
+                    disk[name], cap_bytes=max_windows_per_domain * seq_len * 2
+                ).decode("utf-8", errors="replace")
             else:
                 text = fetch_domain(name)
         except Exception as exc:
@@ -299,7 +325,8 @@ def load_multidomain(
                 print(f"skipped ({type(exc).__name__})")
             continue
 
-        windows = tok.chunks(text, seq_len, stride=seq_len)
+        windows = tok.chunks(text, seq_len, stride=seq_len, dtype=torch.int16)
+        del text
         g = torch.Generator().manual_seed(1234)
         windows = windows[torch.randperm(windows.shape[0], generator=g)]
         windows = windows[:max_windows_per_domain]
@@ -342,6 +369,7 @@ def evaluate_domains(
     for name, split in corpus.splits.items():
         losses = []
         for batch in split.val_batches(batch_size, limit=batches):
+            batch = batch.to(next(model.parameters()).device)
             loss, _ = model.lm_loss(batch, aux_weight=0.0, write_memory=False)
             losses.append(float(loss))
         out[name] = sum(losses) / max(len(losses), 1)

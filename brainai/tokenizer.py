@@ -64,16 +64,23 @@ class ByteTokenizer:
             rows.append(ids)
         return torch.tensor(rows, dtype=torch.long)
 
-    def chunks(self, text: str, seq_len: int, stride: int | None = None) -> torch.Tensor:
-        """Slice a long document into (N, seq_len) training windows."""
+    def chunks(self, text, seq_len: int, stride: int | None = None,
+               dtype: torch.dtype = torch.long) -> torch.Tensor:
+        """Slice a long document into (N, seq_len) training windows.
+
+        ``text`` may be ``str`` or raw ``bytes``. Built on numpy views, so a
+        500 MB file costs ~its own size rather than the many GB a Python list of
+        ints would (that list is what killed Colab sessions on large corpora).
+        ``dtype=torch.int16`` stores windows compactly; cast to long per batch.
+        """
+        import numpy as np
         stride = stride or seq_len
-        ids = list(text.encode("utf-8"))
-        windows = [
-            ids[i : i + seq_len]
-            for i in range(0, max(1, len(ids) - seq_len + 1), stride)
-        ]
-        windows = [w for w in windows if len(w) == seq_len]
-        if not windows:
-            padded = ids + [PAD] * (seq_len - len(ids))
-            windows = [padded[:seq_len]]
-        return torch.tensor(windows, dtype=torch.long)
+        raw = text.encode("utf-8") if isinstance(text, str) else bytes(text)
+        ids = np.frombuffer(raw, dtype=np.uint8)
+        if len(ids) < seq_len:
+            padded = np.full(seq_len, PAD, dtype=np.int16)
+            padded[: len(ids)] = ids
+            return torch.from_numpy(padded[None, :].astype(np.int64)).to(dtype)
+        starts = np.arange(0, len(ids) - seq_len + 1, stride)
+        view = np.lib.stride_tricks.sliding_window_view(ids, seq_len)[starts]
+        return torch.from_numpy(np.ascontiguousarray(view).astype(np.int16)).to(dtype)

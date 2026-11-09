@@ -36,10 +36,21 @@ def load(modality):
     return x, y.astype(np.int64)
 
 
-def to_input(modality, xb, device):
+AUDIO_CROP = 32000     # 2 s at 16 kHz
+AUDIO_POOL = 4         # 16 kHz -> 4 kHz; ESC-50 class cues live well below 2 kHz
+
+
+def to_input(modality, xb, device, train=False):
     t = torch.from_numpy(xb).to(device)
     if modality == "audio":
-        return (t.float() / 32767.0).unsqueeze(1)             # (B,1,L)
+        # A raw 4 s clip is 4000 encoder tokens and attention memory grows with
+        # its square -- that is what ran the T4 out of memory. Take a 2 s crop
+        # (random in training, centred at eval) and average-pool 4x: ~500 tokens.
+        x = t.float() / 32767.0
+        L = x.shape[-1]
+        st = int(np.random.randint(0, L - AUDIO_CROP + 1)) if train else (L - AUDIO_CROP) // 2
+        x = x[..., st:st + AUDIO_CROP].unsqueeze(1)               # (B,1,L)
+        return F.avg_pool1d(x, AUDIO_POOL)
     return t.float() / 255.0                                  # images (B,3,H,W) / video (B,T,3,H,W)
 
 
@@ -47,7 +58,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--modality", choices=["images", "audio", "video"], required=True)
     ap.add_argument("--scale", default="nano")
-    ap.add_argument("--steps", type=int, default=2000)
+    ap.add_argument("--steps", type=int, default=6000)
     ap.add_argument("--batch", type=int, default=64)
     ap.add_argument("--lr", type=float, default=1e-3)
     ap.add_argument("--seed", type=int, default=0)
@@ -68,8 +79,8 @@ def main():
     params = list(enc.parameters()) + list(head.parameters())
     opt = torch.optim.AdamW(params, lr=a.lr, weight_decay=0.01)
 
-    def logits(xb):
-        return head(enc(to_input(a.modality, xb, dev)).mean(dim=1))
+    def logits(xb, train=False):
+        return head(enc(to_input(a.modality, xb, dev, train)).mean(dim=1))
 
     def evaluate():
         enc.eval(); head.eval(); ok = 0
@@ -88,7 +99,7 @@ def main():
         xb = x[idx]
         if a.modality == "images" and rng.random() < 0.5:
             xb = xb[..., ::-1].copy()                          # horizontal flip augmentation
-        loss = F.cross_entropy(logits(xb), torch.from_numpy(y[idx]).to(dev))
+        loss = F.cross_entropy(logits(xb, train=True), torch.from_numpy(y[idx]).to(dev))
         opt.zero_grad(); loss.backward()
         nn.utils.clip_grad_norm_(params, 1.0); opt.step()
         if step % max(1, a.steps // 10) == 0 or step == a.steps - 1:
@@ -96,7 +107,8 @@ def main():
     acc = evaluate()
     print(f"FINAL {a.modality}: val top-1 {acc:.3f}   chance {1/n_cls:.3f}")
     out = Path("checkpoints"); out.mkdir(exist_ok=True)
-    torch.save({"encoder": enc.state_dict(), "scale": a.scale, "val_acc": acc, "classes": n_cls},
+    torch.save({"encoder": enc.state_dict(), "scale": a.scale, "val_acc": acc, "classes": n_cls,
+                "audio_preprocess": {"crop": AUDIO_CROP, "pool": AUDIO_POOL} if a.modality == "audio" else None},
                out / f"sensors_{a.modality}_{a.scale}.pt")
 
 

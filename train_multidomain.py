@@ -48,19 +48,27 @@ def main() -> None:
     ap.add_argument("--lr", type=float, default=6e-4)
     ap.add_argument("--warmup", type=int, default=200)
     ap.add_argument("--world-weight", type=float, default=0.2)
-    ap.add_argument("--eval-every", type=int, default=500)
-    ap.add_argument("--save-every", type=int, default=1000)
+    ap.add_argument("--eval-every", type=int, default=1000)
+    ap.add_argument("--save-every", type=int, default=500)
     ap.add_argument("--temperature", type=float, default=0.5,
                     help="domain sampling temperature; 0=balanced, 1=proportional")
     ap.add_argument("--init", default=None, help="warm-start from a checkpoint")
     ap.add_argument("--out", default="checkpoints/brainai_multidomain.pt")
     ap.add_argument("--history", default="checkpoints/multidomain_history.json")
     ap.add_argument("--threads", type=int, default=8)
+    ap.add_argument("--device", default="auto", help="auto | cpu | cuda")
     ap.add_argument("--seed", type=int, default=0)
     args = ap.parse_args()
 
     torch.manual_seed(args.seed)
-    torch.set_num_threads(args.threads)
+    dev = torch.device("cuda" if (args.device == "auto" and torch.cuda.is_available())
+                       else ("cpu" if args.device == "auto" else args.device))
+    if dev.type == "cpu":
+        torch.set_num_threads(args.threads)
+    else:
+        torch.backends.cuda.matmul.allow_tf32 = True
+        torch.backends.cudnn.allow_tf32 = True
+    print(f"device: {dev}" + (f" ({torch.cuda.get_device_name(0)})" if dev.type == "cuda" else ""))
 
     print("BrainAI multi-domain training")
     print(attribution_line("BrainAI"))
@@ -78,6 +86,7 @@ def main() -> None:
     else:
         model = BrainAI(BrainConfig.for_scale(args.scale,
                                               max_seq_len=max(args.seq, 128)))
+    model.to(dev)
     print(f"parameters: {model.parameter_count():,}")
 
     tokens_per_step = args.batch * args.seq
@@ -95,65 +104,74 @@ def main() -> None:
     start = time.time()
     running = 0.0
 
-    for step in range(args.steps):
-        lr = cosine_lr(step, args.steps, args.lr, args.warmup)
-        for group in opt.param_groups:
-            group["lr"] = lr
+    try:
+      for step in range(args.steps):
+          lr = cosine_lr(step, args.steps, args.lr, args.warmup)
+          for group in opt.param_groups:
+              group["lr"] = lr
 
-        domain, batch = corpus.sample(args.batch)
-        domain_steps[domain] += 1
+          domain, batch = corpus.sample(args.batch)
+          batch = batch.to(dev)
+          domain_steps[domain] += 1
 
-        opt.zero_grad(set_to_none=True)
-        loss, out = model.lm_loss(batch)
-        world_loss, _ = model.world_loss_from(out)
-        if world_loss is not None:
-            loss = loss + args.world_weight * world_loss
-        loss.backward()
-        torch.nn.utils.clip_grad_norm_(params, 1.0)
-        model.plasticity.accumulate_fisher(model)
-        opt.step()
+          opt.zero_grad(set_to_none=True)
+          loss, out = model.lm_loss(batch)
+          world_loss, _ = model.world_loss_from(out)
+          if world_loss is not None:
+              loss = loss + args.world_weight * world_loss
+          loss.backward()
+          torch.nn.utils.clip_grad_norm_(params, 1.0)
+          model.plasticity.accumulate_fisher(model)
+          opt.step()
 
-        running += float(loss.detach())
+          running += float(loss.detach())
 
-        # Keep the replay buffer stocked across domains, so a later sleep or
-        # continual phase rehearses breadth rather than whichever domain
-        # happened to come last.
-        if step % 25 == 0:
-            model.replay.add(batch, importance=1.0,
-                             task_id=corpus.names.index(domain))
+          # Keep the replay buffer stocked across domains, so a later sleep or
+          # continual phase rehearses breadth rather than whichever domain
+          # happened to come last.
+          if step % 25 == 0:
+              model.replay.add(batch, importance=1.0,
+                               task_id=corpus.names.index(domain))
 
-        if step % args.eval_every == 0 or step == args.steps - 1:
-            per_domain = evaluate_domains(model, corpus, batch_size=args.batch)
-            elapsed = time.time() - start
-            record = {
-                "step": step,
-                "train_loss": running / max(1, min(args.eval_every, step + 1)),
-                "lr": lr,
-                "elapsed_s": round(elapsed, 1),
-                "tokens": step * tokens_per_step,
-                "spike_rate": out.trace.extras["spike_rate"],
-                "per_domain": per_domain,
-            }
-            history.append(record)
-            running = 0.0
+          if step % args.eval_every == 0 or step == args.steps - 1:
+              per_domain = evaluate_domains(model, corpus, batch_size=args.batch)
+              elapsed = time.time() - start
+              record = {
+                  "step": step,
+                  "train_loss": running / max(1, min(args.eval_every, step + 1)),
+                  "lr": lr,
+                  "elapsed_s": round(elapsed, 1),
+                  "tokens": step * tokens_per_step,
+                  "spike_rate": out.trace.extras["spike_rate"],
+                  "per_domain": per_domain,
+              }
+              history.append(record)
+              running = 0.0
 
-            worst = max((k for k in per_domain if k != "mean"),
-                        key=lambda k: per_domain[k])
-            best = min((k for k in per_domain if k != "mean"),
-                       key=lambda k: per_domain[k])
-            print(
-                f"step {step:>6}  mean {per_domain['mean']:.4f}  "
-                f"({per_domain['mean'] / math.log(2):.2f} bits/byte)  "
-                f"best {best}={per_domain[best]:.3f}  "
-                f"worst {worst}={per_domain[worst]:.3f}  "
-                f"{elapsed / 60:.0f}m",
-                flush=True,
-            )
-            Path(args.history).parent.mkdir(parents=True, exist_ok=True)
-            Path(args.history).write_text(json.dumps(history, indent=1))
+              worst = max((k for k in per_domain if k != "mean"),
+                          key=lambda k: per_domain[k])
+              best = min((k for k in per_domain if k != "mean"),
+                         key=lambda k: per_domain[k])
+              print(
+                  f"step {step:>6}  mean {per_domain['mean']:.4f}  "
+                  f"({per_domain['mean'] / math.log(2):.2f} bits/byte)  "
+                  f"best {best}={per_domain[best]:.3f}  "
+                  f"worst {worst}={per_domain[worst]:.3f}  "
+                  f"{elapsed / 60:.0f}m",
+                  flush=True,
+              )
+              Path(args.history).parent.mkdir(parents=True, exist_ok=True)
+              Path(args.history).write_text(json.dumps(history, indent=1))
 
-        if step and step % args.save_every == 0:
-            model.save(args.out)
+          if step and step % args.save_every == 0:
+              model.save(args.out)
+
+    except (KeyboardInterrupt, Exception) as exc:
+        # A crash or manual stop must not throw away the run.
+        Path(args.out).parent.mkdir(parents=True, exist_ok=True)
+        model.save(args.out)
+        print(f"\ninterrupted ({type(exc).__name__}: {exc}) -> weights saved to {args.out}")
+        raise
 
     stats = model.plasticity.consolidate(model)
     final = evaluate_domains(model, corpus, batch_size=args.batch, batches=8)
