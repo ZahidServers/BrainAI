@@ -88,23 +88,33 @@ class SpikingAttention(nn.Module):
         k = self._split(self.to_k(src), b, src.shape[1])
         v = self._split(self.to_v(src), b, src.shape[1])
 
-        scores = torch.matmul(q, k.transpose(-2, -1)) * self.scale
-
-        if causal and context is None:
-            causal_mask = torch.ones(s, s, device=spikes.device, dtype=torch.bool).triu(1)
-            scores = scores.masked_fill(causal_mask, NEG_MASK)
-        if key_padding_mask is not None:
-            scores = scores.masked_fill(
-                key_padding_mask[:, None, None, :], NEG_MASK
+        if self.mode == "softmax" and key_padding_mask is None:
+            # Fused kernel: never materialises the (B, H, S, S) score matrix, which
+            # at batch 32 / seq 256 x 3 timesteps x ~14 layers was ~14 GB and ran a
+            # 15 GB T4 out of memory. Same maths as the explicit path below.
+            out = F.scaled_dot_product_attention(
+                q, k, v,
+                dropout_p=self.drop.p if isinstance(self.drop, nn.Dropout) and self.training else 0.0,
+                is_causal=bool(causal and context is None),
             )
-
-        if self.mode == "softmax":
-            attn = F.softmax(scores, dim=-1)
         else:
-            attn = sparsemax(scores, dim=-1)
-        attn = self.drop(attn)
+            scores = torch.matmul(q, k.transpose(-2, -1)) * self.scale
 
-        out = torch.matmul(attn, v)
+            if causal and context is None:
+                causal_mask = torch.ones(s, s, device=spikes.device, dtype=torch.bool).triu(1)
+                scores = scores.masked_fill(causal_mask, NEG_MASK)
+            if key_padding_mask is not None:
+                scores = scores.masked_fill(
+                    key_padding_mask[:, None, None, :], NEG_MASK
+                )
+
+            if self.mode == "softmax":
+                attn = F.softmax(scores, dim=-1)
+            else:
+                attn = sparsemax(scores, dim=-1)
+            attn = self.drop(attn)
+
+            out = torch.matmul(attn, v)
         out = out.transpose(1, 2).reshape(b, s, self.width)
         return self.to_out(out)
 

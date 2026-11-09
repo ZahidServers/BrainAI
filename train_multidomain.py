@@ -57,6 +57,9 @@ def main() -> None:
     ap.add_argument("--history", default="checkpoints/multidomain_history.json")
     ap.add_argument("--threads", type=int, default=8)
     ap.add_argument("--device", default="auto", help="auto | cpu | cuda")
+    ap.add_argument("--micro-batch", type=int, default=0,
+                    help="split each batch into chunks of this size (gradient accumulation); "
+                         "same result, less GPU memory. 0 = no split. Try 8 if CUDA OOMs.")
     ap.add_argument("--seed", type=int, default=0)
     args = ap.parse_args()
 
@@ -115,11 +118,16 @@ def main() -> None:
           domain_steps[domain] += 1
 
           opt.zero_grad(set_to_none=True)
-          loss, out = model.lm_loss(batch)
-          world_loss, _ = model.world_loss_from(out)
-          if world_loss is not None:
-              loss = loss + args.world_weight * world_loss
-          loss.backward()
+          chunks = batch.split(args.micro_batch) if args.micro_batch > 0 else (batch,)
+          total_loss = 0.0
+          for chunk in chunks:
+              loss, out = model.lm_loss(chunk)
+              world_loss, _ = model.world_loss_from(out)
+              if world_loss is not None:
+                  loss = loss + args.world_weight * world_loss
+              (loss * (chunk.shape[0] / batch.shape[0])).backward()
+              total_loss += float(loss.detach()) * chunk.shape[0] / batch.shape[0]
+          loss = torch.tensor(total_loss)
           torch.nn.utils.clip_grad_norm_(params, 1.0)
           model.plasticity.accumulate_fisher(model)
           opt.step()
